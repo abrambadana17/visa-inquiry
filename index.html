@@ -503,6 +503,44 @@
       width: 100%;
       height: 100%;
     }
+
+    /* Service card hover effects */
+.service-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-color: var(--accent-color);
+}
+
+/* Make sure text colors are consistent */
+.service-card h5 {
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+
+.service-card:hover h5 {
+  color: var(--accent-color);
+}
+
+.service-card p {
+  color: #666;
+}
+
+/* Remove default link styles */
+.service-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Card click feedback */
+.service-card:active {
+  transform: translateY(-2px);
+}
   </style>
 </head>
 <body>
@@ -519,7 +557,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#home">Visa Updates</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#about">About Us</a>
@@ -632,71 +670,94 @@
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="section-padding">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2>Our Services</h2>
-        <p class="lead">Comprehensive visa and immigration services tailored to your needs</p>
+<!-- Services Section -->
+<section id="services" class="section-padding">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2>Our Services</h2>
+      <p class="lead">Comprehensive visa and immigration services tailored to your needs</p>
+    </div>
+    <div class="row">
+      <!-- Tourist Visas -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <a href="services/tourist.html" class="text-decoration-none">
+          <div class="card text-center h-100 service-card">
+            <div class="card-body">
+              <i class="fas fa-plane-departure service-icon"></i>
+              <h5>Tourist Visas</h5>
+              <p>Planning a vacation? We'll help you get the right tourist visa for your destination country with minimal hassle.</p>
+            </div>
+          </div>
+        </a>
       </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card text-center">
+      
+      <!-- Business Visas -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <a href="services/business.html" class="text-decoration-none">
+          <div class="card text-center h-100 service-card">
             <div class="card-body">
               <i class="fas fa-briefcase service-icon"></i>
-              <h5>Business Immigration Services</h5>
-              <p>Comprehensive solutions for entrepreneurs and investors seeking to establish or expand their business internationally.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card text-center">
-            <div class="card-body">
-              <i class="fas fa-passport service-icon"></i>
               <h5>Business Visas</h5>
-              <p>Short-term business visas for meetings, conferences, negotiations, and market research activities abroad.</p>
+              <p>Expand your business globally with our expert assistance in obtaining business and work visas.</p>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card text-center">
+        </a>
+      </div>
+      
+      <!-- Student Visas -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <a href="services/student.html" class="text-decoration-none">
+          <div class="card text-center h-100 service-card">
             <div class="card-body">
-              <i class="fas fa-building service-icon"></i>
-              <h5>Long Term Work Visas</h5>
-              <p>Permanent and long-term employment visas for professionals seeking career opportunities overseas.</p>
+              <i class="fas fa-graduation-cap service-icon"></i>
+              <h5>Student Visas</h5>
+              <p>Pursue your education abroad with our comprehensive student visa application services.</p>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card text-center">
+        </a>
+      </div>
+      
+      <!-- Family Visas -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <a href="services/family.html" class="text-decoration-none">
+          <div class="card text-center h-100 service-card">
             <div class="card-body">
-              <i class="fas fa-calendar-alt service-icon"></i>
-              <h5>Short Term Work Visas</h5>
-              <p>Temporary work permits for seasonal work, internships, training programs, and project-based assignments.</p>
+              <i class="fas fa-heart service-icon"></i>
+              <h5>Family Visas</h5>
+              <p>Reunite with your loved ones through family reunification and spouse visa services.</p>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card text-center">
+        </a>
+      </div>
+      
+      <!-- Immigration Services -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <a href="services/immigration.html" class="text-decoration-none">
+          <div class="card text-center h-100 service-card">
             <div class="card-body">
-              <i class="fas fa-star service-icon"></i>
-              <h5>Talent Visas</h5>
-              <p>Specialized visas for exceptional individuals in arts, sciences, sports, and digital technology fields.</p>
+              <i class="fas fa-home service-icon"></i>
+              <h5>Immigration Services</h5>
+              <p>Complete immigration solutions including permanent residency and citizenship applications.</p>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="card text-center">
+        </a>
+      </div>
+      
+      <!-- Document Services -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <a href="services/document.html" class="text-decoration-none">
+          <div class="card text-center h-100 service-card">
             <div class="card-body">
-              <i class="fas fa-tasks service-icon"></i>
-              <h5>Other Work Visas</h5>
-              <p>Comprehensive range of employment visas including intra-company transfers, religious workers, and more.</p>
+              <i class="fas fa-file-alt service-icon"></i>
+              <h5>Document Services</h5>
+              <p>Professional document preparation, translation, and authentication services.</p>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Testimonials -->
   <section class="section-padding" style="background: #f8f9fa;">
@@ -898,7 +959,7 @@
         <div class="col-lg-2 col-md-6 mb-4">
           <h6>Quick Links</h6>
           <ul class="list-unstyled">
-            <li><a href="#home" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="#home" class="text-light text-decoration-none">Visa Updates</a></li>
             <li><a href="#about" class="text-light text-decoration-none">About Us</a></li>
             <li><a href="#services" class="text-light text-decoration-none">Services</a></li>
             <li><a href="#contact" class="text-light text-decoration-none">Contact</a></li>
