@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-  <title>One Solution Visa - Your Trusted Visa Partner</title>
+  <title>Document Services | One Solution Visa</title>
   <link rel="icon" type="image/png" href="../images/logo.png">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -79,6 +79,124 @@
     .section-padding {
       padding: 60px 0;
       scroll-margin-top: 80px;
+    }
+
+    .service-hero {
+      background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+      color: white;
+      padding: 100px 0 60px;
+      margin-top: 56px;
+      text-align: center;
+    }
+
+    .service-hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .service-hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--secondary-color);
+      margin-bottom: 1rem;
+      background: var(--light-bg);
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+
+    .feature-card {
+      border: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      height: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 1.5rem;
+      position: relative;
+    }
+
+    .step-number {
+      width: 50px;
+      height: 50px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0 auto 1rem;
+    }
+
+    .doc-type-card {
+      border: 1px solid #dee2e6;
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: center;
+      height: 100%;
+      transition: all 0.3s ease;
+      background: white;
+    }
+
+    .doc-type-card:hover {
+      border-color: var(--accent-color);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.1);
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    .table th {
+      background-color: var(--light-bg);
+      border-color: #dee2e6;
+    }
+
+    .table td {
+      vertical-align: middle;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, #f4f6fa 0%, #e9ecef 100%);
+      border-radius: 15px;
+      padding: 3rem;
+      text-align: center;
     }
 
     .footer {
@@ -178,6 +296,39 @@
         margin-right: 6px;
       }
 
+      .service-hero {
+        padding: 80px 0 40px;
+        margin-top: 56px;
+      }
+
+      .service-hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .service-hero p {
+        font-size: 1rem;
+      }
+
+      .section-padding {
+        padding: 40px 0;
+      }
+
+      .service-icon {
+        font-size: 2rem;
+        width: 60px;
+        height: 60px;
+      }
+
+      .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+      }
+
+      .cta-section {
+        padding: 2rem 1.5rem;
+      }
+
       .footer {
         padding: 30px 0 15px 0;
       }
@@ -214,6 +365,10 @@
 
       .navbar-brand {
         font-size: 1rem;
+      }
+
+      .service-hero h1 {
+        font-size: 1.6rem;
       }
     }
 
@@ -252,13 +407,306 @@
     </div>
   </nav>
 
-  <!-- YOUR PAGE CONTENT GOES HERE -->
-  <main style="margin-top: 80px; min-height: calc(100vh - 300px);">
-    <!-- Add your page content here -->
-    <div class="container section-padding">
-      <h1>Document Services</h1>
-      <p>Lorem ipsum, ...</p>
-    </div>
+  <!-- Document Services Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="service-hero">
+      <div class="container">
+        <h1>Document Services</h1>
+        <p class="lead">Professional document preparation, translation, and authentication services for all your visa and immigration needs.</p>
+        <a href="../index.html#inquiry" class="btn btn-light btn-lg mt-3">
+          <i class="fas fa-file-alt me-2"></i>Get Document Assistance
+        </a>
+      </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2 class="mb-4">Precision in Every Document</h2>
+            <p class="lead">Leave no room for errors in your visa application with our expert document services.</p>
+            <p>Proper documentation is the cornerstone of any successful visa application. Our team of certified document specialists ensures that every paper, certificate, and form meets the exact requirements of immigration authorities worldwide.</p>
+            <p>We understand that even minor errors in documentation can lead to visa rejections. That's why we offer comprehensive document services to ensure your application is flawless from start to finish.</p>
+            <div class="mt-4">
+              <h5><i class="fas fa-shield-alt text-primary me-2"></i>Why Our Document Services?</h5>
+              <ul class="list-unstyled">
+                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Certified document specialists</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>100% accuracy guarantee</li>
+                <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Fast turnaround times</li>
+                <li><i class="fas fa-check-circle text-success me-2"></i>Confidential and secure handling</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="feature-card">
+              <div class="card-body text-center">
+                <i class="fas fa-file-certificate service-icon"></i>
+                <h4>Document Accuracy Matters</h4>
+                <div class="row text-start mt-4">
+                  <div class="col-6">
+                    <h3 class="text-primary">98%</h3>
+                    <p class="small">Visa approval rate with proper documentation</p>
+                  </div>
+                  <div class="col-6">
+                    <h3 class="text-success">24-48</h3>
+                    <p class="small">Hours average processing time</p>
+                  </div>
+                </div>
+                <p class="mt-3">Proper documentation increases your visa approval chances by up to 40%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Offered -->
+    <section class="section-padding" style="background: #f8f9fa;">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2>Our Document Services</h2>
+          <p class="lead">Comprehensive solutions for all your document needs</p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="feature-card">
+              <div class="card-body text-center">
+                <i class="fas fa-edit service-icon"></i>
+                <h4>Document Preparation</h4>
+                <p>Professional preparation of all visa application forms, letters, and supporting documents.</p>
+                <ul class="list-unstyled text-start mt-3">
+                  <li><i class="fas fa-check text-success me-2"></i>Visa Application Forms</li>
+                  <li><i class="fas fa-check text-success me-2"></i>Cover Letters</li>
+                  <li><i class="fas fa-check text-success me-2"></i>Financial Documents</li>
+                  <li><i class="fas fa-check text-success me-2"></i>Personal Statements</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="feature-card">
+              <div class="card-body text-center">
+                <i class="fas fa-language service-icon"></i>
+                <h4>Translation Services</h4>
+                <p>Certified translation of documents into required languages by immigration authorities.</p>
+                <ul class="list-unstyled text-start mt-3">
+                  <li><i class="fas fa-check text-success me-2"></i>Certified Translations</li>
+                  <li><i class="fas fa-check text-success me-2"></i>Notarized Translations</li>
+                  <li><i class="fas fa-check text-success me-2"></i>Legal Document Translation</li>
+                  <li><i class="fas fa-check text-success me-2"></i>Academic Transcript Translation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="feature-card">
+              <div class="card-body text-center">
+                <i class="fas fa-stamp service-icon"></i>
+                <h4>Authentication & Legalization</h4>
+                <p>Document authentication, notarization, apostille, and embassy legalization services.</p>
+                <ul class="list-unstyled text-start mt-3">
+                  <li><i class="fas fa-check text-success me-2"></i>Notarization Services</li>
+                  <li><i class="fas fa-check text-success me-2"></i>Apostille Services</li>
+                  <li><i class="fas fa-check text-success me-2"></i>Embassy Legalization</li>
+                  <li><i class="fas fa-check text-success me-2"></i>DFA Authentication</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Document Types -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2>Common Documents We Handle</h2>
+          <p class="lead">We specialize in preparing and processing these essential documents</p>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-6 mb-4">
+            <div class="doc-type-card">
+              <i class="fas fa-passport fa-2x mb-3 text-primary"></i>
+              <h6>Passports</h5>
+              <p class="small">Copy preparation and verification</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 mb-4">
+            <div class="doc-type-card">
+              <i class="fas fa-graduation-cap fa-2x mb-3 text-warning"></i>
+              <h6>Academic Records</h5>
+              <p class="small">Transcripts, diplomas, certificates</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 mb-4">
+            <div class="doc-type-card">
+              <i class="fas fa-briefcase fa-2x mb-3 text-success"></i>
+              <h6>Employment Documents</h5>
+              <p class="small">Experience letters, pay slips</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 mb-4">
+            <div class="doc-type-card">
+              <i class="fas fa-home fa-2x mb-3 text-info"></i>
+              <h6>Property Papers</h5>
+              <p class="small">Ownership documents, leases</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 mb-4">
+            <div class="doc-type-card">
+              <i class="fas fa-university fa-2x mb-3 text-danger"></i>
+              <h6>Bank Statements</h5>
+              <p class="small">Financial proof documents</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 mb-4">
+            <div class="doc-type-card">
+              <i class="fas fa-file-medical fa-2x mb-3 text-secondary"></i>
+              <h6>Medical Reports</h5>
+              <p class="small">Health certificates, tests</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 mb-4">
+            <div class="doc-type-card">
+              <i class="fas fa-id-card fa-2x mb-3 text-primary"></i>
+              <h6>Identification</h5>
+              <p class="small">Birth certificates, IDs</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-6 mb-4">
+            <div class="doc-type-card">
+              <i class="fas fa-ring fa-2x mb-3 text-warning"></i>
+              <h6>Marriage Documents</h5>
+              <p class="small">Marriage certificates, affidavits</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Table -->
+    <section class="section-padding" style="background: #f8f9fa;">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2>Service Packages</h2>
+          <p class="lead">Flexible pricing for all your document needs</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <div class="table-responsive">
+              <table class="table table-hover table-bordered">
+                <thead class="table-primary">
+                  <tr>
+                    <th>Service Type</th>
+                    <th>Processing Time</th>
+                    <th>Price Range</th>
+                    <th>Included Services</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Document Preparation</strong></td>
+                    <td>24-48 hours</td>
+                    <td>₱1,500 - ₱5,000</td>
+                    <td>Form filling, letter writing, document review</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Translation Services</strong></td>
+                    <td>1-3 business days</td>
+                    <td>₱800 - ₱2,500 per page</td>
+                    <td>Certified translation, notarization if required</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Notarization</strong></td>
+                    <td>Same day</td>
+                    <td>₱500 - ₱2,000 per document</td>
+                    <td>Notary public services, certification</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Apostille Services</strong></td>
+                    <td>3-5 business days</td>
+                    <td>₱2,000 - ₱8,000</td>
+                    <td>DFA processing, document legalization</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Embassy Legalization</strong></td>
+                    <td>5-7 business days</td>
+                    <td>₱3,000 - ₱12,000</td>
+                    <td>Embassy submission, follow-up, collection</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Complete Package</strong></td>
+                    <td>7-10 business days</td>
+                    <td>₱8,000 - ₱20,000</td>
+                    <td>End-to-end document processing</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="text-center mt-4">
+              <p class="text-muted"><em>Prices may vary based on document complexity and urgency. Contact us for exact quotes.</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Steps -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2>Our Document Processing Steps</h2>
+          <p class="lead">Simple and efficient document handling process</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <h5>Document Submission</h5>
+              <p class="small">Submit your documents via email or in-person consultation</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <h5>Review & Assessment</h5>
+              <p class="small">Our experts review documents for completeness and requirements</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <h5>Processing</h5>
+              <p class="small">Documents are prepared, translated, or authenticated as needed</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <h5>Delivery</h5>
+              <p class="small">Processed documents delivered to you with tracking</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="cta-section">
+          <h3 class="mb-3">Ready to Get Your Documents Processed?</h3>
+          <p class="lead mb-4">Let our certified document specialists handle all your documentation needs with precision and care.</p>
+          <a href="../index.html#inquiry" class="btn btn-primary btn-lg">
+            <i class="fas fa-file-upload me-2"></i>Start Document Inquiry
+          </a>
+          <p class="mt-3 text-muted">Click above to be redirected to our main inquiry form</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -286,25 +734,25 @@
         <div class="col-lg-2 col-md-6 mb-4">
           <h6>Quick Links</h6>
           <ul class="list-unstyled">
-            <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
-            <li><a href="index.html#services" class="text-light text-decoration-none">Services</a></li>
-            <li><a href="index.html#contact" class="text-light text-decoration-none">Contact</a></li>
-            <li><a href="index.html#inquiry" class="text-light text-decoration-none">Inquiry</a></li>
+            <li><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="../index.html#services" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="../index.html#contact" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="../index.html#inquiry" class="text-light text-decoration-none">Inquiry</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
-          <h6>Services</h6>
+          <h6>Document Services</h6>
           <ul class="list-unstyled">
-            <li><a href="services/tourist.html" class="text-light text-decoration-none">Tourist Visas</a></li>
-            <li><a href="services/business.html" class="text-light text-decoration-none">Business Visas</a></li>
-            <li><a href="services/student.html" class="text-light text-decoration-none">Student Visas</a></li>
-            <li><a href="services/family.html" class="text-light text-decoration-none">Family Visas</a></li>
+            <li><a href="document.html" class="text-light text-decoration-none fw-bold">Translation Services</a></li>
+            <li><a href="document.html" class="text-light text-decoration-none">Notarization</a></li>
+            <li><a href="document.html" class="text-light text-decoration-none">Apostille Services</a></li>
+            <li><a href="document.html" class="text-light text-decoration-none">Legalization</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
           <h6>Contact Info</h6>
           <ul class="list-unstyled">
-            <li><i class="fas fa-map-marker-alt me-2"></i>Cebu City, Philippines</li>
+            <li><i class="fas fa-map-marker-alt me-2"></i>A. Gabuya Street, Cogon Pardo, Cebu City, Philippines</li>
             <li><i class="fas fa-phone me-2"></i>+63 968 707 5241</li>
             <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
           </ul>
@@ -361,6 +809,24 @@
         setTimeout(() => {
           document.body.style.opacity = '1';
         }, 100);
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          e.preventDefault();
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            const offsetTop = targetElement.offsetTop - 80;
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
       });
     });
   </script>

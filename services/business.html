@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-  <title>One Solution Visa - Your Trusted Visa Partner</title>
+  <title>Business Visa & Immigration Services - One Solution Visa</title>
   <link rel="icon" type="image/png" href="../images/logo.png">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -81,6 +81,149 @@
       scroll-margin-top: 80px;
     }
 
+    /* Business specific styles */
+    .business-hero {
+      background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+      color: white;
+      padding: 100px 0 60px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    
+    .business-hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    
+    .business-hero .lead {
+      font-size: 1.3rem;
+      opacity: 0.9;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .service-badge {
+      display: inline-block;
+      background: var(--accent-color);
+      color: white;
+      padding: 8px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+    }
+    
+    .business-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      height: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-top: 4px solid var(--accent-color);
+    }
+    
+    .business-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    
+    .business-icon {
+      font-size: 2.8rem;
+      color: var(--accent-color);
+      margin-bottom: 1.5rem;
+      background: var(--light-bg);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+    
+    .comparison-table {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .comparison-table th {
+      background: var(--secondary-color);
+      color: white;
+      font-weight: 600;
+      padding: 1.2rem;
+    }
+    
+    .comparison-table td {
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .timeline {
+      position: relative;
+      padding-left: 40px;
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--accent-color);
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2.5rem;
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -32px;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      background: var(--accent-color);
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 0 0 3px var(--accent-color);
+    }
+    
+    .requirement-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+    }
+    
+    .requirement-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .requirement-list i {
+      color: var(--accent-color);
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+    
+    .cta-business {
+      background: linear-gradient(135deg, var(--accent-color) 0%, #2980b9 100%);
+      color: white;
+      border-radius: 15px;
+      padding: 3rem;
+      margin-top: 3rem;
+    }
+
     .footer {
       background: var(--secondary-color);
       color: #fff;
@@ -155,6 +298,14 @@
       .nav-link:hover, .nav-link.active {
         background-color: rgba(255, 255, 255, 0.1);
       }
+      
+      .business-card {
+        padding: 2rem;
+      }
+      
+      .comparison-table {
+        font-size: 0.9rem;
+      }
     }
 
     /* iPhone 15 and Small Devices */
@@ -176,6 +327,40 @@
         height: 35px;
         width: 35px;
         margin-right: 6px;
+      }
+      
+      .business-hero {
+        padding: 80px 0 40px;
+      }
+      
+      .business-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .business-hero .lead {
+        font-size: 1.1rem;
+      }
+      
+      .business-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2.2rem;
+      }
+      
+      .cta-business {
+        padding: 2rem 1.5rem;
+      }
+      
+      .timeline {
+        padding-left: 30px;
+      }
+      
+      .timeline::before {
+        left: 10px;
+      }
+      
+      .timeline-item::before {
+        left: -22px;
       }
 
       .footer {
@@ -215,6 +400,14 @@
       .navbar-brand {
         font-size: 1rem;
       }
+      
+      .business-hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .business-card {
+        padding: 1.5rem;
+      }
     }
 
     /* Prevent horizontal scroll */
@@ -252,13 +445,235 @@
     </div>
   </nav>
 
-  <!-- YOUR PAGE CONTENT GOES HERE -->
+  <!-- Page Content -->
   <main style="margin-top: 80px; min-height: calc(100vh - 300px);">
-    <!-- Add your page content here -->
-    <div class="container section-padding">
-      <h1>Business Visa</h1>
-      <p>Lorem ipsum, ...</p>
-    </div>
+    <!-- Hero Section -->
+    <section class="business-hero">
+      <div class="container">
+        <span class="service-badge">Business & Work Solutions</span>
+        <h1>Business Visa & Immigration Services</h1>
+        <p class="lead">Expand your global footprint with our comprehensive business and work visa solutions. From short-term business visits to permanent establishment abroad.</p>
+        <a href="../index.html#inquiry" class="btn btn-light btn-lg mt-3">
+          <i class="fas fa-briefcase me-2"></i>Start Business Application
+        </a>
+      </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center mb-4">
+            <h2 class="mb-3">Our Business & Work Visa Solutions</h2>
+            <p class="lead">Tailored services for entrepreneurs, investors, and professionals</p>
+          </div>
+          
+          <!-- Business Immigration Services -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="business-card text-center">
+              <div class="business-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <h3>Business Immigration Services</h3>
+              <p>Complete solutions for entrepreneurs and investors looking to establish or expand businesses internationally.</p>
+              <ul class="list-unstyled text-start mt-3">
+                <li><i class="fas fa-check text-success me-2"></i>Investor Visas</li>
+                <li><i class="fas fa-check text-success me-2"></i>Entrepreneur Programs</li>
+                <li><i class="fas fa-check text-success me-2"></i>Business Establishment</li>
+                <li><i class="fas fa-check text-success me-2"></i>Investment Planning</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Business Visas -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="business-card text-center">
+              <div class="business-icon">
+                <i class="fas fa-passport"></i>
+              </div>
+              <h3>Business Visas</h3>
+              <p>Short-term visas for meetings, conferences, negotiations, and market research activities.</p>
+              <ul class="list-unstyled text-start mt-3">
+                <li><i class="fas fa-check text-success me-2"></i>Meeting & Conference Visas</li>
+                <li><i class="fas fa-check text-success me-2"></i>Training & Workshop Visas</li>
+                <li><i class="fas fa-check text-success me-2"></i>Market Research Visas</li>
+                <li><i class="fas fa-check text-success me-2"></i>Exhibition & Trade Fair Visas</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Work Visas -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="business-card text-center">
+              <div class="business-icon">
+                <i class="fas fa-suitcase"></i>
+              </div>
+              <h3>Work Visas</h3>
+              <p>Comprehensive employment visa solutions including long-term, short-term, and specialized work permits.</p>
+              <ul class="list-unstyled text-start mt-3">
+                <li><i class="fas fa-check text-success me-2"></i>Long Term Work Visas</li>
+                <li><i class="fas fa-check text-success me-2"></i>Short Term Work Visas</li>
+                <li><i class="fas fa-check text-success me-2"></i>Talent & Specialist Visas</li>
+                <li><i class="fas fa-check text-success me-2"></i>Intra-Company Transfers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="row mb-5">
+          <div class="col-12 mb-4">
+            <h3 class="text-center mb-4">Business Visa Comparison</h3>
+          </div>
+          <div class="col-12">
+            <div class="comparison-table">
+              <table class="table table-hover mb-0">
+                <thead>
+                  <tr>
+                    <th>Visa Type</th>
+                    <th>Purpose</th>
+                    <th>Duration</th>
+                    <th>Processing Time</th>
+                    <th>Ideal For</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Short-Term Business Visa</strong></td>
+                    <td>Meetings, conferences, training</td>
+                    <td>1-6 months</td>
+                    <td>5-15 days</td>
+                    <td>Business travelers, consultants</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Long-Term Work Visa</strong></td>
+                    <td>Employment, contracts</td>
+                    <td>1-5 years</td>
+                    <td>30-90 days</td>
+                    <td>Professionals, skilled workers</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Investor Visa</strong></td>
+                    <td>Business establishment</td>
+                    <td>2+ years (path to PR)</td>
+                    <td>60-180 days</td>
+                    <td>Entrepreneurs, investors</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Intra-Company Transfer</strong></td>
+                    <td>Company transfers</td>
+                    <td>1-3 years</td>
+                    <td>20-60 days</td>
+                    <td>Multinational employees</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Process Timeline -->
+        <div class="row mb-5">
+          <div class="col-12 mb-4">
+            <h3 class="text-center mb-4">Our Business Visa Process</h3>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <div class="timeline">
+              <div class="timeline-item">
+                <h4>Business Consultation</h4>
+                <p>We analyze your business objectives, travel needs, and eligibility for various business visa categories.</p>
+              </div>
+              <div class="timeline-item">
+                <h4>Document Strategy</h4>
+                <p>Develop comprehensive documentation including business plans, invitation letters, and financial proof.</p>
+              </div>
+              <div class="timeline-item">
+                <h4>Application Preparation</h4>
+                <p>Complete visa application with supporting documents tailored to specific country requirements.</p>
+              </div>
+              <div class="timeline-item">
+                <h4>Submission & Follow-up</h4>
+                <p>Submit application to appropriate embassy/consulate with regular status updates and liaison.</p>
+              </div>
+              <div class="timeline-item">
+                <h4>Interview Preparation</h4>
+                <p>Mock interviews and briefing sessions for embassy interviews if required.</p>
+              </div>
+              <div class="timeline-item">
+                <h4>Visa Collection & Briefing</h4>
+                <p>Collect visa and provide comprehensive business travel briefing.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Requirements -->
+        <div class="row mb-5">
+          <div class="col-lg-6">
+            <div class="mb-4">
+              <h3 class="mb-3">Common Requirements</h3>
+              <ul class="requirement-list list-unstyled">
+                <li><i class="fas fa-file-contract"></i> Valid passport with minimum 6 months validity</li>
+                <li><i class="fas fa-briefcase"></i> Company registration documents</li>
+                <li><i class="fas fa-envelope"></i> Business invitation letters</li>
+                <li><i class="fas fa-chart-line"></i> Financial statements and proof of funds</li>
+                <li><i class="fas fa-plane"></i> Travel itinerary and accommodation details</li>
+                <li><i class="fas fa-user-tie"></i> Professional credentials and resume</li>
+                <li><i class="fas fa-handshake"></i> Business contracts or agreements</li>
+                <li><i class="fas fa-file-invoice-dollar"></i> Tax documents and business licenses</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="mb-4">
+              <h3 class="mb-3">Our Business Visa Expertise</h3>
+              <div class="row">
+                <div class="col-6 mb-3">
+                  <div class="text-center p-3 bg-light rounded">
+                    <h2 class="text-primary mb-1">50+</h2>
+                    <p class="mb-0">Countries</p>
+                  </div>
+                </div>
+                <div class="col-6 mb-3">
+                  <div class="text-center p-3 bg-light rounded">
+                    <h2 class="text-primary mb-1">95%</h2>
+                    <p class="mb-0">Success Rate</p>
+                  </div>
+                </div>
+                <div class="col-6 mb-3">
+                  <div class="text-center p-3 bg-light rounded">
+                    <h2 class="text-primary mb-1">24-48</h2>
+                    <p class="mb-0">Hours Response</p>
+                  </div>
+                </div>
+                <div class="col-6 mb-3">
+                  <div class="text-center p-3 bg-light rounded">
+                    <h2 class="text-primary mb-1">10+</h2>
+                    <p class="mb-0">Years Experience</p>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-3">We specialize in complex business visa applications for established companies, startups, investors, and professionals across multiple industries.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-business text-center">
+          <h3 class="mb-3 text-white">Expand Your Business Globally</h3>
+          <p class="lead mb-4 text-white">Let us handle the visa complexities while you focus on growing your business internationally.</p>
+          <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+            <a href="../index.html#inquiry" class="btn btn-light btn-lg">
+              <i class="fas fa-calendar-alt me-2"></i>Schedule Business Consultation
+            </a>
+            <a href="tel:+639687075241" class="btn btn-outline-light btn-lg">
+              <i class="fas fa-phone me-2"></i>Call for Business Inquiry
+            </a>
+          </div>
+          <p class="mt-3 text-white opacity-75">Priority service available for urgent business travel needs</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -286,19 +701,19 @@
         <div class="col-lg-2 col-md-6 mb-4">
           <h6>Quick Links</h6>
           <ul class="list-unstyled">
-            <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
-            <li><a href="index.html#services" class="text-light text-decoration-none">Services</a></li>
-            <li><a href="index.html#contact" class="text-light text-decoration-none">Contact</a></li>
-            <li><a href="index.html#inquiry" class="text-light text-decoration-none">Inquiry</a></li>
+            <li><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="../index.html#services" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="../index.html#contact" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="../index.html#inquiry" class="text-light text-decoration-none">Inquiry</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
-          <h6>Services</h6>
+          <h6>Business Services</h6>
           <ul class="list-unstyled">
-            <li><a href="services/tourist.html" class="text-light text-decoration-none">Tourist Visas</a></li>
-            <li><a href="services/business.html" class="text-light text-decoration-none">Business Visas</a></li>
-            <li><a href="services/student.html" class="text-light text-decoration-none">Student Visas</a></li>
-            <li><a href="services/family.html" class="text-light text-decoration-none">Family Visas</a></li>
+            <li><a href="business.html" class="text-light text-decoration-none fw-bold">Business Immigration</a></li>
+            <li><a href="business.html" class="text-light text-decoration-none">Business Visas</a></li>
+            <li><a href="work.html" class="text-light text-decoration-none">Work Visas</a></li>
+            <li><a href="tourist.html" class="text-light text-decoration-none">Tourist Visas</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
@@ -307,6 +722,8 @@
             <li><i class="fas fa-map-marker-alt me-2"></i>Cebu City, Philippines</li>
             <li><i class="fas fa-phone me-2"></i>+63 968 707 5241</li>
             <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
+            <li><i class="fas fa-clock me-2"></i>Mon-Fri: 8AM-6PM</li>
+            <li><i class="fas fa-building me-2"></i>Sat: 9AM-3PM (Business Hours)</li>
           </ul>
         </div>
       </div>
@@ -361,6 +778,20 @@
         setTimeout(() => {
           document.body.style.opacity = '1';
         }, 100);
+      });
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
       });
     });
   </script>

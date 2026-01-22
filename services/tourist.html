@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-  <title>One Solution Visa - Your Trusted Visa Partner</title>
+  <title>Tourist Visa Services - One Solution Visa</title>
   <link rel="icon" type="image/png" href="../images/logo.png">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -79,6 +79,95 @@
     .section-padding {
       padding: 60px 0;
       scroll-margin-top: 80px;
+    }
+
+    /* Service specific styles */
+    .service-hero {
+      background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+      color: white;
+      padding: 100px 0 60px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    
+    .service-hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    
+    .service-hero .lead {
+      font-size: 1.3rem;
+      opacity: 0.9;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+    
+    .process-step {
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 2rem;
+    }
+    
+    .process-step .step-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    .benefit-card {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      height: 100%;
+      transition: transform 0.3s ease;
+    }
+    
+    .benefit-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .destination-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .destination-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .destination-flag {
+      width: 40px;
+      height: 25px;
+      object-fit: cover;
+      border-radius: 3px;
+      margin-right: 10px;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, var(--light-bg) 0%, #e8f4fc 100%);
+      border-radius: 15px;
+      padding: 3rem;
+      margin-top: 3rem;
     }
 
     .footer {
@@ -177,6 +266,26 @@
         width: 35px;
         margin-right: 6px;
       }
+      
+      .service-hero {
+        padding: 80px 0 40px;
+      }
+      
+      .service-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .service-hero .lead {
+        font-size: 1.1rem;
+      }
+      
+      .cta-section {
+        padding: 2rem 1.5rem;
+      }
+      
+      .benefit-card {
+        padding: 1.5rem;
+      }
 
       .footer {
         padding: 30px 0 15px 0;
@@ -215,6 +324,10 @@
       .navbar-brand {
         font-size: 1rem;
       }
+      
+      .service-hero h1 {
+        font-size: 1.8rem;
+      }
     }
 
     /* Prevent horizontal scroll */
@@ -252,13 +365,151 @@
     </div>
   </nav>
 
-  <!-- YOUR PAGE CONTENT GOES HERE -->
+  <!-- Page Content -->
   <main style="margin-top: 80px; min-height: calc(100vh - 300px);">
-    <!-- Add your page content here -->
-    <div class="container section-padding">
-      <h1>Tourist Visa</h1>
-      <p>Lorem ipsum, ...</p>
-    </div>
+    <!-- Hero Section -->
+    <section class="service-hero">
+      <div class="container">
+        <h1>Tourist Visa Services</h1>
+        <p class="lead">Explore the world with confidence. Our expert team handles every detail of your tourist visa application for a seamless travel experience.</p>
+        <a href="../index.html#inquiry" class="btn btn-light btn-lg mt-3">
+          <i class="fas fa-paper-plane me-2"></i>Apply Now
+        </a>
+      </div>
+    </section>
+
+    <!-- Service Details -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6">
+            <h2 class="mb-4">Why Choose Our Tourist Visa Services?</h2>
+            <p>Traveling should be about creating memories, not navigating complex visa processes. With over 10 years of experience, we specialize in making tourist visa applications straightforward and stress-free.</p>
+            <p>We handle applications for all major tourist destinations including the United States, Canada, UK, Schengen countries, Australia, Japan, and many more.</p>
+          </div>
+          <div class="col-lg-6">
+            <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tourist Travel" class="img-fluid rounded shadow">
+          </div>
+        </div>
+
+        <!-- Benefits -->
+        <div class="row mb-5">
+          <div class="col-12 mb-4">
+            <h3 class="text-center mb-4">Our Tourist Visa Advantages</h3>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="benefit-card text-center">
+              <i class="fas fa-clock feature-icon"></i>
+              <h4>Fast Processing</h4>
+              <p>Expedited processing options available for urgent travel plans with guaranteed timelines.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="benefit-card text-center">
+              <i class="fas fa-shield-alt feature-icon"></i>
+              <h4>High Success Rate</h4>
+              <p>98% success rate with thorough document verification and interview preparation.</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="benefit-card text-center">
+              <i class="fas fa-headset feature-icon"></i>
+              <h4>Dedicated Support</h4>
+              <p>Personal consultant assigned to guide you through every step of the process.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Application Process -->
+        <div class="row mb-5">
+          <div class="col-12 mb-4">
+            <h3 class="text-center mb-4">Simple 5-Step Process</h3>
+          </div>
+          <div class="col-12">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <h4>Free Consultation</h4>
+              <p>Initial assessment of your travel plans and eligibility with our visa experts.</p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <h4>Document Preparation</h4>
+              <p>We help you gather and prepare all required documents with our checklist system.</p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <h4>Application Submission</h4>
+              <p>Our team submits your application to the appropriate embassy or consulate.</p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <h4>Interview Preparation</h4>
+              <p>Mock interviews and coaching if required for your destination country.</p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">5</div>
+              <h4>Visa Collection & Briefing</h4>
+              <p>We collect your visa and provide a comprehensive travel briefing.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Popular Destinations -->
+        <div class="row mb-5">
+          <div class="col-12 mb-4">
+            <h3 class="text-center mb-4">Popular Tourist Destinations</h3>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="destination-card p-3 text-center">
+              <div class="d-flex justify-content-center align-items-center mb-3">
+                <img src="https://flagcdn.com/w320/us.png" alt="USA Flag" class="destination-flag">
+                <h5 class="mb-0">United States</h5>
+              </div>
+              <p class="text-muted small">B1/B2 Visitor Visa<br>Processing: 15-30 days</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="destination-card p-3 text-center">
+              <div class="d-flex justify-content-center align-items-center mb-3">
+                <img src="https://flagcdn.com/w320/gb.png" alt="UK Flag" class="destination-flag">
+                <h5 class="mb-0">United Kingdom</h5>
+              </div>
+              <p class="text-muted small">Standard Visitor Visa<br>Processing: 10-15 days</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="destination-card p-3 text-center">
+              <div class="d-flex justify-content-center align-items-center mb-3">
+                <img src="https://flagcdn.com/w320/ca.png" alt="Canada Flag" class="destination-flag">
+                <h5 class="mb-0">Canada</h5>
+              </div>
+              <p class="text-muted small">Visitor Visa (TRV)<br>Processing: 14-28 days</p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="destination-card p-3 text-center">
+              <div class="d-flex justify-content-center align-items-center mb-3">
+                <img src="https://flagcdn.com/w320/au.png" alt="Australia Flag" class="destination-flag">
+                <h5 class="mb-0">Australia</h5>
+              </div>
+              <p class="text-muted small">Visitor Visa (600)<br>Processing: 20-35 days</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section text-center">
+          <h3 class="mb-3">Ready to Start Your Journey?</h3>
+          <p class="lead mb-4">Contact us today for a free consultation and let us handle the visa process while you plan your adventure.</p>
+          <a href="../index.html#inquiry" class="btn btn-primary btn-lg me-3">
+            <i class="fas fa-calendar-check me-2"></i>Book Consultation
+          </a>
+          <a href="tel:+639687075241" class="btn btn-outline-primary btn-lg">
+            <i class="fas fa-phone me-2"></i>Call Now
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
@@ -286,19 +537,19 @@
         <div class="col-lg-2 col-md-6 mb-4">
           <h6>Quick Links</h6>
           <ul class="list-unstyled">
-            <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
-            <li><a href="index.html#services" class="text-light text-decoration-none">Services</a></li>
-            <li><a href="index.html#contact" class="text-light text-decoration-none">Contact</a></li>
-            <li><a href="index.html#inquiry" class="text-light text-decoration-none">Inquiry</a></li>
+            <li><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="../index.html#services" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="../index.html#contact" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="../index.html#inquiry" class="text-light text-decoration-none">Inquiry</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
           <h6>Services</h6>
           <ul class="list-unstyled">
-            <li><a href="services/tourist.html" class="text-light text-decoration-none">Tourist Visas</a></li>
-            <li><a href="services/business.html" class="text-light text-decoration-none">Business Visas</a></li>
-            <li><a href="services/student.html" class="text-light text-decoration-none">Student Visas</a></li>
-            <li><a href="services/family.html" class="text-light text-decoration-none">Family Visas</a></li>
+            <li><a href="tourist.html" class="text-light text-decoration-none">Tourist Visas</a></li>
+            <li><a href="business.html" class="text-light text-decoration-none">Business Visas</a></li>
+            <li><a href="student.html" class="text-light text-decoration-none">Student Visas</a></li>
+            <li><a href="family.html" class="text-light text-decoration-none">Family Visas</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
@@ -307,6 +558,7 @@
             <li><i class="fas fa-map-marker-alt me-2"></i>Cebu City, Philippines</li>
             <li><i class="fas fa-phone me-2"></i>+63 968 707 5241</li>
             <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
+            <li><i class="fas fa-clock me-2"></i>Mon-Sat: 9AM-6PM</li>
           </ul>
         </div>
       </div>
@@ -361,6 +613,20 @@
         setTimeout(() => {
           document.body.style.opacity = '1';
         }, 100);
+      });
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
       });
     });
   </script>
