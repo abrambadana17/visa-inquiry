@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>Graduate Visa Services | One Solution Visa</title>
+  <link rel="icon" type="image/png" href="../images/logo.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+   :root {
+  --primary-color: #ffffff;
+  --secondary-color: #2c3e50;
+  --accent-color: #3498db;
+  --light-bg: #f4f6fa;
+}
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 0.75rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      padding: 0.5rem 0;
+      background: var(--secondary-color) !important;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .navbar-logo {
+      height: 40px;
+      width: 40px;
+      margin-right: 8px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    /* Back button styling */
+    .back-btn {
+      color: white !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateX(-3px);
+    }
+
+    .back-btn i {
+      margin-right: 5px;
+    }
+
+    .section-padding {
+      padding: 60px 0;
+      scroll-margin-top: 80px;
+    }
+
+    /* Service Hero Section with Background Image */
+    .service-hero {
+      background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), 
+                  url('../images/graduatestudent.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 120px 0 80px;
+      margin-bottom: 40px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .service-hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .service-hero .lead {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .graduate-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+    
+    .content-nav {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /* Custom scrollbar for content-nav */
+    .content-nav::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .content-nav::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb {
+      background: var(--accent-color);
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
+    }
+    
+    .content-nav h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .nav-links a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      display: block;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+    
+    .nav-links a:hover {
+      background: var(--light-bg);
+      border-left: 3px solid var(--accent-color);
+      transform: translateX(5px);
+    }
+    
+    .content-section {
+      background: white;
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .content-section h2 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .content-section h3 {
+      color: var(--secondary-color);
+      margin: 2rem 0 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .content-section h4 {
+      color: var(--secondary-color);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .content-section p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    
+    .content-section ul, .content-section ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    .content-section li {
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-left: 4px solid var(--accent-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .info-box {
+      background: linear-gradient(135deg, #e8f4fc 0%, #d4eaf7 100%);
+      border-left: 4px solid var(--secondary-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .warning-box {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      border-left: 4px solid #ffc107;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, var(--light-bg) 0%, #e8f4fc 100%);
+      border-radius: 15px;
+      padding: 3rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--secondary-color);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-light:hover {
+      background: var(--light-bg);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+    }
+
+    .footer {
+      background: var(--secondary-color);
+      color: #fff;
+      padding: 40px 0 20px 0;
+      position: relative;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    /* Mobile Navigation Improvements */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: rgba(44, 62, 80, 0.98);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0.4rem 0.6rem;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
+      }
+
+      .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin: 0.25rem 0;
+      }
+
+      .nav-link:hover, .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      
+      .content-nav {
+        position: static;
+        margin-bottom: 2rem;
+      }
+    }
+
+    /* iPhone 15 and Small Devices */
+    @media (max-width: 430px) {
+      .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .navbar {
+        padding: 0.5rem 0;
+      }
+
+      .navbar-brand {
+        font-size: 1.1rem;
+      }
+
+      .navbar-logo {
+        height: 35px;
+        width: 35px;
+        margin-right: 6px;
+      }
+      
+      .service-hero {
+        padding: 100px 0 60px;
+        background-attachment: scroll;
+      }
+      
+      .service-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .service-hero .lead {
+        font-size: 1.1rem;
+      }
+      
+      .graduate-icon {
+        font-size: 2.5rem;
+      }
+      
+      .content-section, .content-nav {
+        padding: 1.5rem;
+      }
+      
+      .cta-section {
+        padding: 2rem 1.5rem;
+      }
+
+      .footer {
+        padding: 30px 0 15px 0;
+      }
+
+      .footer h5, .footer h6 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .footer p, .footer li {
+        font-size: 0.9rem;
+      }
+
+      .footer .col-lg-4, 
+      .footer .col-lg-2, 
+      .footer .col-lg-3,
+      .footer .col-md-6 {
+        margin-bottom: 1.5rem;
+      }
+
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Very Small Devices */
+    @media (max-width: 375px) {
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .navbar-brand {
+        font-size: 1rem;
+      }
+      
+      .service-hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Prevent horizontal scroll */
+    .row {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
+    .row > * {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/logo.png" alt="One Solution Visa Logo" class="navbar-logo">
+        OneSolutionVisa
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link back-btn" href="../services/student.html">
+              <i class="fas fa-arrow-left me-1"></i>Back to Student Visa
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Graduate Visa Content -->
+  <main style="margin-top: 80px; min-height: calc(100vh - 300px);">
+    <!-- Hero Section -->
+    <section class="service-hero">
+      <div class="container">
+        <div class="graduate-icon">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+        <h1>Graduate Visa: Eligibility, Conditions & Application Process</h1>
+        <p class="lead">The Graduate Visa is a post-study work route that allows international students who have successfully completed an eligible UK degree to remain in the UK for up to two years, or up to three years for doctoral graduates, to work or seek employment at any skill level.</p>
+        <a href="../index.html#inquiry" class="btn btn-light btn-lg mt-3">
+          <i class="fas fa-user-graduate me-2"></i>Start Your Application
+        </a>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row">
+          <!-- Navigation Sidebar -->
+          <div class="col-lg-4 mb-4">
+            <div class="content-nav">
+              <h3><i class="fas fa-list-alt me-2"></i>Contents</h3>
+              <ul class="nav-links">
+                <li><a href="#overview">UK Graduate Visa Overview</a></li>
+                <li><a href="#section1">1. Graduate Visa Requirements</a></li>
+                <li><a href="#section2">2. UK Degree Completion Requirements</a></li>
+                <li><a href="#section3">3. Study at Compliant UK Provider</a></li>
+                <li><a href="#section4">4. Student Permission Period</a></li>
+                <li><a href="#section5">5. Applying from Within the UK</a></li>
+                <li><a href="#section6">6. Previous Graduate Visa Restrictions</a></li>
+                <li><a href="#section7">7. Suitability Criteria</a></li>
+                <li><a href="#section8">8. Is Sponsorship Required?</a></li>
+                <li><a href="#section9">9. How to Apply</a></li>
+                <li><a href="#section10">10. Fees & Health Surcharge</a></li>
+                <li><a href="#section11">11. Length of Stay</a></li>
+                <li><a href="#section12">12. Can the Visa Be Extended?</a></li>
+                <li><a href="#section13">13. Switching to Work Visa</a></li>
+                <li><a href="#section14">14. Leads to Settlement?</a></li>
+                <li><a href="#section15">15. Conditions & Work Restrictions</a></li>
+                <li><a href="#section16">16. Impact on Long-Term Plans</a></li>
+                <li><a href="#section17">17. Can Dependants Join?</a></li>
+                <li><a href="#section18">18. Common Refusal Mistakes</a></li>
+                <li><a href="#section19">19. Future Changes</a></li>
+                <li><a href="#section20">20. How We Can Assist</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="col-lg-8">
+            <!-- Overview Section -->
+            <div id="overview" class="content-section">
+              <h2>UK Graduate Visa Overview</h2>
+              <p>The Graduate Visa is a post-study work route that allows international students who have successfully completed an eligible UK degree to remain in the UK for up to two years, or up to three years for doctoral graduates, to work or seek employment at any skill level.</p>
+              
+              <div class="info-box">
+                <p><strong>Important:</strong> While the Graduate Visa does not provide a direct pathway to settlement (Indefinite Leave to Remain), it offers a valuable opportunity to gain UK work experience. Where appropriate, individuals on the Graduate Immigration Route may switch to an immigration route that leads to settlement, such as the Skilled Worker, Global Talent, or Innovator Founder route.</p>
+              </div>
+            </div>
+
+            <!-- Section 1 -->
+            <div id="section1" class="content-section">
+              <h3>1. Graduate Visa Requirements for International Students</h3>
+              <p>To qualify for a Graduate Visa, applicants must satisfy UK Visas & Immigration that they:</p>
+              <ul>
+                <li>Have successfully completed a UK degree or another eligible qualification</li>
+                <li>Studied at a UK Higher Education Provider that holds student sponsor status and maintains a track record of compliance</li>
+                <li>Have held permission as a Student for the relevant qualification and met the minimum study period requirements</li>
+                <li>Are applying from within the UK and hold valid Student leave at the time of application</li>
+                <li>Have not previously been granted permission under the Doctorate Extension Scheme (DES) or the Graduate route</li>
+                <li>Do not fall for refusal under suitability grounds in the Immigration Rules</li>
+              </ul>
+              
+              <div class="highlight-box">
+                <p><strong>Note:</strong> The precise requirements may vary depending on individual circumstances, and it is advisable to seek expert legal advice to ensure compliance.</p>
+              </div>
+            </div>
+
+            <!-- Section 2 -->
+            <div id="section2" class="content-section">
+              <h3>2. UK Degree Completion Requirements for a Graduate Visa</h3>
+              <p>To qualify for the Graduate Immigration Route, applicants must have completed a UK degree or another eligible qualification at the required level. Eligible qualifications include:</p>
+              <ul>
+                <li>A UK bachelor's degree</li>
+                <li>A UK postgraduate degree, such as a master's or doctorate</li>
+                <li>A professional qualification or diploma requiring study at UK bachelor's degree level or above, in a regulated profession under UK law or a UK public authority</li>
+              </ul>
+              
+              <p>In each case, the qualification must be awarded by a UK Higher Education Provider with a track record of compliance and must be formally conferred prior to the Graduate Visa application.</p>
+              
+              <div class="info-box">
+                <p><strong>Additional Eligibility:</strong> Applicants may also be eligible if, after completing an eligible qualification during their most recent Student leave, they were sponsored to serve as a Student Union Sabbatical Officer.</p>
+              </div>
+            </div>
+
+            <!-- Section 3 -->
+            <div id="section3" class="content-section">
+              <h3>3. Study at a Compliant UK Higher Education Provider</h3>
+              <p>To qualify for a Graduate Visa, the qualification must have been obtained from a UK Higher Education Provider that holds a student sponsor licence and is recognised by the Home Office as having a track record of compliance.</p>
+              
+              <div class="warning-box">
+                <p><strong>Important:</strong> Only institutions that meet these criteria are authorised to report successful course completion to UK Visas & Immigration, which is mandatory for the Graduate Immigration Route.</p>
+              </div>
+            </div>
+
+            <!-- Section 4 -->
+            <div id="section4" class="content-section">
+              <h3>4. Graduate Visa Student Permission Period Requirements</h3>
+              <p>Applicants must have held Student permission for a minimum period and must have completed a substantial portion of their studies physically in the UK.</p>
+              
+              <h4>For courses lasting 12 months or more:</h4>
+              <p>Applicants must have held Student permission for at least 12 months and studied in the UK for that period.</p>
+              
+              <h4>For courses shorter than 12 months:</h4>
+              <p>Applicants must have completed the entire course in the UK on a Student visa.</p>
+            </div>
+
+            <!-- Section 5 -->
+            <div id="section5" class="content-section">
+              <h3>5. Applying from Within the UK with a Valid Student Visa</h3>
+              <p>The Graduate route is only available to applicants who are physically present in the UK and who hold valid Student leave at the time of application.</p>
+              
+              <div class="warning-box">
+                <p><strong>Warning:</strong> Applications made from outside the UK or after Student leave has expired will be refused, and overstaying may adversely affect the applicant's immigration record.</p>
+              </div>
+            </div>
+
+            <!-- Section 6 -->
+            <div id="section6" class="content-section">
+              <h3>6. Restrictions on Previous Graduate or Doctorate Scheme Visas</h3>
+              <p>Applicants who have previously been granted leave under the Doctorate Extension Scheme (DES) or the Graduate route are not eligible to apply again. The Graduate Visa is intended as a one-time opportunity for recent graduates to remain in the UK for a limited period.</p>
+              
+              <div class="info-box">
+                <p><strong>Important:</strong> Applicants must consider alternative immigration options to remain in the UK lawfully if they have previously used these routes.</p>
+              </div>
+            </div>
+
+            <!-- Section 7 -->
+            <div id="section7" class="content-section">
+              <h3>7. Graduate Visa Suitability Criteria under Immigration Rules</h3>
+              <p>Graduate Visa applications must not fall for refusal under suitability grounds in the Immigration Rules, which include factors such as:</p>
+              <ul>
+                <li>Criminality or serious misconduct</li>
+                <li>Breaches of immigration law, including deception or overstaying</li>
+                <li>Non-payment of NHS debt or outstanding Home Office litigation costs</li>
+              </ul>
+              
+              <div class="warning-box">
+                <p><strong>Serious Consequences:</strong> A refusal on suitability grounds may carry serious consequences and impact future applications.</p>
+              </div>
+            </div>
+
+            <!-- Section 8 -->
+            <div id="section8" class="content-section">
+              <h3>8. Is Sponsorship Required for the Graduate Visa?</h3>
+              <p>The Graduate Visa is an unsponsored route. Applicants do not need a job offer or a Certificate of Sponsorship (CoS) to qualify.</p>
+            </div>
+
+            <!-- Section 9 -->
+            <div id="section9" class="content-section">
+              <h3>9. How to Apply for a UK Graduate Visa</h3>
+              <p>Applicants must submit their Graduate Visa application before their Student leave expires, and only after their education provider has confirmed course completion to the Home Office.</p>
+              
+              <h4>Application Process:</h4>
+              <ul>
+                <li>Applications are made online from within the UK</li>
+                <li>Require submission of supporting documents, including the CAS reference from the Student visa application</li>
+                <li>Identity verification is typically completed through the UK Immigration: ID Check app or via a biometric appointment at a UKVCAS centre if necessary</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>Processing Time:</strong> The Home Office aims to process Graduate Visa applications within eight weeks of the application date. Applicants are advised to apply early and avoid non-essential travel until a decision is received.</p>
+              </div>
+            </div>
+
+            <!-- Section 10 -->
+            <div id="section10" class="content-section">
+              <h3>10. Graduate Visa Fees and the Immigration Health Surcharge</h3>
+              <p>Graduate Visa applicants must pay the Home Office application fee and the Immigration Health Surcharge (IHS).</p>
+              
+              <h4>As of July 2025:</h4>
+              <ul>
+                <li><strong>Application fee:</strong> £880</li>
+                <li><strong>Immigration Health Surcharge:</strong> £1,035 per year of leave granted</li>
+              </ul>
+              
+              <h4>Total Costs:</h4>
+              <ul>
+                <li><strong>Two-year Graduate Visa:</strong> £880 + £2,070 = £2,950</li>
+                <li><strong>Three-year Graduate Visa:</strong> £880 + £3,105 = £3,985</li>
+              </ul>
+              
+              <div class="warning-box">
+                <p><strong>Important:</strong> Both fees must be paid in full at the time of application, and applicants should verify the current fee levels before applying.</p>
+              </div>
+            </div>
+
+            <!-- Section 11 -->
+            <div id="section11" class="content-section">
+              <h3>11. Length of Stay under the Graduate Immigration Route</h3>
+              <ul>
+                <li><strong>Bachelor's or Master's degree graduates:</strong> May remain in the UK for two years</li>
+                <li><strong>Doctoral graduates:</strong> May remain for three years</li>
+              </ul>
+            </div>
+
+            <!-- Section 12 -->
+            <div id="section12" class="content-section">
+              <h3>12. Can a UK Graduate Visa Be Extended?</h3>
+              <div class="info-box">
+                <p><strong>Important:</strong> It is not possible to extend leave under the Graduate Immigration Route.</p>
+              </div>
+            </div>
+
+            <!-- Section 13 -->
+            <div id="section13" class="content-section">
+              <h3>13. Switching to a Work Visa After the Graduate Visa Expires</h3>
+              <p>Applicants wishing to remain in the UK after their Graduate Visa expires must switch to another immigration route before their leave ends.</p>
+              
+              <h4>Common options include:</h4>
+              <ul>
+                <li>Skilled Worker route</li>
+                <li>Global Talent route</li>
+                <li>Innovator Founder route</li>
+              </ul>
+              
+              <div class="highlight-box">
+                <p><strong>Planning Required:</strong> Each route has specific requirements, including job offers, endorsements, and eligibility criteria. It is advisable to plan early and seek expert legal advice to ensure a smooth transition.</p>
+              </div>
+            </div>
+
+            <!-- Section 14 -->
+            <div id="section14" class="content-section">
+              <h3>14. Does the Graduate Visa Lead to Settlement in the UK?</h3>
+              <p>The Graduate Visa does not directly lead to settlement (ILR). However, it provides an opportunity to gain work experience, and holders may switch to settlement routes if they meet the requirements.</p>
+              
+              <div class="info-box">
+                <p><strong>Additional Benefit:</strong> Time spent on the Graduate route may also contribute to the 10-year long residence route for settlement.</p>
+              </div>
+            </div>
+
+            <!-- Section 15 -->
+            <div id="section15" class="content-section">
+              <h3>15. Graduate Visa Conditions and Work Restrictions</h3>
+              <p>Graduate Visa holders may work in the UK without restriction on the type of employment and are not subject to minimum salary requirements.</p>
+              
+              <h4>Permitted Activities:</h4>
+              <ul>
+                <li>May be employed, self-employed, or engage in voluntary work</li>
+                <li>Can change jobs without notifying the Home Office</li>
+                <li>May study further, provided the course does not require Student sponsorship</li>
+              </ul>
+              
+              <h4>Restrictions:</h4>
+              <ul>
+                <li>Not permitted to work as professional sportspersons or sports coaches</li>
+                <li>Public funds are not accessible under the Graduate route</li>
+              </ul>
+            </div>
+
+            <!-- Section 16 -->
+            <div id="section16" class="content-section">
+              <h3>16. Impact of the Graduate Visa on Long-Term UK Immigration Plans</h3>
+              <ul>
+                <li><strong>Settlement under work-based routes:</strong> Time spent on the Graduate Visa does not count towards the qualifying period for ILR under work-based routes</li>
+                <li><strong>Switching routes:</strong> To qualify for settlement, holders must switch into another route that leads to ILR, and the qualifying period begins from the date leave is granted under the new route</li>
+                <li><strong>10-year long residence:</strong> Time spent on the Graduate route is considered lawful residence and may count towards the 10-year long residence route</li>
+              </ul>
+            </div>
+
+            <!-- Section 17 -->
+            <div id="section17" class="content-section">
+              <h3>17. Can Dependants Join You on a Graduate Visa?</h3>
+              <ul>
+                <li><strong>Existing dependants:</strong> Dependants already in the UK with permission as the main applicant's dependent may extend their stay when the main applicant applies for the Graduate Visa</li>
+                <li><strong>New dependants:</strong> New dependants are generally not permitted, except where a dependent child is born in the UK during Student or Graduate leave</li>
+              </ul>
+            </div>
+
+            <!-- Section 18 -->
+            <div id="section18" class="content-section">
+              <h3>18. Graduate Visa Refusals: Common Mistakes to Avoid</h3>
+              <p>Graduate Visa applications can be refused for reasons such as:</p>
+              <ul>
+                <li>Applying after Student leave has expired</li>
+                <li>Applying from outside the UK</li>
+                <li>Submitting the application before course completion has been confirmed</li>
+                <li>Failing to complete a qualifying course</li>
+                <li>Suitability issues</li>
+                <li>Providing incomplete documentation</li>
+              </ul>
+              
+              <div class="highlight-box">
+                <p><strong>Recommendation:</strong> Applicants should ensure they meet all requirements and submit a complete application to avoid refusal.</p>
+              </div>
+            </div>
+
+            <!-- Section 19 -->
+            <div id="section19" class="content-section">
+              <h3>19. Future Changes to the UK Graduate Immigration Route</h3>
+              <p>The Graduate route was introduced in July 2021 and remains subject to periodic review.</p>
+              
+              <h4>Recent and Potential Changes:</h4>
+              <ul>
+                <li><strong>Effective from 16 July 2025:</strong> Changes to dependent partner eligibility</li>
+                <li><strong>Under Discussion:</strong> Possible reduction in Graduate Visa duration (no such change has been implemented as of July 2025)</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>Stay Informed:</strong> Applicants should remain informed of potential policy updates and seek legal advice when planning their immigration pathway.</p>
+              </div>
+            </div>
+
+            <!-- Section 20 -->
+            <div id="section20" class="content-section">
+              <h3>20. How Our Immigration Barristers Can Assist</h3>
+              <p>The Graduate Immigration route allows international students to remain in the UK for two or three years after completing an eligible course. However, applying for a Graduate Visa requires careful attention to eligibility, timing, and documentation.</p>
+              
+              <div class="highlight-box">
+                <h4>Our Services Include:</h4>
+                <ul>
+                  <li>Confirming eligibility for the Graduate Visa</li>
+                  <li>Advising on timing and application strategy</li>
+                  <li>Preparing and submitting complete applications</li>
+                  <li>Responding to Home Office enquiries on your behalf</li>
+                </ul>
+              </div>
+              
+              <h4>Post-Visa Support:</h4>
+              <p>After the visa is granted, we can advise on:</p>
+              <ul>
+                <li>Work rights and conditions under the Graduate Visa</li>
+                <li>Switching to other immigration routes before expiry</li>
+                <li>Long-term immigration planning for settlement</li>
+              </ul>
+              
+              <h4>Employment Transition Support:</h4>
+              <p>For graduates securing employment with a UK sponsor, we can also provide:</p>
+              <ul>
+                <li>Guidance on switching to the Skilled Worker route</li>
+                <li>Liaising with employers to ensure a smooth transition</li>
+                <li>Comprehensive immigration strategy planning</li>
+              </ul>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+              <h3 class="mb-3">Ready to Apply for Your UK Graduate Visa?</h3>
+              <p class="lead mb-4">Let our expert team guide you through the graduate visa application process and maximize your chances of approval.</p>
+              <a href="../index.html#inquiry" class="btn btn-primary btn-lg">
+                <i class="fas fa-user-graduate me-2"></i>Start Your Application
+              </a>
+              <p class="mt-3 text-muted">Click above to be redirected to our main inquiry form</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h5>One Solution Visa™</h5>
+          <p>Your trusted partner for all visa and immigration services. We make your travel dreams come true with professional expertise and personalized service.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/visaconnect" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="../index.html#services" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="../index.html#contact" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="../index.html#inquiry" class="text-light text-decoration-none">Inquiry</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Graduate Services</h6>
+          <ul class="list-unstyled">
+            <li><a href="graduate.html" class="text-light text-decoration-none fw-bold">UK Graduate Visa</a></li>
+            <li><a href="ukstudent.html" class="text-light text-decoration-none">UK Student Visa</a></li>
+            <li><a href="student.html" class="text-light text-decoration-none">Work Visa Transition</a></li>
+            <li><a href="student.html" class="text-light text-decoration-none">Settlement Planning</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Contact Info</h6>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt me-2"></i>A. Gabuya Street, Cogon Pardo, Cebu City, Philippines</li>
+            <li><i class="fas fa-phone me-2"></i>+63 968 707 5241</li>
+            <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
+            <li><i class="fas fa-clock me-2"></i>Mon-Sat: 9AM-6PM</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0">&copy; 2025 One Solution Visa. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0">
+            <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+            <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Navigation Scripts
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const isClickInside = navbarToggler.contains(event.target) || 
+                              navbarCollapse.contains(event.target);
+        
+        if (!isClickInside && navbarCollapse.classList.contains('show')) {
+          navbarToggler.click();
+        }
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      
+      // Add loading animation on page load
+      window.addEventListener('load', () => {
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease-in-out';
+        setTimeout(() => {
+          document.body.style.opacity = '1';
+        }, 100);
+      });
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Highlight active nav link
+      const sections = document.querySelectorAll('.content-section');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      function setActiveNavLink() {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (window.scrollY >= sectionTop - 150) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', setActiveNavLink);
+      setActiveNavLink();
+    });
+  </script>
+</body>
+</html>

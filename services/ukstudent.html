@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>UK Student Visa Services | One Solution Visa</title>
+  <link rel="icon" type="image/png" href="../images/logo.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+   :root {
+  --primary-color: #ffffff;
+  --secondary-color: #2c3e50;
+  --accent-color: #3498db;
+  --light-bg: #f4f6fa;
+}
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 0.75rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      padding: 0.5rem 0;
+      background: var(--secondary-color) !important;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .navbar-logo {
+      height: 40px;
+      width: 40px;
+      margin-right: 8px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    /* Back button styling */
+    .back-btn {
+      color: white !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateX(-3px);
+    }
+
+    .back-btn i {
+      margin-right: 5px;
+    }
+
+    .section-padding {
+      padding: 60px 0;
+      scroll-margin-top: 80px;
+    }
+
+    /* Service Hero Section with Background Image */
+    .service-hero {
+      background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), 
+                  url('../images/ukstudent.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 120px 0 80px;
+      margin-bottom: 40px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .service-hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .service-hero .lead {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .student-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+    
+    .content-nav {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /* Custom scrollbar for content-nav */
+    .content-nav::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .content-nav::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb {
+      background: var(--accent-color);
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
+    }
+    
+    .content-nav h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .nav-links a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      display: block;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+    
+    .nav-links a:hover {
+      background: var(--light-bg);
+      border-left: 3px solid var(--accent-color);
+      transform: translateX(5px);
+    }
+    
+    .content-section {
+      background: white;
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .content-section h2 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .content-section h3 {
+      color: var(--secondary-color);
+      margin: 2rem 0 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .content-section h4 {
+      color: var(--secondary-color);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .content-section p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    
+    .content-section ul, .content-section ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    .content-section li {
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-left: 4px solid var(--accent-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .info-box {
+      background: linear-gradient(135deg, #e8f4fc 0%, #d4eaf7 100%);
+      border-left: 4px solid var(--secondary-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, var(--light-bg) 0%, #e8f4fc 100%);
+      border-radius: 15px;
+      padding: 3rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--secondary-color);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-light:hover {
+      background: var(--light-bg);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+    }
+
+    .footer {
+      background: var(--secondary-color);
+      color: #fff;
+      padding: 40px 0 20px 0;
+      position: relative;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    /* Mobile Navigation Improvements */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: rgba(44, 62, 80, 0.98);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0.4rem 0.6rem;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
+      }
+
+      .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin: 0.25rem 0;
+      }
+
+      .nav-link:hover, .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      
+      .content-nav {
+        position: static;
+        margin-bottom: 2rem;
+      }
+    }
+
+    /* iPhone 15 and Small Devices */
+    @media (max-width: 430px) {
+      .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .navbar {
+        padding: 0.5rem 0;
+      }
+
+      .navbar-brand {
+        font-size: 1.1rem;
+      }
+
+      .navbar-logo {
+        height: 35px;
+        width: 35px;
+        margin-right: 6px;
+      }
+      
+      .service-hero {
+        padding: 100px 0 60px;
+        background-attachment: scroll;
+      }
+      
+      .service-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .service-hero .lead {
+        font-size: 1.1rem;
+      }
+      
+      .student-icon {
+        font-size: 2.5rem;
+      }
+      
+      .content-section, .content-nav {
+        padding: 1.5rem;
+      }
+      
+      .cta-section {
+        padding: 2rem 1.5rem;
+      }
+
+      .footer {
+        padding: 30px 0 15px 0;
+      }
+
+      .footer h5, .footer h6 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .footer p, .footer li {
+        font-size: 0.9rem;
+      }
+
+      .footer .col-lg-4, 
+      .footer .col-lg-2, 
+      .footer .col-lg-3,
+      .footer .col-md-6 {
+        margin-bottom: 1.5rem;
+      }
+
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Very Small Devices */
+    @media (max-width: 375px) {
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .navbar-brand {
+        font-size: 1rem;
+      }
+      
+      .service-hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Prevent horizontal scroll */
+    .row {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
+    .row > * {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/logo.png" alt="One Solution Visa Logo" class="navbar-logo">
+        OneSolutionVisa
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link back-btn" href="../services/student.html">
+              <i class="fas fa-arrow-left me-1"></i>Back to Student Visa
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Student Visa Content -->
+  <main style="margin-top: 80px; min-height: calc(100vh - 300px);">
+    <!-- Hero Section -->
+    <section class="service-hero">
+      <div class="container">
+        <div class="student-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h1>UK Student Visa: Eligibility, Requirements & Application Process</h1>
+        <p class="lead">The UK Student Visa is designed for individuals aged 16 or over who intend to pursue further or higher education in the United Kingdom, such as at a college or university.</p>
+        <a href="../index.html#inquiry" class="btn btn-light btn-lg mt-3">
+          <i class="fas fa-graduation-cap me-2"></i>Start Your Application
+        </a>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row">
+          <!-- Navigation Sidebar -->
+          <div class="col-lg-4 mb-4">
+            <div class="content-nav">
+              <h3><i class="fas fa-list-alt me-2"></i>Contents</h3>
+              <ul class="nav-links">
+                <li><a href="#overview">UK Student Visa Overview</a></li>
+                <li><a href="#section1">1. Requirements for a UK Student Visa</a></li>
+                <li><a href="#section2">2. Approved Courses Eligible</a></li>
+                <li><a href="#section3">3. Who Else Can Apply?</a></li>
+                <li><a href="#section4">4. Place of Study Rules</a></li>
+                <li><a href="#section5">5. Confirmation of Acceptance (CAS)</a></li>
+                <li><a href="#section6">6. Financial Requirement</a></li>
+                <li><a href="#section7">7. Scholarships & Sponsorship</a></li>
+                <li><a href="#section8">8. English Language Requirement</a></li>
+                <li><a href="#section9">9. Genuine Student Requirement</a></li>
+                <li><a href="#section10">10. Credibility Interview Preparation</a></li>
+                <li><a href="#section11">11. Common Refusal Reasons</a></li>
+                <li><a href="#section12">12. Conditions & Responsibilities</a></li>
+                <li><a href="#section13">13. Changing Courses or Sponsors</a></li>
+                <li><a href="#section14">14. Sponsorship Withdrawals</a></li>
+                <li><a href="#section15">15. Switching into Student Route</a></li>
+                <li><a href="#section16">16. How to Apply</a></li>
+                <li><a href="#section17">17. Processing Times</a></li>
+                <li><a href="#section18">18. Travelling to the UK</a></li>
+                <li><a href="#section19">19. Length of Stay</a></li>
+                <li><a href="#section20">20. Working in the UK</a></li>
+                <li><a href="#section21">21. Support for Disabilities</a></li>
+                <li><a href="#section22">22. Rules for Dependants</a></li>
+                <li><a href="#section23">23. Child Student Visa</a></li>
+                <li><a href="#section24">24. Extending Your Stay</a></li>
+                <li><a href="#section25">25. Leads to Settlement?</a></li>
+                <li><a href="#section26">26. Switching to Work Visa</a></li>
+                <li><a href="#section27">27. How We Can Help</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="col-lg-8">
+            <!-- Overview Section -->
+            <div id="overview" class="content-section">
+              <h2>UK Student Visa Overview</h2>
+              <p>The UK Student Visa is designed for individuals aged 16 or over who intend to pursue further or higher education in the United Kingdom, such as at a college or university.</p>
+              
+              <div class="info-box">
+                <p><strong>Note:</strong> If you are aged between 4 and 17 and plan to study at an independent school in the UK, you should apply for a Child Student Visa instead of a Student Visa.</p>
+              </div>
+            </div>
+
+            <!-- Section 1 -->
+            <div id="section1" class="content-section">
+              <h3>1. Requirements for a UK Student Visa</h3>
+              <p>To qualify for a UK Student Visa, applicants must demonstrate to UK Visas and Immigration (UKVI) that they meet the following criteria:</p>
+              <ul>
+                <li>You are aged 16 or over</li>
+                <li>You have received an unconditional offer of a place on a course of study from a student sponsor holding a valid sponsor licence</li>
+                <li>You can read, write, speak, and understand English to at least CEFR Level B2 (for degree-level or above courses) or CEFR Level B1 (for courses below degree level)</li>
+                <li>You have sufficient funds to cover your course fees and living expenses in the UK, without accessing public funds</li>
+                <li>If you are aged 16 or 17, you have obtained written consent from your parent(s) or legal guardian to live and study in the UK</li>
+              </ul>
+              <div class="highlight-box">
+                <p><strong>Important:</strong> The specific requirements may vary depending on individual circumstances. It is advisable to seek guidance from an immigration lawyer to ensure that your application is prepared accurately and in compliance with the Immigration Rules.</p>
+              </div>
+            </div>
+
+            <!-- Section 2 -->
+            <div id="section2" class="content-section">
+              <h3>2. Approved Courses Eligible for a UK Student Visa</h3>
+              <p>To qualify for a UK Student Visa, applicants must have an unconditional offer from a licensed student sponsor to study on an eligible course. The Immigration Rules specify the types of courses that meet the eligibility criteria:</p>
+              
+              <h4>Full-time courses at degree level or above</h4>
+              <p>Applicants may apply if enrolled on a full-time course at RQF level 6 or above in England, Wales, and Northern Ireland, or SCQF level 9 or above in Scotland. This includes undergraduate and postgraduate degrees, provided the course leads to an approved qualification.</p>
+              
+              <h4>Full-time courses below degree level</h4>
+              <p>Applicants may qualify if their course involves at least 15 hours per week of organised classroom-based daytime study (between 08:00 and 18:00, Monday to Friday) and leads to an approved qualification.</p>
+              
+              <h4>Pre-sessional English language courses</h4>
+              <p>Full-time pre-sessional English language courses are eligible if taught at a level equivalent to CEFR B2 or above. Shorter English language courses below this level may require a Short-term Study visa.</p>
+              
+              <h4>Part-time postgraduate courses</h4>
+              <p>Part-time postgraduate courses at RQF level 7 or above (or SCQF level 11 or above) may be eligible if they lead to an approved qualification and the CAS is issued by a higher education provider with a track record of compliance.</p>
+              
+              <h4>Other eligible courses include:</h4>
+              <ul>
+                <li>Overseas higher education courses recognised by Ecctis as equivalent to UK higher education courses</li>
+                <li>ACCA qualifications (Association of Certified Chartered Accountants)</li>
+                <li>ACCA Foundations in Accountancy programmes</li>
+                <li>Aviation licences, ratings, or certificates issued by the UK Civil Aviation Authority</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>Note:</strong> Courses outside these categories will not normally qualify for a UK Student Visa.</p>
+              </div>
+            </div>
+
+            <!-- Section 3 -->
+            <div id="section3" class="content-section">
+              <h3>3. Who Else Can Apply for a UK Student Visa?</h3>
+              <p>You may also be eligible to apply for a UK Student Visa if you are:</p>
+              <ul>
+                <li>Taking up a full-time, elected position as a Student Union Sabbatical Officer at a UK educational institution holding a Student sponsor licence</li>
+                <li>Currently in the UK with permission as a Student (or under the former Tier 4 (General) Student route) and applying to complete a course, undertake a new course, or extend your stay for academic progression purposes</li>
+              </ul>
+              <div class="info-box">
+                <p><strong>Important Note:</strong> The Doctorate Extension Scheme has closed and has been replaced by the Graduate Route. If you have completed a PhD in the UK and wish to remain for work purposes, you may consider applying under the Graduate Visa route instead.</p>
+              </div>
+            </div>
+
+            <!-- Section 4 -->
+            <div id="section4" class="content-section">
+              <h3>4. UK Student Visa: Place of Study Rules and Requirements</h3>
+              <p>Unless undertaking a permitted work placement, participating in a study abroad programme, or enrolled on a pre-sessional course, all teaching and study that form part of the course must take place at the premises of the student sponsor or at a partner institution named on the sponsor's licence.</p>
+            </div>
+
+            <!-- Section 5 -->
+            <div id="section5" class="content-section">
+              <h3>5. Confirmation of Acceptance for Studies (CAS): What You Need to Know</h3>
+              <p>Once an unconditional offer has been made, the education provider (a licensed student sponsor) will issue a Confirmation of Acceptance for Studies (CAS) and provide a unique CAS reference number. The Student Visa application must be submitted within six months of the CAS issue date.</p>
+              
+              <p><strong>The CAS must not have been used in a previous visa application that was either granted or refused, and the sponsor must not have withdrawn the offer of study.</strong></p>
+              
+              <h4>The CAS must contain specific information, including:</h4>
+              <ul>
+                <li>Details of the course of study</li>
+                <li>The level of the course (e.g. RQF level)</li>
+                <li>The location of course delivery</li>
+                <li>Course fees and any payments already made</li>
+                <li>Accommodation costs, if applicable</li>
+                <li>How the English language requirement has been met</li>
+              </ul>
+            </div>
+
+            <!-- Section 6 -->
+            <div id="section6" class="content-section">
+              <h3>6. UK Student Visa Financial Requirement</h3>
+              <p>To qualify for a UK Student Visa, applicants must demonstrate to UKVI that they have sufficient funds to pay course fees and support themselves financially while studying in the UK, without recourse to public funds.</p>
+              
+              <h4>Course Fees</h4>
+              <p>Unless exempt, applicants must show sufficient funds to pay any outstanding tuition fees for one academic year of study (up to 9 months). If the course duration includes part of a month, it will be rounded up to the next full month.</p>
+              
+              <p>If part or all course fees have already been paid, this amount may be deducted from the total funds required, provided the payment is:</p>
+              <ul>
+                <li>Confirmed on the CAS; or</li>
+                <li>Supported by an official receipt from the student sponsor</li>
+              </ul>
+              
+              <h4>Living Costs</h4>
+              <p>Applicants must also demonstrate sufficient funds for living expenses, based on the location of study:</p>
+              <ul>
+                <li><strong>London:</strong> £1,483 per month for up to 9 months (maximum £13,347)</li>
+                <li><strong>Outside London:</strong> £1,136 per month for up to 9 months (maximum £10,224)</li>
+              </ul>
+              <p><em>These amounts are based on the latest UKVI guidance as of May 2025.</em></p>
+              
+              <p>Funds must be held in the applicant's name (or that of a parent/legal guardian if relying on their funds) for a consecutive 28-day period ending no more than 31 days before the application date.</p>
+              
+              <p>Additional funds are required if dependants are applying at the same time.</p>
+              
+              <h4>Exemptions</h4>
+              <p>Certain applicants are exempt from the financial requirement, including:</p>
+              <ul>
+                <li>Those who have lawfully lived in the UK for 12 months or more immediately prior to the application</li>
+                <li>Student Union Sabbatical Officers</li>
+                <li>British Nationals (Overseas) and nationals of countries listed under the differential evidence requirement (though UKVI may still request evidence of funds)</li>
+              </ul>
+            </div>
+
+            <!-- Section 7 -->
+            <div id="section7" class="content-section">
+              <h3>7. Using Scholarships or Sponsorship to Meet the Financial Requirement</h3>
+              <p>International students must demonstrate that they meet the financial requirement, which may be achieved through personal savings, family funds, or scholarships and sponsorships.</p>
+              
+              <p>Scholarships or bursaries may be used to meet the financial requirement if they qualify as official financial sponsorship under the Immigration Rules. Official sponsors include a UK government department, national government, international scholarship agency, university, or independent school. The sponsorship must cover tuition fees and/or living costs and be confirmed in an official letter.</p>
+              
+              <h4>UK Government Scholarship Schemes:</h4>
+              <ul>
+                <li><strong>Chevening Scholarships</strong></li>
+                <li><strong>Commonwealth Scholarships</strong></li>
+                <li><strong>GREAT Scholarships</strong></li>
+              </ul>
+              
+              <p>Other sources may include charities, trusts, or employer sponsorship.</p>
+              
+              <div class="highlight-box">
+                <p><strong>Important:</strong> If relying on a scholarship or bursary, applicants must ensure that all documentation meets UKVI requirements.</p>
+              </div>
+            </div>
+
+            <!-- Section 8 -->
+            <div id="section8" class="content-section">
+              <h3>8. English Language Requirement for a UK Student Visa</h3>
+              <p>To qualify for a Student Visa, applicants must demonstrate English language ability to the required standard. For degree-level courses (RQF level 6 or above), the required level is CEFR B2. For courses below degree level (RQF level 3 to 5), the required level is CEFR B1.</p>
+              
+              <p>Typically, this is demonstrated through a Secure English Language Test (SELT) from an approved provider.</p>
+              
+              <h4>Exemptions may apply for:</h4>
+              <ul>
+                <li>Nationals of majority English-speaking countries</li>
+                <li>Those who have completed a qualifying academic qualification taught in English in a majority English-speaking country</li>
+                <li>Applicants with GCSE/A Level/Scottish Higher qualifications in English, Welsh, Scots Gaelic, or Irish language</li>
+                <li>Nationals of Canada</li>
+                <li>Applicants studying as part of a study abroad programme in the United States</li>
+                <li>Applicants who have previously met the requirement in a successful visa application (if evidence remains valid)</li>
+              </ul>
+            </div>
+
+            <!-- Section 9 -->
+            <div id="section9" class="content-section">
+              <h3>9. The Genuine Student Requirement for UK Student Visa Applicants</h3>
+              <p>UKVI may conduct an interview to assess whether applicants meet the Genuine Student requirement, particularly if there are credibility concerns.</p>
+              
+              <p>Interview questions may cover immigration history, previous education, the intended course, chosen institution, reasons for studying in the UK, future plans, and financial circumstances.</p>
+              
+              <div class="info-box">
+                <p><strong>Important:</strong> The Entry Clearance Officer must be satisfied that the applicant is a genuine student who intends to study in the UK and is capable of completing the proposed course. Failure to satisfy this requirement may result in refusal.</p>
+              </div>
+            </div>
+
+            <!-- Section 10 -->
+            <div id="section10" class="content-section">
+              <h3>10. How to Prepare for a UK Student Visa Credibility Interview</h3>
+              <p>Credibility interviews are conducted by UKVI to assess whether applicants are genuine students with credible intentions.</p>
+              
+              <p>If invited, interviews are usually held at a visa application centre, either in person or via video call, and typically last around 30 minutes.</p>
+              
+              <h4>Applicants should be prepared to explain:</h4>
+              <ul>
+                <li>Why they chose the course and institution</li>
+                <li>How the course aligns with their career plans</li>
+                <li>How they will fund their studies and living costs</li>
+                <li>What research they have conducted about the university and accommodation</li>
+                <li>What they intend to do after completing their studies</li>
+              </ul>
+              
+              <div class="warning-box">
+                <p><strong>Warning:</strong> Inconsistent answers or lack of preparation may result in refusal under the Genuine Student Rule.</p>
+              </div>
+            </div>
+
+            <!-- Section 11 -->
+            <div id="section11" class="content-section">
+              <h3>11. UK Student Visa Refusals: Common Reasons and How to Avoid Them</h3>
+              <p>Student visa applications may be refused for various reasons, often due to insufficient evidence or failure to meet eligibility requirements.</p>
+              
+              <h4>Common refusal grounds include:</h4>
+              <ul>
+                <li>Inadequate financial evidence or inconsistencies in documentation</li>
+                <li>Failure to meet the English language requirement</li>
+                <li>Unsatisfactory credibility interview</li>
+                <li>Doubts about the applicant's genuine student status</li>
+                <li>Errors in the CAS, such as incorrect course details or sponsor information</li>
+              </ul>
+              
+              <h4>If refused, applicants may:</h4>
+              <ul>
+                <li>Challenge the decision through Administrative Review if an error is suspected</li>
+                <li>Submit a fresh application with improved evidence</li>
+                <li>Consider Judicial Review where a refusal is procedurally unfair or legally flawed</li>
+              </ul>
+            </div>
+
+            <!-- Section 12 -->
+            <div id="section12" class="content-section">
+              <h3>12. UK Student Visa Conditions and Responsibilities While in the UK</h3>
+              <p>Once granted, Student Visa holders must comply with certain conditions. Failure to do so may result in visa curtailment and affect future applications.</p>
+              
+              <h4>Student Visa holders must:</h4>
+              <ul>
+                <li>Study full-time at the licensed student sponsor or permitted partner institution</li>
+                <li>Attend and engage with the course as required</li>
+                <li>Notify the education provider and UKVI of any changes in circumstances (e.g., change of course, address, or withdrawal)</li>
+                <li>Comply with permitted working hours and visa conditions</li>
+                <li>Ensure their visa remains valid and apply for extensions before expiry</li>
+              </ul>
+              
+              <p>Sponsors must report events such as poor attendance, unauthorised absences, or early withdrawal. If sponsorship is withdrawn, UKVI may cancel the visa, requiring the student to leave the UK.</p>
+            </div>
+
+            <!-- Section 13 -->
+            <div id="section13" class="content-section">
+              <h3>13. Changing Courses or Sponsors on a UK Student Visa</h3>
+              <p>Students are expected to complete the course for which the CAS was issued. However, changes may be permitted in certain circumstances.</p>
+              
+              <h4>Changing course with the same provider</h4>
+              <p>May be possible without a new visa application if the new course is at the same or higher level and can be completed within the existing visa period, with sponsor approval.</p>
+              
+              <h4>Changing to a different provider</h4>
+              <p>Requires a new Student Visa with a new CAS. Students must not begin the new course until the new visa is granted.</p>
+              
+              <div class="info-box">
+                <p><strong>Important:</strong> Failure to follow correct procedures may result in cancellation of immigration permission.</p>
+              </div>
+            </div>
+
+            <!-- Section 14 -->
+            <div id="section14" class="content-section">
+              <h3>14. Student Visa Sponsorship Withdrawals and Curtailment Explained</h3>
+              <p>A Student Visa is linked to the sponsor. If sponsorship is withdrawn, UKVI may curtail the visa.</p>
+              
+              <p>Curtailment typically allows 60 calendar days to leave the UK or submit a fresh application. To continue studying with a new sponsor, a new CAS and Student Visa are required.</p>
+              
+              <p>Curtailment may also occur if the sponsor loses its licence. Students are usually given a grace period to find an alternative sponsor and apply for a new visa.</p>
+              
+              <div class="highlight-box">
+                <p><strong>Important:</strong> Visa curtailment can affect future immigration applications. It is advisable to seek legal advice promptly if sponsorship is withdrawn.</p>
+              </div>
+            </div>
+
+            <!-- Section 15 -->
+            <div id="section15" class="content-section">
+              <h3>15. Switching into the Student Route from Within the UK</h3>
+              <p>Applicants with valid leave may switch into the Student route, subject to restrictions.</p>
+              
+              <h4>Switching is NOT permitted if the applicant currently has, or was last granted, permission as:</h4>
+              <ul>
+                <li>Visitor</li>
+                <li>Short-term Student</li>
+                <li>Parent of a Child Student</li>
+                <li>Seasonal Worker</li>
+                <li>Domestic Worker in a Private Household</li>
+                <li>Leave granted outside the Immigration Rules (unless expressly granted for finding a new sponsor)</li>
+              </ul>
+              
+              <p>Applicants on immigration bail are also not permitted to switch into the Student route.</p>
+            </div>
+
+            <!-- Section 16 -->
+            <div id="section16" class="content-section">
+              <h3>16. How to Apply for a UK Student Visa: Inside or Outside the UK</h3>
+              <ul>
+                <li><strong>Applications from outside the UK:</strong> May be submitted up to six months before the course start date on the CAS</li>
+                <li><strong>Applications from within the UK:</strong> May be submitted up to three months before the course begins, and the course must start no more than 28 days after the expiry of current leave</li>
+              </ul>
+            </div>
+
+            <!-- Section 17 -->
+            <div id="section17" class="content-section">
+              <h3>17. UK Student Visa Processing Times</h3>
+              <ul>
+                <li><strong>Applications made outside the UK:</strong> Typically receive a decision within three weeks of the biometric appointment or identity verification</li>
+                <li><strong>Applications made within the UK:</strong> Normally receive a decision within eight weeks of submission and biometric provision</li>
+              </ul>
+            </div>
+
+            <!-- Section 18 -->
+            <div id="section18" class="content-section">
+              <h3>18. Travelling to the UK on a Student Visa: What to Know</h3>
+              <p>If the application is approved, applicants may travel to the UK:</p>
+              <ul>
+                <li><strong>Up to one week before</strong> the course begins if the course lasts six months or less</li>
+                <li><strong>Up to one month before</strong> if the course lasts longer than six months</li>
+              </ul>
+            </div>
+
+            <!-- Section 19 -->
+            <div id="section19" class="content-section">
+              <h3>19. Length of Stay on a UK Student Visa Based on Course Level</h3>
+              <ul>
+                <li><strong>Degree level (RQF level 6 or above):</strong> Typically permitted to stay up to five years</li>
+                <li><strong>Below degree level (RQF level 3 to 5):</strong> Maximum stay is generally two years</li>
+              </ul>
+              
+              <h4>Exceptions apply for certain subjects:</h4>
+              <ul>
+                <li>Architecture</li>
+                <li>Medicine, dentistry, veterinary medicine and science</li>
+                <li>Music at Conservatoires UK</li>
+                <li>Specific law courses</li>
+              </ul>
+              
+              <p>The time limit is based on total leave granted under the Student route, including any additional time granted under section 3C of the Immigration Act 1971.</p>
+            </div>
+
+            <!-- Section 20 -->
+            <div id="section20" class="content-section">
+              <h3>20. Working in the UK on a Student Visa: Permitted Hours and Conditions</h3>
+              <p>Employment rights under the Student route depend on the course level and sponsor compliance.</p>
+              
+              <h4>Full-time students at degree level or above:</h4>
+              <ul>
+                <li>May work up to 20 hours per week during term time</li>
+                <li>May work full-time during official vacations</li>
+              </ul>
+              
+              <h4>Full-time students below degree level:</h4>
+              <ul>
+                <li>May work up to 10 hours per week during term time</li>
+                <li>May work full-time during vacations</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>Important:</strong> No employment is permitted for students enrolled on part-time courses or at institutions without a track record of compliance.</p>
+              </div>
+            </div>
+
+            <!-- Section 21 -->
+            <div id="section21" class="content-section">
+              <h3>21. Support for Students with Disabilities on a UK Student Visa</h3>
+              <p>International students with disabilities or long-term conditions are protected under the Equality Act 2010. UK universities must provide reasonable adjustments to prevent substantial disadvantage.</p>
+              
+              <p>Prospective students should notify their education provider early to arrange support, which may include academic adjustments, accessible accommodation, or assistive technologies.</p>
+              
+              <p>If a disability affects living or support costs, additional funds may be required to meet the financial requirement. UKVI expects evidence that applicants can maintain themselves without recourse to public funds.</p>
+            </div>
+
+            <!-- Section 22 -->
+            <div id="section22" class="content-section">
+              <h3>22. UK Student Visa Rules for Dependants</h3>
+              
+              <h4>Courses Starting Before 1 January 2024</h4>
+              <p>Dependent partners and/or children may accompany the main Student Visa holder if:</p>
+              <ul>
+                <li>The student is enrolled on a full-time postgraduate course (RQF level 7 or above) lasting nine months or more</li>
+                <li>The student is sponsored by a government or international scholarship agency and studying a course lasting longer than six months</li>
+                <li>The student is on the Doctorate Extension Scheme (for those granted leave before 1 July 2021)</li>
+              </ul>
+              
+              <h4>Dependants must show maintenance funds of:</h4>
+              <ul>
+                <li><strong>£845 per month</strong> (up to nine months) if studying in London</li>
+                <li><strong>£680 per month</strong> (up to nine months) if studying outside London</li>
+              </ul>
+              
+              <h4>Courses Starting On or After 1 January 2024</h4>
+              <p>Students whose courses start on or after 1 January 2024 are generally not permitted to bring dependents under the Student route.</p>
+              
+              <p><strong>Exception:</strong> Students enrolled on a PhD, doctoral qualification, or research-based higher degree at RQF level 7 or above may still bring dependents.</p>
+              
+              <p>Existing dependents in the UK may continue to extend their stay if eligibility requirements continue to be met.</p>
+            </div>
+
+            <!-- Section 23 -->
+            <div id="section23" class="content-section">
+              <h3>23. UK Child Student Visa and Parental Visa Options</h3>
+              <p>Applicants aged between 4 and 17 intending to study at an independent school should apply for a Child Student Visa. This route is designed for younger students studying at a fee-paying independent school with a sponsor licence.</p>
+              
+              <p>Applicants under 18 must have suitable care and accommodation arrangements, including written parental consent and naming an adult responsible for their welfare if they will not live with their parent or legal guardian.</p>
+              
+              <p>Parents of children under 12 may apply for a Parent of a Child Student Visa to accompany their child for primary education, although this visa does not permit employment or switching into other categories.</p>
+            </div>
+
+            <!-- Section 24 -->
+            <div id="section24" class="content-section">
+              <h3>24. Extending Your Stay on a UK Student Visa</h3>
+              <p>Students in the UK with valid Student leave may apply to extend their stay under the Student route. Eligible dependents may also extend their leave simultaneously.</p>
+              
+              <p>To qualify, applicants must have an unconditional offer from a licensed student sponsor. In most cases, the new course must represent academic progression (a higher level than the previous course).</p>
+              
+              <p><strong>Exceptions include:</strong> related courses supporting career plans, resits, or repeating modules.</p>
+              
+              <p>Applicants who have been in the UK for less than 12 months must demonstrate sufficient funds for study and living costs according to the financial requirements.</p>
+            </div>
+
+            <!-- Section 25 -->
+            <div id="section25" class="content-section">
+              <h3>25. Does the UK Student Visa Lead to Settlement?</h3>
+              <p>The Student route does not directly lead to settlement. However, Student Visa holders may be eligible to switch to other immigration routes that lead to settlement.</p>
+            </div>
+
+            <!-- Section 26 -->
+            <div id="section26" class="content-section">
+              <h3>26. Switching from a UK Student Visa to a Work Visa Route</h3>
+              <p>Students enrolled in degree-level courses may apply to switch into a sponsored work route before completing their course, provided the employment start date is not earlier than course completion.</p>
+              
+              <p>PhD or doctoral students may apply to switch after completing 24 months of study.</p>
+              
+              <h4>Eligible work visa categories include:</h4>
+              <ul>
+                <li>Skilled Worker</li>
+                <li>Senior or Specialist Worker</li>
+                <li>Graduate Trainee</li>
+                <li>UK Expansion Worker</li>
+                <li>Global Talent</li>
+                <li>High Potential Individual</li>
+                <li>Scale-Up</li>
+                <li>Innovator Founder</li>
+                <li>International Sportsperson routes</li>
+              </ul>
+            </div>
+
+            <!-- Section 27 -->
+            <div id="section27" class="content-section">
+              <h3>27. How Our Immigration Barristers Can Help</h3>
+              <p>The UK Student Visa route enables international students aged 16 and over to pursue further or higher education in the UK. However, securing a Student Visa requires careful preparation, from meeting eligibility and financial requirements to ensuring that supporting documents comply with UKVI specifications.</p>
+              
+              <div class="highlight-box">
+                <h4>UK Student Visa Applications</h4>
+                <p>If you are applying for a UK Student Visa, whether from outside or within the UK, we can:</p>
+                <ul>
+                  <li>Assess eligibility based on age, course, sponsor institution, and immigration history</li>
+                  <li>Advise on timing and strategy, including switching routes or extending existing leave</li>
+                  <li>Review and advise on CAS and supporting documents</li>
+                  <li>Ensure compliance with financial evidence rules and advise on scholarships or sponsorship</li>
+                  <li>Prepare and submit a professionally drafted visa application with all required documents</li>
+                  <li>Respond to any Home Office enquiries or requests for clarification on your behalf</li>
+                </ul>
+              </div>
+              
+              <h4>Post-Visa Legal Guidance</h4>
+              <p>Once your Student Visa has been granted, we can assist with:</p>
+              <ul>
+                <li>Understanding and complying with visa conditions, including permitted study and work activities</li>
+                <li>Advising on changes to circumstances, such as switching institutions or courses</li>
+                <li>Assisting with applications to extend stay for further studies or academic progression</li>
+                <li>Supporting dependent visa applications, where eligible</li>
+              </ul>
+              
+              <h4>Planning Ahead: From Study to Work and Beyond</h4>
+              <p>As your studies progress, you may wish to explore future immigration options. We provide strategic advice on:</p>
+              <ul>
+                <li>Switching from the Student route to a work-based immigration route</li>
+                <li>Navigating post-study work rights and planning your immigration journey to settlement</li>
+                <li>Assessing long-term options, including the 10-year Long Residence route or other pathways to Indefinite Leave to Remain</li>
+              </ul>
+              
+              <p>Whether you are applying to study in the UK for the first time, extending your leave, or preparing to transition into work after graduation, our immigration barristers provide expert, forward-looking advice to support your goals at every stage.</p>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+              <h3 class="mb-3">Ready to Begin Your UK Education Journey?</h3>
+              <p class="lead mb-4">Let our expert team guide you through the student visa application process and maximize your chances of approval.</p>
+              <a href="../index.html#inquiry" class="btn btn-primary btn-lg">
+                <i class="fas fa-graduation-cap me-2"></i>Start Your Application
+              </a>
+              <p class="mt-3 text-muted">Click above to be redirected to our main inquiry form</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h5>One Solution Visa™</h5>
+          <p>Your trusted partner for all visa and immigration services. We make your travel dreams come true with professional expertise and personalized service.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/visaconnect" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="../index.html#services" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="../index.html#contact" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="../index.html#inquiry" class="text-light text-decoration-none">Inquiry</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Student Services</h6>
+          <ul class="list-unstyled">
+            <li><a href="ukstudent.html" class="text-light text-decoration-none fw-bold">UK Student Visas</a></li>
+            <li><a href="student.html" class="text-light text-decoration-none">University Selection</a></li>
+            <li><a href="student.html" class="text-light text-decoration-none">Scholarship Guidance</a></li>
+            <li><a href="student.html" class="text-light text-decoration-none">Visa Documentation</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Contact Info</h6>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt me-2"></i>A. Gabuya Street, Cogon Pardo, Cebu City, Philippines</li>
+            <li><i class="fas fa-phone me-2"></i>+63 968 707 5241</li>
+            <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
+            <li><i class="fas fa-clock me-2"></i>Mon-Sat: 9AM-6PM</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0">&copy; 2025 One Solution Visa. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0">
+            <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+            <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Navigation Scripts
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const isClickInside = navbarToggler.contains(event.target) || 
+                              navbarCollapse.contains(event.target);
+        
+        if (!isClickInside && navbarCollapse.classList.contains('show')) {
+          navbarToggler.click();
+        }
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      
+      // Add loading animation on page load
+      window.addEventListener('load', () => {
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease-in-out';
+        setTimeout(() => {
+          document.body.style.opacity = '1';
+        }, 100);
+      });
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Highlight active nav link
+      const sections = document.querySelectorAll('.content-section');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      function setActiveNavLink() {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (window.scrollY >= sectionTop - 150) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', setActiveNavLink);
+      setActiveNavLink();
+    });
+  </script>
+</body>
+</html>
