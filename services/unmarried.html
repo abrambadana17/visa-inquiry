@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>UK Unmarried Partner Visa Services | One Solution Visa</title>
+  <link rel="icon" type="image/png" href="../images/logo.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+   :root {
+  --primary-color: #ffffff;
+  --secondary-color: #2c3e50;
+  --accent-color: #3498db;
+  --light-bg: #f4f6fa;
+}
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 0.75rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      padding: 0.5rem 0;
+      background: var(--secondary-color) !important;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .navbar-logo {
+      height: 40px;
+      width: 40px;
+      margin-right: 8px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    /* Back button styling */
+    .back-btn {
+      color: white !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateX(-3px);
+    }
+
+    .back-btn i {
+      margin-right: 5px;
+    }
+
+    .section-padding {
+      padding: 60px 0;
+      scroll-margin-top: 80px;
+    }
+
+    /* Service Hero Section with Background Image */
+    .service-hero {
+      background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), 
+                  url('../images/unmarried.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 120px 0 80px;
+      margin-bottom: 40px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .service-hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .service-hero .lead {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .partner-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+    
+    .content-nav {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /* Custom scrollbar for content-nav */
+    .content-nav::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .content-nav::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb {
+      background: var(--accent-color);
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
+    }
+    
+    .content-nav h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .nav-links a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      display: block;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+    
+    .nav-links a:hover {
+      background: var(--light-bg);
+      border-left: 3px solid var(--accent-color);
+      transform: translateX(5px);
+    }
+    
+    .content-section {
+      background: white;
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .content-section h2 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .content-section h3 {
+      color: var(--secondary-color);
+      margin: 2rem 0 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .content-section h4 {
+      color: var(--secondary-color);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .content-section p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    
+    .content-section ul, .content-section ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    .content-section li {
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-left: 4px solid var(--accent-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .info-box {
+      background: linear-gradient(135deg, #e8f4fc 0%, #d4eaf7 100%);
+      border-left: 4px solid var(--secondary-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .warning-box {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      border-left: 4px solid #ffc107;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .faq-box {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-left: 4px solid #28a745;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, var(--light-bg) 0%, #e8f4fc 100%);
+      border-radius: 15px;
+      padding: 3rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--secondary-color);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-light:hover {
+      background: var(--light-bg);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+    }
+
+    .footer {
+      background: var(--secondary-color);
+      color: #fff;
+      padding: 40px 0 20px 0;
+      position: relative;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    /* Mobile Navigation Improvements */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: rgba(44, 62, 80, 0.98);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0.4rem 0.6rem;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
+      }
+
+      .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin: 0.25rem 0;
+      }
+
+      .nav-link:hover, .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      
+      .content-nav {
+        position: static;
+        margin-bottom: 2rem;
+      }
+    }
+
+    /* iPhone 15 and Small Devices */
+    @media (max-width: 430px) {
+      .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .navbar {
+        padding: 0.5rem 0;
+      }
+
+      .navbar-brand {
+        font-size: 1.1rem;
+      }
+
+      .navbar-logo {
+        height: 35px;
+        width: 35px;
+        margin-right: 6px;
+      }
+      
+      .service-hero {
+        padding: 100px 0 60px;
+        background-attachment: scroll;
+      }
+      
+      .service-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .service-hero .lead {
+        font-size: 1.1rem;
+      }
+      
+      .partner-icon {
+        font-size: 2.5rem;
+      }
+      
+      .content-section, .content-nav {
+        padding: 1.5rem;
+      }
+      
+      .cta-section {
+        padding: 2rem 1.5rem;
+      }
+
+      .footer {
+        padding: 30px 0 15px 0;
+      }
+
+      .footer h5, .footer h6 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .footer p, .footer li {
+        font-size: 0.9rem;
+      }
+
+      .footer .col-lg-4, 
+      .footer .col-lg-2, 
+      .footer .col-lg-3,
+      .footer .col-md-6 {
+        margin-bottom: 1.5rem;
+      }
+
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Very Small Devices */
+    @media (max-width: 375px) {
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .navbar-brand {
+        font-size: 1rem;
+      }
+      
+      .service-hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Prevent horizontal scroll */
+    .row {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
+    .row > * {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/logo.png" alt="One Solution Visa Logo" class="navbar-logo">
+        OneSolutionVisa
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link back-btn" href="family.html">
+              <i class="fas fa-arrow-left me-1"></i>Back to Family Visa
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Unmarried Partner Visa Content -->
+  <main style="margin-top: 80px; min-height: calc(100vh - 300px);">
+    <!-- Hero Section -->
+    <section class="service-hero">
+      <div class="container">
+        <div class="partner-icon">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <h1>UK Unmarried Partner Visa: Eligibility, Requirements & Application</h1>
+        <p class="lead">The Unmarried Partner Visa is designed for long-term partners of British or Irish citizens, individuals who are settled in the UK, holders of pre-settled status, Turkish Businessperson or Turkish Worker visa holders, and individuals granted refugee status or humanitarian protection. This visa allows eligible applicants to join or remain with their unmarried partner in the United Kingdom.</p>
+        <a href="../index.html#inquiry" class="btn btn-light btn-lg mt-3">
+          <i class="fas fa-handshake me-2"></i>Start Your Application
+        </a>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row">
+          <!-- Navigation Sidebar -->
+          <div class="col-lg-4 mb-4">
+            <div class="content-nav">
+              <h3><i class="fas fa-list-alt me-2"></i>Contents</h3>
+              <ul class="nav-links">
+                <li><a href="#overview">UK Unmarried Partner Visa Overview</a></li>
+                <li><a href="#section1">1. Unmarried Partner Visa Requirements</a></li>
+                <li><a href="#section2">2. Status of Sponsoring Partner</a></li>
+                <li><a href="#section3">3. Minimum Age Requirement</a></li>
+                <li><a href="#section4">4. Relationship Requirement Overview</a></li>
+                <li><a href="#section5">5. Requirement to Have Met in Person</a></li>
+                <li><a href="#section6">6. 2-Year Relationship Requirement</a></li>
+                <li><a href="#section7">7. Navigating New Rules</a></li>
+                <li><a href="#section8">8. Genuine & Subsisting Relationship</a></li>
+                <li><a href="#section9">9. Home Office Assessment Factors</a></li>
+                <li><a href="#section10">10. Documents to Prove Relationship</a></li>
+                <li><a href="#section11">11. What is a Genuine Relationship?</a></li>
+                <li><a href="#section12">12. Intention to Live Together in UK</a></li>
+                <li><a href="#section13">13. Previous Relationships Ended</a></li>
+                <li><a href="#section14">14. Financial Requirement</a></li>
+                <li><a href="#section15">15. How to Satisfy Financial Requirement</a></li>
+                <li><a href="#section16">16. Accommodation Requirement</a></li>
+                <li><a href="#section17">17. English Language Requirement</a></li>
+                <li><a href="#section18">18. Supporting Documents Checklist</a></li>
+                <li><a href="#section19">19. Application Fee</a></li>
+                <li><a href="#section20">20. Processing & Decision Times</a></li>
+                <li><a href="#section21">21. Visa Duration</a></li>
+                <li><a href="#section22">22. Switching from Within UK</a></li>
+                <li><a href="#section23">23. Working Rights in UK</a></li>
+                <li><a href="#section24">24. Indefinite Leave to Remain</a></li>
+                <li><a href="#section25">25. Frequently Asked Questions</a></li>
+                <li><a href="#section26">26. How We Can Help</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="col-lg-8">
+            <!-- Overview Section -->
+            <div id="overview" class="content-section">
+              <h2>UK Unmarried Partner Visa Overview</h2>
+              <p>The <strong>UK Unmarried Partner Visa</strong> is designed for long-term partners of British or Irish citizens, individuals who are settled in the UK, holders of pre-settled status, Turkish Businessperson or Turkish Worker visa holders, and individuals granted refugee status or humanitarian protection.</p>
+              
+              <p>This visa allows eligible applicants to join or remain with their unmarried partner in the United Kingdom. Applications may also be made where the sponsoring partner is temporarily outside the UK but intends to return and reside in the UK with the applicant.</p>
+              
+              <div class="info-box">
+                <p><strong>Settlement Route:</strong> A successful UK Unmarried Partner Visa application places the applicant on a route to settlement, with eligibility to apply for <strong>Indefinite Leave to Remain (ILR)</strong> after completing five years in this category.</p>
+              </div>
+            </div>
+
+            <!-- Section 1 -->
+            <div id="section1" class="content-section">
+              <h3>1. Unmarried Partner Visa Requirements</h3>
+              <p>To qualify for a UK Unmarried Partner Visa, applicants must satisfy UK Visas and Immigration that all relevant eligibility criteria are met. These requirements include:</p>
+              <ul>
+                <li>The sponsoring partner holds qualifying immigration status</li>
+                <li>Both partners are aged 18 or over</li>
+                <li>The partners have met in person</li>
+                <li>The relationship has existed for at least 2 years (or exceptional circumstances apply)</li>
+                <li>The relationship is genuine and subsisting</li>
+                <li>There is a clear intention to live together permanently in the UK</li>
+                <li>Any previous relationships have permanently ended</li>
+                <li>The financial requirement is satisfied</li>
+                <li>Adequate accommodation is available</li>
+                <li>The applicant meets the English language requirement</li>
+              </ul>
+              
+              <div class="highlight-box">
+                <p><strong>Professional Advice:</strong> The precise requirements applicable may differ depending on individual circumstances. Professional legal advice may be beneficial to ensure full compliance with the Immigration Rules.</p>
+              </div>
+            </div>
+
+            <!-- Section 2 -->
+            <div id="section2" class="content-section">
+              <h3>2. Status of Sponsoring Partner</h3>
+              <p>To sponsor an Unmarried Partner Visa application, the partner must hold one of the qualifying immigration statuses:</p>
+              <ul>
+                <li>British or Irish citizenship</li>
+                <li>Settled status or indefinite leave to remain in the UK</li>
+                <li>Pre-settled status under Appendix EU</li>
+                <li>Limited leave under the Turkish Businessperson or Turkish Worker routes</li>
+                <li>Refugee leave or humanitarian protection in the UK</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>Sponsors Outside UK:</strong> A British citizen sponsor may include an individual accompanying the applicant to the UK. Similarly, a sponsor being granted settlement at the same time as the applicant is also considered eligible.</p>
+              </div>
+            </div>
+
+            <!-- Section 3 -->
+            <div id="section3" class="content-section">
+              <h3>3. Minimum Age for an Unmarried Partner Visa</h3>
+              <p>Both the applicant and the sponsoring partner must be at least 18 years of age on the date the visa application is submitted.</p>
+            </div>
+
+            <!-- Section 4 -->
+            <div id="section4" class="content-section">
+              <h3>4. UK Unmarried Partner Visa Relationship Requirement</h3>
+              <p>Applicants must demonstrate that their relationship meets several specific criteria:</p>
+              <ul>
+                <li>Evidence of a personal meeting between partners</li>
+                <li>A long-term relationship comparable to marriage or civil partnership</li>
+                <li>The authenticity and continuity of the relationship</li>
+                <li>An intention to live together permanently in the UK</li>
+                <li>Confirmation that any previous relationships have permanently ended</li>
+              </ul>
+              <p>Each element must be substantiated with appropriate documentary evidence.</p>
+            </div>
+
+            <!-- Section 5 -->
+            <div id="section5" class="content-section">
+              <h3>5. Requirement to Have Met in Person</h3>
+              <p>Applicants must provide evidence that they have met their partner in person. This requires proof of a genuine face-to-face meeting that established a personal relationship.</p>
+              
+              <div class="warning-box">
+                <p><strong>Important:</strong> Brief or incidental encounters followed solely by remote communication are insufficient to meet this requirement. The Home Office looks for evidence of meaningful personal interaction.</p>
+              </div>
+            </div>
+
+            <!-- Section 6 -->
+            <div id="section6" class="content-section">
+              <h3>6. Requirement to Have Been in a Relationship for at Least 2 Years</h3>
+              <p>Applicants are required to show that they have been in a relationship similar to marriage or civil partnership for a minimum of two years before applying.</p>
+              
+              <div class="info-box">
+                <p><strong>Cohabitation Rules:</strong> While previous rules required cohabitation, this is no longer mandatory. However, documentary evidence demonstrating the longevity and seriousness of the relationship remains essential.</p>
+              </div>
+              
+              <div class="highlight-box">
+                <p><strong>Exceptional Circumstances:</strong> Where the relationship has existed for less than two years, an application may still be considered if exceptional circumstances can be demonstrated. This requires strong supporting evidence.</p>
+              </div>
+            </div>
+
+            <!-- Section 7 -->
+            <div id="section7" class="content-section">
+              <h3>7. Navigating the New UK Unmarried Partner Visa Rules</h3>
+              <p>Recent changes to the Immigration Rules have altered how certain requirements are assessed, particularly regarding cohabitation and exceptional circumstances.</p>
+              
+              <div class="warning-box">
+                <p><strong>Key Changes:</strong> The removal of mandatory cohabitation requirements means applicants can now demonstrate their relationship through various forms of evidence beyond shared address documentation. However, careful navigation of these updated provisions is essential to ensure compliance.</p>
+              </div>
+            </div>
+
+            <!-- Section 8 -->
+            <div id="section8" class="content-section">
+              <h3>8. Genuine and Subsisting Relationship Requirement</h3>
+              <p>Applicants must provide compelling evidence that their relationship is genuine and ongoing. Each application is assessed individually, with the Home Office considering all relevant documentation and personal circumstances.</p>
+              
+              <div class="info-box">
+                <p><strong>Evidence Strategy:</strong> A successful application typically includes a combination of communication records, photographs, travel documents, financial interdependence, and statements from friends and family.</p>
+              </div>
+            </div>
+
+            <!-- Section 9 -->
+            <div id="section9" class="content-section">
+              <h3>9. Factors Considered by the Home Office When Deciding Whether a Relationship Is Genuine and Subsisting</h3>
+              <p>The Home Office evaluates various factors when assessing relationship authenticity:</p>
+              <ul>
+                <li>The length and continuity of the relationship</li>
+                <li>Living arrangements and time spent together</li>
+                <li>Shared financial responsibilities and joint assets</li>
+                <li>Children and parental responsibilities</li>
+                <li>Family connections and social recognition</li>
+                <li>Future plans and commitment in the UK</li>
+                <li>Overall credibility and consistency of evidence submitted</li>
+              </ul>
+              
+              <div class="warning-box">
+                <p><strong>Verification:</strong> Where doubts arise, the Home Office may conduct further checks, interviews, or home visits to verify the authenticity of the relationship.</p>
+              </div>
+            </div>
+
+            <!-- Section 10 -->
+            <div id="section10" class="content-section">
+              <h3>10. Documents Required to Prove a Genuine and Subsisting Relationship</h3>
+              <p>Applicants are expected to submit substantial evidence demonstrating emotional commitment, regular communication, shared responsibilities, and mutual support. Recommended documents include:</p>
+              
+              <h4>Communication Evidence:</h4>
+              <ul>
+                <li>Call logs, text messages, and chat histories</li>
+                <li>Email correspondence spanning the relationship</li>
+                <li>Social media interactions</li>
+              </ul>
+              
+              <h4>Time Together Evidence:</h4>
+              <ul>
+                <li>Travel tickets and boarding passes</li>
+                <li>Hotel bookings and receipts</li>
+                <li>Photographs together at different times and locations</li>
+              </ul>
+              
+              <h4>Financial Interdependence:</h4>
+              <ul>
+                <li>Joint bank accounts or financial arrangements</li>
+                <li>Evidence of money transfers between partners</li>
+                <li>Shared bills or financial responsibilities</li>
+              </ul>
+              
+              <h4>Social Recognition:</h4>
+              <ul>
+                <li>Statements from friends and family</li>
+                <li>Evidence of celebrating milestones together</li>
+                <li>Joint memberships or activities</li>
+              </ul>
+              
+              <div class="warning-box">
+                <p><strong>Document Quality:</strong> All documents should be recent, credible, and sourced from a variety of official or reliable origins. Failure to adequately demonstrate a genuine and subsisting relationship may result in refusal.</p>
+              </div>
+            </div>
+
+            <!-- Section 11 -->
+            <div id="section11" class="content-section">
+              <h3>11. What is a Genuine and Subsisting Relationship?</h3>
+              <p>A genuine and subsisting relationship is one that is authentic, ongoing, and based on mutual commitment and shared life intentions. The Home Office assesses this by reviewing the consistency and credibility of the evidence provided.</p>
+              
+              <div class="info-box">
+                <p><strong>Key Characteristics:</strong> Genuine relationships typically show emotional commitment, shared decision-making, mutual support through difficulties, and concrete plans for a future life together in the UK.</p>
+              </div>
+            </div>
+
+            <!-- Section 12 -->
+            <div id="section12" class="content-section">
+              <h3>12. Intention to Live Together Permanently in the UK</h3>
+              <p>Applicants must demonstrate a clear and genuine intention to live together permanently in the UK. This includes:</p>
+              <ul>
+                <li>Immediate living arrangements following visa approval</li>
+                <li>Long-term residence expectations and plans</li>
+                <li>Employment or study intentions in the UK</li>
+                <li>Integration plans within the UK community</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>Extended Absences:</strong> Extended periods spent outside the UK must be justified and consistent with the intention of permanent UK residence. Frequent or prolonged absences may raise doubts about genuine intentions.</p>
+              </div>
+            </div>
+
+            <!-- Section 13 -->
+            <div id="section13" class="content-section">
+              <h3>13. Previous Relationship Broken Down Permanently</h3>
+              <p>Where either partner has been previously married or in a civil partnership, evidence must be provided to show that the relationship has permanently ended. Acceptable evidence includes:</p>
+              <ul>
+                <li>Decree absolute or final divorce order</li>
+                <li>Dissolution certificate for civil partnerships</li>
+                <li>Death certificate for deceased former partners</li>
+                <li>Legal documentation proving relationship termination</li>
+              </ul>
+              
+              <div class="warning-box">
+                <p><strong>Legal Dissolution Preferred:</strong> While legal dissolution is preferred, in limited circumstances, alternative evidence may be accepted. However, this requires careful preparation and strong supporting documentation.</p>
+              </div>
+            </div>
+
+            <!-- Section 14 -->
+            <div id="section14" class="content-section">
+              <h3>14. UK Unmarried Partner Visa Financial Requirement</h3>
+              <p>Applicants must demonstrate that they can be adequately maintained in the UK without reliance on public funds. This generally requires a minimum gross annual income of <strong>£29,000</strong>, unless exemptions apply.</p>
+              
+              <div class="warning-box">
+                <p><strong>Important:</strong> The financial requirement must be met at each application stage, including entry clearance, extension, and settlement. Strict evidential standards apply, and failure to meet them is a common reason for refusal.</p>
+              </div>
+              
+              <h4>Income Sources Considered:</h4>
+              <ul>
+                <li>Employment income (sponsor and/or applicant)</li>
+                <li>Self-employment earnings</li>
+                <li>Non-employment income (rental, dividends, etc.)</li>
+                <li>Cash savings over £16,000</li>
+                <li>Pension income</li>
+              </ul>
+            </div>
+
+            <!-- Section 15 -->
+            <div id="section15" class="content-section">
+              <h3>15. How to Satisfy the UK Unmarried Partner Visa Financial Requirement</h3>
+              <p>The financial requirement may be met through various means or combinations:</p>
+              
+              <h4>Employment Income:</h4>
+              <p>Current employment with same employer for 6+ months, or with different employer earning same amount for 12+ months.</p>
+              
+              <h4>Cash Savings:</h4>
+              <p>Savings must be held for at least 6 months. Formula: (Savings - £16,000) ÷ 2.5 = annual income contribution.</p>
+              
+              <h4>Self-Employment:</h4>
+              <p>Requires tax documents, accounts, and evidence of ongoing business.</p>
+              
+              <h4>Non-Employment Income:</h4>
+              <p>Property rental, dividends, interest, maintenance payments, etc.</p>
+              
+              <div class="info-box">
+                <p><strong>Combination Rules:</strong> In certain cases, a combination of sources is permitted. Additional considerations apply where the sponsor receives specific benefits or where exceptional circumstances exist.</p>
+              </div>
+            </div>
+
+            <!-- Section 16 -->
+            <div id="section16" class="content-section">
+              <h3>16. Unmarried Partner Visa Accommodation Requirement</h3>
+              <p>Applicants must provide evidence of suitable accommodation that meets all legal requirements:</p>
+              <ul>
+                <li>Legally occupied (owned or rented with permission)</li>
+                <li>Not overcrowded according to UK housing standards</li>
+                <li>Compliant with public health and safety regulations</li>
+                <li>Available without recourse to public funds</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>Evidence Required:</strong> Tenancy agreement, mortgage statement, property inspection report, or letter from property owner confirming accommodation availability.</p>
+              </div>
+            </div>
+
+            <!-- Section 17 -->
+            <div id="section17" class="content-section">
+              <h3>17. Unmarried Partner Visa English Language Requirement</h3>
+              <p>Applicants must demonstrate English language proficiency unless exempt. Requirements vary by application stage:</p>
+              
+              <table class="table table-bordered">
+                <thead class="table-light">
+                  <tr>
+                    <th>Application Stage</th>
+                    <th>CEFR Level Required</th>
+                    <th>Common Evidence</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Initial Application</td>
+                    <td>A1 (Beginner)</td>
+                    <td>Approved test certificate</td>
+                  </tr>
+                  <tr>
+                    <td>Extension</td>
+                    <td>A2 (Elementary)</td>
+                    <td>Approved test certificate</td>
+                  </tr>
+                  <tr>
+                    <td>Settlement (ILR)</td>
+                    <td>B1 (Intermediate)</td>
+                    <td>Approved test or degree taught in English</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <div class="info-box">
+                <p><strong>Exemptions:</strong> Available for applicants aged 65+, those with physical or mental conditions preventing testing, and nationals of majority English-speaking countries.</p>
+              </div>
+            </div>
+
+            <!-- Section 18 -->
+            <div id="section18" class="content-section">
+              <h3>18. UK Unmarried Partner Visa Supporting Documents Checklists</h3>
+              <p>Applications must be supported by the correct documents in the prescribed format. Essential documents include:</p>
+              
+              <h4>Relationship Documents:</h4>
+              <ul>
+                <li>Evidence of meeting and relationship duration</li>
+                <li>Communication records and photographs</li>
+                <li>Statements from friends and family</li>
+                <li>Evidence of previous relationships ending</li>
+              </ul>
+              
+              <h4>Financial Documents:</h4>
+              <ul>
+                <li>Bank statements (6-12 months depending on category)</li>
+                <li>Pay slips covering required period</li>
+                <li>Employment letter confirming income</li>
+                <li>Tax documents for self-employed</li>
+              </ul>
+              
+              <h4>Accommodation Documents:</h4>
+              <ul>
+                <li>Tenancy agreement or mortgage statement</li>
+                <li>Property inspection report if required</li>
+                <li>Council tax statement</li>
+              </ul>
+              
+              <h4>Identity and Status Documents:</h4>
+              <ul>
+                <li>Valid passports for both partners</li>
+                <li>Sponsor's proof of status in UK</li>
+                <li>Birth certificates if applicable</li>
+                <li>English language test certificate</li>
+              </ul>
+              
+              <div class="warning-box">
+                <p><strong>Important:</strong> Generic checklists should be used cautiously, as each case requires tailored evidence. Missing or incorrect documentation can lead to refusal, delays, or the need for reapplication.</p>
+              </div>
+            </div>
+
+            <!-- Section 19 -->
+            <div id="section19" class="content-section">
+              <h3>19. UK Unmarried Partner Visa Application Fee</h3>
+              <p>The application fee varies depending on application location:</p>
+              <ul>
+                <li><strong>Applications from outside the UK:</strong> £1,938</li>
+                <li><strong>Applications from within the UK:</strong> £1,321</li>
+              </ul>
+              
+              <div class="info-box">
+                <h4>Additional Charges:</h4>
+                <ul>
+                  <li><strong>Priority Service:</strong> £500-£800 (reduces processing time)</li>
+                  <li><strong>Super Priority Service:</strong> £1,000 (next-day decision where available)</li>
+                  <li><strong>Immigration Health Surcharge:</strong> £1,035 per year (must be paid upfront for visa duration)</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Section 20 -->
+            <div id="section20" class="content-section">
+              <h3>20. UK Unmarried Partner Visa Processing & Decision Waiting Times</h3>
+              <p>Processing times differ based on application location and service level:</p>
+              
+              <table class="table table-bordered">
+                <thead class="table-light">
+                  <tr>
+                    <th>Service Type</th>
+                    <th>Outside UK</th>
+                    <th>Inside UK</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Standard Processing</td>
+                    <td>Approximately 12 weeks</td>
+                    <td>Approximately 8 weeks</td>
+                  </tr>
+                  <tr>
+                    <td>Priority Service</td>
+                    <td>30 working days</td>
+                    <td>5 working days</td>
+                  </tr>
+                  <tr>
+                    <td>Super Priority Service</td>
+                    <td>Not available</td>
+                    <td>Next working day</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <div class="info-box">
+                <p><strong>Processing Variables:</strong> Priority and Super Priority options may reduce decision times where available, subject to eligibility. Complex cases may take longer regardless of service selected.</p>
+              </div>
+            </div>
+
+            <!-- Section 21 -->
+            <div id="section21" class="content-section">
+              <h3>21. Duration of a UK Unmarried Partner Visa</h3>
+              <p>Successful applicants are granted leave as follows:</p>
+              <ul>
+                <li><strong>Entry clearance (from outside UK):</strong> 33 months initial grant</li>
+                <li><strong>In-country applications:</strong> 30 months initial grant</li>
+                <li><strong>Extensions:</strong> Further 30 months to complete 5-year qualifying period</li>
+              </ul>
+              
+              <div class="highlight-box">
+                <p><strong>Settlement Pathway:</strong> After completing 5 continuous years on the Unmarried Partner Visa route, applicants become eligible to apply for Indefinite Leave to Remain (settlement).</p>
+              </div>
+            </div>
+
+            <!-- Section 22 -->
+            <div id="section22" class="content-section">
+              <h3>22. Switching Into the Unmarried Partner Visa Route From Within the UK</h3>
+              <p>Applications may be made from within the UK, provided the applicant holds valid leave exceeding six months in an eligible category:</p>
+              
+              <h4>Eligible Categories for Switching:</h4>
+              <ul>
+                <li>Skilled Worker Visa</li>
+                <li>Student Visa</li>
+                <li>Graduate Visa</li>
+                <li>Other family route visas</li>
+                <li>Most work visa categories</li>
+              </ul>
+              
+              <div class="warning-box">
+                <p><strong>Visitor Restrictions:</strong> Visitors are generally required to apply from overseas. Those in the UK on a Standard Visitor Visa cannot switch to the Unmarried Partner route from within the UK.</p>
+              </div>
+            </div>
+
+            <!-- Section 23 -->
+            <div id="section23" class="content-section">
+              <h3>23. Working in the UK on an Unmarried Partner Visa</h3>
+              <div class="info-box">
+                <p><strong>Employment Rights:</strong> Unmarried Partner Visa holders are permitted to work in the UK without restriction. There are no limitations on:</p>
+                <ul>
+                  <li>Type of employment (including self-employment)</li>
+                  <li>Number of hours worked</li>
+                  <li>Specific employers or sectors</li>
+                  <li>Minimum salary requirements (beyond general employment laws)</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Section 24 -->
+            <div id="section24" class="content-section">
+              <h3>24. Indefinite Leave to Remain as an Unmarried Partner</h3>
+              <p>After five continuous years on this route, applicants may qualify for settlement, subject to meeting all requirements:</p>
+              
+              <h4>Key Requirements for ILR:</h4>
+              <ul>
+                <li>Continuous residence in UK for 5 years</li>
+                <li>Relationship remains genuine and subsisting</li>
+                <li>Financial requirement continues to be met</li>
+                <li>English language at B1 level</li>
+                <li>Passed Life in the UK test</li>
+                <li>No serious criminal record or immigration breaches</li>
+              </ul>
+              
+              <div class="highlight-box">
+                <p><strong>Continuous Residence:</strong> Applicants must not have spent more than 180 days outside the UK in any 12-month period during the 5-year qualifying period. Some discretion may apply in exceptional circumstances.</p>
+              </div>
+            </div>
+
+            <!-- Section 25: FAQ Section -->
+            <div id="section25" class="content-section">
+              <h3>25. UK Unmarried Partner Visa Frequently Asked Questions</h3>
+              
+              <div class="faq-box">
+                <h4><i class="fas fa-question-circle me-2"></i>Where Can I Apply for A UK Unmarried Partner Visa?</h4>
+                <p>Applications must be submitted either from the applicant's country of residence or from within the UK if eligible. Visitors must apply from overseas. The application location affects processing times, fees, and specific requirements.</p>
+              </div>
+              
+              <div class="faq-box">
+                <h4><i class="fas fa-question-circle me-2"></i>How Do I Apply for a UK Unmarried Partner Visa?</h4>
+                <p>Applications are submitted online using the appropriate form. Supporting documents must be prepared in advance and uploaded in accordance with Home Office procedures. Key steps include:</p>
+                <ol>
+                  <li>Complete online application form</li>
+                  <li>Pay application fee and Immigration Health Surcharge</li>
+                  <li>Upload required supporting documents</li>
+                  <li>Book biometrics appointment</li>
+                  <li>Attend appointment and submit biometrics</li>
+                  <li>Wait for decision</li>
+                </ol>
+              </div>
+              
+              <div class="faq-box">
+                <h4><i class="fas fa-question-circle me-2"></i>When Can I Apply for a British Passport?</h4>
+                <p>Applicants may apply for British citizenship after obtaining indefinite leave to remain and meeting the relevant residence and eligibility requirements. For partners of British citizens, you can apply immediately after receiving ILR. For others, you must wait 12 months after ILR.</p>
+              </div>
+              
+              <div class="faq-box">
+                <h4><i class="fas fa-question-circle me-2"></i>What if My Unmarried Partner Visa Application Is Refused?</h4>
+                <p>Refused applications usually carry a right of appeal. Appeals are heard by the First-tier Tribunal and may involve oral or written evidence. Grounds for appeal typically involve human rights considerations. Alternatively, you may be able to reapply addressing the reasons for refusal.</p>
+              </div>
+              
+              <div class="faq-box">
+                <h4><i class="fas fa-question-circle me-2"></i>What if I Cannot Satisfy the Requirements for an Unmarried Partner Visa?</h4>
+                <p>Where standard requirements cannot be met, applicants may still be considered under human rights grounds in exceptional circumstances. This requires demonstrating that refusal would result in unjustifiably harsh consequences under Article 8 of the European Convention on Human Rights.</p>
+              </div>
+            </div>
+
+            <!-- Section 26 -->
+            <div id="section26" class="content-section">
+              <h3>26. How Our Immigration Barristers Can Help</h3>
+              <p>Our immigration barristers provide comprehensive support to unmarried partners seeking to live and settle in the UK. We offer tailored advice, thorough case assessments, and professional assistance with complex applications, particularly where financial or evidential issues arise.</p>
+              
+              <div class="highlight-box">
+                <h4><i class="fas fa-handshake me-2"></i>Our Unmarried Partner Visa Services Include:</h4>
+                <ul>
+                  <li><strong>Eligibility Assessment:</strong> Detailed analysis of your specific circumstances against current Immigration Rules</li>
+                  <li><strong>Document Preparation:</strong> Expert guidance on gathering and presenting relationship evidence</li>
+                  <li><strong>Financial Requirement Strategy:</strong> Advice on meeting the £29,000 threshold through optimal combination of income sources</li>
+                  <li><strong>Application Management:</strong> Complete handling of your application from start to finish</li>
+                  <li><strong>Complex Case Support:</strong> Specialized assistance for applications with exceptional circumstances</li>
+                  <li><strong>Appeal Representation:</strong> Professional representation in case of refusal</li>
+                  <li><strong>Settlement Guidance:</strong> Strategic planning for ILR and citizenship applications</li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <p><strong>Our Approach:</strong> We adopt a client-focused, proactive strategy grounded in extensive expertise in UK immigration law. We stay current with all rule changes and Home Office guidance to ensure your application has the highest chance of success.</p>
+              </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+              <h3 class="mb-3">Ready to Apply for Your UK Unmarried Partner Visa?</h3>
+              <p class="lead mb-4">Let our expert team guide you through the application process and maximize your chances of approval. We specialize in building strong cases for unmarried partners.</p>
+              <a href="../index.html#inquiry" class="btn btn-primary btn-lg">
+                <i class="fas fa-handshake me-2"></i>Start Your Application
+              </a>
+              <p class="mt-3 text-muted">Click above to be redirected to our main inquiry form</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h5>One Solution Visa™</h5>
+          <p>Your trusted partner for all visa and immigration services. We make your travel dreams come true with professional expertise and personalized service.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/visaconnect" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="../index.html#services" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="../index.html#contact" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="../index.html#inquiry" class="text-light text-decoration-none">Inquiry</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Family Services</h6>
+          <ul class="list-unstyled">
+            <li><a href="family.html" class="text-light text-decoration-none fw-bold">Family Visas</a></li>
+            <li><a href="spouse.html" class="text-light text-decoration-none">UK Spouse Visa</a></li>
+            <li><a href="unmarried.html" class="text-light text-decoration-none">Unmarried Partner Visa</a></li>
+            <li><a href="partner.html" class="text-light text-decoration-none">Child of Partner Visa</a></li>
+            <li><a href="other.html" class="text-light text-decoration-none">Fiance & Other Visas</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Contact Info</h6>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt me-2"></i>A. Gabuya Street, Cogon Pardo, Cebu City, Philippines</li>
+            <li><i class="fas fa-phone me-2"></i>+63 968 707 5241</li>
+            <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
+            <li><i class="fas fa-clock me-2"></i>Mon-Sat: 9AM-6PM</li>
+            <li><i class="fas fa-handshake me-2"></i>Partner Visa Consultation Available</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0">&copy; 2025 One Solution Visa. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0">
+            <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+            <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Navigation Scripts
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const isClickInside = navbarToggler.contains(event.target) || 
+                              navbarCollapse.contains(event.target);
+        
+        if (!isClickInside && navbarCollapse.classList.contains('show')) {
+          navbarToggler.click();
+        }
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      
+      // Add loading animation on page load
+      window.addEventListener('load', () => {
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease-in-out';
+        setTimeout(() => {
+          document.body.style.opacity = '1';
+        }, 100);
+      });
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Highlight active nav link
+      const sections = document.querySelectorAll('.content-section');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      function setActiveNavLink() {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (window.scrollY >= sectionTop - 150) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', setActiveNavLink);
+      setActiveNavLink();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>UK Child Visas Services | One Solution Visa</title>
+  <link rel="icon" type="image/png" href="../images/logo.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+   :root {
+  --primary-color: #ffffff;
+  --secondary-color: #2c3e50;
+  --accent-color: #3498db;
+  --light-bg: #f4f6fa;
+}
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 0.75rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      padding: 0.5rem 0;
+      background: var(--secondary-color) !important;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .navbar-logo {
+      height: 40px;
+      width: 40px;
+      margin-right: 8px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    /* Back button styling */
+    .back-btn {
+      color: white !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateX(-3px);
+    }
+
+    .back-btn i {
+      margin-right: 5px;
+    }
+
+    .section-padding {
+      padding: 60px 0;
+      scroll-margin-top: 80px;
+    }
+
+    /* Service Hero Section with Background Image */
+    .service-hero {
+      background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), 
+                  url('../images/other.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 120px 0 80px;
+      margin-bottom: 40px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .service-hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .service-hero .lead {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .other-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+    
+    .content-nav {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /* Custom scrollbar for content-nav */
+    .content-nav::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .content-nav::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb {
+      background: var(--accent-color);
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
+    }
+    
+    .content-nav h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .nav-links a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      display: block;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+    
+    .nav-links a:hover {
+      background: var(--light-bg);
+      border-left: 3px solid var(--accent-color);
+      transform: translateX(5px);
+    }
+    
+    .content-section {
+      background: white;
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .content-section h2 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .content-section h3 {
+      color: var(--secondary-color);
+      margin: 2rem 0 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .content-section h4 {
+      color: var(--secondary-color);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .content-section p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    
+    .content-section ul, .content-section ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    .content-section li {
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-left: 4px solid var(--accent-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .info-box {
+      background: linear-gradient(135deg, #e8f4fc 0%, #d4eaf7 100%);
+      border-left: 4px solid var(--secondary-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .warning-box {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      border-left: 4px solid #ffc107;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .success-box {
+      background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+      border-left: 4px solid #28a745;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, var(--light-bg) 0%, #e8f4fc 100%);
+      border-radius: 15px;
+      padding: 3rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--secondary-color);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-light:hover {
+      background: var(--light-bg);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+    }
+
+    .footer {
+      background: var(--secondary-color);
+      color: #fff;
+      padding: 40px 0 20px 0;
+      position: relative;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    /* Mobile Navigation Improvements */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: rgba(44, 62, 80, 0.98);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0.4rem 0.6rem;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
+      }
+
+      .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin: 0.25rem 0;
+      }
+
+      .nav-link:hover, .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      
+      .content-nav {
+        position: static;
+        margin-bottom: 2rem;
+      }
+    }
+
+    /* iPhone 15 and Small Devices */
+    @media (max-width: 430px) {
+      .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .navbar {
+        padding: 0.5rem 0;
+      }
+
+      .navbar-brand {
+        font-size: 1.1rem;
+      }
+
+      .navbar-logo {
+        height: 35px;
+        width: 35px;
+        margin-right: 6px;
+      }
+      
+      .service-hero {
+        padding: 100px 0 60px;
+        background-attachment: scroll;
+      }
+      
+      .service-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .service-hero .lead {
+        font-size: 1.1rem;
+      }
+      
+      .other-icon {
+        font-size: 2.5rem;
+      }
+      
+      .content-section, .content-nav {
+        padding: 1.5rem;
+      }
+      
+      .cta-section {
+        padding: 2rem 1.5rem;
+      }
+
+      .footer {
+        padding: 30px 0 15px 0;
+      }
+
+      .footer h5, .footer h6 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .footer p, .footer li {
+        font-size: 0.9rem;
+      }
+
+      .footer .col-lg-4, 
+      .footer .col-lg-2, 
+      .footer .col-lg-3,
+      .footer .col-md-6 {
+        margin-bottom: 1.5rem;
+      }
+
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Very Small Devices */
+    @media (max-width: 375px) {
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .navbar-brand {
+        font-size: 1rem;
+      }
+      
+      .service-hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Prevent horizontal scroll */
+    .row {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
+    .row > * {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/logo.png" alt="One Solution Visa Logo" class="navbar-logo">
+        OneSolutionVisa
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link back-btn" href="family.html">
+              <i class="fas fa-arrow-left me-1"></i>Back to Family Visa
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Other Child Visas Content -->
+  <main style="margin-top: 80px; min-height: calc(100vh - 300px);">
+    <!-- Hero Section -->
+    <section class="service-hero">
+      <div class="container">
+        <div class="other-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <h1>UK Other Child Visas: Alternative Routes & Requirements</h1>
+        <p class="lead">The UK provides alternative Child Visa routes for children whose circumstances fall outside the Child of a Partner or Parent route under Appendix FM or the Dependent Child route under the Points-Based System.</p>
+        <a href="../index.html#inquiry" class="btn btn-light btn-lg mt-3">
+          <i class="fas fa-users me-2"></i>Start Your Application
+        </a>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row">
+          <!-- Navigation Sidebar -->
+          <div class="col-lg-4 mb-4">
+            <div class="content-nav">
+              <h3><i class="fas fa-list-alt me-2"></i>Contents</h3>
+              <ul class="nav-links">
+                <li><a href="#overview">Other Child Visas Overview</a></li>
+                <li><a href="#section1">1. Visa Route Selection Guidance</a></li>
+                <li><a href="#section2">2. Child of Parent with Limited Leave</a></li>
+                <li><a href="#section3">3. Requirements for Limited Leave Route</a></li>
+                <li><a href="#section4">4. Child of Settled Parent/Relative</a></li>
+                <li><a href="#section5">5. Requirements for Settled Route</a></li>
+                <li><a href="#section6">6. Not Formed Independent Family Unit</a></li>
+                <li><a href="#section7">7. Not Leading Independent Life</a></li>
+                <li><a href="#section8">8. Sole Responsibility Criteria</a></li>
+                <li><a href="#section9">9. Serious & Compelling Considerations</a></li>
+                <li><a href="#section10">10. Financial Requirement</a></li>
+                <li><a href="#section11">11. Adequate Maintenance Calculation</a></li>
+                <li><a href="#section12">12. Accommodation Requirement</a></li>
+                <li><a href="#section13">13. English Language Requirement</a></li>
+                <li><a href="#section14">14. Application Fee</a></li>
+                <li><a href="#section15">15. Exemptions from Visa Requirement</a></li>
+                <li><a href="#section16">16. Points-Based System Dependants</a></li>
+                <li><a href="#section17">17. Appendix FM Child Routes</a></li>
+                <li><a href="#section18">18. Processing Considerations</a></li>
+                <li><a href="#section19">19. How We Can Help</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="col-lg-8">
+            <!-- Overview Section -->
+            <div id="overview" class="content-section">
+              <h2>OTHER CHILD VISAS</h2>
+              <p>The UK provides alternative Child Visa routes for children whose circumstances fall outside the Child of a Partner or Parent route under Appendix FM or the Dependent Child route under the Points-Based System.</p>
+              
+              <div class="info-box">
+                <p><strong>Applicable Routes:</strong> These routes apply where a parent holds, or is being granted, limited leave to enter or remain on a route to settlement, or where a parent or relative is present and settled in the UK or is being admitted for settlement, but not as a Partner or Parent under Appendix FM or as a Points-Based System migrant.</p>
+              </div>
+              
+              <div class="highlight-box">
+                <h4>Important Route Distinctions:</h4>
+                <ul>
+                  <li><strong>Child of Partner/Parent Route:</strong> Where a child's parent holds/being granted leave as a Partner or Parent under Appendix FM</li>
+                  <li><strong>Points-Based System Dependant:</strong> Where a child's parent holds/being granted leave as a Points-Based System migrant</li>
+                  <li><strong>Other Child Visas:</strong> For all other qualifying circumstances</li>
+                </ul>
+              </div>
+              
+              <div class="success-box">
+                <p><strong>Exemptions:</strong> A child who is a British citizen, holds indefinite leave to remain, or is otherwise settled in the UK is not required to apply for a visa in order to enter the United Kingdom.</p>
+              </div>
+            </div>
+
+            <!-- Section 1 -->
+            <div id="section1" class="content-section">
+              <h3>1. Visa Route Selection Guidance</h3>
+              <p>Selecting the correct child visa route is crucial for application success. Use this guide to determine the appropriate pathway:</p>
+              
+              <table class="table table-bordered">
+                <thead class="table-light">
+                  <tr>
+                    <th>Parent's Status</th>
+                    <th>Appropriate Child Visa Route</th>
+                    <th>Key Requirements</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Partner or Parent under Appendix FM</td>
+                    <td><strong>Child of a Partner or Parent Visa</strong></td>
+                    <td>Parent holds/being granted Appendix FM leave</td>
+                  </tr>
+                  <tr>
+                    <td>Points-Based System Migrant</td>
+                    <td><strong>Dependent Child of PBS Migrant</strong></td>
+                    <td>Parent holds PBS visa (Skilled Worker, etc.)</td>
+                  </tr>
+                  <tr>
+                    <td>Limited leave on route to settlement (other categories)</td>
+                    <td><strong>Child of Parent with Limited Leave</strong></td>
+                    <td>Parent has limited leave with settlement view</td>
+                  </tr>
+                  <tr>
+                    <td>Settled in UK or being admitted for settlement</td>
+                    <td><strong>Child of Settled Parent/Relative</strong></td>
+                    <td>Parent/relative is settled or being settled</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <div class="warning-box">
+                <p><strong>Professional Advice Recommended:</strong> The precise requirements will depend on the individual circumstances of the parent and child. Specialist legal advice may assist in determining eligibility and ensuring compliance with the Immigration Rules.</p>
+              </div>
+            </div>
+
+            <!-- Section 2 -->
+            <div id="section2" class="content-section">
+              <h3>2. Requirements for a UK Child Visa as the Child of a Parent with Limited Leave to Enter or Remain in the United Kingdom</h3>
+              <p>This route is appropriate for a child seeking leave to enter or remain in the UK in line with a parent who has been granted, or is being granted, limited leave on an immigration route leading to settlement, other than as a Partner or Parent under Appendix FM or as a Points-Based System migrant.</p>
+            </div>
+
+            <!-- Section 3 -->
+            <div id="section3" class="content-section">
+              <h3>3. Requirements for Limited Leave Route</h3>
+              <p>To qualify under this route, UK Visas & Immigration must be satisfied that:</p>
+              
+              <div class="info-box">
+                <h5>Core Requirements:</h5>
+                <ul>
+                  <li>The child is under the age of 18 at the date of application</li>
+                  <li>The child has not formed an independent family unit</li>
+                  <li>The child is not leading an independent life</li>
+                  <li>The child meets the applicable financial requirement</li>
+                  <li>The child meets the accommodation requirement</li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <h5>Additional Relationship Requirements (One Must Apply):</h5>
+                <ul>
+                  <li>One parent is present and settled in the UK or is being admitted for settlement at the same time, and the other parent has been granted, or is being granted, limited leave with a view to settlement; <strong>OR</strong></li>
+                  <li>One parent has been granted, or is being granted, leave to enter or remain with a view to settlement and has sole responsibility for the child's upbringing; <strong>OR</strong></li>
+                  <li>One parent has been granted, or is being granted, limited leave to enter or remain with a view to settlement and there are serious and compelling family or other considerations making the child's exclusion undesirable, with suitable care arrangements in place</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Section 4 -->
+            <div id="section4" class="content-section">
+              <h3>4. Requirements for a UK Child Visa as the Child of a Parent or Relative Present and Settled in the United Kingdom or Being Admitted for Settlement in the UK</h3>
+              <p>This route applies to a child seeking indefinite leave to enter the UK to join a parent or relative who is already present and settled in the UK or is being admitted for settlement, other than as a Partner or Parent under Appendix FM or as a Points-Based System migrant.</p>
+            </div>
+
+            <!-- Section 5 -->
+            <div id="section5" class="content-section">
+              <h3>5. Requirements for Settled Route</h3>
+              <p>To qualify, UK Visas & Immigration must be satisfied that:</p>
+              
+              <div class="info-box">
+                <h5>Core Requirements:</h5>
+                <ul>
+                  <li>The child (or child relative) is under the age of 18 at the date of application</li>
+                  <li>The child (or child relative) has not formed an independent family unit</li>
+                  <li>The child (or child relative) is not leading an independent life</li>
+                  <li>The child (or child relative) satisfies the financial requirement</li>
+                  <li>The child (or child relative) satisfies the accommodation requirement</li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <h5>Relationship Requirements (One Must Apply):</h5>
+                <ul>
+                  <li>Both parents are present and settled in the UK; <strong>OR</strong></li>
+                  <li>Both parents are being admitted for settlement at the same time; <strong>OR</strong></li>
+                  <li>One parent is present and settled in the UK and the other is being admitted for settlement at the same time; <strong>OR</strong></li>
+                  <li>One parent is present and settled in the UK or being admitted for settlement and the other parent is deceased; <strong>OR</strong></li>
+                  <li>One parent is present and settled in the UK or being admitted for settlement and has sole responsibility for the child's upbringing; <strong>OR</strong></li>
+                  <li>A parent or relative is present and settled in the UK or being admitted for settlement, and there are serious and compelling family or other considerations making the child's exclusion undesirable, with suitable care arrangements in place</li>
+                </ul>
+              </div>
+              
+              <div class="highlight-box">
+                <p><strong>Professional Guidance:</strong> The specific requirements may vary depending on the circumstances of the child and family members. Professional immigration advice may be beneficial in navigating these complex criteria.</p>
+              </div>
+            </div>
+
+            <!-- Section 6 -->
+            <div id="section6" class="content-section">
+              <h3>6. Child Has Not Formed an Independent Family Unit</h3>
+              <p>The child (or child relative where indefinite leave is sought) must not be living independently as part of another family unit.</p>
+              
+              <div class="info-box">
+                <h5>What Constitutes an Independent Family Unit:</h5>
+                <ul>
+                  <li>Living with a spouse or civil partner</li>
+                  <li>Living with a fiancé(e) or proposed civil partner</li>
+                  <li>Living with an unmarried partner as a couple</li>
+                  <li>Having established a separate household with a partner</li>
+                  <li>Having parental responsibilities for their own children (in most cases)</li>
+                </ul>
+              </div>
+              
+              <div class="warning-box">
+                <p><strong>Assessment:</strong> The Home Office will assess whether the child has established a separate family unit that operates independently from their parents or relatives. This is a key eligibility criterion for all child visa routes.</p>
+              </div>
+            </div>
+
+            <!-- Section 7 -->
+            <div id="section7" class="content-section">
+              <h3>7. Child Is Not Leading an Independent Life</h3>
+              <p>A child who is leading an independent life will not qualify under the family life provisions of Part 8 of the Immigration Rules. The child must not have chosen to establish a separate social or economic unit.</p>
+              
+              <div class="info-box">
+                <h5>Practical Indicators of Independent Life:</h5>
+                <ul>
+                  <li><strong>Living Arrangements:</strong> Must live with parent(s) or relative (except for full-time residential education)</li>
+                  <li><strong>Employment Status:</strong> Should not be in full-time employment</li>
+                  <li><strong>Financial Dependency:</strong> Must be wholly or mainly dependent on parent(s) or relative for financial support</li>
+                  <li><strong>Emotional Dependency:</strong> Must rely on parent(s) or relative for emotional support and guidance</li>
+                  <li><strong>Decision Making:</strong> Major life decisions should involve parent(s) or relative</li>
+                </ul>
+              </div>
+              
+              <div class="highlight-box">
+                <p><strong>Educational Exception:</strong> Children attending full-time residential educational institutions (boarding schools, etc.) may still qualify if they maintain dependency during holidays and breaks, and financial/emotional reliance on parents continues.</p>
+              </div>
+            </div>
+
+            <!-- Section 8 -->
+            <div id="section8" class="content-section">
+              <h3>8. Sole Responsibility for the Child's Upbringing</h3>
+              <p>Sole responsibility exists where one parent has relinquished parental responsibility in practice, and the other parent has assumed exclusive responsibility for all major decisions relating to the child's upbringing and day-to-day care.</p>
+              
+              <div class="warning-box">
+                <p><strong>Evidence Requirements:</strong> Where sole responsibility is relied upon, the child will normally reside with the sponsoring parent, who must demonstrate continuous care and control. The Home Office will require substantial documentary evidence showing that responsibility for the child's welfare is not shared.</p>
+              </div>
+              
+              <h4>Key Evidence for Sole Responsibility:</h4>
+              <ul>
+                <li>Legal custody or guardianship orders</li>
+                <li>School records showing only one parent's involvement</li>
+                <li>Medical records with only one parent's contact details</li>
+                <li>Financial support evidence from only one parent</li>
+                <li>Correspondence with authorities regarding the child</li>
+                <li>Statements from teachers, doctors, or social workers</li>
+                <li>Evidence of the other parent's absence or inability to care</li>
+                <li>Documentation of major decisions made by one parent</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>Legal Support:</strong> Immigration barristers can provide guidance on the evidence required to establish sole responsibility, which often involves complex documentation and careful case preparation.</p>
+              </div>
+            </div>
+
+            <!-- Section 9 -->
+            <div id="section9" class="content-section">
+              <h3>9. Serious and Compelling Family or Other Considerations</h3>
+              <p>In assessing whether serious and compelling family or other considerations exist, the Home Office places primary emphasis on the child's welfare and best interests. This assessment is highly fact-specific.</p>
+              
+              <div class="info-box">
+                <h5>Family Considerations May Include:</h5>
+                <ul>
+                  <li>The child's emotional and developmental needs</li>
+                  <li>Psychological impact of separation from parent(s)</li>
+                  <li>Quality of existing care arrangements</li>
+                  <li>Child's attachment to UK-based family members</li>
+                  <li>Special medical or educational requirements</li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <h5>Other Considerations May Include:</h5>
+                <ul>
+                  <li>Social and economic environment in home country</li>
+                  <li>Evidence of neglect, abuse, or unmet needs</li>
+                  <li>Political instability or conflict in home country</li>
+                  <li>Lack of access to essential services or education</li>
+                  <li>Risk to child's safety or wellbeing</li>
+                </ul>
+              </div>
+              
+              <div class="warning-box">
+                <p><strong>Threshold and Care Arrangements:</strong> These factors must be sufficiently serious to justify admission to the UK. A single factor or combination of circumstances may amount to serious and compelling grounds. Where this ground is relied upon, the Home Office must also be satisfied that appropriate arrangements have been made for the child's care in the UK.</p>
+              </div>
+            </div>
+
+            <!-- Section 10 -->
+            <div id="section10" class="content-section">
+              <h3>10. UK Child Visa Financial Requirement</h3>
+              <p>To qualify for a UK Child Visa under these routes, it must be demonstrated that the child will be adequately maintained by the parent(s) or relative without recourse to public funds.</p>
+              
+              <div class="info-box">
+                <h5>Adequate Maintenance Assessment:</h5>
+                <p>Adequate maintenance is assessed by comparing projected weekly income against essential costs and income support thresholds. The formula considers:</p>
+                <ul>
+                  <li><strong>Projected Weekly Income (A):</strong> All sources of household income</li>
+                  <li><strong>Weekly Accommodation Costs (B):</strong> Rent/mortgage, council tax, utilities</li>
+                  <li><strong>Income Support Threshold (C):</strong> Applicable amount for family size</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Section 11 -->
+            <div id="section11" class="content-section">
+              <h3>11. Adequate Maintenance Calculation</h3>
+              <p>The adequate maintenance test applies the formula: <strong>A - B ≥ C</strong></p>
+              
+              <div class="highlight-box">
+                <h5>Calculation Formula Explained:</h5>
+                <p><strong>A (Weekly Income)</strong> - <strong>B (Weekly Accommodation Costs)</strong> ≥ <strong>C (Income Support Threshold)</strong></p>
+                <p>Where the result meets or exceeds the threshold, the financial requirement is satisfied.</p>
+              </div>
+              
+              <h4>Cash Savings Consideration:</h4>
+              <p>Where cash savings are relied upon, the total amount is divided by the number of weeks of leave that would be granted to determine the weekly contribution.</p>
+              
+              <div class="info-box">
+                <h5>Example Calculation:</h5>
+                <ul>
+                  <li>Weekly household income: £500</li>
+                  <li>Weekly accommodation costs: £150</li>
+                  <li>Income support threshold for family: £200</li>
+                  <li>Calculation: £500 - £150 = £350</li>
+                  <li>Result: £350 ≥ £200 = Requirement MET</li>
+                </ul>
+              </div>
+              
+              <div class="warning-box">
+                <p><strong>Professional Assistance Recommended:</strong> Professional assistance may be helpful in applying this calculation correctly and preparing compliant financial evidence that meets Home Office standards.</p>
+              </div>
+            </div>
+
+            <!-- Section 12 -->
+            <div id="section12" class="content-section">
+              <h3>12. UK Child Visa Accommodation Requirement</h3>
+              <p>Applicants must show that suitable accommodation is available for the child without reliance on public funds.</p>
+              
+              <div class="info-box">
+                <h5>Accommodation Standards:</h5>
+                <ul>
+                  <li>Owned or exclusively occupied by the parent(s) or relative</li>
+                  <li>Not overcrowded according to UK housing standards</li>
+                  <li>Compliant with public health and safety regulations</li>
+                  <li>Suitable for the child's age and needs</li>
+                  <li>Available without recourse to public funds</li>
+                </ul>
+              </div>
+              
+              <h4>Required Evidence:</h4>
+              <ul>
+                <li>Property inspection report (if required)</li>
+                <li>Tenancy agreement or mortgage statement</li>
+                <li>Council tax statement</li>
+                <li>Evidence of legal right to occupy</li>
+                <li>Letter from property owner (if living with family/friends)</li>
+                <li>Evidence property is not overcrowded</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>Evidence Must Confirm:</strong> The legal right to occupy the property and the adequacy of the living arrangements for all household members, including the child applicant.</p>
+              </div>
+            </div>
+
+            <!-- Section 13 -->
+            <div id="section13" class="content-section">
+              <h3>13. Child Visa English Language Requirement</h3>
+              <div class="success-box">
+                <h4><i class="fas fa-check-circle me-2"></i>No English Language Requirement</h4>
+                <p>There is <strong>no English language requirement</strong> for children applying for a UK Child Visa under these routes. This recognizes that children will typically acquire English language skills through education and integration in the UK.</p>
+              </div>
+              
+              <div class="info-box">
+                <p><strong>Educational Support:</strong> UK schools offer comprehensive English as an Additional Language (EAL) support for children arriving from non-English speaking backgrounds, ensuring they can access education and integrate successfully.</p>
+              </div>
+            </div>
+
+            <!-- Section 14 -->
+            <div id="section14" class="content-section">
+              <h3>14. UK Child Visa Application Fee</h3>
+              <p>The Home Office application fees for UK Child Visas under these routes are as follows:</p>
+              
+              <table class="table table-bordered">
+                <thead class="table-light">
+                  <tr>
+                    <th>Application Type</th>
+                    <th>Standard Fee</th>
+                    <th>Service Information</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Outside the UK (Entry Clearance)</td>
+                    <td><strong>£1,523</strong></td>
+                    <td>Priority service may be available for additional fee</td>
+                  </tr>
+                  <tr>
+                    <td>Inside the UK (Switch/Extension)</td>
+                    <td><strong>£1,033</strong></td>
+                    <td>Super Priority may be available for next-day decision</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <div class="info-box">
+                <h5>Additional Costs to Consider:</h5>
+                <ul>
+                  <li><strong>Immigration Health Surcharge:</strong> £1,035 per year (paid upfront for visa duration)</li>
+                  <li><strong>Biometric Enrollment:</strong> £19.20 (if applicable)</li>
+                  <li><strong>Document Translation/Certification:</strong> Variable costs</li>
+                  <li><strong>Priority Services:</strong> Additional fees for faster processing</li>
+                  <li><strong>Legal Fees:</strong> If using professional immigration services</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Section 15 -->
+            <div id="section15" class="content-section">
+              <h3>15. Exemptions from Visa Requirement</h3>
+              <p>Certain children are exempt from visa requirements and do not need to apply for entry clearance:</p>
+              
+              <div class="success-box">
+                <h5><i class="fas fa-passport me-2"></i>Exempt Categories:</h5>
+                <ul>
+                  <li><strong>British Citizens:</strong> Including those with right of abode</li>
+                  <li><strong>Irish Citizens:</strong> Under Common Travel Area arrangements</li>
+                  <li><strong>Indefinite Leave to Remain Holders:</strong> Already settled in the UK</li>
+                  <li><strong>EU Settlement Scheme Status Holders:</strong> With settled or pre-settled status</li>
+                  <li><strong>Dual Nationals:</strong> With British citizenship</li>
+                  <li><strong>Other Settled Status:</strong> Persons otherwise settled in the UK</li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <p><strong>Verification Required:</strong> Even if exempt from visa requirements, children may need to provide evidence of their status (British passport, ILR biometric card, etc.) when entering the UK.</p>
+              </div>
+            </div>
+
+            <!-- Section 16 -->
+            <div id="section16" class="content-section">
+              <h3>16. Points-Based System Dependants</h3>
+              <p>Where a child's parent holds, or is being granted, leave as a Points-Based System migrant, the appropriate route is the Dependent Child of a Points-Based System Migrant.</p>
+              
+              <div class="info-box">
+                <h5>Applicable PBS Routes Include:</h5>
+                <ul>
+                  <li>Skilled Worker Visa</li>
+                  <li>Health and Care Worker Visa</li>
+                  <li>Global Talent Visa</li>
+                  <li>Innovator Founder Visa</li>
+                  <li>Scale-up Visa</li>
+                  <li>Minister of Religion Visa</li>
+                  <li>International Sportsperson Visa</li>
+                  <li>Temporary Worker visas (in some circumstances)</li>
+                </ul>
+              </div>
+              
+              <div class="warning-box">
+                <p><strong>Important Distinction:</strong> Children of PBS migrants should <strong>not</strong> apply under the "Other Child Visas" routes described on this page. Using the incorrect route is a common reason for refusal.</p>
+              </div>
+            </div>
+
+            <!-- Section 17 -->
+            <div id="section17" class="content-section">
+              <h3>17. Appendix FM Child Routes</h3>
+              <p>Where a child's parent holds, or is being granted, leave as a Partner or Parent under Appendix FM of the Immigration Rules, the child must apply under the Child of a Partner or Parent Visa route.</p>
+              
+              <div class="info-box">
+                <h5>Appendix FM Categories Include:</h5>
+                <ul>
+                  <li>Spouse/Civil Partner Visa</li>
+                  <li>Unmarried Partner Visa</li>
+                  <li>Fiancé(e)/Proposed Civil Partner Visa</li>
+                  <li>Parent of a British/Settled Child Visa</li>
+                  <li>Other Appendix FM family routes</li>
+                </ul>
+              </div>
+              
+              <div class="highlight-box">
+                <p><strong>Route Selection Critical:</strong> Selecting the correct visa route based on the parent's exact immigration status is essential for application success. Professional advice can help determine the appropriate pathway.</p>
+              </div>
+            </div>
+
+            <!-- Section 18 -->
+            <div id="section18" class="content-section">
+              <h3>18. Processing Considerations</h3>
+              <p>When preparing a child visa application under these routes, consider the following:</p>
+              
+              <div class="info-box">
+                <h5>Key Processing Factors:</h5>
+                <ul>
+                  <li><strong>Simultaneous Applications:</strong> If parent is applying at same time, coordinate submissions</li>
+                  <li><strong>Document Authentication:</strong> Non-English documents require certified translations</li>
+                  <li><strong>Financial Evidence:</strong> Must cover required period and meet format standards</li>
+                  <li><strong>Relationship Evidence:</strong> Particularly important for sole responsibility cases</li>
+                  <li><strong>Care Arrangements:</strong> Must be documented for serious/compelling cases</li>
+                  <li><strong>Processing Times:</strong> Standard processing 8-12 weeks; priority services available</li>
+                </ul>
+              </div>
+              
+              <div class="warning-box">
+                <p><strong>Common Refusal Reasons:</strong> Applications are often refused due to incorrect route selection, insufficient evidence of relationship/dependency, inadequate financial documentation, or failure to meet accommodation requirements.</p>
+              </div>
+            </div>
+
+            <!-- Section 19 -->
+            <div id="section19" class="content-section">
+              <h3>19. How Our Immigration Barristers Can Help</h3>
+              <p>Our immigration barristers regularly assist foreign national children in relocating to and settling in the UK with their parents or relatives. We have supported numerous families in preparing and submitting successful Child Visa applications.</p>
+              
+              <div class="highlight-box">
+                <h4><i class="fas fa-users me-2"></i>Our Other Child Visa Services Include:</h4>
+                <ul>
+                  <li><strong>Route Assessment:</strong> Determining the correct visa pathway based on parent's status</li>
+                  <li><strong>Eligibility Evaluation:</strong> Comprehensive assessment against Immigration Rules</li>
+                  <li><strong>Sole Responsibility Cases:</strong> Expert handling of complex sole responsibility applications</li>
+                  <li><strong>Serious/Compelling Circumstances:</strong> Building strong cases for exceptional admissions</li>
+                  <li><strong>Financial Requirement Guidance:</strong> Navigating adequate maintenance calculations</li>
+                  <li><strong>Document Preparation:</strong> Ensuring all evidence meets Home Office standards</li>
+                  <li><strong>Application Management:</strong> Complete handling from preparation to submission</li>
+                  <li><strong>Appeal Representation:</strong> If the application is refused</li>
+                  <li><strong>Post-Arrival Support:</strong> Guidance on settlement and integration</li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <p><strong>Our Commitment:</strong> Whether you require advice on eligibility under the Immigration Rules, an assessment of your prospects, or professional assistance with preparing an application, our team is well placed to help. We are committed to providing clear, practical, and reliable immigration advice through a professional, approachable, and client-focused service.</p>
+              </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+              <h3 class="mb-3">Need Help With Alternative Child Visa Routes?</h3>
+              <p class="lead mb-4">Our expert team specializes in complex child visa applications, including sole responsibility cases and exceptional circumstances. Let us help reunite your family in the UK.</p>
+              <a href="../index.html#inquiry" class="btn btn-primary btn-lg">
+                <i class="fas fa-users me-2"></i>Start Your Child's Application
+              </a>
+              <p class="mt-3 text-muted">Click above to be redirected to our main inquiry form</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h5>One Solution Visa™</h5>
+          <p>Your trusted partner for all visa and immigration services. We make your travel dreams come true with professional expertise and personalized service.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/visaconnect" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="../index.html#services" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="../index.html#contact" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="../index.html#inquiry" class="text-light text-decoration-none">Inquiry</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Family Services</h6>
+          <ul class="list-unstyled">
+            <li><a href="family.html" class="text-light text-decoration-none fw-bold">Family Visas</a></li>
+            <li><a href="spouse.html" class="text-light text-decoration-none">UK Spouse Visa</a></li>
+            <li><a href="unmarried.html" class="text-light text-decoration-none">Unmarried Partner Visa</a></li>
+            <li><a href="partner.html" class="text-light text-decoration-none">Child of Partner Visa</a></li>
+            <li><a href="other.html" class="text-light text-decoration-none">Other Child Visas</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Contact Info</h6>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt me-2"></i>A. Gabuya Street, Cogon Pardo, Cebu City, Philippines</li>
+            <li><i class="fas fa-phone me-2"></i>+63 968 707 5241</li>
+            <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
+            <li><i class="fas fa-clock me-2"></i>Mon-Sat: 9AM-6PM</li>
+            <li><i class="fas fa-users me-2"></i>Complex Child Visa Consultation Available</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0">&copy; 2025 One Solution Visa. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0">
+            <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+            <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Navigation Scripts
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const isClickInside = navbarToggler.contains(event.target) || 
+                              navbarCollapse.contains(event.target);
+        
+        if (!isClickInside && navbarCollapse.classList.contains('show')) {
+          navbarToggler.click();
+        }
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      
+      // Add loading animation on page load
+      window.addEventListener('load', () => {
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease-in-out';
+        setTimeout(() => {
+          document.body.style.opacity = '1';
+        }, 100);
+      });
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Highlight active nav link
+      const sections = document.querySelectorAll('.content-section');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      function setActiveNavLink() {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (window.scrollY >= sectionTop - 150) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', setActiveNavLink);
+      setActiveNavLink();
+    });
+  </script>
+</body>
+</html>

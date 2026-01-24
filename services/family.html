@@ -81,208 +81,109 @@
       scroll-margin-top: 80px;
     }
 
-    /* Family specific styles - Using your color theme */
+    /* Hero section with background image */
     .family-hero {
-      background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+      background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.75)), 
+                  url('../images/family.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       color: white;
-      padding: 100px 0 60px;
-      margin-bottom: 40px;
+      padding: 120px 0 80px;
+      margin-top: 56px;
       text-align: center;
+      position: relative;
+      min-height: calc(100vh - 56px);
+      display: flex;
+      align-items: center;
     }
     
     .family-hero h1 {
       font-size: 2.8rem;
       font-weight: bold;
       margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
     
     .family-hero .lead {
       font-size: 1.3rem;
-      opacity: 0.9;
+      opacity: 0.95;
       max-width: 800px;
-      margin: 0 auto;
+      margin: 0 auto 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
     
-    .family-card {
-      background: white;
-      border-radius: 12px;
-      padding: 2.5rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      height: 100%;
-      transition: transform 0.3s ease;
-      border-top: 4px solid var(--accent-color);
-      text-align: center;
-    }
-    
-    .family-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 30px rgba(52, 152, 219, 0.15);
-    }
-    
-    .family-icon {
-      font-size: 2.8rem;
-      color: var(--accent-color);
-      margin-bottom: 1.5rem;
-      background: var(--light-bg);
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
+    /* Family-specific styles - Horizontal alignment */
+    .family-options {
       display: flex;
-      align-items: center;
+      flex-wrap: nowrap;
       justify-content: center;
-      margin: 0 auto 1.5rem;
-    }
-    
-    .eligibility-box {
-      background: white;
-      border-radius: 10px;
-      padding: 2rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
-      border-left: 4px solid var(--accent-color);
-    }
-    
-    .eligibility-list li {
-      padding: 12px 0;
-      border-bottom: 1px solid #eee;
-      display: flex;
-      align-items: center;
-    }
-    
-    .eligibility-list li:last-child {
-      border-bottom: none;
-    }
-    
-    .eligibility-list i {
-      color: var(--accent-color);
-      margin-right: 12px;
-      font-size: 1.2rem;
-    }
-    
-    .process-flow {
-      position: relative;
-      padding: 2rem;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    
-    .process-step {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 2rem;
-      position: relative;
-    }
-    
-    .step-circle {
-      flex-shrink: 0;
-      width: 50px;
-      height: 50px;
-      background: var(--accent-color);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 1.2rem;
-      margin-right: 1.5rem;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .step-content {
-      flex: 1;
-    }
-    
-    .process-step:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      left: 25px;
-      top: 50px;
-      bottom: -2rem;
-      width: 2px;
-      background: var(--accent-color);
-      opacity: 0.3;
-    }
-    
-    .document-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-    
-    .document-item {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      border-left: 4px solid var(--accent-color);
-      transition: transform 0.3s ease;
-    }
-    
-    .document-item:hover {
-      transform: translateY(-5px);
-    }
-    
-    .document-icon {
-      font-size: 1.8rem;
-      color: var(--accent-color);
-      margin-bottom: 1rem;
-    }
-    
-    .timeline-container {
-      position: relative;
-      padding-left: 40px;
-    }
-    
-    .timeline-container::before {
-      content: '';
-      position: absolute;
-      left: 15px;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: linear-gradient(to bottom, var(--accent-color), var(--secondary-color));
-    }
-    
-    .timeline-item {
-      position: relative;
-      margin-bottom: 2rem;
-      padding: 1.5rem;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-    
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -32px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 12px;
-      height: 12px;
-      background: var(--accent-color);
-      border-radius: 50%;
-      border: 3px solid white;
-      box-shadow: 0 0 0 3px var(--accent-color);
-    }
-    
-    .testimonial-family {
-      background: var(--light-bg);
-      border-radius: 12px;
-      padding: 2rem;
-      margin: 2rem 0;
-      border-left: 5px solid var(--accent-color);
-    }
-    
-    .cta-family {
-      background: linear-gradient(135deg, var(--accent-color) 0%, #2980b9 100%);
-      color: white;
-      border-radius: 15px;
-      padding: 3rem;
+      gap: 1rem;
       margin-top: 3rem;
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .family-option-btn {
+      background: rgba(255, 255, 255, 0.9);
+      color: white;
+      border: 2px solid transparent;
+      padding: 1.2rem 1rem;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      text-align: center;
+      flex: 1;
+      min-width: 180px;
+      max-width: 250px;
+    }
+    
+    .family-option-btn:hover {
+      background: white;
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+      border-color: white;
+      color: var(--secondary-color);
+    }
+    
+    .family-option-btn i {
+      margin-bottom: 15px;
+      font-size: 2.5rem;
+      display: block;
+    }
+    
+    .family-option-btn .btn-text {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    
+    /* Gradient backgrounds matching student.html style */
+    .family-option-btn.spouse {
+      background: linear-gradient(135deg, #4A90E2 0%, #2c3e50 100%);
+    }
+    
+    .family-option-btn.partner {
+      background: linear-gradient(135deg, #36D1DC 0%, #5B86E5 100%);
+    }
+    
+    .family-option-btn.child {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .family-option-btn.other-child {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+    
+    .family-option-btn.fiance {
+      background: linear-gradient(135deg, #ff9966 0%, #ff5e62 100%);
     }
 
     .footer {
@@ -360,18 +261,27 @@
         background-color: rgba(255, 255, 255, 0.1);
       }
       
-      .family-card {
-        padding: 2rem;
+      .family-options {
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 400px;
       }
       
-      .process-flow {
-        padding: 1.5rem;
+      .family-option-btn {
+        width: 100%;
+        min-width: auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .family-options {
+        flex-direction: column;
+        align-items: center;
       }
       
-      .step-circle {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
+      .family-option-btn {
+        width: 100%;
+        max-width: 350px;
       }
     }
 
@@ -397,7 +307,9 @@
       }
       
       .family-hero {
-        padding: 80px 0 40px;
+        padding: 100px 0 60px;
+        background-attachment: scroll;
+        min-height: calc(100vh - 56px);
       }
       
       .family-hero h1 {
@@ -408,38 +320,19 @@
         font-size: 1.1rem;
       }
       
-      .family-card {
-        padding: 1.5rem;
+      .family-option-btn {
+        padding: 1rem 0.8rem;
+        min-width: 140px;
+        font-size: 0.9rem;
       }
       
-      .family-icon {
-        width: 70px;
-        height: 70px;
-        font-size: 2.2rem;
+      .family-option-btn i {
+        font-size: 2rem;
+        margin-bottom: 10px;
       }
       
-      .eligibility-box {
-        padding: 1.5rem;
-      }
-      
-      .cta-family {
-        padding: 2rem 1.5rem;
-      }
-      
-      .process-step {
-        flex-direction: column;
-      }
-      
-      .step-circle {
-        margin-right: 0;
-        margin-bottom: 1rem;
-      }
-      
-      .process-step:not(:last-child)::after {
-        left: 50%;
-        top: 40px;
-        bottom: -2rem;
-        transform: translateX(-50%);
+      .family-option-btn .btn-text {
+        font-size: 0.9rem;
       }
 
       .footer {
@@ -484,8 +377,8 @@
         font-size: 1.8rem;
       }
       
-      .family-card {
-        padding: 1.25rem;
+      .family-option-btn {
+        padding: 1rem 0.8rem;
       }
     }
 
@@ -524,280 +417,39 @@
     </div>
   </nav>
 
-  <!-- Page Content -->
-  <main style="margin-top: 80px; min-height: calc(100vh - 300px);">
+  <!-- Family Visa Content -->
+  <main>
     <!-- Hero Section -->
     <section class="family-hero">
       <div class="container">
-        <h1>Family Visa & Reunification Services</h1>
-        <p class="lead">Reunite with your loved ones. Our expert team handles family visa applications for spouses, children, parents, and relatives with care and precision.</p>
-        <a href="../index.html#inquiry" class="btn btn-light btn-lg mt-3">
-          <i class="fas fa-heart me-2"></i>Start Family Application
-        </a>
-      </div>
-    </section>
-
-    <!-- Family Visa Types -->
-    <section class="section-padding">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center mb-4">
-            <h2 class="mb-3">Family Visa Categories</h2>
-            <p class="lead">Comprehensive solutions for family reunification</p>
-          </div>
-          
-          <!-- Spouse/Partner Visa -->
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="family-card">
-              <div class="family-icon">
-                <i class="fas fa-ring"></i>
-              </div>
-              <h3>Spouse & Partner Visas</h3>
-              <p>Reunite with your spouse or partner for temporary visits or permanent relocation.</p>
-              <ul class="list-unstyled mt-3 text-start">
-                <li><i class="fas fa-check text-success me-2"></i>Marriage-based visas</li>
-                <li><i class="fas fa-check text-success me-2"></i>De facto partner visas</li>
-                <li><i class="fas fa-check text-success me-2"></i>Fiancé(e) visas</li>
-                <li><i class="fas fa-check text-success me-2"></i>Same-sex partner visas</li>
-              </ul>
-            </div>
-          </div>
-          
-          <!-- Parent Visa -->
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="family-card">
-              <div class="family-icon">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-center">
+            <h1>Family Visa & Reunification Services</h1>
+            <p class="lead">Reunite with your loved ones. Our expert team handles family visa applications for spouses, children, parents, and relatives with care and precision.</p>
+            
+            <div class="family-options">
+              <a href="spouse.html" class="family-option-btn spouse">
+                <i class="fas fa-heart"></i>
+                <span class="btn-text">UK Spouse Visa</span>
+              </a>
+              <a href="unmarried.html" class="family-option-btn partner">
+                <i class="fas fa-handshake"></i>
+                <span class="btn-text">Unmarried Partner Visa</span>
+              </a>
+              <a href="partner.html" class="family-option-btn child">
                 <i class="fas fa-user-friends"></i>
-              </div>
-              <h3>Parent Visas</h3>
-              <p>Bring your parents to join you for temporary stays or permanent residency.</p>
-              <ul class="list-unstyled mt-3 text-start">
-                <li><i class="fas fa-check text-success me-2"></i>Parent visitor visas</li>
-                <li><i class="fas fa-check text-success me-2"></i>Parent sponsorship</li>
-                <li><i class="fas fa-check text-success me-2"></i>Aged parent visas</li>
-                <li><i class="fas fa-check text-success me-2"></i>Contributory parent visas</li>
-              </ul>
-            </div>
-          </div>
-          
-          <!-- Child Visa -->
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="family-card">
-              <div class="family-icon">
+                <span class="btn-text">Child of a Partner or Parent Visa</span>
+              </a>
+              <a href="other.html" class="family-option-btn other-child">
                 <i class="fas fa-child"></i>
-              </div>
-              <h3>Child & Dependent Visas</h3>
-              <p>Reunite with your children or include them in your immigration application.</p>
-              <ul class="list-unstyled mt-3 text-start">
-                <li><i class="fas fa-check text-success me-2"></i>Child visitor visas</li>
-                <li><i class="fas fa-check text-success me-2"></i>Dependent child visas</li>
-                <li><i class="fas fa-check text-success me-2"></i>Adoption visas</li>
-                <li><i class="fas fa-check text-success me-2"></i>Orphan relative visas</li>
-              </ul>
+                <span class="btn-text">Other Child Visas</span>
+              </a>
+              <a href="fiance.html" class="family-option-btn fiance">
+                <i class="fas fa-ring"></i>
+                <span class="btn-text">Fiance Visa</span>
+              </a>
             </div>
           </div>
-        </div>
-
-        <!-- Eligibility Requirements -->
-        <div class="row mb-5">
-          <div class="col-lg-6">
-            <div class="eligibility-box">
-              <h3 class="mb-3">Sponsor Eligibility</h3>
-              <ul class="eligibility-list list-unstyled">
-                <li><i class="fas fa-user-check"></i> Must be a citizen or permanent resident</li>
-                <li><i class="fas fa-file-invoice-dollar"></i> Meet minimum income requirements</li>
-                <li><i class="fas fa-home"></i> Provide adequate accommodation</li>
-                <li><i class="fas fa-shield-alt"></i> No serious criminal convictions</li>
-                <li><i class="fas fa-hand-holding-usd"></i> Ability to support family members</li>
-                <li><i class="fas fa-file-contract"></i> Sign sponsorship undertaking</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="eligibility-box">
-              <h3 class="mb-3">Applicant Requirements</h3>
-              <ul class="eligibility-list list-unstyled">
-                <li><i class="fas fa-passport"></i> Valid passport and travel documents</li>
-                <li><i class="fas fa-heartbeat"></i> Pass medical examination</li>
-                <li><i class="fas fa-fingerprint"></i> Clear police certificates</li>
-                <li><i class="fas fa-venus-mars"></i> Genuine relationship evidence</li>
-                <li><i class="fas fa-language"></i> Meet language requirements (if applicable)</li>
-                <li><i class="fas fa-money-check-alt"></i> Pay applicable visa fees</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Application Process -->
-        <div class="row mb-5">
-          <div class="col-12 mb-4">
-            <h3 class="text-center mb-4">Family Visa Application Process</h3>
-          </div>
-          <div class="col-12">
-            <div class="process-flow">
-              <div class="process-step">
-                <div class="step-circle">1</div>
-                <div class="step-content">
-                  <h4>Initial Consultation</h4>
-                  <p>We assess your family situation, relationship evidence, and eligibility for various family visa categories.</p>
-                </div>
-              </div>
-              <div class="process-step">
-                <div class="step-circle">2</div>
-                <div class="step-content">
-                  <h4>Document Collection</h4>
-                  <p>Guidance on gathering relationship evidence, financial documents, and supporting paperwork.</p>
-                </div>
-              </div>
-              <div class="process-step">
-                <div class="step-circle">3</div>
-                <div class="step-content">
-                  <h4>Application Preparation</h4>
-                  <p>Complete visa application with comprehensive supporting documents tailored to your family situation.</p>
-                </div>
-              </div>
-              <div class="process-step">
-                <div class="step-circle">4</div>
-                <div class="step-content">
-                  <h4>Submission & Follow-up</h4>
-                  <p>Submit application to immigration authorities with regular status updates and liaison.</p>
-                </div>
-              </div>
-              <div class="process-step">
-                <div class="step-circle">5</div>
-                <div class="step-content">
-                  <h4>Interview Preparation</h4>
-                  <p>Mock interviews and relationship evidence coaching for embassy interviews.</p>
-                </div>
-              </div>
-              <div class="process-step">
-                <div class="step-circle">6</div>
-                <div class="step-content">
-                  <h4>Visa Grant & Settlement</h4>
-                  <p>Assistance with visa collection and family settlement planning in the new country.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Required Documents -->
-        <div class="row mb-5">
-          <div class="col-12 mb-4">
-            <h3 class="text-center mb-4">Required Documents Checklist</h3>
-          </div>
-          <div class="col-12">
-            <div class="document-grid">
-              <div class="document-item">
-                <div class="document-icon">
-                  <i class="fas fa-file-contract"></i>
-                </div>
-                <h5>Relationship Evidence</h5>
-                <ul class="list-unstyled small">
-                  <li>Marriage certificates</li>
-                  <li>Birth certificates</li>
-                  <li>Photos together</li>
-                  <li>Communication records</li>
-                </ul>
-              </div>
-              <div class="document-item">
-                <div class="document-icon">
-                  <i class="fas fa-file-invoice-dollar"></i>
-                </div>
-                <h5>Financial Documents</h5>
-                <ul class="list-unstyled small">
-                  <li>Bank statements</li>
-                  <li>Employment letters</li>
-                  <li>Tax returns</li>
-                  <li>Proof of income</li>
-                </ul>
-              </div>
-              <div class="document-item">
-                <div class="document-icon">
-                  <i class="fas fa-home"></i>
-                </div>
-                <h5>Accommodation Proof</h5>
-                <ul class="list-unstyled small">
-                  <li>Rental agreements</li>
-                  <li>Property deeds</li>
-                  <li>Utility bills</li>
-                  <li>Council tax bills</li>
-                </ul>
-              </div>
-              <div class="document-item">
-                <div class="document-icon">
-                  <i class="fas fa-passport"></i>
-                </div>
-                <h5>Identification</h5>
-                <ul class="list-unstyled small">
-                  <li>Valid passports</li>
-                  <li>National ID cards</li>
-                  <li>Birth certificates</li>
-                  <li>Police certificates</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Processing Times -->
-        <div class="row mb-5">
-          <div class="col-12 mb-4">
-            <h3 class="text-center mb-4">Processing Timeline</h3>
-          </div>
-          <div class="col-lg-8 mx-auto">
-            <div class="timeline-container">
-              <div class="timeline-item">
-                <h5>Initial Assessment & Document Preparation</h5>
-                <p class="text-muted mb-0">1-2 weeks</p>
-              </div>
-              <div class="timeline-item">
-                <h5>Application Submission</h5>
-                <p class="text-muted mb-0">Within 1 week of document completion</p>
-              </div>
-              <div class="timeline-item">
-                <h5>Acknowledgement & Case Number</h5>
-                <p class="text-muted mb-0">2-4 weeks after submission</p>
-              </div>
-              <div class="timeline-item">
-                <h5>Case Processing</h5>
-                <p class="text-muted mb-0">3-12 months (varies by category)</p>
-              </div>
-              <div class="timeline-item">
-                <h5>Decision & Visa Grant</h5>
-                <p class="text-muted mb-0">1-2 weeks after approval</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Testimonial -->
-        <div class="testimonial-family">
-          <div class="row align-items-center">
-            <div class="col-md-8">
-              <h4 class="mb-3">"Reunited After 3 Years Apart"</h4>
-              <p class="mb-0">"One Solution Visa helped us navigate the complex spouse visa process. Their attention to detail and personalized guidance made what seemed impossible possible. Today, my husband and I are finally living together in Canada."</p>
-              <p class="mt-3 mb-0"><strong>Maria Rodriguez</strong> – Spouse Visa Applicant</p>
-            </div>
-            <div class="col-md-4 text-center">
-              <i class="fas fa-quote-right" style="font-size: 4rem; color: var(--accent-color); opacity: 0.3;"></i>
-            </div>
-          </div>
-        </div>
-
-        <!-- CTA Section -->
-        <div class="cta-family text-center">
-          <h3 class="mb-3 text-white">Reunite With Your Family</h3>
-          <p class="lead mb-4 text-white">Let us handle the complex visa process while you focus on reuniting with your loved ones.</p>
-          <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
-            <a href="../index.html#inquiry" class="btn btn-light btn-lg">
-              <i class="fas fa-heart me-2"></i>Start Family Reunification
-            </a>
-            <a href="tel:+639687075241" class="btn btn-outline-light btn-lg">
-              <i class="fas fa-phone me-2"></i>Call Family Visa Expert
-            </a>
-          </div>
-          <p class="mt-3 text-white opacity-75">Free initial assessment for all family visa inquiries</p>
         </div>
       </div>
     </section>
@@ -838,18 +490,19 @@
           <h6>Family Services</h6>
           <ul class="list-unstyled">
             <li><a href="family.html" class="text-light text-decoration-none fw-bold">Family Visas</a></li>
-            <li><a href="immigration.html" class="text-light text-decoration-none">Family Sponsorship</a></li>
-            <li><a href="tourist.html" class="text-light text-decoration-none">Family Tourist Visas</a></li>
-            <li><a href="business.html" class="text-light text-decoration-none">Business Family Visas</a></li>
+            <li><a href="spouse.html" class="text-light text-decoration-none">UK Spouse Visa</a></li>
+            <li><a href="unmarried.html" class="text-light text-decoration-none">Unmarried Partner Visa</a></li>
+            <li><a href="partner.html" class="text-light text-decoration-none">Child of Partner Visa</a></li>
+            <li><a href="other.html" class="text-light text-decoration-none">Fiance & Other Visas</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
           <h6>Contact Info</h6>
           <ul class="list-unstyled">
-            <li><i class="fas fa-map-marker-alt me-2"></i>Cebu City, Philippines</li>
+            <li><i class="fas fa-map-marker-alt me-2"></i>A. Gabuya Street, Cogon Pardo, Cebu City, Philippines</li>
             <li><i class="fas fa-phone me-2"></i>+63 968 707 5241</li>
             <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
-            <li><i class="fas fa-clock me-2"></i>Mon-Fri: 8AM-6PM</li>
+            <li><i class="fas fa-clock me-2"></i>Mon-Sat: 9AM-6PM</li>
             <li><i class="fas fa-heart me-2"></i>Family Consultation Hours Available</li>
           </ul>
         </div>
@@ -905,20 +558,6 @@
         setTimeout(() => {
           document.body.style.opacity = '1';
         }, 100);
-      });
-      
-      // Smooth scroll for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            window.scrollTo({
-              top: target.offsetTop - 80,
-              behavior: 'smooth'
-            });
-          }
-        });
       });
     });
   </script>

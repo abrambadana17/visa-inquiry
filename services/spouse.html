@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>UK Spouse Visa Services | One Solution Visa</title>
+  <link rel="icon" type="image/png" href="../images/logo.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+   :root {
+  --primary-color: #ffffff;
+  --secondary-color: #2c3e50;
+  --accent-color: #3498db;
+  --light-bg: #f4f6fa;
+}
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 0.75rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      padding: 0.5rem 0;
+      background: var(--secondary-color) !important;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .navbar-logo {
+      height: 40px;
+      width: 40px;
+      margin-right: 8px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    /* Back button styling */
+    .back-btn {
+      color: white !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateX(-3px);
+    }
+
+    .back-btn i {
+      margin-right: 5px;
+    }
+
+    .section-padding {
+      padding: 60px 0;
+      scroll-margin-top: 80px;
+    }
+
+    /* Service Hero Section with Background Image */
+    .service-hero {
+      background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), 
+                  url('../images/spouse.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 120px 0 80px;
+      margin-bottom: 40px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .service-hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .service-hero .lead {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .spouse-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+    
+    .content-nav {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /* Custom scrollbar for content-nav */
+    .content-nav::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .content-nav::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb {
+      background: var(--accent-color);
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
+    }
+    
+    .content-nav h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .nav-links a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      display: block;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+    
+    .nav-links a:hover {
+      background: var(--light-bg);
+      border-left: 3px solid var(--accent-color);
+      transform: translateX(5px);
+    }
+    
+    .content-section {
+      background: white;
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .content-section h2 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .content-section h3 {
+      color: var(--secondary-color);
+      margin: 2rem 0 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .content-section h4 {
+      color: var(--secondary-color);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .content-section p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    
+    .content-section ul, .content-section ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    .content-section li {
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-left: 4px solid var(--accent-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .info-box {
+      background: linear-gradient(135deg, #e8f4fc 0%, #d4eaf7 100%);
+      border-left: 4px solid var(--secondary-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .warning-box {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      border-left: 4px solid #ffc107;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, var(--light-bg) 0%, #e8f4fc 100%);
+      border-radius: 15px;
+      padding: 3rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--secondary-color);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-light:hover {
+      background: var(--light-bg);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+    }
+
+    .footer {
+      background: var(--secondary-color);
+      color: #fff;
+      padding: 40px 0 20px 0;
+      position: relative;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    /* Mobile Navigation Improvements */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: rgba(44, 62, 80, 0.98);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0.4rem 0.6rem;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
+      }
+
+      .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin: 0.25rem 0;
+      }
+
+      .nav-link:hover, .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      
+      .content-nav {
+        position: static;
+        margin-bottom: 2rem;
+      }
+    }
+
+    /* iPhone 15 and Small Devices */
+    @media (max-width: 430px) {
+      .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .navbar {
+        padding: 0.5rem 0;
+      }
+
+      .navbar-brand {
+        font-size: 1.1rem;
+      }
+
+      .navbar-logo {
+        height: 35px;
+        width: 35px;
+        margin-right: 6px;
+      }
+      
+      .service-hero {
+        padding: 100px 0 60px;
+        background-attachment: scroll;
+      }
+      
+      .service-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .service-hero .lead {
+        font-size: 1.1rem;
+      }
+      
+      .spouse-icon {
+        font-size: 2.5rem;
+      }
+      
+      .content-section, .content-nav {
+        padding: 1.5rem;
+      }
+      
+      .cta-section {
+        padding: 2rem 1.5rem;
+      }
+
+      .footer {
+        padding: 30px 0 15px 0;
+      }
+
+      .footer h5, .footer h6 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .footer p, .footer li {
+        font-size: 0.9rem;
+      }
+
+      .footer .col-lg-4, 
+      .footer .col-lg-2, 
+      .footer .col-lg-3,
+      .footer .col-md-6 {
+        margin-bottom: 1.5rem;
+      }
+
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Very Small Devices */
+    @media (max-width: 375px) {
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .navbar-brand {
+        font-size: 1rem;
+      }
+      
+      .service-hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Prevent horizontal scroll */
+    .row {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
+    .row > * {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/logo.png" alt="One Solution Visa Logo" class="navbar-logo">
+        OneSolutionVisa
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link back-btn" href="family.html">
+              <i class="fas fa-arrow-left me-1"></i>Back to Family Visa
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Spouse Visa Content -->
+  <main style="margin-top: 80px; min-height: calc(100vh - 300px);">
+    <!-- Hero Section -->
+    <section class="service-hero">
+      <div class="container">
+        <div class="spouse-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h1>UK Spouse Visa: Eligibility, Requirements & How to Apply</h1>
+        <p class="lead">The UK Spouse Visa is available to individuals who are legally married to a British or Irish citizen, a person who is settled in the United Kingdom (holding Indefinite Leave to Remain or settled status), an individual with pre-settled status under the EU Settlement Scheme, a holder of a Turkish Businessperson or Turkish Worker visa, or a person granted refugee status or humanitarian protection in the UK.</p>
+        <a href="../index.html#inquiry" class="btn btn-light btn-lg mt-3">
+          <i class="fas fa-heart me-2"></i>Start Your Application
+        </a>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row">
+          <!-- Navigation Sidebar -->
+          <div class="col-lg-4 mb-4">
+            <div class="content-nav">
+              <h3><i class="fas fa-list-alt me-2"></i>Contents</h3>
+              <ul class="nav-links">
+                <li><a href="#overview">UK Spouse Visa Overview</a></li>
+                <li><a href="#section1">1. Eligibility and Core Requirements</a></li>
+                <li><a href="#section2">2. Who Can Sponsor a UK Spouse Visa</a></li>
+                <li><a href="#section3">3. Minimum Age Requirement</a></li>
+                <li><a href="#section4">4. Demonstrating a Genuine Relationship</a></li>
+                <li><a href="#section5">5. Restrictions on Family Relationships</a></li>
+                <li><a href="#section6">6. Face-to-Face Meeting Requirement</a></li>
+                <li><a href="#section7">7. Marriage Recognition and Validity</a></li>
+                <li><a href="#section8">8. Proving a Genuine Relationship</a></li>
+                <li><a href="#section9">9. Intention to Live Together in the UK</a></li>
+                <li><a href="#section10">10. Evidence Previous Relationships Ended</a></li>
+                <li><a href="#section11">11. Financial Requirement</a></li>
+                <li><a href="#section12">12. Accommodation Requirements</a></li>
+                <li><a href="#section13">13. English Language Requirement</a></li>
+                <li><a href="#section14">14. Human Rights and Exceptional Circumstances</a></li>
+                <li><a href="#section15">15. Applying Inside or Outside UK</a></li>
+                <li><a href="#section16">16. Switching from Other Routes</a></li>
+                <li><a href="#section17">17. Including Children in Application</a></li>
+                <li><a href="#section18">18. Application Process & Documents</a></li>
+                <li><a href="#section19">19. Checklist of Documents</a></li>
+                <li><a href="#section20">20. Home Office Fees</a></li>
+                <li><a href="#section21">21. Processing Times</a></li>
+                <li><a href="#section22">22. Visa Validity Duration</a></li>
+                <li><a href="#section23">23. Can Spouse Visa Holders Work</a></li>
+                <li><a href="#section24">24. Common Refusal Reasons</a></li>
+                <li><a href="#section25">25. Appeals and Reapplications</a></li>
+                <li><a href="#section26">26. Applying for ILR After 5 Years</a></li>
+                <li><a href="#section27">27. Applying for UK Passport</a></li>
+                <li><a href="#section28">28. Timeline to British Citizenship</a></li>
+                <li><a href="#section29">29. Marriage in the UK Visa Options</a></li>
+                <li><a href="#section30">30. How We Can Help</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="col-lg-8">
+            <!-- Overview Section -->
+            <div id="overview" class="content-section">
+              <h2>UK Spouse Visa Overview</h2>
+              <p>The <strong>UK Spouse Visa</strong> is available to individuals who are legally married to a British or Irish citizen, a person who is settled in the United Kingdom (holding Indefinite Leave to Remain or settled status), an individual with pre-settled status under the EU Settlement Scheme, a holder of a Turkish Businessperson or Turkish Worker visa, or a person granted refugee status or humanitarian protection in the UK.</p>
+              
+              <p>This visa permits the applicant to enter or remain in the UK in order to live together with their spouse on a long-term basis. An application may also be submitted where the sponsoring spouse is currently outside the UK but intends to return and establish residence in the UK with the applicant.</p>
+              
+              <div class="info-box">
+                <p><strong>Settlement Route:</strong> The UK Spouse Visa forms part of a settlement route, enabling eligible applicants to apply for <strong>Indefinite Leave to Remain (ILR)</strong> after completing five years of continuous residence in the UK, provided that all applicable Immigration Rules continue to be satisfied throughout the duration of the route.</p>
+              </div>
+            </div>
+
+            <!-- Section 1 -->
+            <div id="section1" class="content-section">
+              <h3>1. UK Spouse Visa Eligibility and Core Requirements</h3>
+              <p>To qualify for a UK Spouse Visa, applicants must demonstrate to UK Visas and Immigration that all relevant eligibility requirements are met. These include:</p>
+              <ul>
+                <li>The sponsoring partner is a British or Irish citizen, settled in the UK, holds pre-settled status under the EU Settlement Scheme, has limited leave as a Turkish Businessperson or Worker, or has refugee status or humanitarian protection in the UK</li>
+                <li>Both partners are aged 18 or over</li>
+                <li>The couple is not related within a prohibited degree of relationship</li>
+                <li>The partners have met in person</li>
+                <li>The marriage is legally valid and recognised under UK law</li>
+                <li>The relationship is genuine and subsisting</li>
+                <li>There is a clear intention to live together permanently in the UK</li>
+                <li>Any previous relationships have permanently ended</li>
+                <li>The financial requirement is satisfied</li>
+                <li>Adequate accommodation is available</li>
+                <li>The applicant meets the English language requirement</li>
+              </ul>
+              
+              <div class="highlight-box">
+                <p><strong>Professional Advice:</strong> The precise requirements may differ depending on individual circumstances. Professional legal advice is often advisable to ensure full compliance with Immigration Rules and Home Office guidance.</p>
+              </div>
+            </div>
+
+            <!-- Section 2 -->
+            <div id="section2" class="content-section">
+              <h3>2. Who Can Sponsor a UK Spouse Visa Application?</h3>
+              <p>A Spouse Visa application must be supported by a qualifying sponsor who falls within one of the following categories:</p>
+              <ul>
+                <li>A British or Irish citizen residing in the UK or intending to return with the applicant</li>
+                <li>A person holding Indefinite Leave to Remain or settled status under the EU Settlement Scheme</li>
+                <li>An individual with pre-settled status under Appendix EU</li>
+                <li>A Turkish Businessperson or Worker under Appendix ECAA</li>
+                <li>A person granted refugee status or humanitarian protection in the UK</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>Sponsors Outside UK:</strong> Sponsors may be outside the UK at the time of application, provided there is a genuine intention to return and live permanently with the applicant in the UK.</p>
+              </div>
+            </div>
+
+            <!-- Section 3 -->
+            <div id="section3" class="content-section">
+              <h3>3. Minimum Age Requirement for a UK Spouse Visa</h3>
+              <p>Both the applicant and the sponsoring partner must be at least 18 years old on the date the Spouse Visa application is submitted.</p>
+            </div>
+
+            <!-- Section 4 -->
+            <div id="section4" class="content-section">
+              <h3>4. Demonstrating a Genuine Relationship for a UK Spouse Visa</h3>
+              <p>The relationship requirement comprises several elements:</p>
+              <ul>
+                <li>The couple must not fall within a prohibited family relationship</li>
+                <li>The partners must have met in person</li>
+                <li>The marriage must be legally valid</li>
+                <li>The relationship must be genuine and ongoing</li>
+                <li>There must be an intention to live together permanently in the UK</li>
+                <li>Any prior relationships must have ended permanently</li>
+              </ul>
+              <p>Each of these elements must be evidenced to the satisfaction of the Home Office.</p>
+            </div>
+
+            <!-- Section 5 -->
+            <div id="section5" class="content-section">
+              <h3>5. Restrictions on Family Relationships Under Spouse Visa Rules</h3>
+              <p>UK immigration law prohibits spouses from being related within specific degrees, as defined by the Marriage Act 1949 and related legislation. Relationships that fall within these prohibited categories are not eligible for a Spouse Visa.</p>
+              
+              <div class="info-box">
+                <p><strong>Extended Family Relationships:</strong> Certain extended family relationships may only qualify if both parties are aged 21 or over and additional conditions are met. The Home Office applies these rules strictly.</p>
+              </div>
+            </div>
+
+            <!-- Section 6 -->
+            <div id="section6" class="content-section">
+              <h3>6. UK Spouse Visa: Face-to-Face Meeting Requirement</h3>
+              <p>Applicants must show that they and their spouse have met face-to-face and formed a mutual acquaintance. Mere virtual contact or brief encounters without meaningful interaction do not satisfy this requirement.</p>
+            </div>
+
+            <!-- Section 7 -->
+            <div id="section7" class="content-section">
+              <h3>7. Marriage Recognition and Validity for UK Spouse Visa Applications</h3>
+              <p>To qualify for a UK Spouse Visa, the marriage must be legally valid and recognised under UK law.</p>
+              
+              <h4>Marriages in the UK</h4>
+              <p>Must comply with statutory formalities, including proper notice, authorised venues, and lawful officiation.</p>
+              
+              <h4>Overseas marriages</h4>
+              <p>Are recognised if they were lawfully conducted, legally valid in the country of marriage, free from legal impediments, and any prior marriages were legally terminated.</p>
+              
+              <div class="warning-box">
+                <p><strong>Important:</strong> Official marriage certificates or recognised equivalents must be provided.</p>
+              </div>
+            </div>
+
+            <!-- Section 8 -->
+            <div id="section8" class="content-section">
+              <h3>8. How to Prove a Genuine and Subsisting Relationship for a Spouse Visa</h3>
+              <p>Applicants must demonstrate that their relationship is genuine and ongoing at all stages of the visa route. The Home Office assesses this on a case-by-case basis using a broad range of evidence, including:</p>
+              <ul>
+                <li>Cohabitation history</li>
+                <li>Shared financial responsibilities</li>
+                <li>Children and parental responsibilities</li>
+                <li>Communication and travel history</li>
+                <li>Future plans as a couple</li>
+              </ul>
+              
+              <div class="highlight-box">
+                <p><strong>Evidence Requirement:</strong> No single document is sufficient. A consistent body of credible evidence is required.</p>
+              </div>
+            </div>
+
+            <!-- Section 9 -->
+            <div id="section9" class="content-section">
+              <h3>9. UK Spouse Visa: Proving Intention to Live Together in the UK</h3>
+              <p>Applicants must prove a shared intention to live together on a permanent basis in the UK. Temporary absences are permitted, provided they are consistent with maintaining family life in the UK and do not indicate habitual residence elsewhere.</p>
+            </div>
+
+            <!-- Section 10 -->
+            <div id="section10" class="content-section">
+              <h3>10. Evidence That Previous Relationships Have Ended for Spouse Visa Applications</h3>
+              <p>Where either partner has been previously married, documentary proof of legal termination—such as a decree absolute or overseas equivalent—must be submitted. An undissolved marriage will prevent approval under the Spouse Visa route.</p>
+            </div>
+
+            <!-- Section 11 -->
+            <div id="section11" class="content-section">
+              <h3>11. Meeting the Financial Requirement for a UK Spouse Visa</h3>
+              <p>Applicants must meet the financial requirement to demonstrate that they can be maintained without public funds. The standard minimum income threshold is <strong>£29,000 gross per year</strong>, unless transitional provisions apply.</p>
+              
+              <h4>Permitted sources include:</h4>
+              <ul>
+                <li>Employment income</li>
+                <li>Self-employment or company director income</li>
+                <li>Non-employment income</li>
+                <li>Cash savings over £16,000</li>
+                <li>Pension income</li>
+              </ul>
+              
+              <div class="warning-box">
+                <p><strong>Important:</strong> Strict evidential rules apply, and failure to comply is a common reason for refusal.</p>
+              </div>
+            </div>
+
+            <!-- Section 12 -->
+            <div id="section12" class="content-section">
+              <h3>12. Accommodation Requirements for UK Spouse Visa Applicants</h3>
+              <p>Applicants must show that suitable accommodation is available in the UK without reliance on public funds. The accommodation must not be overcrowded and must comply with public health regulations.</p>
+            </div>
+
+            <!-- Section 13 -->
+            <div id="section13" class="content-section">
+              <h3>13. UK Spouse Visa English Language Requirement: Tests and Exemptions</h3>
+              <p>Applicants must meet specified English language standards:</p>
+              <ul>
+                <li><strong>A1</strong> for initial applications</li>
+                <li><strong>A2</strong> for extensions</li>
+                <li><strong>B1</strong> for settlement</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>Exemptions:</strong> Apply in limited circumstances, including age, medical conditions, or nationality.</p>
+              </div>
+            </div>
+
+            <!-- Section 14 -->
+            <div id="section14" class="content-section">
+              <h3>14. UK Spouse Visa Exceptions: Human Rights and Exceptional Circumstances</h3>
+              <p>Applicants who cannot meet all standard requirements may still qualify where refusal would breach Article 8 of the European Convention on Human Rights. Such cases are assessed under the exceptional circumstances provisions of Appendix FM.</p>
+            </div>
+
+            <!-- Section 15 -->
+            <div id="section15" class="content-section">
+              <h3>15. Applying for a Spouse Visa Inside or Outside the UK</h3>
+              <p>Applications must generally be made from outside the UK unless the applicant holds a visa allowing a stay of more than six months. Visitor visa holders are not permitted to switch from within the UK.</p>
+            </div>
+
+            <!-- Section 16 -->
+            <div id="section16" class="content-section">
+              <h3>16. Switching to a UK Spouse Visa From Another Immigration Route</h3>
+              <p>Applicants may be able to switch to the Spouse Visa route from eligible categories such as Skilled Worker, Student, Graduate, or Fiancé(e) visas, provided all requirements are met.</p>
+            </div>
+
+            <!-- Section 17 -->
+            <div id="section17" class="content-section">
+              <h3>17. How to Include Children in a UK Spouse Visa Application</h3>
+              <p>Eligible dependent children under 18 may apply alongside or separately from the main applicant, subject to accommodation and financial requirements.</p>
+            </div>
+
+            <!-- Section 18 -->
+            <div id="section18" class="content-section">
+              <h3>18. UK Spouse Visa Application Process: Online Form and Supporting Documents</h3>
+              <p>Applications must be submitted online using the correct form, with supporting documents prepared in accordance with Home Office requirements. Errors or omissions can result in refusal.</p>
+            </div>
+
+            <!-- Section 19 -->
+            <div id="section19" class="content-section">
+              <h3>19. Checklist of Documents for a UK Spouse Visa Application</h3>
+              <p>Documentary requirements vary by case. Incorrect formatting, missing documents, or failure to meet evidential rules frequently lead to refusal. Tailored legal advice is strongly recommended.</p>
+            </div>
+
+            <!-- Section 20 -->
+            <div id="section20" class="content-section">
+              <h3>20. Home Office Fees for UK Spouse Visa Applications</h3>
+              <ul>
+                <li><strong>Applications from outside the UK:</strong> £1,938</li>
+                <li><strong>Applications from within the UK:</strong> £1,321</li>
+              </ul>
+              <div class="info-box">
+                <p><strong>Additional Charges:</strong> Apply for priority services.</p>
+              </div>
+            </div>
+
+            <!-- Section 21 -->
+            <div id="section21" class="content-section">
+              <h3>21. Spouse Visa UK Processing Times and Decision Waiting Times</h3>
+              <ul>
+                <li><strong>Outside the UK:</strong> Approximately 12 weeks (30 working days with Priority)</li>
+                <li><strong>Inside the UK:</strong> Approximately 8 weeks, or longer in complex cases</li>
+              </ul>
+              <div class="info-box">
+                <p><strong>Super Priority Service:</strong> Available for in-country applications only.</p>
+              </div>
+            </div>
+
+            <!-- Section 22 -->
+            <div id="section22" class="content-section">
+              <h3>22. How Long Is a UK Spouse Visa Valid For?</h3>
+              <p>Initial grants are issued for <strong>33 months</strong> (overseas) or <strong>30 months</strong> (in-country). Extensions are granted for a further 30 months. Settlement is available after five years.</p>
+            </div>
+
+            <!-- Section 23 -->
+            <div id="section23" class="content-section">
+              <h3>23. Can Spouse Visa Holders Work in the UK?</h3>
+              <div class="info-box">
+                <p><strong>Employment Rights:</strong> Spouse Visa holders have unrestricted permission to work in the UK.</p>
+              </div>
+            </div>
+
+            <!-- Section 24 -->
+            <div id="section24" class="content-section">
+              <h3>24. Reasons Why UK Spouse Visa Applications Are Refused and How to Avoid Them</h3>
+              <p>Refusals often arise due to:</p>
+              <ul>
+                <li>Insufficient relationship evidence</li>
+                <li>Failure to meet the financial requirement</li>
+                <li>Incorrect documentation</li>
+                <li>Invalid or unrecognised marriages</li>
+                <li>English language non-compliance</li>
+              </ul>
+              <div class="highlight-box">
+                <p><strong>Preparation is Key:</strong> Careful preparation significantly reduces refusal risk.</p>
+              </div>
+            </div>
+
+            <!-- Section 25 -->
+            <div id="section25" class="content-section">
+              <h3>25. Spouse Visa Refused: Appeal and Reapplication Options</h3>
+              <p>Most refusals carry a right of appeal on human rights grounds. Appeals can be lengthy and complex, and specialist legal representation is advisable.</p>
+            </div>
+
+            <!-- Section 26 -->
+            <div id="section26" class="content-section">
+              <h3>26. How to Apply for ILR After Five Years on a UK Spouse Visa</h3>
+              <p>Applicants may apply for Indefinite Leave to Remain after completing five years, subject to residence, English language (B1), and Life in the UK Test requirements.</p>
+            </div>
+
+            <!-- Section 27 -->
+            <div id="section27" class="content-section">
+              <h3>27. When Can Spouse Visa Holders Apply for a UK Passport?</h3>
+              <p>Following ILR, spouses of British citizens may apply for naturalisation immediately. Others must wait 12 months.</p>
+            </div>
+
+            <!-- Section 28 -->
+            <div id="section28" class="content-section">
+              <h3>28. UK Spouse Visa to British Citizenship: Application Timeline Explained</h3>
+              <ul>
+                <li>Initial Spouse Visa</li>
+                <li>Extension</li>
+                <li>Indefinite Leave to Remain</li>
+                <li>British Citizenship</li>
+              </ul>
+              <p>Each stage carries distinct requirements and evidential standards.</p>
+            </div>
+
+            <!-- Section 29 -->
+            <div id="section29" class="content-section">
+              <h3>29. Marriage in the UK: Selecting the Appropriate Visa Route</h3>
+              <p>Those intending to marry in the UK must choose between a <strong>Marriage Visitor Visa</strong> (no settlement) or a <strong>Fiancé(e) Visa</strong>, which allows switching to the Spouse Visa after marriage.</p>
+            </div>
+
+            <!-- Section 30 -->
+            <div id="section30" class="content-section">
+              <h3>30. How Our Immigration Barristers Can Help</h3>
+              <p>Spouse Visa applications are complex and highly evidence-driven. Specialist immigration barristers provide strategic advice, document preparation, representation in appeals, and support through extensions and settlement applications, ensuring compliance and maximising prospects of success.</p>
+              
+              <div class="highlight-box">
+                <h4>Our Services Include:</h4>
+                <ul>
+                  <li>Comprehensive eligibility assessment</li>
+                  <li>Document preparation and verification</li>
+                  <li>Application submission and follow-up</li>
+                  <li>Appeal representation if required</li>
+                  <li>Guidance through extensions and settlement</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+              <h3 class="mb-3">Ready to Apply for Your UK Spouse Visa?</h3>
+              <p class="lead mb-4">Let our expert team guide you through the spouse visa application process and maximize your chances of approval.</p>
+              <a href="../index.html#inquiry" class="btn btn-primary btn-lg">
+                <i class="fas fa-heart me-2"></i>Start Your Application
+              </a>
+              <p class="mt-3 text-muted">Click above to be redirected to our main inquiry form</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h5>One Solution Visa™</h5>
+          <p>Your trusted partner for all visa and immigration services. We make your travel dreams come true with professional expertise and personalized service.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/visaconnect" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="../index.html#services" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="../index.html#contact" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="../index.html#inquiry" class="text-light text-decoration-none">Inquiry</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Family Services</h6>
+          <ul class="list-unstyled">
+            <li><a href="family.html" class="text-light text-decoration-none fw-bold">Family Visas</a></li>
+            <li><a href="spouse.html" class="text-light text-decoration-none">UK Spouse Visa</a></li>
+            <li><a href="unmarried.html" class="text-light text-decoration-none">Unmarried Partner Visa</a></li>
+            <li><a href="partner.html" class="text-light text-decoration-none">Child of Partner Visa</a></li>
+            <li><a href="other.html" class="text-light text-decoration-none">Fiance & Other Visas</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Contact Info</h6>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt me-2"></i>A. Gabuya Street, Cogon Pardo, Cebu City, Philippines</li>
+            <li><i class="fas fa-phone me-2"></i>+63 968 707 5241</li>
+            <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
+            <li><i class="fas fa-clock me-2"></i>Mon-Sat: 9AM-6PM</li>
+            <li><i class="fas fa-heart me-2"></i>Family Consultation Hours Available</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0">&copy; 2025 One Solution Visa. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0">
+            <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+            <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Navigation Scripts
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const isClickInside = navbarToggler.contains(event.target) || 
+                              navbarCollapse.contains(event.target);
+        
+        if (!isClickInside && navbarCollapse.classList.contains('show')) {
+          navbarToggler.click();
+        }
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      
+      // Add loading animation on page load
+      window.addEventListener('load', () => {
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease-in-out';
+        setTimeout(() => {
+          document.body.style.opacity = '1';
+        }, 100);
+      });
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Highlight active nav link
+      const sections = document.querySelectorAll('.content-section');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      function setActiveNavLink() {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (window.scrollY >= sectionTop - 150) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', setActiveNavLink);
+      setActiveNavLink();
+    });
+  </script>
+</body>
+</html>
