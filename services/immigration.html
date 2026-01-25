@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-  <title>Immigration Services - One Solution Visa</title>
+  <title>UK Skilled Worker Visa Services | One Solution Visa</title>
   <link rel="icon" type="image/png" href="../images/logo.png">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -81,195 +81,227 @@
       scroll-margin-top: 80px;
     }
 
-    /* Immigration specific styles */
-    .immigration-hero {
-      background: linear-gradient(135deg, #1a5276 0%, #2c3e50 100%);
+    /* Service Hero Section with Background Image */
+    .service-hero {
+      background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), 
+                  url('../images/work.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       color: white;
-      padding: 100px 0 60px;
+      padding: 120px 0 80px;
       margin-bottom: 40px;
       text-align: center;
+      position: relative;
     }
     
-    .immigration-hero h1 {
+    .service-hero h1 {
       font-size: 2.8rem;
       font-weight: bold;
       margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
     
-    .immigration-hero .lead {
+    .service-hero .lead {
       font-size: 1.3rem;
-      opacity: 0.9;
+      opacity: 0.95;
       max-width: 800px;
-      margin: 0 auto;
+      margin: 0 auto 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
     
-    .pathway-card {
-      background: white;
-      border-radius: 12px;
-      padding: 2.5rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      height: 100%;
-      transition: transform 0.3s ease;
-      border-left: 5px solid var(--accent-color);
-      position: relative;
-      overflow: hidden;
+    .work-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
     
-    .pathway-card:hover {
-      transform: translateY(-8px);
-    }
-    
-    .pathway-badge {
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: var(--accent-color);
-      color: white;
-      padding: 8px 15px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      border-radius: 0 12px 0 12px;
-    }
-    
-    .pathway-icon {
+    .feature-icon {
       font-size: 2.5rem;
       color: var(--accent-color);
-      margin-bottom: 1.5rem;
-      background: var(--light-bg);
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .country-card {
-      border: 1px solid #e0e0e0;
-      border-radius: 10px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      height: 100%;
-    }
-    
-    .country-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    
-    .country-flag {
-      width: 100%;
-      height: 120px;
-      object-fit: cover;
-    }
-    
-    .country-info {
-      padding: 1.5rem;
-    }
-    
-    .timeline-immigration {
-      position: relative;
-      padding-left: 50px;
-    }
-    
-    .timeline-immigration::before {
-      content: '';
-      position: absolute;
-      left: 20px;
-      top: 0;
-      bottom: 0;
-      width: 3px;
-      background: linear-gradient(to bottom, var(--accent-color), #9b59b6);
-    }
-    
-    .timeline-step {
-      position: relative;
-      margin-bottom: 2.5rem;
-      padding: 1.5rem;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-    
-    .timeline-step::before {
-      content: '';
-      position: absolute;
-      left: -35px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 20px;
-      height: 20px;
-      background: var(--accent-color);
-      border-radius: 50%;
-      border: 4px solid white;
-      box-shadow: 0 0 0 4px var(--accent-color);
-    }
-    
-    .step-number {
-      position: absolute;
-      left: -43px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: white;
-      font-weight: bold;
-      font-size: 0.9rem;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .benefit-item {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 1.5rem;
-      padding: 1.5rem;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-    
-    .benefit-icon {
-      flex-shrink: 0;
-      width: 60px;
-      height: 60px;
-      background: var(--light-bg);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: 1.5rem;
-      font-size: 1.5rem;
-      color: var(--accent-color);
-    }
-    
-    .comparison-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-    
-    .comparison-item {
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-    
-    .comparison-item h4 {
-      color: var(--accent-color);
       margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--light-bg);
     }
     
-    .cta-immigration {
-      background: linear-gradient(135deg, var(--secondary-color) 0%, #1a252f 100%);
-      color: white;
+    .content-nav {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /* Custom scrollbar for content-nav */
+    .content-nav::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .content-nav::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb {
+      background: var(--accent-color);
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
+    }
+    
+    .content-nav h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .nav-links a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      display: block;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+    
+    .nav-links a:hover {
+      background: var(--light-bg);
+      border-left: 3px solid var(--accent-color);
+      transform: translateX(5px);
+    }
+    
+    .content-section {
+      background: white;
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .content-section h2 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .content-section h3 {
+      color: var(--secondary-color);
+      margin: 2rem 0 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .content-section h4 {
+      color: var(--secondary-color);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .content-section p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    
+    .content-section ul, .content-section ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    .content-section li {
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-left: 4px solid var(--accent-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .info-box {
+      background: linear-gradient(135deg, #e8f4fc 0%, #d4eaf7 100%);
+      border-left: 4px solid var(--secondary-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .warning-box {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      border-left: 4px solid #ffc107;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .success-box {
+      background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+      border-left: 4px solid #28a745;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, var(--light-bg) 0%, #e8f4fc 100%);
       border-radius: 15px;
       padding: 3rem;
       margin-top: 3rem;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--secondary-color);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-light:hover {
+      background: var(--light-bg);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
     }
 
     .footer {
@@ -347,24 +379,9 @@
         background-color: rgba(255, 255, 255, 0.1);
       }
       
-      .pathway-card {
-        padding: 2rem;
-      }
-      
-      .timeline-immigration {
-        padding-left: 40px;
-      }
-      
-      .timeline-immigration::before {
-        left: 15px;
-      }
-      
-      .timeline-step::before {
-        left: -25px;
-      }
-      
-      .step-number {
-        left: -35px;
+      .content-nav {
+        position: static;
+        margin-bottom: 2rem;
       }
     }
 
@@ -389,45 +406,29 @@
         margin-right: 6px;
       }
       
-      .immigration-hero {
-        padding: 80px 0 40px;
+      .service-hero {
+        padding: 100px 0 60px;
+        background-attachment: scroll;
       }
       
-      .immigration-hero h1 {
+      .service-hero h1 {
         font-size: 2rem;
       }
       
-      .immigration-hero .lead {
+      .service-hero .lead {
         font-size: 1.1rem;
       }
       
-      .pathway-card {
+      .work-icon {
+        font-size: 2.5rem;
+      }
+      
+      .content-section, .content-nav {
         padding: 1.5rem;
       }
       
-      .pathway-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 2rem;
-      }
-      
-      .benefit-item {
-        flex-direction: column;
-        text-align: center;
-        padding: 1rem;
-      }
-      
-      .benefit-icon {
-        margin-right: 0;
-        margin-bottom: 1rem;
-      }
-      
-      .cta-immigration {
+      .cta-section {
         padding: 2rem 1.5rem;
-      }
-      
-      .comparison-grid {
-        grid-template-columns: 1fr;
       }
 
       .footer {
@@ -468,12 +469,8 @@
         font-size: 1rem;
       }
       
-      .immigration-hero h1 {
+      .service-hero h1 {
         font-size: 1.8rem;
-      }
-      
-      .timeline-step {
-        padding: 1rem;
       }
     }
 
@@ -503,8 +500,8 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link back-btn" href="../index.html">
-              <i class="fas fa-arrow-left me-1"></i>Back to Home
+            <a class="nav-link back-btn" href="../index.html#services">
+              <i class="fas fa-arrow-left me-1"></i>Back to Services
             </a>
           </li>
         </ul>
@@ -512,282 +509,913 @@
     </div>
   </nav>
 
-  <!-- Page Content -->
+  <!-- Skilled Worker Visa Content -->
   <main style="margin-top: 80px; min-height: calc(100vh - 300px);">
     <!-- Hero Section -->
-    <section class="immigration-hero">
+    <section class="service-hero">
       <div class="container">
-        <h1>Permanent Immigration Services</h1>
-        <p class="lead">Your pathway to permanent residency and citizenship. We guide individuals and families through the complete immigration journey to their dream countries.</p>
+        <div class="work-icon">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <h1>UK Skilled Worker Visa: UK Work Visa Route for Sponsored Employment</h1>
+        <p class="lead">The Skilled Worker Visa allows individuals from any country to live and work in the UK, as long as they have a job offer for a qualifying skilled role from a UK employer that holds a valid Home Office sponsor licence.</p>
         <a href="../index.html#inquiry" class="btn btn-light btn-lg mt-3">
-          <i class="fas fa-home me-2"></i>Start Immigration Assessment
+          <i class="fas fa-briefcase me-2"></i>Start Your Skilled Worker Visa Application
         </a>
       </div>
     </section>
 
-    <!-- Immigration Pathways -->
+    <!-- Content Section -->
     <section class="section-padding">
       <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center mb-4">
-            <h2 class="mb-3">Immigration Pathways to Permanent Residency</h2>
-            <p class="lead">Comprehensive solutions for your permanent relocation goals</p>
-          </div>
-          
-          <!-- Skilled Migration -->
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="pathway-card">
-              <span class="pathway-badge">Most Popular</span>
-              <div class="pathway-icon">
-                <i class="fas fa-user-graduate"></i>
-              </div>
-              <h3>Skilled Migration</h3>
-              <p>Permanent residency based on skills, qualifications, and work experience.</p>
-              <ul class="list-unstyled mt-3">
-                <li><i class="fas fa-check text-success me-2"></i>Points-based systems</li>
-                <li><i class="fas fa-check text-success me-2"></i>Occupation lists</li>
-                <li><i class="fas fa-check text-success me-2"></i>Skill assessment</li>
-                <li><i class="fas fa-check text-success me-2"></i>Expression of Interest</li>
+        <div class="row">
+          <!-- Navigation Sidebar -->
+          <div class="col-lg-4 mb-4">
+            <div class="content-nav">
+              <h3><i class="fas fa-list-alt me-2"></i>Contents</h3>
+              <ul class="nav-links">
+                <li><a href="#overview">Skilled Worker Visa Overview</a></li>
+                <li><a href="#section1">1. Requirements for UK Skilled Worker Visa</a></li>
+                <li><a href="#section2">2. Certificate of Sponsorship (CoS) Explained</a></li>
+                <li><a href="#section3">3. Job Skill Level Criteria</a></li>
+                <li><a href="#section4">4. English Language Test & Exemptions</a></li>
+                <li><a href="#section5">5. Minimum Salary & Going Rate</a></li>
+                <li><a href="#section6">6. UK Immigration Salary List</a></li>
+                <li><a href="#section7">7. Skilled Worker Visa for New Entrants</a></li>
+                <li><a href="#section8">8. Financial Maintenance Requirement</a></li>
+                <li><a href="#section9">9. Criminal Record Certificate</a></li>
+                <li><a href="#section10">10. Resident Labour Market Test</a></li>
+                <li><a href="#section11">11. Cooling-Off Period Rules</a></li>
+                <li><a href="#section12">12. Bringing Family to the UK</a></li>
+                <li><a href="#section13">13. Switch from Other Routes</a></li>
+                <li><a href="#section14">14. How to Apply: Step-by-Step Guide</a></li>
+                <li><a href="#section15">15. Costs: Fees & Health Surcharge</a></li>
+                <li><a href="#section16">16. Fast-Track Options</a></li>
+                <li><a href="#section17">17. How Long Visa Lasts</a></li>
+                <li><a href="#section18">18. Maximum Stay Time Limit</a></li>
+                <li><a href="#section19">19. How to Change Jobs</a></li>
+                <li><a href="#section20">20. Redundancy Options</a></li>
+                <li><a href="#section21">21. Working a Second Job</a></li>
+                <li><a href="#section22">22. Self-Employment Rules</a></li>
+                <li><a href="#section23">23. Reporting Job/Personal Changes</a></li>
+                <li><a href="#section24">24. Sponsor Duties & Compliance</a></li>
+                <li><a href="#section25">25. Indefinite Leave to Remain (ILR)</a></li>
+                <li><a href="#section26">26. Switching to Other Routes</a></li>
+                <li><a href="#section27">27. Reasons for Refusal</a></li>
+                <li><a href="#section28">28. If Visa Refused: Appeal & Review</a></li>
+                <li><a href="#section29">29. Pros and Cons</a></li>
+                <li><a href="#section30">30. How We Can Help</a></li>
               </ul>
-              <div class="mt-4">
-                <span class="badge bg-primary me-2">Canada</span>
-                <span class="badge bg-primary me-2">Australia</span>
-                <span class="badge bg-primary me-2">New Zealand</span>
-              </div>
             </div>
           </div>
-          
-          <!-- Business Immigration -->
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="pathway-card">
-              <div class="pathway-icon">
-                <i class="fas fa-briefcase"></i>
-              </div>
-              <h3>Business Immigration</h3>
-              <p>Permanent residency through business investment and entrepreneurship.</p>
-              <ul class="list-unstyled mt-3">
-                <li><i class="fas fa-check text-success me-2"></i>Investor programs</li>
-                <li><i class="fas fa-check text-success me-2"></i>Entrepreneur visas</li>
-                <li><i class="fas fa-check text-success me-2"></i>Business innovation</li>
-                <li><i class="fas fa-check text-success me-2"></i>Start-up visas</li>
-              </ul>
-              <div class="mt-4">
-                <span class="badge bg-success me-2">USA EB-5</span>
-                <span class="badge bg-success me-2">UK Innovator</span>
-                <span class="badge bg-success me-2">Canada SUV</span>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Family Sponsorship -->
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="pathway-card">
-              <div class="pathway-icon">
-                <i class="fas fa-users"></i>
-              </div>
-              <h3>Family Sponsorship</h3>
-              <p>Reunite with family members through sponsorship programs.</p>
-              <ul class="list-unstyled mt-3">
-                <li><i class="fas fa-check text-success me-2"></i>Spouse/Partner visas</li>
-                <li><i class="fas fa-check text-success me-2"></i>Parent sponsorship</li>
-                <li><i class="fas fa-check text-success me-2"></i>Child sponsorship</li>
-                <li><i class="fas fa-check text-success me-2"></i>Other relatives</li>
-              </ul>
-              <div class="mt-4">
-                <span class="badge bg-info me-2">Family Class</span>
-                <span class="badge bg-info me-2">Partner Visas</span>
-                <span class="badge bg-info me-2">Parent Visas</span>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- Popular Destinations -->
-        <div class="row mb-5">
-          <div class="col-12 mb-4">
-            <h3 class="text-center mb-4">Top Immigration Destinations</h3>
-          </div>
-          <div class="col-md-3 col-sm-6 mb-4">
-            <div class="country-card">
-              <img src="https://flagcdn.com/w640/ca.png" alt="Canada Flag" class="country-flag">
-              <div class="country-info">
-                <h5>Canada</h5>
-                <p class="text-muted small">Express Entry, PNP, Family Sponsorship</p>
-                <div class="mt-2">
-                  <span class="badge bg-light text-dark">Processing: 6-18 months</span>
-                </div>
+          <!-- Main Content -->
+          <div class="col-lg-8">
+            <!-- Overview Section -->
+            <div id="overview" class="content-section">
+              <h2>UK Skilled Worker Visa Overview</h2>
+              <p>The Skilled Worker Visa allows individuals from any country to live and work in the UK, as long as they have a job offer for a qualifying skilled role from a UK employer that holds a valid Home Office sponsor licence. The job must meet the required skill level and minimum salary criteria, and applicants must satisfy conditions such as English language proficiency.</p>
+              
+              <div class="info-box">
+                <p><strong>Settlement Pathway:</strong> After five years of continuous lawful residence and employment in the UK, this visa can lead to indefinite leave to remain (settlement). Dependants, including partners and children, may join or accompany the visa holder and are permitted to live, work, and study in the UK.</p>
               </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 mb-4">
-            <div class="country-card">
-              <img src="https://flagcdn.com/w640/au.png" alt="Australia Flag" class="country-flag">
-              <div class="country-info">
-                <h5>Australia</h5>
-                <p class="text-muted small">Skilled Migration, Business, Family</p>
-                <div class="mt-2">
-                  <span class="badge bg-light text-dark">Processing: 12-24 months</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 mb-4">
-            <div class="country-card">
-              <img src="https://flagcdn.com/w640/us.png" alt="USA Flag" class="country-flag">
-              <div class="country-info">
-                <h5>United States</h5>
-                <p class="text-muted small">EB Visas, Family Preference, DV Lottery</p>
-                <div class="mt-2">
-                  <span class="badge bg-light text-dark">Processing: 1-3 years</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-6 mb-4">
-            <div class="country-card">
-              <img src="https://flagcdn.com/w640/nz.png" alt="New Zealand Flag" class="country-flag">
-              <div class="country-info">
-                <h5>New Zealand</h5>
-                <p class="text-muted small">Skilled Migrant, Investor, Family</p>
-                <div class="mt-2">
-                  <span class="badge bg-light text-dark">Processing: 6-15 months</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Immigration Process -->
-        <div class="row mb-5">
-          <div class="col-12 mb-4">
-            <h3 class="text-center mb-4">Our Immigration Process</h3>
-          </div>
-          <div class="col-lg-8 mx-auto">
-            <div class="timeline-immigration">
-              <div class="timeline-step">
-                <div class="step-number">1</div>
-                <h4>Initial Assessment</h4>
-                <p>Comprehensive evaluation of your profile, qualifications, and immigration options.</p>
-              </div>
-              <div class="timeline-step">
-                <div class="step-number">2</div>
-                <h4>Strategy Development</h4>
-                <p>Create personalized immigration pathway strategy with backup options.</p>
-              </div>
-              <div class="timeline-step">
-                <div class="step-number">3</div>
-                <h4>Document Preparation</h4>
-                <p>Gather and prepare all required documents with our detailed checklist.</p>
-              </div>
-              <div class="timeline-step">
-                <div class="step-number">4</div>
-                <h4>Application Submission</h4>
-                <p>Submit complete application package to immigration authorities.</p>
-              </div>
-              <div class="timeline-step">
-                <div class="step-number">5</div>
-                <h4>Case Management</h4>
-                <p>Regular follow-up and response to any requests from immigration officials.</p>
-              </div>
-              <div class="timeline-step">
-                <div class="step-number">6</div>
-                <h4>Post-Approval Support</h4>
-                <p>Assistance with landing procedures, settlement, and citizenship applications.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Benefits -->
-        <div class="row mb-5">
-          <div class="col-12 mb-4">
-            <h3 class="text-center mb-4">Why Choose Our Immigration Services</h3>
-          </div>
-          <div class="col-12">
-            <div class="benefit-item">
-              <div class="benefit-icon">
-                <i class="fas fa-chart-line"></i>
-              </div>
-              <div>
-                <h4>High Success Rate</h4>
-                <p>96% success rate with thorough preparation and strategy development for each case.</p>
-              </div>
-            </div>
-            <div class="benefit-item">
-              <div class="benefit-icon">
-                <i class="fas fa-user-shield"></i>
-              </div>
-              <div>
-                <h4>Dedicated Case Manager</h4>
-                <p>Personal immigration consultant assigned to guide you through every step of the process.</p>
-              </div>
-            </div>
-            <div class="benefit-item">
-              <div class="benefit-icon">
-                <i class="fas fa-file-contract"></i>
-              </div>
-              <div>
-                <h4>Comprehensive Documentation</h4>
-                <p>Professional preparation of all required documents with attention to detail.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Comparison -->
-        <div class="row mb-5">
-          <div class="col-12 mb-4">
-            <h3 class="text-center mb-4">Immigration Program Comparison</h3>
-          </div>
-          <div class="col-12">
-            <div class="comparison-grid">
-              <div class="comparison-item">
-                <h4>Skilled Worker Programs</h4>
-                <ul class="list-unstyled">
-                  <li><i class="fas fa-check text-success me-2"></i>Based on occupation</li>
-                  <li><i class="fas fa-check text-success me-2"></i>Points assessment</li>
-                  <li><i class="fas fa-check text-success me-2"></i>Language requirements</li>
-                  <li><i class="fas fa-check text-success me-2"></i>Work experience needed</li>
-                  <li><i class="fas fa-check text-success me-2"></i>Education assessment</li>
+              
+              <div class="highlight-box">
+                <h4>Key Requirements:</h4>
+                <ul>
+                  <li>Job offer from Home Office-approved sponsor</li>
+                  <li>Role at RQF Level 6 or above (degree level)</li>
+                  <li>Salary meeting threshold (£41,700+) and occupation 'going rate'</li>
+                  <li>English language proficiency (CEFR Level B2 from Jan 2026)</li>
+                  <li>Maintenance funds (£1,270 unless certified by sponsor)</li>
                 </ul>
               </div>
-              <div class="comparison-item">
-                <h4>Business Immigration</h4>
-                <ul class="list-unstyled">
-                  <li><i class="fas fa-check text-success me-2"></i>Investment required</li>
-                  <li><i class="fas fa-check text-success me-2"></i>Business experience</li>
-                  <li><i class="fas fa-check text-success me-2"></i>Net worth verification</li>
-                  <li><i class="fas fa-check text-success me-2"></i>Business plan needed</li>
-                  <li><i class="fas fa-check text-success me-2"></i>Job creation potential</li>
-                </ul>
-              </div>
-              <div class="comparison-item">
-                <h4>Family Sponsorship</h4>
-                <ul class="list-unstyled">
-                  <li><i class="fas fa-check text-success me-2"></i>Relationship proof</li>
-                  <li><i class="fas fa-check text-success me-2"></i>Financial support</li>
-                  <li><i class="fas fa-check text-success me-2"></i>Sponsor eligibility</li>
-                  <li><i class="fas fa-check text-success me-2"></i>Medical examination</li>
-                  <li><i class="fas fa-check text-success me-2"></i>Background checks</li>
+              
+              <div class="success-box">
+                <h5>Special Categories:</h5>
+                <ul>
+                  <li><strong>Health and Care Visa:</strong> Reduced fees, no IHS, faster processing for eligible healthcare professionals</li>
+                  <li><strong>Self-Sponsorship:</strong> Possible through your own UK company with sponsor licence</li>
+                  <li><strong>No Quota:</strong> No limit on number of Skilled Worker visas issued</li>
                 </ul>
               </div>
             </div>
-          </div>
-        </div>
 
-        <!-- CTA Section -->
-        <div class="cta-immigration text-center">
-          <h3 class="mb-3 text-white">Start Your Immigration Journey Today</h3>
-          <p class="lead mb-4 text-white">Book a comprehensive immigration assessment with our experts and discover your pathway to permanent residency.</p>
-          <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
-            <a href="../index.html#inquiry" class="btn btn-light btn-lg">
-              <i class="fas fa-calendar-check me-2"></i>Free Immigration Assessment
-            </a>
-            <a href="tel:+639687075241" class="btn btn-outline-light btn-lg">
-              <i class="fas fa-phone me-2"></i>Call Immigration Expert
-            </a>
+            <!-- Section 1 -->
+            <div id="section1" class="content-section">
+              <h3>1. Requirements for a UK Skilled Worker Visa</h3>
+              <p>To qualify for a UK Skilled Worker Visa, you must satisfy specific requirements set by UK Visas and Immigration. These include conditions related to age, job offer, salary, English language ability, and other supporting evidence. You must prove that:</p>
+              
+              <div class="info-box">
+                <h5>Core Requirements:</h5>
+                <ul>
+                  <li>You are aged 18 or above at the time of application</li>
+                  <li>You have a valid Certificate of Sponsorship (CoS) issued by a UK employer licensed to sponsor Skilled Worker migrants</li>
+                  <li>Your job offer is for a genuine vacancy that meets the sponsorship criteria under the Skilled Worker route</li>
+                  <li>The role is at the required skill level, typically RQF Level 6 (degree level equivalent) or above</li>
+                  <li>You will receive a salary that meets the minimum salary requirements, including the general salary threshold and the "going rate" for your occupation based on SOC 2020 codes</li>
+                  <li>Your sponsor has paid the Immigration Skills Charge if required</li>
+                  <li>You meet the English language requirement</li>
+                </ul>
+              </div>
+              
+              <div class="warning-box">
+                <h5>English Language Requirement Update:</h5>
+                <p>Existing Skilled Worker visa holders who previously demonstrated English at CEFR Level B1 (equivalent to IELTS 4.0–5.0) remain subject to this level. New applicants from 8 January 2026 must demonstrate CEFR Level B2 (equivalent to IELTS 5.5–6.5) in reading, writing, speaking, and listening.</p>
+              </div>
+              
+              <div class="info-box">
+                <h5>Additional Requirements:</h5>
+                <ul>
+                  <li>You have sufficient funds to support yourself on arrival in the UK, unless your sponsor confirms they will cover your maintenance</li>
+                  <li>You have provided a criminal record certificate if the job requires one (e.g., education, health, or social care)</li>
+                  <li>You have provided a valid TB test certificate if required for your country of residence</li>
+                </ul>
+              </div>
+              
+              <div class="highlight-box">
+                <p><strong>Meeting the Requirements:</strong> The exact requirements depend on your individual circumstances, the nature of the job offered, and whether any exemptions or tradable points apply. Lower salary thresholds may be available if you are under 26, a recent graduate, working in an occupation on the Immigration Salary List, or hold a relevant PhD. It is important to ensure your application is prepared carefully and that all evidence is correctly submitted. Seeking expert advice from a qualified immigration lawyer can help prevent delays or refusals.</p>
+              </div>
+            </div>
+
+            <!-- Section 2 -->
+            <div id="section2" class="content-section">
+              <h3>2. Skilled Worker Visa UK: Certificate of Sponsorship (CoS) Explained</h3>
+              <p>To apply for a Skilled Worker Visa, you must have a valid Certificate of Sponsorship (CoS) for the specific job you intend to undertake in the UK. Your CoS must be issued by an employer licensed by the Home Office to sponsor workers under the Skilled Worker route.</p>
+              
+              <div class="warning-box">
+                <p><strong>Sponsor Requirements:</strong> Your sponsor must be listed as A-rated on the Home Office Register of Licensed Sponsors, unless you were last granted permission as a Skilled Worker and are applying to continue working for the same sponsor as in your most recent permission.</p>
+              </div>
+              
+              <div class="info-box">
+                <h5>CoS Validity and Mandatory Information:</h5>
+                <p>Your Certificate of Sponsorship must be issued no more than three months before the date of your Skilled Worker Visa application. It must also include mandatory information such as:</p>
+                <ul>
+                  <li>Your full name, job title, and salary</li>
+                  <li>A start date no later than three months after the application date</li>
+                  <li>Confirmation that the CoS has not been withdrawn by your sponsor</li>
+                </ul>
+              </div>
+              
+              <div class="highlight-box">
+                <h5>Proving a Genuine Job Offer:</h5>
+                <p>To be granted a Skilled Worker Visa, you must prove you are being sponsored for a genuine vacancy and that you can perform the role specified in the CoS. If the Home Office believes the job does not genuinely exist, is a sham, or has been created primarily to support your visa application, your application will be refused.</p>
+                <p>The Home Office will also ensure that you are not in an arrangement where you fill a temporary or permanent position or provide ongoing services to a third party not your sponsor. Such arrangements may lead to refusal if they violate rules governing sponsored employment.</p>
+              </div>
+              
+              <div class="info-box">
+                <h5>Immigration Skills Charge (ISC):</h5>
+                <p>Your sponsor must pay any applicable Immigration Skills Charge (ISC) in full when assigning your CoS. The charge depends on the size of the organisation and the length of employment. However, there are exemptions. Employers are not required to pay the charge for certain research or academic roles. The charge is also waived for workers assigned a CoS before 6 April 2017, and for dependants of the main applicant. Sponsors are also exempt when a student switches into a Skilled Worker visa and later extends their stay.</p>
+              </div>
+            </div>
+
+            <!-- Section 3 -->
+            <div id="section3" class="content-section">
+              <h3>3. Job Skill Level Criteria for the UK Skilled Worker Visa</h3>
+              <p>To qualify for a Skilled Worker Visa, the job must meet the minimum skill level requirement set by UKVI. Under this route, the role must be skilled to at least RQF Level 6, which is equivalent to degree level. This refers to the job's skill level, not necessarily your personal qualifications.</p>
+              
+              <div class="info-box">
+                <h5>Eligible Occupations and SOC 2020 Codes:</h5>
+                <p>The Home Office lists eligible jobs in appendices such as Skilled Occupations, Immigration Salary List, and Temporary Shortage List. Each eligible role is assigned a SOC 2020 occupation code, and your sponsor must select a code that accurately reflects the role.</p>
+              </div>
+              
+              <div class="warning-box">
+                <h5>Choosing the Correct Occupation Code:</h5>
+                <p>It is the sponsor's responsibility to select the most appropriate occupation code. If the Home Office believes an incorrect code has been chosen, your application may be refused. The Home Office will consider whether the sponsor has demonstrated a genuine need for the role, whether you have the required skills and experience, and whether the sponsor has complied with immigration requirements.</p>
+                <p>Choosing the wrong or inflated occupation code is a common reason for refusal, so the job description and your background must match the selected role.</p>
+              </div>
+            </div>
+
+            <!-- Section 4 -->
+            <div id="section4" class="content-section">
+              <h3>4. UK Skilled Worker Visa: English Language Test & Exemptions</h3>
+              <p>From 8 January 2026, applicants must demonstrate English language ability at CEFR Level B2 (upper intermediate) across all four skills: reading, writing, speaking, and listening.</p>
+              
+              <div class="info-box">
+                <h5>How to Meet the English Language Requirement:</h5>
+                <p>You can satisfy the requirement through any of the following:</p>
+                <ul>
+                  <li>You are a national of a majority English-speaking country</li>
+                  <li>You passed a Secure English Language Test (SELT) at CEFR Level B2 or higher with an approved provider</li>
+                  <li>You hold a degree taught in English that is equivalent to a UK bachelor's degree or higher</li>
+                  <li>You obtained an approved English qualification while studying in the UK under age 18</li>
+                  <li>You previously met the B1 requirement in a successful UK visa application</li>
+                </ul>
+                <p>Each route requires specific evidence, so it is important to provide the correct documentation.</p>
+              </div>
+              
+              <div class="highlight-box">
+                <p><strong>Transitional Arrangements:</strong> Applicants who have already met the B1 level in a previous successful application and are applying for extension or settlement may continue to use that qualification, subject to certain conditions.</p>
+              </div>
+            </div>
+
+            <!-- Section 5 -->
+            <div id="section5" class="content-section">
+              <h3>5. Minimum Salary & Going Rate for UK Skilled Worker Visa Jobs</h3>
+              <p>To sponsor a worker, employers must pay a salary that meets both the general salary threshold and the 'going rate' for the occupation code.</p>
+              
+              <div class="info-box">
+                <h5>Going Rate Requirement:</h5>
+                <p>The salary must meet the higher of:</p>
+                <ul>
+                  <li>The general salary threshold</li>
+                  <li>The applicable going rate for the SOC code</li>
+                </ul>
+                <p>The going rate is based on a 37.5-hour week and must be prorated if your working hours differ.</p>
+              </div>
+              
+              <table class="table table-bordered">
+                <thead class="table-light">
+                  <tr>
+                    <th>Salary Component</th>
+                    <th>Standard Rate</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>General Salary Threshold</strong></td>
+                    <td>£41,700/year</td>
+                    <td>May reduce to £37,500 or £33,400 with tradable points</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Hourly Minimum Rate</strong></td>
+                    <td>£17.13/hour</td>
+                    <td>Most occupations, some exceptions apply</td>
+                  </tr>
+                  <tr>
+                    <td><strong>New Entrant Rate</strong></td>
+                    <td>70-90% of going rate</td>
+                    <td>For eligible new entrants to labour market</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <div class="info-box">
+                <h5>Tradable Points System:</h5>
+                <p>Lower salary options may apply for applicants with relevant PhDs, jobs on the Immigration Salary List, or new entrants to the labour market.</p>
+              </div>
+              
+              <div class="warning-box">
+                <h5>Transitional Rules:</h5>
+                <p>Transitional rules apply for those previously granted permission before 4 April 2024, allowing lower salary thresholds in certain circumstances when extending or changing employer.</p>
+              </div>
+            </div>
+
+            <!-- Section 6 -->
+            <div id="section6" class="content-section">
+              <h3>6. UK Immigration Salary List: Impact on Skilled Worker Visa Eligibility</h3>
+              <p>The Immigration Salary List identifies shortage occupations and allows lower salary thresholds. The list is being phased out and replaced by the Temporary Shortage List.</p>
+              
+              <div class="info-box">
+                <h5>Salary Discounts for ISL Occupations:</h5>
+                <p>If your job is on the ISL, you may be paid a lower salary than the general threshold, provided all other requirements are met and the application is made before removal.</p>
+              </div>
+              
+              <div class="warning-box">
+                <h5>Phase-Out Timeline:</h5>
+                <p>The Immigration Salary List is being phased out throughout 2024-2025, with occupations gradually removed. Applicants should check current lists before applying and consider that occupations may be removed with little notice.</p>
+              </div>
+            </div>
+
+            <!-- Section 7 -->
+            <div id="section7" class="content-section">
+              <h3>7. Skilled Worker Visa for New Entrants: Lower Salary Thresholds</h3>
+              <p>New entrants may qualify for lower salary thresholds to support younger workers and early-career professionals.</p>
+              
+              <div class="info-box">
+                <h5>Who Qualifies as a New Entrant?</h5>
+                <p>You may qualify if:</p>
+                <ul>
+                  <li>You are under 26</li>
+                  <li>You are switching from a Student or Graduate visa</li>
+                  <li>You are sponsored in a postdoctoral research role</li>
+                  <li>You are working toward a recognised professional qualification</li>
+                </ul>
+              </div>
+              
+              <div class="warning-box">
+                <h5>Time Limit on New Entrant Status:</h5>
+                <p>You cannot qualify if your combined permission in relevant categories exceeds 4 years. Once you exceed this limit, you must meet the standard salary requirements.</p>
+              </div>
+              
+              <div class="highlight-box">
+                <p><strong>Salary Benefits:</strong> New entrants typically qualify for 70-90% of the going rate for their occupation, making it easier for early-career professionals to secure sponsorship.</p>
+              </div>
+            </div>
+
+            <!-- Section 8 -->
+            <div id="section8" class="content-section">
+              <h3>8. Financial Maintenance Requirement for the UK Skilled Worker Visa</h3>
+              <div class="info-box">
+                <h5>Maintenance Funds Requirement:</h5>
+                <p>Most applicants must show they have at least <strong>£1,270 in savings</strong>, held for <strong>28 consecutive days</strong>, to prove they can support themselves when they arrive in the UK. This requirement is waived if your sponsor confirms they will cover your maintenance costs in the Certificate of Sponsorship.</p>
+              </div>
+              
+              <div class="info-box">
+                <h5>Dependant Maintenance:</h5>
+                <p>If you have dependants, you must also show extra funds for each family member unless your sponsor covers their maintenance too. The required amounts are:</p>
+                <ul>
+                  <li>Partner: £285</li>
+                  <li>First child: £315</li>
+                  <li>Each additional child: £200</li>
+                </ul>
+              </div>
+              
+              <div class="warning-box">
+                <h5>Evidence Requirements:</h5>
+                <p>The savings must be in your name (or your partner's), and you must provide bank statements as evidence. If you cannot meet the maintenance requirement, your application may be refused.</p>
+              </div>
+            </div>
+
+            <!-- Section 9 -->
+            <div id="section9" class="content-section">
+              <h3>9. When Is a Criminal Record Certificate Needed for the Skilled Worker Visa?</h3>
+              <p>If you are applying from outside the UK for certain roles that involve working with vulnerable people (such as education, health, or social care), you may need to provide a criminal record certificate.</p>
+              
+              <div class="info-box">
+                <h5>Certificate Requirements:</h5>
+                <p>This certificate must be issued by every country where you have lived for 12 months or more in the last 10 years. The purpose is to prove that you have no relevant criminal convictions that would make you unsuitable for the role.</p>
+              </div>
+              
+              <div class="warning-box">
+                <h5>Check Requirements Early:</h5>
+                <p>The exact requirements depend on your occupation and the country you are applying from, so it is important to check whether a criminal record certificate is needed before submitting your application. Obtaining certificates from some countries can take several weeks or months.</p>
+              </div>
+            </div>
+
+            <!-- Section 10 -->
+            <div id="section10" class="content-section">
+              <h3>10. Skilled Worker Visa: Is the Resident Labour Market Test Still Required?</h3>
+              <div class="success-box">
+                <h5><i class="fas fa-check-circle me-2"></i>No RLMT Required</h5>
+                <p>No. The Resident Labour Market Test (RLMT) is no longer required for the Skilled Worker route. However, your sponsor must still prove that the job is genuine and that it meets the requirements of the route.</p>
+              </div>
+              
+              <div class="info-box">
+                <h5>Genuine Vacancy Assessment:</h5>
+                <p>The employer must show that the vacancy is real, that the job is needed for business operations, and that you meet the skills and experience required for the role. The Home Office will assess whether the job is genuine and whether the employer has complied with immigration rules.</p>
+              </div>
+              
+              <div class="warning-box">
+                <p><strong>Important:</strong> Even though RLMT is removed, the Home Office can still refuse the application if it believes the role is not genuine or has been created primarily to facilitate a visa application.</p>
+              </div>
+            </div>
+
+            <!-- Section 11 -->
+            <div id="section11" class="content-section">
+              <h3>11. UK Skilled Worker Visa: Cooling-Off Period Rules Explained</h3>
+              <div class="success-box">
+                <h5><i class="fas fa-check-circle me-2"></i>Cooling-Off Period Removed</h5>
+                <p>The 12-month cooling-off period has been removed. This means applicants can return to the Skilled Worker route without waiting for a year after leaving the UK.</p>
+              </div>
+              
+              <div class="info-box">
+                <h5>Previous Rules vs Current Rules:</h5>
+                <ul>
+                  <li><strong>Before:</strong> Individuals had to wait 12 months before applying again if they had already spent a period on a Skilled Worker visa</li>
+                  <li><strong>Now:</strong> You can apply for a new Skilled Worker Visa immediately, provided you meet the eligibility requirements and have a valid sponsor and Certificate of Sponsorship</li>
+                </ul>
+              </div>
+              
+              <div class="highlight-box">
+                <p><strong>Flexibility:</strong> This change allows more flexibility for workers who want to return to the UK quickly, whether for the same employer or a new sponsor.</p>
+              </div>
+            </div>
+
+            <!-- Section 12 -->
+            <div id="section12" class="content-section">
+              <h3>12. Bringing Family to the UK on a Skilled Worker Visa: Dependant Rules</h3>
+              
+              <div class="info-box">
+                <h5>Who Can Come as Dependants?</h5>
+                <p>Your dependants can include:</p>
+                <ul>
+                  <li>Your spouse or civil partner</li>
+                  <li>Your unmarried partner (if you have lived together in a relationship similar to marriage for at least 2 years)</li>
+                  <li>Your children under 18</li>
+                  <li>Your children aged 18 or over if they were already your dependant before turning 18</li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <h5>Requirements for Dependants:</h5>
+                <p>Dependants must:</p>
+                <ul>
+                  <li>Apply separately for their own visa</li>
+                  <li>Provide evidence of relationship (marriage certificate, birth certificate, etc.)</li>
+                  <li>Meet the financial requirements unless your sponsor certifies maintenance</li>
+                  <li>Provide required documents such as passports and photographs</li>
+                  <li>Not have breached UK immigration rules</li>
+                </ul>
+              </div>
+              
+              <div class="warning-box">
+                <h5>Dependant Restrictions:</h5>
+                <p>Some roles on the Immigration Salary List or Temporary Shortage List may have restrictions for dependants. If your role falls under these lists, dependants may not be allowed unless you already had dependants under previous rules. It is important to check whether your occupation has any dependant restrictions before applying.</p>
+              </div>
+              
+              <div class="info-box">
+                <h5>Dependant Rights in the UK:</h5>
+                <p>Dependants are usually allowed to:</p>
+                <ul>
+                  <li>Live in the UK for the same period as the main applicant</li>
+                  <li>Work in most jobs without restrictions</li>
+                  <li>Study full-time or part-time</li>
+                  <li>Access NHS healthcare (after paying the Immigration Health Surcharge unless exempt)</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Section 13 -->
+            <div id="section13" class="content-section">
+              <h3>13. Switch to the UK Skilled Worker Visa from Another Immigration Route</h3>
+              <p>You may be able to switch to the Skilled Worker Visa from another immigration route if you meet the eligibility requirements.</p>
+              
+              <div class="warning-box">
+                <h5>Routes You Cannot Switch From:</h5>
+                <p>You cannot switch from certain categories such as Visitor, Seasonal Worker, or other temporary visas.</p>
+              </div>
+              
+              <div class="info-box">
+                <h5>Switching from Student Visa:</h5>
+                <p>If you are switching from a Student visa, you must meet specific conditions, including having a valid job offer, a Certificate of Sponsorship, and meeting the salary and English requirements. You must also apply before your current visa expires.</p>
+              </div>
+              
+              <div class="highlight-box">
+                <p><strong>In-Country Switching:</strong> If you are already in the UK under another eligible route, you may be able to switch without leaving the country. This avoids the need to return home to apply.</p>
+              </div>
+            </div>
+
+            <!-- Section 14 -->
+            <div id="section14" class="content-section">
+              <h3>14. How to Apply for a UK Skilled Worker Visa: Step-by-Step Guide</h3>
+              <p>To apply for a Skilled Worker Visa, you must follow several steps:</p>
+              
+              <div class="info-box">
+                <ol>
+                  <li><strong>Secure a job offer</strong> from a UK employer who is licensed to sponsor Skilled Worker migrants</li>
+                  <li><strong>Receive Certificate of Sponsorship</strong> - Your employer assigns you a valid Certificate of Sponsorship (CoS)</li>
+                  <li><strong>Prepare required documents</strong> including proof of English language ability, evidence of funds, and identity documents</li>
+                  <li><strong>Complete online application</strong> form and pay the application fee</li>
+                  <li><strong>Pay Immigration Health Surcharge</strong> unless exempt (e.g., Health and Care workers)</li>
+                  <li><strong>Attend biometric appointment</strong> to provide fingerprints and a photo</li>
+                  <li><strong>Wait for decision</strong> from UK Visas and Immigration</li>
+                </ol>
+              </div>
+              
+              <div class="highlight-box">
+                <p><strong>Visa Approval:</strong> Once your visa is approved, you will receive a vignette in your passport or a digital status showing your permission to travel to the UK. You must travel within the validity of the vignette (usually 90 days).</p>
+              </div>
+            </div>
+
+            <!-- Section 15 -->
+            <div id="section15" class="content-section">
+              <h3>15. UK Skilled Worker Visa Costs: Fees & Health Surcharge</h3>
+              <p>Applicants must pay the visa application fee, which varies depending on whether you are applying from inside or outside the UK and how long your visa will last.</p>
+              
+              <table class="table table-bordered">
+                <thead class="table-light">
+                  <tr>
+                    <th>Application Type</th>
+                    <th>Application Fee</th>
+                    <th>Immigration Health Surcharge</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Outside UK (up to 3 years)</td>
+                    <td>£827</td>
+                    <td>£1,035 per year</td>
+                  </tr>
+                  <tr>
+                    <td>Outside UK (more than 3 years)</td>
+                    <td>£1,609</td>
+                    <td>£1,035 per year</td>
+                  </tr>
+                  <tr>
+                    <td>Inside UK (up to 3 years)</td>
+                    <td>£719</td>
+                    <td>£1,035 per year</td>
+                  </tr>
+                  <tr>
+                    <td>Inside UK (more than 3 years)</td>
+                    <td>£1,423</td>
+                    <td>£1,035 per year</td>
+                  </tr>
+                  <tr>
+                    <td>Health and Care Visa</td>
+                    <td>Reduced fees apply</td>
+                    <td>Exempt</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <div class="info-box">
+                <h5>Additional Costs:</h5>
+                <ul>
+                  <li>Criminal record certificate (if required): Variable by country</li>
+                  <li>TB test (if required): Usually £50-£150</li>
+                  <li>Biometric appointment: £19.20 (if applicable)</li>
+                  <li>Priority service: Additional £500-£1,000</li>
+                  <li>Legal fees: If using professional immigration services</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Section 16 -->
+            <div id="section16" class="content-section">
+              <h3>16. Fast-Track Options for UK Skilled Worker Visa Applications</h3>
+              <p>Priority and Super Priority services are available for faster visa decisions, depending on availability and location.</p>
+              
+              <table class="table table-bordered">
+                <thead class="table-light">
+                  <tr>
+                    <th>Service Type</th>
+                    <th>Processing Time</th>
+                    <th>Additional Fee</th>
+                    <th>Availability</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Standard Service</td>
+                    <td>3-8 weeks</td>
+                    <td>Included</td>
+                    <td>All applications</td>
+                  </tr>
+                  <tr>
+                    <td>Priority Service</td>
+                    <td>5 working days</td>
+                    <td>£500</td>
+                    <td>Most applications</td>
+                  </tr>
+                  <tr>
+                    <td>Super Priority Service</td>
+                    <td>Next working day</td>
+                    <td>£1,000</td>
+                    <td>In-country applications only</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <div class="warning-box">
+                <p><strong>Important:</strong> These services only speed up the decision timeline; they do not change the assessment criteria. Approval is not guaranteed even with fast-track processing, and the application still must meet all eligibility requirements.</p>
+              </div>
+            </div>
+
+            <!-- Section 17 -->
+            <div id="section17" class="content-section">
+              <h3>17. How Long Does a UK Skilled Worker Visa Last?</h3>
+              <p>A Skilled Worker Visa is typically granted for the duration of the sponsored employment plus an additional 14 days.</p>
+              
+              <div class="info-box">
+                <h5>Visa Duration Factors:</h5>
+                <ul>
+                  <li><strong>Maximum initial grant:</strong> Up to 5 years (or length of CoS if less)</li>
+                  <li><strong>Short contracts:</strong> If your employment contract is shorter, your visa will be granted for the shorter period</li>
+                  <li><strong>Extensions:</strong> You can apply to extend your visa before it expires, provided you still meet the requirements and continue to be sponsored by a licensed employer</li>
+                  <li><strong>Continuity:</strong> Time on Skilled Worker Visa counts toward the 5-year settlement requirement</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Section 18 -->
+            <div id="section18" class="content-section">
+              <h3>18. Maximum Stay on a UK Skilled Worker Visa: Is There a Time Limit?</h3>
+              <div class="success-box">
+                <h5><i class="fas fa-infinity me-2"></i>No Maximum Time Limit</h5>
+                <p>There is no overall maximum limit to the time you can stay in the UK on a Skilled Worker Visa. You can extend your visa as long as you continue to meet the eligibility requirements and remain sponsored by a licensed employer.</p>
+              </div>
+              
+              <div class="info-box">
+                <h5>Indefinite Leave to Remain Pathway:</h5>
+                <p>After five years of continuous lawful residence in the UK, you may be eligible to apply for Indefinite Leave to Remain (ILR), provided you meet the requirements such as continuous residence, limited absences, and meeting the salary threshold.</p>
+              </div>
+              
+              <div class="warning-box">
+                <h5>Other Route Time Considerations:</h5>
+                <p>There are specific rules for time spent in the UK under other routes, which may affect your ILR eligibility. Time spent as a Student, for example, typically does not count toward the 5-year settlement requirement for Skilled Workers.</p>
+              </div>
+            </div>
+
+            <!-- Section 19 -->
+            <div id="section19" class="content-section">
+              <h3>19. How to Change Jobs on a UK Skilled Worker Visa</h3>
+              <div class="warning-box">
+                <h5><i class="fas fa-exclamation-triangle me-2"></i>New Visa Required</h5>
+                <p>If you want to change jobs, you must apply for a new Skilled Worker Visa and receive approval before starting work with a different sponsor. You cannot start working for a new employer until your new visa is granted.</p>
+              </div>
+              
+              <div class="info-box">
+                <h5>Requirements for Job Change:</h5>
+                <ul>
+                  <li>Your new employer must provide a new Certificate of Sponsorship</li>
+                  <li>The new job must meet the required skill level and salary thresholds</li>
+                  <li>You must submit a new visa application and pay applicable fees</li>
+                  <li>Your new CoS must be assigned before your current visa expires</li>
+                </ul>
+              </div>
+              
+              <div class="highlight-box">
+                <p><strong>Continuity of Employment:</strong> You can continue working for your current sponsor while your new application is being processed, provided you have permission to remain in the UK. There is no need to leave your current job until the new visa is granted.</p>
+              </div>
+            </div>
+
+            <!-- Section 20 -->
+            <div id="section20" class="content-section">
+              <h3>20. Redundancy on a Skilled Worker Visa: What Are Your Options?</h3>
+              <p>If you are made redundant, your employer must report this to the Home Office.</p>
+              
+              <div class="warning-box">
+                <h5>60-Day Grace Period:</h5>
+                <p>You may be given a short period (usually 60 days) to:</p>
+                <ul>
+                  <li>Find a new sponsor and apply for a new Skilled Worker Visa</li>
+                  <li>Switch to a different visa category</li>
+                  <li>Make arrangements to leave the UK</li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <h5>Immediate Action Required:</h5>
+                <p>If you cannot secure a new job or apply for a new visa within the time limit, you may need to depart the UK. It is important to act quickly if you face redundancy to avoid overstaying your visa, which could affect future UK immigration applications.</p>
+              </div>
+              
+              <div class="highlight-box">
+                <p><strong>Professional Advice Recommended:</strong> If facing redundancy, seek immediate immigration advice to understand your options and timelines for securing alternative sponsorship or changing visa categories.</p>
+              </div>
+            </div>
+
+            <!-- Section 21 -->
+            <div id="section21" class="content-section">
+              <h3>21. Can You Work a Second Job on a Skilled Worker Visa?</h3>
+              <div class="info-box">
+                <h5>Second Job Conditions:</h5>
+                <p>You may be allowed to work a second job under certain conditions:</p>
+                <ul>
+                  <li>The second job must be on the list of permitted supplementary occupations</li>
+                  <li>It must not exceed 20 hours per week</li>
+                  <li>The role must meet the required skill level (RQF Level 6 or above)</li>
+                  <li>It must be compatible with your main job (not conflict with hours or duties)</li>
+                </ul>
+              </div>
+              
+              <div class="warning-box">
+                <h5>Compliance Requirements:</h5>
+                <p>If the second job is not on the approved list, you would need to apply for a new visa. If you work outside these conditions, you may breach your visa rules and face curtailment or refusal of future applications.</p>
+              </div>
+            </div>
+
+            <!-- Section 22 -->
+            <div id="section22" class="content-section">
+              <h3>22. Is Self-Employment Allowed on a UK Skilled Worker Visa?</h3>
+              <div class="warning-box">
+                <h5><i class="fas fa-ban me-2"></i>Generally Not Permitted</h5>
+                <p>Self-employment is generally not permitted under the Skilled Worker route. You are only allowed to work for the employer who sponsors you, unless you are self-sponsored by your own UK company that holds a valid sponsor licence.</p>
+              </div>
+              
+              <div class="info-box">
+                <h5>Self-Sponsorship Option:</h5>
+                <p>Self-sponsorship is possible but requires strict compliance with sponsorship rules and evidence that the business is genuine. This typically requires:</p>
+                <ul>
+                  <li>Your UK company holds a valid sponsor licence</li>
+                  <li>The business is active and trading</li>
+                  <li>The role is genuine and necessary for the business</li>
+                  <li>You meet all salary and skill level requirements</li>
+                </ul>
+              </div>
+              
+              <div class="highlight-box">
+                <p><strong>Alternative Routes:</strong> If you want to run a business or work as a freelancer, you may need to consider other visa routes such as the Innovator Founder Visa or Global Talent Visa.</p>
+              </div>
+            </div>
+
+            <!-- Section 23 -->
+            <div id="section23" class="content-section">
+              <h3>23. Reporting Job or Personal Changes on a Skilled Worker Visa</h3>
+              <p>If there are changes to your job or personal circumstances, you may need to report them or apply for a new visa.</p>
+              
+              <div class="info-box">
+                <h5>Changes Requiring Action:</h5>
+                <ul>
+                  <li>New job title or significant change in duties</li>
+                  <li>Change in salary (especially if below required threshold)</li>
+                  <li>Change of employer</li>
+                  <li>Change of work location (especially if moving to different premises)</li>
+                  <li>Changes to personal details (name, nationality, etc.)</li>
+                </ul>
+              </div>
+              
+              <div class="warning-box">
+                <h5>Consequences of Non-Reporting:</h5>
+                <p>Failure to report changes can result in visa curtailment or refusal. Your sponsor also has duties to report certain changes to the Home Office, such as changes in your employment status or address.</p>
+              </div>
+            </div>
+
+            <!-- Section 24 -->
+            <div id="section24" class="content-section">
+              <h3>24. Skilled Worker Visa Sponsor Duties & Visa Compliance Requirements</h3>
+              <p>Both sponsors and visa holders must follow strict compliance rules.</p>
+              
+              <div class="info-box">
+                <h5>Sponsor Duties Include:</h5>
+                <ul>
+                  <li>Monitor their sponsored employees and keep accurate records</li>
+                  <li>Report changes to the Home Office (e.g., employee not attending, changes in circumstances)</li>
+                  <li>Ensure the role remains genuine and necessary for business operations</li>
+                  <li>Pay the correct salary as specified in the CoS</li>
+                  <li>Provide appropriate working conditions in line with UK employment law</li>
+                  <li>Comply with the terms of the sponsor licence</li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <h5>Visa Holder Responsibilities:</h5>
+                <ul>
+                  <li>Work only in the role specified in the Certificate of Sponsorship</li>
+                  <li>Maintain valid immigration status at all times</li>
+                  <li>Follow the rules of the Skilled Worker route</li>
+                  <li>Report relevant changes to your sponsor</li>
+                  <li>Leave the UK if your visa expires and is not extended</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Section 25 -->
+            <div id="section25" class="content-section">
+              <h3>25. Indefinite Leave to Remain on a Skilled Worker Visa: ILR Requirements</h3>
+              <p>To qualify for Indefinite Leave to Remain (ILR), you must have five years of continuous lawful residence in the UK under the Skilled Worker route or other eligible categories.</p>
+              
+              <div class="info-box">
+                <h5>Key ILR Requirements:</h5>
+                <ul>
+                  <li><strong>Continuous residence:</strong> 5 years with limited absences (no more than 180 days in any 12-month period)</li>
+                  <li><strong>Life in the UK Test:</strong> Must pass this citizenship test</li>
+                  <li><strong>English language:</strong> CEFR Level B1 or higher (unless already demonstrated)</li>
+                  <li><strong>Salary threshold:</strong> Must meet the required salary at time of ILR application (generally £38,700 or occupation going rate)</li>
+                  <li><strong>Employer confirmation:</strong> Your employer may need to confirm that you still work in a suitable role</li>
+                  <li><strong>No serious criminal record:</strong> Must not have unspent convictions</li>
+                </ul>
+              </div>
+              
+              <div class="highlight-box">
+                <p><strong>ILR Benefits:</strong> Once you meet these requirements, you can apply for ILR, which allows you to live and work in the UK permanently without immigration restrictions. After 12 months with ILR, you may be eligible to apply for British citizenship.</p>
+              </div>
+            </div>
+
+            <!-- Section 26 -->
+            <div id="section26" class="content-section">
+              <h3>26. Switching from Skilled Worker Visa to Another UK Immigration Route</h3>
+              <p>You may switch from the Skilled Worker route to other immigration categories such as Global Talent, Innovator Founder, or Scale-up, provided you meet the eligibility requirements for the new route.</p>
+              
+              <div class="info-box">
+                <h5>Popular Switching Options:</h5>
+                <ul>
+                  <li><strong>Global Talent Visa:</strong> For leaders or potential leaders in academia, research, arts, culture, or digital technology</li>
+                  <li><strong>Innovator Founder Visa:</strong> For experienced businesspeople starting innovative businesses in the UK</li>
+                  <li><strong>Scale-up Visa:</strong> For highly skilled workers in eligible scale-up companies</li>
+                  <li><strong>Other work routes:</strong> Health and Care Worker, Senior or Specialist Worker, etc.</li>
+                  <li><strong>Family routes:</strong> Spouse or partner visa if marrying a British citizen or settled person</li>
+                </ul>
+              </div>
+              
+              <div class="warning-box">
+                <h5>Timing and Requirements:</h5>
+                <p>Switching requires careful planning and timing, as some routes have specific criteria and application requirements. You must ensure you submit your application before your current visa expires and meet the requirements of the new category. If you switch to a new route, you may need to meet additional conditions such as investment funds, endorsements, or job offers.</p>
+              </div>
+            </div>
+
+            <!-- Section 27 -->
+            <div id="section27" class="content-section">
+              <h3>27. Reasons UK Skilled Worker Visa Applications Are Refused</h3>
+              <p>Common reasons for refusal include:</p>
+              
+              <div class="warning-box">
+                <h5>Common Refusal Reasons:</h5>
+                <ul>
+                  <li><strong>Incorrect SOC code:</strong> Selecting wrong or inflated occupation code</li>
+                  <li><strong>Salary issues:</strong> Failing to meet the skill level or salary requirements</li>
+                  <li><strong>Insufficient evidence:</strong> Not providing required documentation or evidence</li>
+                  <li><strong>CoS problems:</strong> Issues with the Certificate of Sponsorship (invalid, withdrawn, incorrect details)</li>
+                  <li><strong>Genuineness concerns:</strong> Home Office believes the job is not genuine or employer not compliant</li>
+                  <li><strong>English language:</strong> Not meeting the English language requirement</li>
+                  <li><strong>Maintenance funds:</strong> Not having enough funds or incorrect evidence</li>
+                  <li><strong>Missing documents:</strong> Criminal record certificates, TB test results, etc.</li>
+                  <li><strong>Previous breaches:</strong> History of immigration violations</li>
+                </ul>
+              </div>
+              
+              <div class="highlight-box">
+                <p><strong>Prevention Strategy:</strong> It is important to ensure all information is accurate and evidence is complete to avoid refusal. Professional immigration advice can help identify potential issues before submission.</p>
+              </div>
+            </div>
+
+            <!-- Section 28 -->
+            <div id="section28" class="content-section">
+              <h3>28. What to Do If Your Skilled Worker Visa Is Refused: Appeal & Review</h3>
+              <p>If your Skilled Worker Visa application is refused, you may be able to request an Administrative Review if the decision was made due to an error.</p>
+              
+              <div class="info-box">
+                <h5>Administrative Review:</h5>
+                <ul>
+                  <li>Must be requested within the specified timeframe (usually 14-28 days)</li>
+                  <li>Available if you believe the Home Office made an error in applying the Immigration Rules</li>
+                  <li>Involves a re-examination of your application by a different caseworker</li>
+                  <li>No new evidence can be submitted (except in limited circumstances)</li>
+                </ul>
+              </div>
+              
+              <div class="warning-box">
+                <h5>Fresh Application Option:</h5>
+                <p>In some cases, you may need to submit a fresh application if the issues cannot be resolved through a review. Appeals are limited, and the Home Office decision is often final unless there are exceptional circumstances.</p>
+              </div>
+              
+              <div class="highlight-box">
+                <p><strong>Legal Advice Recommended:</strong> Seeking legal advice can help you understand your options and improve your chances in a new application or review. An immigration lawyer can identify the reasons for refusal and advise on the best course of action.</p>
+              </div>
+            </div>
+
+            <!-- Section 29 -->
+            <div id="section29" class="content-section">
+              <h3>29. UK Skilled Worker Visa Pros and Cons: Opportunities & Limitations</h3>
+              
+              <div class="info-box">
+                <h5>Pros (Advantages):</h5>
+                <ul>
+                  <li><strong>Clear settlement pathway:</strong> Leads to ILR after 5 years</li>
+                  <li><strong>Dependant rights:</strong> Can bring partner and children who can work/study</li>
+                  <li><strong>Broad eligibility:</strong> Many occupations qualify across various sectors</li>
+                  <li><strong>Employer flexibility:</strong> Can change jobs (with new visa)</li>
+                  <li><strong>No cooling-off period:</strong> Can return immediately if leaving UK</li>
+                  <li><strong>No quota:</strong> No limit on number of visas issued</li>
+                  <li><strong>Health and Care benefits:</strong> Special category with reduced costs</li>
+                </ul>
+              </div>
+              
+              <div class="warning-box">
+                <h5>Cons (Limitations):</h5>
+                <ul>
+                  <li><strong>Sponsor dependent:</strong> Tied to employer with sponsor licence</li>
+                  <li><strong>Job change restrictions:</strong> Requires new visa application</li>
+                  <li><strong>Compliance requirements:</strong> Strict rules for both sponsor and employee</li>
+                  <li><strong>Salary thresholds:</strong> Minimum salary requirements may exclude some roles</li>
+                  <li><strong>Skill level requirement:</strong> Only RQF Level 6+ roles qualify</li>
+                  <li><strong>Costs:</strong> Application fees, IHS, and potential legal costs</li>
+                  <li><strong>Redundancy risks:</strong> Limited time to find new sponsor if made redundant</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Section 30 -->
+            <div id="section30" class="content-section">
+              <h3>30. How Our Immigration Barristers Can Help</h3>
+              <p>Our immigration barristers provide expert guidance to applicants and employers on eligibility, job codes, application preparation, and compliance.</p>
+              
+              <div class="highlight-box">
+                <h4><i class="fas fa-briefcase me-2"></i>Our Skilled Worker Visa Services Include:</h4>
+                <ul>
+                  <li><strong>Eligibility Assessment:</strong> Comprehensive evaluation of your qualifications and job offer</li>
+                  <li><strong>SOC Code Guidance:</strong> Ensuring correct occupation code selection</li>
+                  <li><strong>Salary Analysis:</strong> Verifying compliance with minimum thresholds and going rates</li>
+                  <li><strong>Document Preparation:</strong> Ensuring all evidence meets Home Office standards</li>
+                  <li><strong>Sponsor Licence Support:</strong> Assistance for employers obtaining/maintaining licence</li>
+                  <li><strong>Application Management:</strong> Complete handling from preparation to submission</li>
+                  <li><strong>Compliance Advice:</strong> Guidance on sponsor duties and ongoing requirements</li>
+                  <li><strong>Refusal Assistance:</strong> Help with administrative reviews or fresh applications</li>
+                  <li><strong>Settlement Planning:</strong> Strategic advice for ILR pathway</li>
+                  <li><strong>Dependant Applications:</strong> Assistance with family member visas</li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <h5>Specialized Expertise:</h5>
+                <p>Our barristers specialise in complex Skilled Worker cases, including:</p>
+                <ul>
+                  <li>Self-sponsorship arrangements</li>
+                  <li>Health and Care Worker Visa applications</li>
+                  <li>New entrant and transitional cases</li>
+                  <li>Salary threshold calculations with tradable points</li>
+                  <li>Sponsor licence compliance and audits</li>
+                  <li>Job change and redundancy situations</li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <p><strong>Our Commitment:</strong> With professional legal advice, applicants can reduce the risk of delays or refusals and improve their chances of a successful outcome. We provide clear, practical guidance tailored to your specific circumstances, helping you navigate the complexities of the Skilled Worker route efficiently and effectively.</p>
+              </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+              <h3 class="mb-3">Ready to Start Your UK Skilled Worker Visa Application?</h3>
+              <p class="lead mb-4">Let our expert team guide you through the Skilled Worker visa process and help you secure your sponsored employment in the UK.</p>
+              <a href="../index.html#inquiry" class="btn btn-primary btn-lg">
+                <i class="fas fa-briefcase me-2"></i>Start Your Skilled Worker Visa Application
+              </a>
+              <p class="mt-3 text-muted">Click above to be redirected to our main inquiry form</p>
+            </div>
           </div>
-          <p class="mt-3 text-white opacity-75">Comprehensive consultation includes eligibility assessment and pathway recommendations</p>
         </div>
       </div>
     </section>
@@ -798,7 +1426,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-6 mb-4">
-         <h5>One Solution Visa™</h5>
+          <h5>One Solution Visa™</h5>
           <p>Your trusted partner for all visa and immigration services. We make your travel dreams come true with professional expertise and personalized service.</p>
           <div class="social-links">
             <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
@@ -825,22 +1453,24 @@
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
-          <h6>Immigration Services</h6>
+          <h6>Our Services</h6>
           <ul class="list-unstyled">
-            <li><a href="immigration.html" class="text-light text-decoration-none fw-bold">Permanent Residency</a></li>
-            <li><a href="business.html" class="text-light text-decoration-none">Business Immigration</a></li>
-            <li><a href="family.html" class="text-light text-decoration-none">Family Sponsorship</a></li>
-            <li><a href="work.html" class="text-light text-decoration-none">Work to Residency</a></li>
+            <li><a href="spouse.html" class="text-light text-decoration-none">UK Spouse Visa</a></li>
+            <li><a href="unmarried.html" class="text-light text-decoration-none">Unmarried Partner Visa</a></li>
+            <li><a href="fiance.html" class="text-light text-decoration-none">Fiancé Visa</a></li>
+            <li><a href="partner.html" class="text-light text-decoration-none">Child of Partner Visa</a></li>
+            <li><a href="other.html" class="text-light text-decoration-none">Other Child Visas</a></li>
+            <li><a href="work.html" class="text-light text-decoration-none fw-bold">Skilled Worker Visa</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
           <h6>Contact Info</h6>
           <ul class="list-unstyled">
-            <li><i class="fas fa-map-marker-alt me-2"></i>Cebu City, Philippines</li>
+            <li><i class="fas fa-map-marker-alt me-2"></i>A. Gabuya Street, Cogon Pardo, Cebu City, Philippines</li>
             <li><i class="fas fa-phone me-2"></i>+63 968 707 5241</li>
             <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
-            <li><i class="fas fa-clock me-2"></i>Mon-Fri: 8AM-6PM</li>
-            <li><i class="fas fa-calendar me-2"></i>By Appointment Only</li>
+            <li><i class="fas fa-clock me-2"></i>Mon-Sat: 9AM-6PM</li>
+            <li><i class="fas fa-briefcase me-2"></i>Skilled Worker Visa Consultation Available</li>
           </ul>
         </div>
       </div>
@@ -904,12 +1534,39 @@
           const target = document.querySelector(this.getAttribute('href'));
           if (target) {
             window.scrollTo({
-              top: target.offsetTop - 80,
+              top: target.offsetTop - 100,
               behavior: 'smooth'
             });
           }
         });
       });
+      
+      // Highlight active nav link
+      const sections = document.querySelectorAll('.content-section');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      function setActiveNavLink() {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (window.scrollY >= sectionTop - 150) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', setActiveNavLink);
+      setActiveNavLink();
     });
   </script>
 </body>
