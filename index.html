@@ -58,6 +58,188 @@
       flex-shrink: 0;
     }
 
+    /* Dropdown styling */
+    .dropdown-menu {
+      background: rgba(44, 62, 80, 0.98);
+      backdrop-filter: blur(10px);
+      border: none;
+      border-radius: 8px;
+      padding: 0.5rem;
+      margin-top: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      min-width: 250px;
+    }
+
+    .dropdown-item {
+      color: white;
+      padding: 0.75rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .dropdown-item:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+
+    .dropdown-submenu {
+      position: relative;
+    }
+
+    .dropdown-submenu > .dropdown-menu {
+      top: 0;
+      left: 100%;
+      margin-top: -0.5rem;
+      margin-left: 0.1rem;
+    }
+
+    .dropdown-divider {
+      border-color: rgba(255, 255, 255, 0.2);
+      margin: 0.5rem 0;
+    }
+
+    .nav-link.dropdown-toggle::after {
+      margin-left: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .show .nav-link.dropdown-toggle::after {
+      transform: rotate(180deg);
+    }
+
+    /* Desktop: Show submenus on hover */
+    @media (min-width: 992px) {
+      .dropdown-submenu:hover > .dropdown-menu {
+        display: block !important;
+      }
+
+      .dropdown-submenu > .dropdown-toggle::after {
+        content: '\f105';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        margin-left: auto;
+        padding-left: 0.5rem;
+        font-size: 0.75rem;
+        min-width: 12px;
+      }
+
+      .dropdown-submenu:hover > .dropdown-toggle::after {
+        transform: rotate(90deg);
+      }
+    }
+
+    /* Mobile navigation enhancements */
+    .mobile-menu-back {
+      display: none;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: none;
+      padding: 0.75rem 1rem;
+      border-radius: 5px;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-menu-back:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .mobile-menu-back i {
+      margin-right: 0.5rem;
+    }
+
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: rgba(44, 62, 80, 0.98);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        max-height: 70vh;
+        overflow-y: auto;
+      }
+
+      .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0.4rem 0.6rem;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
+      }
+
+      .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin: 0.25rem 0;
+      }
+
+      .nav-link:hover, .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      /* Show mobile menu back button */
+      .mobile-menu-back {
+        display: block;
+      }
+
+      /* Mobile dropdown improvements */
+      .dropdown-menu {
+        background: transparent;
+        border: none;
+        margin-left: 0;
+        padding: 0;
+        box-shadow: none;
+        position: static !important;
+        transform: none !important;
+      }
+
+      .dropdown-item {
+        padding: 0.75rem 1rem;
+        background: rgba(255, 255, 255, 0.05);
+        margin: 0.25rem 0;
+        border-radius: 5px;
+      }
+
+      .dropdown-submenu .dropdown-menu {
+        display: none;
+        margin-left: 1rem;
+        margin-top: 0.25rem;
+        padding-left: 0;
+        position: relative;
+      }
+
+      .dropdown-submenu.show .dropdown-menu {
+        display: block;
+      }
+
+      .dropdown-submenu > .dropdown-item {
+        position: relative;
+        padding-right: 2.5rem;
+      }
+
+      .dropdown-submenu > .dropdown-item::after {
+        content: '\f105';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg);
+        transition: transform 0.3s ease;
+      }
+
+      .dropdown-submenu.show > .dropdown-item::after {
+        transform: translateY(-50%) rotate(90deg);
+      }
+    }
+
     .hero-section {
       background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
       color: white;
@@ -242,38 +424,6 @@
       opacity: 0.3;
     }
 
-    /* Mobile Navigation Improvements */
-    @media (max-width: 991px) {
-      .navbar-collapse {
-        background: rgba(44, 62, 80, 0.98);
-        backdrop-filter: blur(10px);
-        border-radius: 8px;
-        padding: 1rem;
-        margin-top: 10px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      }
-
-      .navbar-toggler {
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        padding: 0.4rem 0.6rem;
-      }
-
-      .navbar-toggler:focus {
-        box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
-      }
-
-      .nav-link {
-        padding: 0.75rem 1rem;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-        margin: 0.25rem 0;
-      }
-
-      .nav-link:hover, .nav-link.active {
-        background-color: rgba(255, 255, 255, 0.1);
-      }
-    }
-
     /* iPhone 15 and Small Devices */
     @media (max-width: 430px) {
       .container {
@@ -420,6 +570,14 @@
         height: 40px;
         font-size: 0.9rem;
       }
+
+      .dropdown-menu {
+        min-width: 200px;
+      }
+
+      .mobile-menu-back {
+        font-size: 0.95rem;
+      }
     }
 
     /* Very Small Devices */
@@ -505,42 +663,39 @@
     }
 
     /* Service card hover effects */
-.service-card {
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border: 2px solid transparent;
-}
+    .service-card {
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
 
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  border-color: var(--accent-color);
-}
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      border-color: var(--accent-color);
+    }
 
-/* Make sure text colors are consistent */
-.service-card h5 {
-  color: var(--secondary-color);
-  transition: color 0.3s ease;
-}
+    .service-card h5 {
+      color: var(--secondary-color);
+      transition: color 0.3s ease;
+    }
 
-.service-card:hover h5 {
-  color: var(--accent-color);
-}
+    .service-card:hover h5 {
+      color: var(--accent-color);
+    }
 
-.service-card p {
-  color: #666;
-}
+    .service-card p {
+      color: #666;
+    }
 
-/* Remove default link styles */
-.service-card a {
-  text-decoration: none;
-  color: inherit;
-}
+    .service-card a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-/* Card click feedback */
-.service-card:active {
-  transform: translateY(-2px);
-}
+    .service-card:active {
+      transform: translateY(-2px);
+    }
   </style>
 </head>
 <body>
@@ -556,14 +711,51 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
+          <button class="mobile-menu-back d-none" id="mobileBackBtn">
+            <i class="fas fa-arrow-left"></i> Back to Main Menu
+          </button>
           <li class="nav-item">
             <a class="nav-link" href="#home">Visa Updates</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#about">About Us</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#services">Services</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="servicesDropdown">
+              Services
+            </a>
+            <ul class="dropdown-menu" id="servicesMenu">
+              <li><a class="dropdown-item" href="#services">Services</a></li>
+              <li><a class="dropdown-item" href="../visa-inquiry/services/tourist.html">Tourist Visas</a></li>
+              <li><a class="dropdown-item" href="../visa-inquiry/services/business.html">Business Visas</a></li>
+              
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" href="#">Student Visas</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../visa-inquiry/services/student.html">Student Visas Overview</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../visa-inquiry/services/childstudent.html">Child Student Visa</a></li>
+                  <li><a class="dropdown-item" href="../visa-inquiry/services/ukstudent.html">UK Student Visa</a></li>
+                  <li><a class="dropdown-item" href="../visa-inquiry/services/graduate.html">Graduate Visa</a></li>
+                </ul>
+              </li>
+              
+              <li class="dropdown-submenu">
+                <a class="dropdown-item dropdown-toggle" href="#">Family Visas</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../visa-inquiry/services/family.html">Family Visas Overview</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../visa-inquiry/services/spouse.html">UK Spouse Visa</a></li>
+                  <li><a class="dropdown-item" href="../visa-inquiry/services/unmarried.html">Unmarried Partner Visa</a></li>
+                  <li><a class="dropdown-item" href="../visa-inquiry/services/partner.html">Child of a Partner or Parent Visa</a></li>
+                  <li><a class="dropdown-item" href="../visa-inquiry/services/other.html">Other Child Visa</a></li>
+                  <li><a class="dropdown-item" href="../visa-inquiry/services/fiance.html">Fiance Visa</a></li>
+                </ul>
+              </li>
+              
+              <li><a class="dropdown-item" href="../visa-inquiry/services/immigration.html">Work Visa</a></li>
+              <li><a class="dropdown-item" href="../visa-inquiry/services/document.html">Document Services</a></li>
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contact Us</a>
@@ -604,7 +796,7 @@
         </div>
         <div class="col-lg-6">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 mb-3">
               <div class="card text-center">
                 <div class="card-body">
                   <i class="fas fa-users service-icon"></i>
@@ -613,7 +805,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mb-3">
               <div class="card text-center">
                 <div class="card-body">
                   <i class="fas fa-globe service-icon"></i>
@@ -622,7 +814,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mb-3">
               <div class="card text-center">
                 <div class="card-body">
                   <i class="fas fa-clock service-icon"></i>
@@ -631,7 +823,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 mb-3">
               <div class="card text-center">
                 <div class="card-body">
                   <i class="fas fa-shield-alt service-icon"></i>
@@ -670,94 +862,88 @@
     </div>
   </section>
 
-<!-- Services Section -->
-<section id="services" class="section-padding">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2>Our Services</h2>
-      <p class="lead">Comprehensive visa and immigration services tailored to your needs</p>
-    </div>
-    <div class="row">
-      <!-- Tourist Visas -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <a href="services/tourist.html" class="text-decoration-none">
-          <div class="card text-center h-100 service-card">
-            <div class="card-body">
-              <i class="fas fa-plane-departure service-icon"></i>
-              <h5>Tourist Visas</h5>
-              <p>Planning a vacation? We'll help you get the right tourist visa for your destination country with minimal hassle.</p>
-            </div>
-          </div>
-        </a>
+  <!-- Services Section -->
+  <section id="services" class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2>Our Services</h2>
+        <p class="lead">Comprehensive visa and immigration services tailored to your needs</p>
       </div>
-      
-      <!-- Business Visas -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <a href="services/business.html" class="text-decoration-none">
-          <div class="card text-center h-100 service-card">
-            <div class="card-body">
-              <i class="fas fa-briefcase service-icon"></i>
-              <h5>Business Visas</h5>
-              <p>Expand your business globally with our expert assistance in obtaining business and work visas.</p>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a href="../visa-inquiry/services/tourist.html" class="text-decoration-none">
+            <div class="card text-center h-100 service-card">
+              <div class="card-body">
+                <i class="fas fa-plane-departure service-icon"></i>
+                <h5>Tourist Visas</h5>
+                <p>Planning a vacation? We'll help you get the right tourist visa for your destination country with minimal hassle.</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-      <!-- Student Visas -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <a href="services/student.html" class="text-decoration-none">
-          <div class="card text-center h-100 service-card">
-            <div class="card-body">
-              <i class="fas fa-graduation-cap service-icon"></i>
-              <h5>Student Visas</h5>
-              <p>Pursue your education abroad with our comprehensive student visa application services.</p>
+          </a>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a href="../visa-inquiry/services/business.html" class="text-decoration-none">
+            <div class="card text-center h-100 service-card">
+              <div class="card-body">
+                <i class="fas fa-briefcase service-icon"></i>
+                <h5>Business Visas</h5>
+                <p>Expand your business globally with our expert assistance in obtaining business and work visas.</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-      <!-- Family Visas -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <a href="services/family.html" class="text-decoration-none">
-          <div class="card text-center h-100 service-card">
-            <div class="card-body">
-              <i class="fas fa-heart service-icon"></i>
-              <h5>Family Visas</h5>
-              <p>Reunite with your loved ones through family reunification and spouse visa services.</p>
+          </a>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a href="../visa-inquiry/services/student.html" class="text-decoration-none">
+            <div class="card text-center h-100 service-card">
+              <div class="card-body">
+                <i class="fas fa-graduation-cap service-icon"></i>
+                <h5>Student Visas</h5>
+                <p>Pursue your education abroad with our comprehensive student visa application services.</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-      <!-- Immigration Services -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <a href="services/immigration.html" class="text-decoration-none">
-          <div class="card text-center h-100 service-card">
-            <div class="card-body">
-              <i class="fas fa-user-tie service-icon"></i>
-              <h5>Work Visa</h5>
-              <p>Secure employment opportunities abroad with expert guidance on work permits, skilled worker visas, and employer sponsorship applications.</p>
+          </a>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a href="../visa-inquiry/services/family.html" class="text-decoration-none">
+            <div class="card text-center h-100 service-card">
+              <div class="card-body">
+                <i class="fas fa-heart service-icon"></i>
+                <h5>Family Visas</h5>
+                <p>Reunite with your loved ones through family reunification and spouse visa services.</p>
+              </div>
             </div>
-          </div>
-        </a>
-      </div>
-      
-      <!-- Document Services -->
-      <div class="col-lg-4 col-md-6 mb-4">
-        <a href="services/document.html" class="text-decoration-none">
-          <div class="card text-center h-100 service-card">
-            <div class="card-body">
-              <i class="fas fa-file-alt service-icon"></i>
-              <h5>Document Services</h5>
-              <p>Professional document preparation, translation, and authentication services.</p>
+          </a>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a href="../visa-inquiry/services/immigration.html" class="text-decoration-none">
+            <div class="card text-center h-100 service-card">
+              <div class="card-body">
+                <i class="fas fa-user-tie service-icon"></i>
+                <h5>Work Visa</h5>
+                <p>Secure employment opportunities abroad with expert guidance on work permits, skilled worker visas, and employer sponsorship applications.</p>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a href="../visa-inquiry/services/document.html" class="text-decoration-none">
+            <div class="card text-center h-100 service-card">
+              <div class="card-body">
+                <i class="fas fa-file-alt service-icon"></i>
+                <h5>Document Services</h5>
+                <p>Professional document preparation, translation, and authentication services.</p>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Testimonials -->
   <section class="section-padding" style="background: #f8f9fa;">
@@ -968,10 +1154,12 @@
         <div class="col-lg-3 col-md-6 mb-4">
           <h6>Services</h6>
           <ul class="list-unstyled">
-            <li><a href="#services" class="text-light text-decoration-none">Business Immigration</a></li>
-            <li><a href="#services" class="text-light text-decoration-none">Business Visas</a></li>
-            <li><a href="#services" class="text-light text-decoration-none">Work Visas</a></li>
-            <li><a href="#services" class="text-light text-decoration-none">Talent Visas</a></li>
+            <li><a href="../services/tourist.html" class="text-light text-decoration-none">Tourist Visas</a></li>
+            <li><a href="../services/business.html" class="text-light text-decoration-none">Business Visas</a></li>
+            <li><a href="../services/student.html" class="text-light text-decoration-none">Student Visas</a></li>
+            <li><a href="../services/family.html" class="text-light text-decoration-none">Family Visas</a></li>
+            <li><a href="../services/immigration.html" class="text-light text-decoration-none">Work Visa</a></li>
+            <li><a href="../services/document.html" class="text-light text-decoration-none">Document Services</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
@@ -1006,6 +1194,108 @@
     document.addEventListener('DOMContentLoaded', function() {
       const navbarToggler = document.querySelector('.navbar-toggler');
       const navbarCollapse = document.querySelector('.navbar-collapse');
+      const servicesDropdown = document.querySelector('#servicesDropdown');
+      const mobileBackBtn = document.querySelector('#mobileBackBtn');
+      const servicesMenu = document.querySelector('#servicesMenu');
+      const navbarNav = document.querySelector('.navbar-nav');
+      
+      // Store original navbar content
+      const originalNavbarContent = navbarNav.innerHTML;
+      
+      // Function to switch to services menu
+      function showServicesMenu() {
+        // Get services dropdown menu content
+        const servicesMenuHTML = servicesMenu.outerHTML;
+        
+        // Hide the main menu and show only services menu with back button
+        navbarNav.innerHTML = `
+          <button class="mobile-menu-back" id="mobileBackBtn">
+            <i class="fas fa-arrow-left"></i> Back to Main Menu
+          </button>
+          ${servicesMenuHTML}
+        `;
+        
+        // Re-attach event listener to back button
+        const newBackBtn = document.getElementById('mobileBackBtn');
+        newBackBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          // Restore original navbar content
+          navbarNav.innerHTML = originalNavbarContent;
+          
+          // Re-initialize event listeners
+          setTimeout(() => {
+            initializeMobileNavigation();
+            initDropdownSubmenus();
+          }, 10);
+        });
+        
+        // Initialize dropdown submenus for the services menu
+        initDropdownSubmenus();
+      }
+      
+      // Function to initialize mobile navigation
+      function initializeMobileNavigation() {
+        const servicesDropdown = document.querySelector('#servicesDropdown');
+        
+        if (servicesDropdown && window.innerWidth < 992) {
+          servicesDropdown.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            if (navbarCollapse.classList.contains('show')) {
+              showServicesMenu();
+            }
+          });
+        }
+      }
+      
+      // Initialize dropdown submenus for mobile
+      function initDropdownSubmenus() {
+        const dropdownSubmenus = document.querySelectorAll('.dropdown-submenu');
+        
+        dropdownSubmenus.forEach(submenu => {
+          const toggle = submenu.querySelector('.dropdown-toggle');
+          const submenuDropdown = submenu.querySelector('.dropdown-menu');
+          
+          toggle.addEventListener('click', function(e) {
+            if (window.innerWidth < 992) {
+              e.preventDefault();
+              e.stopPropagation();
+              
+              const isOpen = submenu.classList.contains('show');
+              
+              // Close all other submenus at the same level
+              const parentMenu = submenu.parentElement;
+              if (parentMenu) {
+                parentMenu.querySelectorAll('.dropdown-submenu').forEach(sm => {
+                  if (sm !== submenu) {
+                    sm.classList.remove('show');
+                  }
+                });
+              }
+              
+              // Toggle current submenu
+              submenu.classList.toggle('show');
+            }
+          });
+        });
+      }
+      
+      // Handle window resize
+      window.addEventListener('resize', function() {
+        if (window.innerWidth >= 992) {
+          // Restore original navbar content on desktop
+          navbarNav.innerHTML = originalNavbarContent;
+          initializeMobileNavigation();
+          initDropdownSubmenus();
+        }
+      });
+      
+      // Initialize on page load
+      initializeMobileNavigation();
+      initDropdownSubmenus();
       
       // Close mobile menu when clicking outside
       document.addEventListener('click', function(event) {
@@ -1014,6 +1304,12 @@
         
         if (!isClickInside && navbarCollapse.classList.contains('show')) {
           navbarToggler.click();
+          // Restore original navbar content when closing
+          setTimeout(() => {
+            navbarNav.innerHTML = originalNavbarContent;
+            initializeMobileNavigation();
+            initDropdownSubmenus();
+          }, 350); // Wait for collapse animation to complete
         }
       });
       
@@ -1041,6 +1337,12 @@
             // Close mobile menu if open
             if (navbarCollapse.classList.contains('show')) {
               navbarToggler.click();
+              // Restore original navbar content when closing
+              setTimeout(() => {
+                navbarNav.innerHTML = originalNavbarContent;
+                initializeMobileNavigation();
+                initDropdownSubmenus();
+              }, 350);
             }
             
             window.scrollTo({
@@ -1126,122 +1428,133 @@
       
       // Enhanced form validation
       const form = document.getElementById('inquiryForm');
-      const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
-      
-      inputs.forEach(input => {
-        input.addEventListener('blur', function() {
-          validateField(this);
-        });
+      if (form) {
+        const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
         
-        input.addEventListener('input', function() {
-          if (this.classList.contains('is-invalid')) {
-            validateField(this);
-          }
-        });
-      });
-      
-      function validateField(field) {
-        if (field.checkValidity()) {
-          field.classList.remove('is-invalid');
-          field.classList.add('is-valid');
-        } else {
-          field.classList.remove('is-valid');
-          field.classList.add('is-invalid');
-        }
-      }
-      
-      // Form submission
-      form.addEventListener('submit', async function (e) {
-        e.preventDefault();
-        
-        // Validate all required fields
-        let isValid = true;
         inputs.forEach(input => {
-          validateField(input);
-          if (!input.checkValidity()) {
-            isValid = false;
-          }
+          input.addEventListener('blur', function() {
+            validateField(this);
+          });
+          
+          input.addEventListener('input', function() {
+            if (this.classList.contains('is-invalid')) {
+              validateField(this);
+            }
+          });
         });
         
-        if (!isValid) {
-          const firstInvalid = form.querySelector('.is-invalid');
-          if (firstInvalid) {
-            firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            firstInvalid.focus();
+        function validateField(field) {
+          if (field.checkValidity()) {
+            field.classList.remove('is-invalid');
+            field.classList.add('is-valid');
+          } else {
+            field.classList.remove('is-valid');
+            field.classList.add('is-invalid');
           }
-          return;
         }
         
-        const submitButton = this.querySelector('button[type="submit"]');
-        const originalText = submitButton.innerHTML;
-        
-        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
-        submitButton.disabled = true;
-
-        try {
-          const formData = {
-            name: this.name.value,
-            email: this.email.value,
-            phone: this.phone.value,
-            visaType: this.visaType.value,
-            destination: this.destination.value,
-            contactMethod: this.contactMethod.value,
-            message: this.message.value,
-          };
-
-          const res = await fetch('/api/send-email', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formData),
+        // Form submission
+        form.addEventListener('submit', async function (e) {
+          e.preventDefault();
+          
+          // Validate all required fields
+          let isValid = true;
+          inputs.forEach(input => {
+            validateField(input);
+            if (!input.checkValidity()) {
+              isValid = false;
+            }
           });
+          
+          if (!isValid) {
+            const firstInvalid = form.querySelector('.is-invalid');
+            if (firstInvalid) {
+              firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              firstInvalid.focus();
+            }
+            return;
+          }
+          
+          const submitButton = this.querySelector('button[type="submit"]');
+          const originalText = submitButton.innerHTML;
+          
+          submitButton.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+          submitButton.disabled = true;
 
-          const result = await res.json();
+          try {
+            const formData = {
+              name: this.name.value,
+              email: this.email.value,
+              phone: this.phone.value,
+              visaType: this.visaType.value,
+              destination: this.destination.value,
+              contactMethod: this.contactMethod.value,
+              message: this.message.value,
+            };
 
-          if (result.success) {
+            const res = await fetch('/api/send-email', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(formData),
+            });
+
+            const result = await res.json();
+
+            if (result.success) {
+              const alertDiv = document.createElement('div');
+              alertDiv.className = 'alert alert-success alert-dismissible fade show mt-3';
+              alertDiv.innerHTML = `
+                <i class="fas fa-check-circle me-2"></i>
+                <strong>Success!</strong> Your inquiry has been sent successfully. We'll get back to you within 24 hours.
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+              `;
+              
+              this.prepend(alertDiv);
+              this.reset();
+              
+              inputs.forEach(input => {
+                input.classList.remove('is-valid', 'is-invalid');
+              });
+              
+              setTimeout(() => {
+                if (alertDiv.parentNode) {
+                  alertDiv.remove();
+                }
+              }, 5000);
+            } else {
+              throw new Error(result.message || 'Failed to send inquiry');
+            }
+            
+          } catch (error) {
             const alertDiv = document.createElement('div');
-            alertDiv.className = 'alert alert-success alert-dismissible fade show mt-3';
+            alertDiv.className = 'alert alert-danger alert-dismissible fade show mt-3';
             alertDiv.innerHTML = `
-              <i class="fas fa-check-circle me-2"></i>
-              <strong>Success!</strong> Your inquiry has been sent successfully. We'll get back to you within 24 hours.
+              <i class="fas fa-exclamation-triangle me-2"></i>
+              <strong>Error!</strong> There was a problem sending your inquiry. Please try again later.
               <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             `;
             
             this.prepend(alertDiv);
-            this.reset();
-            
-            inputs.forEach(input => {
-              input.classList.remove('is-valid', 'is-invalid');
-            });
             
             setTimeout(() => {
               if (alertDiv.parentNode) {
                 alertDiv.remove();
               }
             }, 5000);
-          } else {
-            throw new Error(result.message || 'Failed to send inquiry');
+          } finally {
+            submitButton.innerHTML = originalText;
+            submitButton.disabled = false;
           }
-          
-        } catch (error) {
-          const alertDiv = document.createElement('div');
-          alertDiv.className = 'alert alert-danger alert-dismissible fade show mt-3';
-          alertDiv.innerHTML = `
-            <i class="fas fa-exclamation-triangle me-2"></i>
-            <strong>Error!</strong> There was a problem sending your inquiry. Please try again later.
-            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-          `;
-          
-          this.prepend(alertDiv);
-          
-          setTimeout(() => {
-            if (alertDiv.parentNode) {
-              alertDiv.remove();
-            }
-          }, 5000);
-        } finally {
-          submitButton.innerHTML = originalText;
-          submitButton.disabled = false;
-        }
+        });
+      }
+
+      // Close submenus when parent dropdown closes
+      document.querySelectorAll('.dropdown').forEach(dropdown => {
+        dropdown.addEventListener('hidden.bs.dropdown', function() {
+          this.querySelectorAll('.dropdown-submenu').forEach(submenu => {
+            submenu.classList.remove('show');
+          });
+        });
       });
     });
   </script>
