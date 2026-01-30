@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>UK Transit Visa Services | One Solution Visa</title>
+  <link rel="icon" type="image/png" href="../images/logo.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #ffffff;
+      --secondary-color: #2c3e50;
+      --accent-color: #3498db;
+      --light-bg: #f4f6fa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 0.75rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      padding: 0.5rem 0;
+      background: var(--secondary-color) !important;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .navbar-logo {
+      height: 40px;
+      width: 40px;
+      margin-right: 8px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    /* Back button styling */
+    .back-btn {
+      color: white !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateX(-3px);
+    }
+
+    .back-btn i {
+      margin-right: 5px;
+    }
+
+    .section-padding {
+      padding: 60px 0;
+      scroll-margin-top: 80px;
+    }
+
+    /* Service Hero Section with Background Image */
+    .service-hero {
+      background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), 
+                  url('../images/tourist.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 120px 0 80px;
+      margin-bottom: 40px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .service-hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .service-hero .lead {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .transit-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+    
+    .content-nav {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /* Custom scrollbar for content-nav */
+    .content-nav::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .content-nav::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb {
+      background: var(--accent-color);
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
+    }
+    
+    .content-nav h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .nav-links a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      display: block;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+    
+    .nav-links a:hover {
+      background: var(--light-bg);
+      border-left: 3px solid var(--accent-color);
+      transform: translateX(5px);
+    }
+    
+    .content-section {
+      background: white;
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .content-section h2 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .content-section h3 {
+      color: var(--secondary-color);
+      margin: 2rem 0 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .content-section h4 {
+      color: var(--secondary-color);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .content-section p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    
+    .content-section ul, .content-section ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    .content-section li {
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-left: 4px solid var(--accent-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .info-box {
+      background: linear-gradient(135deg, #e8f4fc 0%, #d4eaf7 100%);
+      border-left: 4px solid var(--secondary-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .warning-box {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      border-left: 4px solid #ffc107;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, var(--light-bg) 0%, #e8f4fc 100%);
+      border-radius: 15px;
+      padding: 3rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--secondary-color);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-light:hover {
+      background: var(--light-bg);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+    }
+
+    .footer {
+      background: var(--secondary-color);
+      color: #fff;
+      padding: 40px 0 20px 0;
+      position: relative;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    /* Mobile Navigation Improvements */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: rgba(44, 62, 80, 0.98);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0.4rem 0.6rem;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
+      }
+
+      .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin: 0.25rem 0;
+      }
+
+      .nav-link:hover, .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      
+      .content-nav {
+        position: static;
+        margin-bottom: 2rem;
+      }
+    }
+
+    /* iPhone 15 and Small Devices */
+    @media (max-width: 430px) {
+      .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .navbar {
+        padding: 0.5rem 0;
+      }
+
+      .navbar-brand {
+        font-size: 1.1rem;
+      }
+
+      .navbar-logo {
+        height: 35px;
+        width: 35px;
+        margin-right: 6px;
+      }
+      
+      .service-hero {
+        padding: 100px 0 60px;
+        background-attachment: scroll;
+      }
+      
+      .service-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .service-hero .lead {
+        font-size: 1.1rem;
+      }
+      
+      .transit-icon {
+        font-size: 2.5rem;
+      }
+      
+      .content-section, .content-nav {
+        padding: 1.5rem;
+      }
+      
+      .cta-section {
+        padding: 2rem 1.5rem;
+      }
+
+      .footer {
+        padding: 30px 0 15px 0;
+      }
+
+      .footer h5, .footer h6 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .footer p, .footer li {
+        font-size: 0.9rem;
+      }
+
+      .footer .col-lg-4, 
+      .footer .col-lg-2, 
+      .footer .col-lg-3,
+      .footer .col-md-6 {
+        margin-bottom: 1.5rem;
+      }
+
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Very Small Devices */
+    @media (max-width: 375px) {
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .navbar-brand {
+        font-size: 1rem;
+      }
+      
+      .service-hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Prevent horizontal scroll */
+    .row {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
+    .row > * {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/logo.png" alt="One Solution Visa Logo" class="navbar-logo">
+        OneSolutionVisa
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link back-btn" href="../services/tourist.html">
+              <i class="fas fa-arrow-left me-1"></i>Back to Tourist Visa
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Transit Visa Content -->
+  <main style="margin-top: 80px; min-height: calc(100vh - 300px);">
+    <!-- Hero Section -->
+    <section class="service-hero">
+      <div class="container">
+        <div class="transit-icon">
+          <i class="fas fa-exchange-alt"></i>
+        </div>
+        <h1>UK Transit Visa: Requirements, Types & Application Process</h1>
+        <p class="lead">Because the UK serves as a major international travel hub with extensive global connections, many travelers pass through it when flying to other destinations. In certain situations, passengers will need to obtain a Transit Visa to legally travel through the UK while on their way to another country.</p>
+        <a href="../index.html#inquiry" class="btn btn-light btn-lg mt-3">
+          <i class="fas fa-plane me-2"></i>Apply for Transit Visa
+        </a>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row">
+          <!-- Navigation Sidebar -->
+          <div class="col-lg-4 mb-4">
+            <div class="content-nav">
+              <h3><i class="fas fa-list-alt me-2"></i>Contents</h3>
+              <ul class="nav-links">
+                <li><a href="#overview">1. UK Transit Visa Overview</a></li>
+                <li><a href="#what-is">2. What is a Transit Visa?</a></li>
+                <li><a href="#eligibility">3. Do I Need a Transit Visa?</a></li>
+                <li><a href="#types">4. Types of UK Transit Visa</a></li>
+                <li><a href="#direct-airside">5. Direct Airside Transit Visa</a></li>
+                <li><a href="#visitor-transit">6. Visitor in Transit Visa</a></li>
+                <li><a href="#standard-visitor">7. Standard Visitor Visa (48+ Hours)</a></li>
+                <li><a href="#documents">8. Required Documents</a></li>
+                <li><a href="#apply">9. How to Apply</a></li>
+                <li><a href="#fees">10. Application Fee</a></li>
+                <li><a href="#processing">11. Processing Time</a></li>
+                <li><a href="#help">12. How We Can Help</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="col-lg-8">
+            <!-- Overview Section -->
+            <div id="overview" class="content-section">
+              <h2>UK Transit Visa Overview</h2>
+              <p>The UK serves as a major international travel hub with extensive global connections, making it a common transit point for travelers worldwide. Understanding when and how to obtain a transit visa is crucial for smooth international travel.</p>
+              
+              <div class="info-box">
+                <p><strong>Important:</strong> A UK Transit Visa allows you to pass through the UK on your way to another country. The type of transit visa you need depends on whether you'll pass through UK border control and how long you'll be in the country.</p>
+              </div>
+            </div>
+
+            <!-- What is a Transit Visa -->
+            <div id="what-is" class="content-section">
+              <h3>What is a Transit Visa?</h3>
+              <p>A transit visa permits you to change flights in a country while travelling onward to another destination. For instance, if you are flying from the USA to Germany and your journey includes a stopover in the UK, you may need a UK transit visa to allow you to pass through the UK. In most cases, a transit visa is only required if you are a national who normally needs a visa for the country where the stopover occurs.</p>
+              
+              <div class="highlight-box">
+                <h4>Two Types of UK Transit Visas:</h4>
+                <ul>
+                  <li><strong>Visitor in Transit visa:</strong> Required if you need to pass through UK border control</li>
+                  <li><strong>Direct Airside Transit visa:</strong> Required if you will remain airside and not pass through border control</li>
+                </ul>
+              </div>
+              
+              <div class="warning-box">
+                <p><strong>Note:</strong> If you intend to remain in the UK for more than 48 hours, a Transit visa will not be suitable. In this situation, you should apply for a Standard Visitor visa instead. Likewise, if you plan to transit through the UK frequently over a period longer than six months, even for short stopovers, the Standard Visitor visa is the appropriate option.</p>
+              </div>
+            </div>
+
+            <!-- Do I Need a Transit Visa -->
+            <div id="eligibility" class="content-section">
+              <h3>Do I Need a Transit Visa for the UK?</h3>
+              <p>Not all travellers are required to obtain a Transit visa to pass through the UK briefly. You will generally not need a Transit visa if you hold any of the following:</p>
+              
+              <ul>
+                <li>An EU passport (although from April 2025, an Electronic Travel Authorisation will be required for stays of up to 6 months)</li>
+                <li>An EU Settlement Scheme Family Permit</li>
+                <li>A Home Office travel document (such as documentation confirming refugee or stateless status)</li>
+                <li>A Standard Visitor visa</li>
+                <li>A Marriage Visitor visa</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>Important:</strong> If your stay in the UK will exceed 48 hours, a Transit visa is not appropriate and you should apply for a Standard Visitor visa instead.</p>
+              </div>
+            </div>
+
+            <!-- Types of UK Transit Visa -->
+            <div id="types" class="content-section">
+              <h3>Types of UK Transit Visa</h3>
+              <p>There are two main categories of UK Transit visas: the Direct Airside Transit visa and the Visitor in Transit visa. Each serves different transit scenarios depending on whether you need to pass through UK border control.</p>
+              
+              <div class="info-box">
+                <h4>Key Difference:</h4>
+                <p>The main distinction between the two visa types is whether you will pass through UK border control during your transit. Your airline can confirm which process applies to your specific itinerary.</p>
+              </div>
+            </div>
+
+            <!-- Direct Airside Transit Visa -->
+            <div id="direct-airside" class="content-section">
+              <h3>Direct Airside Transit Visa – If You're Not Going Through UK Border Control</h3>
+              <p>This visa is for travellers who are passing through the UK on the way to another country without entering the UK through border control. If you are not exempt from needing a Transit visa and the following apply, you will likely need a Direct Airside Transit visa:</p>
+              
+              <ul>
+                <li>You have a connecting flight departing from the UK</li>
+                <li>You will remain airside and will not pass through UK border control</li>
+                <li>You will depart the UK within 48 hours of arrival</li>
+              </ul>
+              
+              <div class="highlight-box">
+                <p><strong>Check with your airline:</strong> Your airline can confirm whether you will be required to pass through border control during your stopover.</p>
+              </div>
+            </div>
+
+            <!-- Visitor in Transit Visa -->
+            <div id="visitor-transit" class="content-section">
+              <h3>Visitor in Transit Visa – If You're Going Through UK Border Control</h3>
+              <p>This visa is intended for travellers who must pass through UK border control while transiting to another country. If you are not exempt and the circumstances below apply, you will likely need a Visitor in Transit visa:</p>
+              
+              <ul>
+                <li>You have a connecting flight from the UK to another destination</li>
+                <li>You are required to pass through UK border control on arrival (for example, to collect and re-check luggage)</li>
+                <li>You will leave the UK within 48 hours of arrival</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>Advisory:</strong> It is advisable to check with your airline to confirm whether border control will be required during your transit.</p>
+              </div>
+            </div>
+
+            <!-- Standard Visitor Visa (48+ Hours) -->
+            <div id="standard-visitor" class="content-section">
+              <h3>Stays of Over 48 Hours: Standard Visitor Visa</h3>
+              <p>If you plan to stay in the UK for more than 48 hours, you will not qualify for a Transit visa and must instead apply for a Standard Visitor visa. This visa allows visits of up to six months for various purposes, including tourism, short-term study, visiting friends or family, and limited business activities.</p>
+              
+              <p>If the UK is one of the destinations you wish to visit and your stay will exceed 48 hours, this visa is likely the correct choice. The same applies if your layover is longer than 48 hours.</p>
+              
+              <div class="highlight-box">
+                <h4>The Standard Visitor visa allows activities such as:</h4>
+                <ul>
+                  <li>Tourism and travel within the UK</li>
+                  <li>Visiting friends and relatives</li>
+                  <li>Volunteering for up to 30 days</li>
+                  <li>Transiting through the UK</li>
+                  <li>Certain permitted business activities, such as attending meetings, interviews, or conferences</li>
+                  <li>Approved paid engagements, such as delivering a short lecture series or performing in a show</li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <p><strong>Important:</strong> If you already hold a valid Standard Visitor visa, you may use it instead of applying for a separate Transit visa, even if the UK is not your final destination.</p>
+                <p>EU citizens currently do not need a visa to enter the UK for stays of up to six months. However, from April 2025, an Electronic Travel Authorisation (ETA) will be required for visits of six months or less.</p>
+              </div>
+            </div>
+
+            <!-- Required Documents -->
+            <div id="documents" class="content-section">
+              <h3>Required Documents for UK Transit Visa</h3>
+              <p>When applying for a UK Transit visa, you will need to submit several supporting documents, which typically include:</p>
+              
+              <ul>
+                <li>A valid passport</li>
+                <li>Any additional relevant travel documents</li>
+                <li>Proof of permission to enter your destination country (such as a passport, residence permit, green card, or valid visa)</li>
+                <li>Evidence explaining the purpose of your visit to the destination country</li>
+                <li>Proof of onward travel from the UK (such as flight confirmations, tickets, boarding passes, or travel agent documents)</li>
+              </ul>
+              
+              <div class="warning-box">
+                <p><strong>Important:</strong> You should also carry these documents with you when travelling, as UK border officials may request to see them on arrival.</p>
+                <p>Applicants must clearly demonstrate that they intend to leave the UK within 48 hours and that they are authorised to enter their destination country. Failure to provide adequate evidence may result in refusal, so it is recommended to apply only after your onward travel has been confirmed.</p>
+              </div>
+            </div>
+
+            <!-- How to Apply -->
+            <div id="apply" class="content-section">
+              <h3>How to Apply for UK Transit Visa (Step by Step)</h3>
+              <p>To apply for a UK Transit visa, you must complete several steps.</p>
+              
+              <h4>Application Process:</h4>
+              <ol>
+                <li><strong>Submit Online Application:</strong> Complete your application through the UK government website</li>
+                <li><strong>Biometric Appointment:</strong> Attend an appointment at a UK visa application centre to provide your photograph and fingerprints</li>
+                <li><strong>Home Office Review:</strong> Your application will be reviewed by the UK Home Office</li>
+                <li><strong>Decision Notification:</strong> You will be informed of the decision by email</li>
+                <li><strong>Visa Issuance:</strong> If approved, you will receive either a physical visa vignette in your passport or access to a digital immigration status</li>
+              </ol>
+              
+              <div class="info-box">
+                <p><strong>Processing Note:</strong> Once issued, the visa may be used to enter the UK for transit purposes.</p>
+              </div>
+            </div>
+
+            <!-- Application Fee -->
+            <div id="fees" class="content-section">
+              <h3>Application Fee for UK Transit Visa</h3>
+              <p>The fee depends on the type of Transit visa you apply for:</p>
+              
+              <div class="highlight-box">
+                <h4>Current Fees (As of 2025):</h4>
+                <ul>
+                  <li><strong>Direct Airside Transit visa:</strong> £39 (may vary slightly by country)</li>
+                  <li><strong>Visitor in Transit visa:</strong> £70 (with potential variations depending on the location of application)</li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <p><strong>Important:</strong> These fees are subject to change. Always verify the current fee on the official UK government website before applying.</p>
+              </div>
+            </div>
+
+            <!-- Processing Time -->
+            <div id="processing" class="content-section">
+              <h3>UK Transit Visa Processing Time</h3>
+              <p>Most applications receive a decision within three weeks. However, processing times can vary depending on several factors:</p>
+              
+              <ul>
+                <li>The accuracy and completeness of your application</li>
+                <li>Whether all required documents are provided</li>
+                <li>The volume of applications being processed</li>
+                <li>Your specific circumstances and nationality</li>
+              </ul>
+              
+              <div class="warning-box">
+                <p><strong>Recommendation:</strong> It is recommended to apply well in advance of your travel date and to respond promptly to any requests for additional information from UK Visas & Immigration.</p>
+              </div>
+            </div>
+
+            <!-- How We Can Help -->
+            <div id="help" class="content-section">
+              <h3>How Can One Solution Visa Help?</h3>
+              <p>The UK is a major international travel hub with numerous airports and global connections. As a result, many travellers with onward flights find themselves transiting through the UK on their journey to another country. Our expert team can provide comprehensive assistance with your transit visa application.</p>
+              
+              <div class="highlight-box">
+                <h4>Our Services Include:</h4>
+                <ul>
+                  <li>Determining which type of transit visa you need based on your travel itinerary</li>
+                  <li>Preparing complete and accurate application packages</li>
+                  <li>Guidance on required documentation and evidence</li>
+                  <li>Assistance with online application submission</li>
+                  <li>Advice on appointment scheduling and preparation</li>
+                  <li>Support with any queries or additional requests from UKVI</li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <h4>Why Choose Us?</h4>
+                <p>With years of experience in UK visa applications, we understand the intricacies of transit visa requirements and can help ensure your application meets all Home Office criteria, increasing your chances of approval and minimizing processing delays.</p>
+              </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+              <h3 class="mb-3">Need Assistance with Your UK Transit Visa?</h3>
+              <p class="lead mb-4">Let our experienced team guide you through the transit visa application process for a smooth journey through the UK.</p>
+              <a href="../index.html#inquiry" class="btn btn-primary btn-lg">
+                <i class="fas fa-plane me-2"></i>Start Your Transit Visa Application
+              </a>
+              <p class="mt-3 text-muted">Click above to be redirected to our main inquiry form</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h5>One Solution Visa™</h5>
+          <p>Your trusted partner for all visa and immigration services. We make your travel dreams come true with professional expertise and personalized service.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/visaconnect" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="../index.html#services" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="../index.html#contact" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="../index.html#inquiry" class="text-light text-decoration-none">Inquiry</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Transit Services</h6>
+          <ul class="list-unstyled">
+            <li><a href="transit.html" class="text-light text-decoration-none fw-bold">UK Transit Visa</a></li>
+            <li><a href="standardvisitor.html" class="text-light text-decoration-none">Standard Visitor Visa</a></li>
+            <li><a href="tourist.html" class="text-light text-decoration-none">Tourist Visa Services</a></li>
+            <li><a href="../index.html#services" class="text-light text-decoration-none">All Visa Services</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Contact Info</h6>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt me-2"></i>A. Gabuya Street, Cogon Pardo, Cebu City, Philippines</li>
+            <li><i class="fas fa-phone me-2"></i>+63 968 707 5241</li>
+            <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
+            <li><i class="fas fa-clock me-2"></i>Mon-Sat: 9AM-6PM</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0">&copy; 2025 One Solution Visa. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0">
+            <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+            <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Navigation Scripts
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const isClickInside = navbarToggler.contains(event.target) || 
+                              navbarCollapse.contains(event.target);
+        
+        if (!isClickInside && navbarCollapse.classList.contains('show')) {
+          navbarToggler.click();
+        }
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      
+      // Add loading animation on page load
+      window.addEventListener('load', () => {
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease-in-out';
+        setTimeout(() => {
+          document.body.style.opacity = '1';
+        }, 100);
+      });
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Highlight active nav link
+      const sections = document.querySelectorAll('.content-section');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      function setActiveNavLink() {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (window.scrollY >= sectionTop - 150) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', setActiveNavLink);
+      setActiveNavLink();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>Tourist Visa Services - One Solution Visa</title>
+  <link rel="icon" type="image/png" href="../images/logo.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+   :root {
+  --primary-color: #ffffff;
+  --secondary-color: #2c3e50;
+  --accent-color: #3498db;
+  --light-bg: #f4f6fa;
+}
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 0.75rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      padding: 0.5rem 0;
+      background: var(--secondary-color) !important;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .navbar-logo {
+      height: 40px;
+      width: 40px;
+      margin-right: 8px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    /* Back button styling */
+    .back-btn {
+      color: white !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateX(-3px);
+    }
+
+    .back-btn i {
+      margin-right: 5px;
+    }
+
+    .section-padding {
+      padding: 60px 0;
+      scroll-margin-top: 80px;
+    }
+
+    /* Service specific styles */
+   .service-hero {
+  background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), 
+              url('../images/tourist.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  padding: 120px 0 80px;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+}
+    
+    .service-hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .service-hero .lead {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .uk-flag-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+    
+    .content-nav {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  position: sticky;
+  top: 100px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for content-nav */
+.content-nav::-webkit-scrollbar {
+  width: 8px;
+}
+
+.content-nav::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.content-nav::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 10px;
+}
+
+.content-nav::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+    
+    .content-nav h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .nav-links a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      display: block;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+    
+    .nav-links a:hover {
+      background: var(--light-bg);
+      border-left: 3px solid var(--accent-color);
+      transform: translateX(5px);
+    }
+    
+    .content-section {
+      background: white;
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .content-section h2 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .content-section h3 {
+      color: var(--secondary-color);
+      margin: 2rem 0 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .content-section h4 {
+      color: var(--secondary-color);
+      margin: 1.5rem 0 1rem;
+    }
+    
+    .content-section p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    
+    .content-section ul, .content-section ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    .content-section li {
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-left: 4px solid var(--accent-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, var(--light-bg) 0%, #e8f4fc 100%);
+      border-radius: 15px;
+      padding: 3rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .footer {
+      background: var(--secondary-color);
+      color: #fff;
+      padding: 40px 0 20px 0;
+      position: relative;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    /* Mobile Navigation Improvements */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: rgba(44, 62, 80, 0.98);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0.4rem 0.6rem;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
+      }
+
+      .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin: 0.25rem 0;
+      }
+
+      .nav-link:hover, .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      
+      .content-nav {
+        position: static;
+        margin-bottom: 2rem;
+      }
+    }
+
+    /* iPhone 15 and Small Devices */
+    @media (max-width: 430px) {
+      .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .navbar {
+        padding: 0.5rem 0;
+      }
+
+      .navbar-brand {
+        font-size: 1.1rem;
+      }
+
+      .navbar-logo {
+        height: 35px;
+        width: 35px;
+        margin-right: 6px;
+      }
+      
+      .service-hero {
+        padding: 100px 0 60px;
+        background-attachment: scroll;
+      }
+      
+      .service-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .service-hero .lead {
+        font-size: 1.1rem;
+      }
+      
+      .uk-flag-icon {
+        font-size: 2.5rem;
+      }
+      
+      .content-section, .content-nav {
+        padding: 1.5rem;
+      }
+      
+      .cta-section {
+        padding: 2rem 1.5rem;
+      }
+
+      .footer {
+        padding: 30px 0 15px 0;
+      }
+
+      .footer h5, .footer h6 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .footer p, .footer li {
+        font-size: 0.9rem;
+      }
+
+      .footer .col-lg-4, 
+      .footer .col-lg-2, 
+      .footer .col-lg-3,
+      .footer .col-md-6 {
+        margin-bottom: 1.5rem;
+      }
+
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Very Small Devices */
+    @media (max-width: 375px) {
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .navbar-brand {
+        font-size: 1rem;
+      }
+      
+      .service-hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Prevent horizontal scroll */
+    .row {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
+    .row > * {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/logo.png" alt="One Solution Visa Logo" class="navbar-logo">
+        OneSolutionVisa
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link back-btn" href="../index.html#services">
+              <i class="fas fa-arrow-left me-1"></i>Back to Services
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <main style="margin-top: 80px; min-height: calc(100vh - 300px);">
+    <!-- Hero Section -->
+    <section class="service-hero">
+      <div class="container">
+       
+        <h1>UK Standard Visitor Visa Services</h1>
+        <p class="lead">Your complete guide to UK Tourist Visa eligibility, permitted activities, and application procedure</p>
+        <a href="../index.html#inquiry" class="btn btn-light btn-lg mt-3">
+          <i class="fas fa-paper-plane me-2"></i>Start Your UK Visa Application
+        </a>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row">
+          <!-- Navigation Sidebar -->
+          <div class="col-lg-4 mb-4">
+            <div class="content-nav">
+              <h3><i class="fas fa-list-alt me-2"></i>Contents</h3>
+              <ul class="nav-links">
+                <li><a href="#overview">UK Standard Visitor Visa Overview</a></li>
+                <li><a href="#section1">1. Visa Nationals and Non-Visa Nationals</a></li>
+                <li><a href="#section2">2. Eligibility Requirements</a></li>
+                <li><a href="#section3">3. The Genuine Visitor Requirement</a></li>
+                <li><a href="#section4">4. Permitted Activities</a></li>
+                <li><a href="#section5">5. Prohibited Activities</a></li>
+                <li><a href="#section6">6. When Payment Is Permitted</a></li>
+                <li><a href="#section7">7. Remote Working on Visitor Visa</a></li>
+                <li><a href="#section8">8. Intention to Leave the UK</a></li>
+                <li><a href="#section9">9. Financial Requirements</a></li>
+                <li><a href="#section10">10. English Language Requirements</a></li>
+                <li><a href="#section11">11. Grounds for Refusal</a></li>
+                <li><a href="#section12">12. Duration and Conditions</a></li>
+                <li><a href="#section13">13. Right to Work</a></li>
+                <li><a href="#section14">14. Supporting Documentation</a></li>
+                <li><a href="#section15">15. Application Procedure</a></li>
+                <li><a href="#section16">16. Place of Submission</a></li>
+                <li><a href="#section17">17. Fees and Processing Times</a></li>
+                <li><a href="#section18">18. Switching from Within UK</a></li>
+                <li><a href="#section19">19. Travel During Application</a></li>
+                <li><a href="#section20">20. Common Refusal Reasons</a></li>
+                <li><a href="#section21">21. Challenging a Refusal</a></li>
+                <li><a href="#section22">22. Extension of Stay</a></li>
+                <li><a href="#section23">23. How We Can Help</a></li>
+                <li><a href="#section24">24. Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="col-lg-8">
+            <!-- Overview Section -->
+            <div id="overview" class="content-section">
+              <h2>UK Standard Visitor Visa: Eligibility Criteria, Permitted Activities, and Application Procedure</h2>
+              <p>The UK Standard Visitor Visa permits individuals to enter the United Kingdom for a temporary stay, typically for up to six months. It is intended for those visiting for tourism, visiting family or friends, permitted business activities, short-term study, or private medical treatment.</p>
+              <p>The Standard Visitor route is strictly temporary. It does not lead to settlement and does not permit employment, long-term study, or marriage in the UK. Applicants must satisfy the Home Office that they are genuine visitors who intend to leave the UK at the end of their authorised stay and who can maintain themselves financially without accessing public funds or undertaking unauthorised work.</p>
+            </div>
+
+            <!-- Section 1 -->
+            <div id="section1" class="content-section">
+              <h3>1. Visa Nationals, Non-Visa Nationals, and the UK Visit Visa Requirement</h3>
+              <p>Whether an individual must apply for a UK Standard Visitor Visa prior to travel depends on their nationality, as well as the purpose and intended duration of their visit.</p>
+              <p>Visa nationals, as listed in Appendix Visitor: Visa National List of the Immigration Rules, must obtain entry clearance before travelling to the UK, regardless of the length or nature of the visit.</p>
+              <p>Non-visa nationals may generally seek entry without applying for a visa in advance, provided they intend to stay for no more than six months and undertake only permitted activities. Certain non-visa nationals must obtain an Electronic Travel Authorisation (ETA) before travelling. Non-visa nationals may nonetheless apply for a Visit Visa in advance to reduce the risk of refusal at the border or to secure prior clearance for permitted paid engagements.</p>
+            </div>
+
+            <!-- Section 2 -->
+            <div id="section2" class="content-section">
+              <h3>2. Visitor Visa Eligibility Requirements</h3>
+              <p>Applicants must demonstrate that they are seeking entry for a genuine temporary purpose permitted under the Visitor route. They must intend to leave the UK at the end of the visit, must not intend to live in the UK through frequent or successive visits, and must not undertake prohibited activities such as employment or long-term study.</p>
+              <p>Applicants must also show that they have sufficient financial resources and that they do not fall for refusal under the general grounds of the Immigration Rules.</p>
+            </div>
+
+            <!-- Section 3 -->
+            <div id="section3" class="content-section">
+              <h3>3. Genuine Visitor Requirement</h3>
+              <p>Applicants must satisfy the Home Office that they are genuine visitors. This requires demonstrating a credible reason for travel, lawful intentions during the visit, and clear plans to depart the UK at the end of the authorised stay.</p>
+              <p>Decision-makers will assess travel history, frequency and duration of previous UK visits, the consistency of the application, and the strength of ties to the applicant's country of residence. Supporting evidence such as employment confirmation, return travel arrangements, and accommodation details is critical.</p>
+            </div>
+
+            <!-- Section 4 -->
+            <div id="section4" class="content-section">
+              <h3>4. What Activities Are Allowed on a Standard Visitor Visa?</h3>
+              <p>Permitted activities include tourism, visiting family or friends, attending business meetings or conferences, undertaking short-term study, receiving private medical treatment, academic exchanges, and permitted creative or sporting activities.</p>
+              <p>All activities must fall strictly within Appendix Visitor: Permitted Activities and must not amount to employment or residence in the UK.</p>
+            </div>
+
+            <!-- Section 5 -->
+            <div id="section5" class="content-section">
+              <h3>5. Activities Not Permitted on a Visit Visa</h3>
+              <p>Visitors must not undertake paid or unpaid work, long-term study, frequent or successive visits amounting to residence, marriage or civil partnership, or access public funds.</p>
+              <p>Any activity resembling employment, including freelance or temporary work for a UK organisation, is prohibited and may result in refusal or future immigration consequences.</p>
+            </div>
+
+            <!-- Section 6 -->
+            <div id="section6" class="content-section">
+              <h3>6. When Can You Be Paid on a UK Visitor Visa?</h3>
+              <p>Payment is permitted only in limited circumstances. Permitted Paid Engagements (PPEs) are allowed where the activity is pre-arranged, completed within 30 days of arrival, directly related to the visitor's overseas profession, and supported by a formal invitation from a UK organisation.</p>
+              <p>Certain artists and performers may also be paid under the Permit Free Festival provisions, provided the event is listed by the Home Office and no additional work is undertaken.</p>
+            </div>
+
+            <!-- Section 7 -->
+            <div id="section7" class="content-section">
+              <h3>7. Can I Work Remotely While in the UK on a Visitor Visa?</h3>
+              <p>Limited remote work for an overseas employer may be permitted where it is incidental to the main purpose of the visit. Visitors must remain employed and remunerated overseas and must not provide services to the UK market or fill a role within a UK organisation.</p>
+              <p>Remote work must not become the primary purpose of the visit.</p>
+            </div>
+
+            <!-- Section 8 -->
+            <div id="section8" class="content-section">
+              <h3>8. Intention to Leave the UK Requirement</h3>
+              <p>Applicants must demonstrate a genuine intention to leave the UK at the end of their visit. The Home Office will assess immigration history, frequency of UK travel, financial circumstances, and personal, economic, and family ties to the applicant's country of residence.</p>
+              <p>Insufficient evidence may result in refusal on genuineness grounds.</p>
+            </div>
+
+            <!-- Section 9 -->
+            <div id="section9" class="content-section">
+              <h3>9. Financial Requirement for a UK Visit Visa</h3>
+              <p>Applicants must show sufficient funds to cover all travel, accommodation, and living costs without working or relying on public funds. Funds must be lawful, accessible, and supported by credible evidence.</p>
+              <p>Third-party support is permitted where the relationship is genuine and the sponsor has sufficient financial means.</p>
+            </div>
+
+            <!-- Section 10 -->
+            <div id="section10" class="content-section">
+              <h3>10. English Language Requirement for a UK Visitor Visa</h3>
+              <p>There is no English language requirement for the Standard Visitor route. However, English ability may be relevant when assessing the credibility and practicality of the proposed visit.</p>
+            </div>
+
+            <!-- Section 11 -->
+            <div id="section11" class="content-section">
+              <h3>11. General Grounds for Refusal of a UK Visit Visa Application</h3>
+              <p>Applications are subject to the general grounds for refusal under Part 9 of the Immigration Rules, including criminality, previous immigration breaches, deception, and conduct not conducive to the public good.</p>
+              <p>Even where the Visitor requirements are met, applications may still be refused on these grounds.</p>
+            </div>
+
+            <!-- Section 12 -->
+            <div id="section12" class="content-section">
+              <h3>12. Duration and Conditions of Stay as a Visitor</h3>
+              <p>Standard Visitor Visas are usually granted for up to six months per visit. Long-term visas may be issued for two, five, or ten years, but each stay must not exceed six months.</p>
+              <p>Visitors are subject to strict conditions relating to work, study, and access to public funds.</p>
+            </div>
+
+            <!-- Section 13 -->
+            <div id="section13" class="content-section">
+              <h3>13. Right to Work on a Standard Visitor Visa</h3>
+              <p>Standard Visitors have no right to work in the UK. Paid and unpaid employment is prohibited, subject only to limited exceptions such as Permitted Paid Engagements and Permit Free Festivals.</p>
+              <p>Visitors may attend job interviews but must leave the UK and apply for the appropriate work visa before starting employment.</p>
+            </div>
+
+            <!-- Section 14 -->
+            <div id="section14" class="content-section">
+              <h3>14. Supporting Documents for a Visitor Visa</h3>
+              <p>There is no fixed document checklist. Supporting evidence must be tailored to the applicant's circumstances and must demonstrate the purpose of the visit, financial capacity, and intention to leave the UK.</p>
+              <p>Poorly prepared or inconsistent documentation may undermine credibility.</p>
+            </div>
+
+            <!-- Section 15 -->
+            <div id="section15" class="content-section">
+              <h3>15. How to Apply for a UK Visitor Visa</h3>
+              <p>Applications must be submitted online from outside the UK. Applicants must pay the relevant fee, attend a biometric appointment, upload supporting documents, and await a decision.</p>
+            </div>
+
+            <!-- Section 16 -->
+            <div id="section16" class="content-section">
+              <h3>16. Where to Apply for a Standard Visitor Visa</h3>
+              <p>Applications must be made from a country where the applicant is lawfully resident and cannot be submitted from within the UK.</p>
+            </div>
+
+            <!-- Section 17 -->
+            <div id="section17" class="content-section">
+              <h3>17. Visit Visa Fees and Processing Times</h3>
+              <p>Fees vary depending on the visa validity requested. Processing times are typically up to three weeks but may vary depending on location and service availability.</p>
+            </div>
+
+            <!-- Section 18 -->
+            <div id="section18" class="content-section">
+              <h3>18. Switching into the Visitor Route from Inside the UK</h3>
+              <p>Switching into the Standard Visitor route from within the UK is not permitted.</p>
+            </div>
+
+            <!-- Section 19 -->
+            <div id="section19" class="content-section">
+              <h3>19. Travel While a Visit Visa Application Is Pending</h3>
+              <p>Applicants must not travel to the UK while a Visit Visa application is pending, as the application may be treated as withdrawn.</p>
+            </div>
+
+            <!-- Section 20 -->
+            <div id="section20" class="content-section">
+              <h3>20. Common Reasons for UK Visit Visa Refusals</h3>
+              <p>UK Standard Visitor Visa applications are refused frequently due to evidential and credibility concerns. Common reasons include:</p>
+              
+              <h4>Lack of Credible Evidence of a Genuine Visit</h4>
+              <p>Applicants may fail to demonstrate a clear, lawful, and time-limited purpose for their visit. Vague itineraries or unsupported explanations often lead to refusal.</p>
+              
+              <h4>Inconsistencies in the Application or Supporting Documents</h4>
+              <p>Discrepancies between the application form, financial evidence, travel history, or sponsor documents may undermine credibility and result in refusal.</p>
+              
+              <h4>Inadequate Financial Evidence</h4>
+              <p>Applicants who fail to show sufficient, lawful, and accessible funds to cover the full cost of their visit may be refused.</p>
+              
+              <h4>Insufficient Ties to the Country of Residence</h4>
+              <p>Weak employment, family, or economic ties may lead the Home Office to conclude that the applicant is unlikely to leave the UK at the end of the visit.</p>
+              
+              <h4>Adverse Immigration History</h4>
+              <p>Previous refusals, overstays, or breaches of immigration conditions in the UK or elsewhere can significantly reduce the likelihood of approval.</p>
+              
+              <h4>Perceived Risk of Long-Term Stay or Settlement</h4>
+              <p>Frequent or extended visits, unclear travel patterns, or lengthy intended stays may suggest an intention to live in the UK through the Visitor route.</p>
+            </div>
+
+            <!-- Section 21 -->
+            <div id="section21" class="content-section">
+              <h3>21. Challenging a Visit Visa Refusal</h3>
+              <p>There is generally no right of appeal against a Visitor Visa refusal. In most cases, the appropriate course is to submit a fresh application addressing the reasons for refusal. Judicial review may be available in limited circumstances where a legal or procedural error has occurred.</p>
+            </div>
+
+            <!-- Section 22 -->
+            <div id="section22" class="content-section">
+              <h3>22. Extension of Stay as a Visitor</h3>
+              <p>Visitors can apply to extend their stay in the UK in certain circumstances, such as for private medical treatment. The extension must be applied for before the current visa expires, and applicants must meet all the original eligibility criteria.</p>
+            </div>
+
+            <!-- Section 23 -->
+            <div id="section23" class="content-section">
+              <h3>23. How Our Immigration Experts Can Help</h3>
+              <p>Although applying for a UK Standard Visitor Visa may appear straightforward, even short-term visits are subject to detailed scrutiny by UK Visas and Immigration. Applications are frequently refused due to concerns regarding the purpose of the visit, financial credibility, or the applicant's intention to leave the UK at the end of their stay.</p>
+              
+              <div class="highlight-box">
+                <h4>Visitor Visa Advice and Representation</h4>
+                <p>Whether you intend to visit the UK for tourism, to visit family or friends, undertake short-term business activities, receive private medical treatment, or participate in a permitted paid engagement, we can:</p>
+                <ul>
+                  <li>Assess your eligibility under the Immigration Rules and advise on your prospects of success</li>
+                  <li>Develop a tailored strategy aligned with the specific purpose of your visit</li>
+                  <li>Advise on the most appropriate visa duration and identify any risks arising from your travel or immigration history</li>
+                  <li>Prepare a fully documented application supported by detailed legal representations</li>
+                  <li>Ensure the application is coherent, credible, and fully compliant with evidential requirements</li>
+                </ul>
+              </div>
+              
+              <h4>Support With Complex or High-Risk Visitor Applications</h4>
+              <p>We regularly assist applicants with more complex circumstances, including:</p>
+              <ul>
+                <li>Previous visa refusals or adverse immigration history</li>
+                <li>Visits based on invitations from friends or family where ties to the country of residence may be questioned</li>
+                <li>High-value business or medical visits requiring extensive supporting evidence</li>
+                <li>Applications involving third-party financial sponsorship</li>
+                <li>Situations involving dual intentions or overlapping travel and work considerations</li>
+              </ul>
+              
+              <h4>Legal Support Following Refusal</h4>
+              <p>If your UK Visitor Visa application has been refused, our immigration experts can:</p>
+              <ul>
+                <li>Analyse the refusal decision and identify legal or procedural errors</li>
+                <li>Advise on the merits of reapplying or pursuing judicial review</li>
+                <li>Prepare a fresh application addressing the refusal reasons with strengthened evidence</li>
+                <li>Provide strategic guidance to reduce the risk of future refusals and protect your ability to travel to the UK</li>
+              </ul>
+            </div>
+
+            <!-- Section 24 -->
+            <div id="section24" class="content-section">
+              <h3>24. Contact One Solution Visa</h3>
+              <p>We are committed to providing clear, reliable, and client-focused immigration advice. Our team is approachable, responsive, and proactive in delivering a professional and supportive service.</p>
+              <div class="highlight-box">
+                <p><strong>To discuss your UK Visit Visa application with one of our immigration experts:</strong></p>
+                <p><i class="fas fa-phone me-2"></i> <strong>Call:</strong> +63 968 707 5241</p>
+                <p><i class="fas fa-envelope me-2"></i> <strong>Email:</strong> abrambadana17@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt me-2"></i> <strong>Address:</strong> A. Gabuya Street, Cogon Pardo, Cebu City, Philippines</p>
+                <p><i class="fas fa-clock me-2"></i> <strong>Hours:</strong> Mon-Sat: 9AM-6PM</p>
+              </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+              <h3 class="mb-3">Ready to Apply for Your UK Tourist Visa?</h3>
+              <p class="lead mb-4">Let our expert team guide you through the application process and maximize your chances of approval.</p>
+              <a href="../index.html#inquiry" class="btn btn-primary btn-lg">
+                <i class="fas fa-paper-plane me-2"></i>Start Your Application
+              </a>
+              <p class="mt-3 text-muted">Click above to be redirected to our main inquiry form</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+         <h5>One Solution Visa™</h5>
+          <p>Your trusted partner for all visa and immigration services. We make your travel dreams come true with professional expertise and personalized service.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/visaconnect" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="../index.html#services" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="../index.html#contact" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="../index.html#inquiry" class="text-light text-decoration-none">Inquiry</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Services</h6>
+          <ul class="list-unstyled">
+            <li><a href="tourist.html" class="text-light text-decoration-none fw-bold">UK Tourist Visas</a></li>
+            <li><a href="business.html" class="text-light text-decoration-none">Business Visas</a></li>
+            <li><a href="student.html" class="text-light text-decoration-none">Student Visas</a></li>
+            <li><a href="family.html" class="text-light text-decoration-none">Family Visas</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Contact Info</h6>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt me-2"></i>A. Gabuya Street, Cogon Pardo, Cebu City, Philippines</li>
+            <li><i class="fas fa-phone me-2"></i>+63 968 707 5241</li>
+            <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
+            <li><i class="fas fa-clock me-2"></i>Mon-Sat: 9AM-6PM</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0">&copy; 2025 One Solution Visa. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0">
+            <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+            <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Navigation Scripts
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const isClickInside = navbarToggler.contains(event.target) || 
+                              navbarCollapse.contains(event.target);
+        
+        if (!isClickInside && navbarCollapse.classList.contains('show')) {
+          navbarToggler.click();
+        }
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      
+      // Add loading animation on page load
+      window.addEventListener('load', () => {
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease-in-out';
+        setTimeout(() => {
+          document.body.style.opacity = '1';
+        }, 100);
+      });
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Highlight active nav link
+      const sections = document.querySelectorAll('.content-section');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      function setActiveNavLink() {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (window.scrollY >= sectionTop - 150) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', setActiveNavLink);
+      setActiveNavLink();
+    });
+  </script>
+</body>
+</html>

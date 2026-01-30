@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>Senior or Specialist Worker Visa | One Solution Visa</title>
+  <link rel="icon" type="image/png" href="../images/logo.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+   :root {
+  --primary-color: #ffffff;
+  --secondary-color: #2c3e50;
+  --accent-color: #3498db;
+  --light-bg: #f4f6fa;
+}
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 0.75rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      padding: 0.5rem 0;
+      background: var(--secondary-color) !important;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .navbar-logo {
+      height: 40px;
+      width: 40px;
+      margin-right: 8px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    /* Back button styling */
+    .back-btn {
+      color: white !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateX(-3px);
+    }
+
+    .back-btn i {
+      margin-right: 5px;
+    }
+
+    .section-padding {
+      padding: 60px 0;
+      scroll-margin-top: 80px;
+    }
+
+    /* Service Hero Section with Background Image */
+    .service-hero {
+      background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), 
+                  url('../images/work.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 120px 0 80px;
+      margin-bottom: 40px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .service-hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .service-hero .lead {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .specialist-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+    
+    .content-nav {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /* Custom scrollbar for content-nav */
+    .content-nav::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .content-nav::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb {
+      background: var(--accent-color);
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
+    }
+    
+    .content-nav h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .nav-links a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      display: block;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+    
+    .nav-links a:hover {
+      background: var(--light-bg);
+      border-left: 3px solid var(--accent-color);
+      transform: translateX(5px);
+    }
+    
+    .content-section {
+      background: white;
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .content-section h2 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .content-section h3 {
+      color: var(--secondary-color);
+      margin: 2rem 0 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .content-section h4 {
+      color: var(--secondary-color);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .content-section p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    
+    .content-section ul, .content-section ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    .content-section li {
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-left: 4px solid var(--accent-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .info-box {
+      background: linear-gradient(135deg, #e8f4fc 0%, #d4eaf7 100%);
+      border-left: 4px solid var(--secondary-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .warning-box {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      border-left: 4px solid #ffc107;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .success-box {
+      background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+      border-left: 4px solid #28a745;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .requirement-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .requirement-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .requirement-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .requirement-list i {
+      color: var(--accent-color);
+      margin-right: 10px;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    
+    .process-step {
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 2.5rem;
+    }
+    
+    .process-step .step-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    .eligibility-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .eligibility-item {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      border-top: 3px solid var(--accent-color);
+      transition: transform 0.3s ease;
+    }
+    
+    .eligibility-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .eligibility-item h5 {
+      color: var(--secondary-color);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+    }
+    
+    .eligibility-item h5 i {
+      margin-right: 10px;
+      color: var(--accent-color);
+    }
+    
+    .fee-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .fee-table th {
+      background: var(--secondary-color);
+      color: white;
+      padding: 12px 15px;
+      text-align: left;
+      font-weight: 600;
+    }
+    
+    .fee-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .fee-table tr:nth-child(even) {
+      background: var(--light-bg);
+    }
+    
+    .fee-table tr:hover {
+      background: #e8f4fc;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, var(--light-bg) 0%, #e8f4fc 100%);
+      border-radius: 15px;
+      padding: 3rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--secondary-color);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-light:hover {
+      background: var(--light-bg);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+    }
+
+    .footer {
+      background: var(--secondary-color);
+      color: #fff;
+      padding: 40px 0 20px 0;
+      position: relative;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    /* Mobile Navigation Improvements */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: rgba(44, 62, 80, 0.98);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0.4rem 0.6rem;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
+      }
+
+      .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin: 0.25rem 0;
+      }
+
+      .nav-link:hover, .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      
+      .content-nav {
+        position: static;
+        margin-bottom: 2rem;
+      }
+      
+      .eligibility-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .fee-table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+
+    /* iPhone 15 and Small Devices */
+    @media (max-width: 430px) {
+      .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .navbar {
+        padding: 0.5rem 0;
+      }
+
+      .navbar-brand {
+        font-size: 1.1rem;
+      }
+
+      .navbar-logo {
+        height: 35px;
+        width: 35px;
+        margin-right: 6px;
+      }
+      
+      .service-hero {
+        padding: 100px 0 60px;
+        background-attachment: scroll;
+      }
+      
+      .service-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .service-hero .lead {
+        font-size: 1.1rem;
+      }
+      
+      .specialist-icon {
+        font-size: 2.5rem;
+      }
+      
+      .content-section, .content-nav {
+        padding: 1.5rem;
+      }
+      
+      .cta-section {
+        padding: 2rem 1.5rem;
+      }
+
+      .footer {
+        padding: 30px 0 15px 0;
+      }
+
+      .footer h5, .footer h6 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .footer p, .footer li {
+        font-size: 0.9rem;
+      }
+
+      .footer .col-lg-4, 
+      .footer .col-lg-2, 
+      .footer .col-lg-3,
+      .footer .col-md-6 {
+        margin-bottom: 1.5rem;
+      }
+
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Very Small Devices */
+    @media (max-width: 375px) {
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .navbar-brand {
+        font-size: 1rem;
+      }
+      
+      .service-hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Prevent horizontal scroll */
+    .row {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
+    .row > * {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/logo.png" alt="One Solution Visa Logo" class="navbar-logo">
+        OneSolutionVisa
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link back-btn" href="immigration.html">
+              <i class="fas fa-arrow-left me-1"></i>Back to Work Visas
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Senior or Specialist Worker Visa Content -->
+  <main style="margin-top: 80px; min-height: calc(100vh - 300px);">
+    <!-- Hero Section -->
+    <section class="service-hero">
+      <div class="container">
+        <div class="specialist-icon">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+        <h1>Senior or Specialist Worker Visa</h1>
+        <p class="lead">If you need to travel to the UK to work at your employer's UK branch, you may qualify for the Senior or Specialist Worker visa. Professional guidance can help you manage the application process smoothly.</p>
+        <a href="../index.html#inquiry" class="btn btn-light btn-lg mt-3">
+          <i class="fas fa-briefcase me-2"></i>Start Specialist Visa Application
+        </a>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row">
+          <!-- Navigation Sidebar -->
+          <div class="col-lg-4 mb-4">
+            <div class="content-nav">
+              <h3><i class="fas fa-list-alt me-2"></i>Contents</h3>
+              <ul class="nav-links">
+                <li><a href="#overview">Senior or Specialist Worker Visa</a></li>
+                <li><a href="#what-is">What is This Visa?</a></li>
+                <li><a href="#european-need">Do European Nationals Need This Visa?</a></li>
+                <li><a href="#eligibility">Who is Eligible?</a></li>
+                <li><a href="#cos">Certificate of Sponsorship (CoS)</a></li>
+                <li><a href="#eligible-jobs">Eligible Jobs</a></li>
+                <li><a href="#financial">Financial Requirements</a></li>
+                <li><a href="#genuine-job">Genuine Job Requirement</a></li>
+                <li><a href="#salary">Salary Requirements</a></li>
+                <li><a href="#documents">Required Documents</a></li>
+                <li><a href="#apply">How to Apply</a></li>
+                <li><a href="#cost">Application Cost</a></li>
+                <li><a href="#processing">Processing Time</a></li>
+                <li><a href="#sponsor-cost">Cost of Sponsoring</a></li>
+                <li><a href="#switching">Switching to This Visa</a></li>
+                <li><a href="#dependants">Dependant Applications</a></li>
+                <li><a href="#validity">Validity Period</a></li>
+                <li><a href="#change-employer">Changing Employers</a></li>
+                <li><a href="#extend">How to Extend</a></li>
+                <li><a href="#how-we-help">How We Can Help</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="col-lg-8">
+            <!-- Overview Section -->
+            <div id="overview" class="content-section">
+              <h2>Senior or Specialist Worker Visa</h2>
+              <p>If you need to travel to the UK to work at your employer's UK branch, you may qualify for the Senior or Specialist Worker visa. Professional guidance can help you manage the application process smoothly.</p>
+              
+              <div class="info-box">
+                <p><strong>Important:</strong> This visa falls under the Global Business Mobility route and has replaced the former Intra-Company Transfer (ICT) or Tier 2 (Intra-Company Transfer) Long-term Staff visa.</p>
+              </div>
+            </div>
+
+            <!-- What is This Visa -->
+            <div id="what-is" class="content-section">
+              <h3>What is the Senior or Specialist Worker Visa in UK?</h3>
+              <p>The Senior or Specialist Worker visa enables overseas employees to work in an eligible role at a UK branch of their current employer.</p>
+              
+              <div class="highlight-box">
+                <h4><i class="fas fa-info-circle me-2"></i>Key Features:</h4>
+                <ul>
+                  <li>Designed for highly paid individuals in senior or specialist roles, such as executives and subject-matter experts</li>
+                  <li>Falls under the Global Business Mobility route</li>
+                  <li>Replaces the former Intra-Company Transfer (ICT) visa</li>
+                  <li>Intended for temporary assignments only</li>
+                </ul>
+              </div>
+              
+              <div class="warning-box">
+                <p><strong>Note:</strong> This visa does not lead directly to settlement or Indefinite Leave to Remain, as holders are expected to return to their overseas employer. However, switching to another visa category that leads to settlement may be possible.</p>
+              </div>
+            </div>
+
+            <!-- European Nationals -->
+            <div id="european-need" class="content-section">
+              <h3>Do European nationals need a Senior or Specialist Worker visa?</h3>
+              <p>Nationals of the EU, Switzerland, Norway, Iceland, or Liechtenstein may not need this visa if they already hold lawful status in the UK.</p>
+              
+              <div class="info-box">
+                <h5><i class="fas fa-flag-europe me-2"></i>EU Settlement Scheme:</h5>
+                <p>Under Brexit arrangements, EU nationals who were living and working in the UK on or before 31 December 2020 may have been eligible for the EU Settlement Scheme.</p>
+                <p>Although the application deadline passed on 30 June 2021, late applications may still be accepted in limited circumstances. Those who do not qualify under the scheme and are not otherwise exempt will need to apply for a Senior or Specialist Worker visa like other non-visa nationals.</p>
+              </div>
+            </div>
+
+            <!-- Eligibility -->
+            <div id="eligibility" class="content-section">
+              <h3>Who is eligible for a UK Senior or Specialist Worker visa?</h3>
+              <p>To qualify, you must meet the following requirements:</p>
+              
+              <div class="eligibility-grid">
+                <div class="eligibility-item">
+                  <h5><i class="fas fa-building"></i>Employer Sponsorship</h5>
+                  <p>Be employed by a Home Office-approved sponsor</p>
+                </div>
+                
+                <div class="eligibility-item">
+                  <h5><i class="fas fa-file-contract"></i>Certificate of Sponsorship</h5>
+                  <p>Hold a valid CoS detailing your UK role</p>
+                </div>
+                
+                <div class="eligibility-item">
+                  <h5><i class="fas fa-briefcase"></i>Eligible Occupation</h5>
+                  <p>Work in an eligible occupation</p>
+                </div>
+                
+                <div class="eligibility-item">
+                  <h5><i class="fas fa-pound-sign"></i>Salary Requirements</h5>
+                  <p>Earn at least £52,500/year or the going rate for your role</p>
+                </div>
+              </div>
+              
+              <h4>Overseas Employment Requirement</h4>
+              <div class="info-box">
+                <ul>
+                  <li><strong>If salary is below £73,900:</strong> Must have worked for your employer overseas for at least 12 months</li>
+                  <li><strong>If salary is £73,900 or above:</strong> No minimum overseas employment requirement</li>
+                </ul>
+              </div>
+              
+              <div class="warning-box">
+                <p><strong>Special Consideration:</strong> If you have been in the UK since before 6 April 2011 on an ICT visa, you may qualify with reduced salary requirements.</p>
+              </div>
+            </div>
+
+            <!-- Certificate of Sponsorship -->
+            <div id="cos" class="content-section">
+              <h3>Certificate of Sponsorship (COS) Requirement for Senior or Specialist Worker visa</h3>
+              <p>A Certificate of Sponsorship is an electronic document issued by your employer containing details of your UK role.</p>
+              
+              <div class="highlight-box">
+                <h5><i class="fas fa-check-circle me-2"></i>CoS Requirements:</h5>
+                <ul>
+                  <li>Your employer must hold a valid sponsor licence to issue a CoS</li>
+                  <li>The reference number must be included in your visa application</li>
+                  <li>CoS documents issued between 11 February and 11 April 2022 for the ICT route may still be valid</li>
+                  <li>If salary doesn't meet £52,500 minimum, employer must increase it</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Eligible Jobs -->
+            <div id="eligible-jobs" class="content-section">
+              <h3>Eligible jobs for the Senior or Specialist Worker visa in UK</h3>
+              <p>You should confirm that your occupation code appears on the list of eligible roles, as stated on your CoS.</p>
+              
+              <p>Most roles previously eligible under the ICT visa remain valid, although some occupations are excluded, including:</p>
+              
+              <div class="warning-box">
+                <h5><i class="fas fa-exclamation-triangle me-2"></i>Excluded Occupations:</h5>
+                <ul>
+                  <li>Artists (3411)</li>
+                  <li>Authors, writers and translators (3412)</li>
+                  <li>Actors, entertainers and presenters (3413)</li>
+                  <li>Dancers and choreographers (3414)</li>
+                  <li>Product, clothing and related designers (3422)</li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <p><strong>Note:</strong> If you are already in the UK in one of these roles under another Global Business Mobility route, you may be able to extend your visa. However, changing jobs may require switching to a different visa category.</p>
+              </div>
+            </div>
+
+            <!-- Financial Requirements -->
+            <div id="financial" class="content-section">
+              <h3>Financial requirements for the Senior or Special Worker visa</h3>
+              <p>Applicants must show at least <strong>£1,270</strong> in personal savings, held for 28 consecutive days and ending within 31 days of the application date.</p>
+              
+              <div class="info-box">
+                <h5><i class="fas fa-money-bill-wave me-2"></i>Alternative Options:</h5>
+                <ul>
+                  <li><strong>Employer Certification:</strong> Your employer may certify maintenance on your behalf, covering costs up to £1,270</li>
+                  <li><strong>Waiver:</strong> Requirement is waived if you have been in the UK on another valid visa for at least 12 months</li>
+                </ul>
+                <p>Evidence may include bank statements or confirmation within your CoS.</p>
+              </div>
+            </div>
+
+            <!-- Genuine Job Requirement -->
+            <div id="genuine-job" class="content-section">
+              <h3>Genuine job requirement for Senior or Specialist Worker visa</h3>
+              <p>The Home Office must be satisfied that the role you are sponsored for is genuine.</p>
+              
+              <div class="warning-box">
+                <h5><i class="fas fa-exclamation-circle me-2"></i>Applications may be refused if:</h5>
+                <ul>
+                  <li>The job does not exist</li>
+                  <li>It was created solely for immigration purposes</li>
+                  <li>It involves working for a third-party organisation unrelated to your sponsor</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Salary Requirements -->
+            <div id="salary" class="content-section">
+              <h3>Salary requirements for the Senior or Specialist Worker visa</h3>
+              <p>You must earn at least <strong>£52,500 per year</strong> or the going rate for your occupation, whichever is higher.</p>
+              
+              <div class="info-box">
+                <h5><i class="fas fa-calculator me-2"></i>Salary Calculation:</h5>
+                <ul>
+                  <li>Includes basic pay (up to 48 hours per week)</li>
+                  <li>Includes guaranteed allowances</li>
+                  <li>If you have lived in the UK since before 6 April 2011 on an ICT route, only the going rate applies</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Required Documents -->
+            <div id="documents" class="content-section">
+              <h3>Documents for the Senior or Specialist Worker visa application</h3>
+              <p>You may need to submit:</p>
+              
+              <ul class="requirement-list">
+                <li><i class="fas fa-passport"></i> A valid passport or travel document</li>
+                <li><i class="fas fa-file-invoice"></i> Job title, occupation code, and salary details</li>
+                <li><i class="fas fa-certificate"></i> Certificate of Sponsorship</li>
+                <li><i class="fas fa-coins"></i> Evidence of meeting the financial requirement</li>
+                <li><i class="fas fa-stethoscope"></i> TB test results, if applicable</li>
+                <li><i class="fas fa-briefcase"></i> Proof of overseas employment if earning under £73,900</li>
+                <li><i class="fas fa-flask"></i> ATAS certificate for sensitive research roles</li>
+              </ul>
+            </div>
+
+            <!-- How to Apply -->
+            <div id="apply" class="content-section">
+              <h3>How to apply for the UK Senior or Specialist Worker visa?</h3>
+              <p>The application process includes:</p>
+              
+              <div class="process-step">
+                <div class="step-number">1</div>
+                <h4>Receive Certificate of Sponsorship</h4>
+                <p>Obtain a valid CoS from your employer</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">2</div>
+                <h4>Prepare Supporting Documents</h4>
+                <p>Gather all required evidence and documentation</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">3</div>
+                <h4>Submit Online Application</h4>
+                <p>Apply via gov.uk within three months of receiving your CoS</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">4</div>
+                <h4>Pay Required Fees</h4>
+                <p>Pay application fee and Immigration Health Surcharge</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">5</div>
+                <h4>Attend Biometric Appointment</h4>
+                <p>Visit a visa centre or use the UK ID Check app</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">6</div>
+                <h4>Await Decision</h4>
+                <p>Typically takes 3–8 weeks</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">7</div>
+                <h4>Travel to the UK</h4>
+                <p>Once your visa is approved</p>
+              </div>
+            </div>
+
+            <!-- Application Cost -->
+            <div id="cost" class="content-section">
+              <h3>Application Cost for Senior or Specialist Worker Visa</h3>
+              <p>Fees depend on visa duration and location of application:</p>
+              
+              <table class="fee-table">
+                <thead>
+                  <tr>
+                    <th>Application Location</th>
+                    <th>Duration</th>
+                    <th>Fee</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="2"><strong>From outside the UK</strong></td>
+                    <td>Up to 3 years</td>
+                    <td>£769</td>
+                  </tr>
+                  <tr>
+                    <td>Over 3 years</td>
+                    <td>£1,519</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="2"><strong>From inside the UK</strong></td>
+                    <td>Up to 3 years</td>
+                    <td>£885</td>
+                  </tr>
+                  <tr>
+                    <td>Over 3 years</td>
+                    <td>£1,751</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <div class="info-box">
+                <p><strong>Additional Cost:</strong> The Immigration Health Surcharge is usually £1,035 per year.</p>
+              </div>
+            </div>
+
+            <!-- Processing Time -->
+            <div id="processing" class="content-section">
+              <h3>Processing Time for Senior or Specialist Worker Visa</h3>
+              <p>Decisions typically take:</p>
+              
+              <div class="highlight-box">
+                <ul>
+                  <li><strong>From outside the UK:</strong> Around 3 weeks</li>
+                  <li><strong>From within the UK:</strong> Up to 8 weeks</li>
+                </ul>
+              </div>
+              
+              <div class="warning-box">
+                <p><strong>Note:</strong> Delays may occur if documents are incomplete or additional checks are required.</p>
+              </div>
+            </div>
+
+            <!-- Sponsor Cost -->
+            <div id="sponsor-cost" class="content-section">
+              <h3>What is the cost of sponsoring a senior or specialist worker?</h3>
+              <p>Sponsorship costs may range from <strong>£2,893 to £5,386 per year</strong> and include:</p>
+              
+              <ul class="requirement-list">
+                <li><i class="fas fa-file-alt"></i> Sponsor licence fee</li>
+                <li><i class="fas fa-graduation-cap"></i> Immigration Skills Charge</li>
+                <li><i class="fas fa-certificate"></i> Certificate of Sponsorship fee (£525)</li>
+                <li><i class="fas fa-file-invoice-dollar"></i> Visa application fee</li>
+                <li><i class="fas fa-heartbeat"></i> Immigration Health Surcharge</li>
+              </ul>
+              
+              <div class="info-box">
+                <p>The Immigration Skills Charge varies based on organisation size and visa length.</p>
+              </div>
+            </div>
+
+            <!-- Switching -->
+            <div id="switching" class="content-section">
+              <h3>Switching to the Senior or Specialist Worker visa in UK</h3>
+              <p>Eligible applicants already in the UK may switch without leaving, provided they are not on restricted visa types such as:</p>
+              
+              <div class="warning-box">
+                <ul>
+                  <li>Visit visas</li>
+                  <li>Short-term student visas</li>
+                  <li>Immigration bail</li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <p><strong>Student Exception:</strong> Students may switch if they have completed their course or studied a PhD for at least 24 months.</p>
+                <p>Switching fees and processing times are similar to standard applications. Applicants must remain in the UK while awaiting a decision.</p>
+              </div>
+            </div>
+
+            <!-- Dependant Applications -->
+            <div id="dependants" class="content-section">
+              <h3>Dependant application process of senior or specialist workers</h3>
+              <p>Eligible dependants, such as partners and children, may apply separately.</p>
+              
+              <div class="highlight-box">
+                <h5><i class="fas fa-users me-2"></i>Requirements for Dependants:</h5>
+                <ul>
+                  <li>Proof of relationship</li>
+                  <li>Evidence of financial support</li>
+                  <li>Biometric data submission</li>
+                  <li>Compliance with visa conditions</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Validity Period -->
+            <div id="validity" class="content-section">
+              <h3>Validity period of the GBM Senior or Specialist Worker visa</h3>
+              <p>Visas are granted for up to five years or the CoS duration plus 14 days, whichever is shorter.</p>
+              
+              <div class="info-box">
+                <h5><i class="fas fa-calendar-alt me-2"></i>Maximum Stay Limits:</h5>
+                <ul>
+                  <li><strong>If earning under £73,900:</strong> Five years in six years</li>
+                  <li><strong>If earning £73,900 or more:</strong> Nine years in ten years</li>
+                </ul>
+                <p>Time spent on other Global Business Mobility routes may count toward the maximum stay.</p>
+              </div>
+            </div>
+
+            <!-- Changing Employers -->
+            <div id="change-employer" class="content-section">
+              <h3>Change employers on a Senior or Specialist Worker Visa</h3>
+              <p>You must apply to update your visa if your job role or occupation code changes.</p>
+              
+              <div class="warning-box">
+                <p><strong>Important:</strong> The new role must be with the same employer or a linked organisation and meet all eligibility requirements.</p>
+              </div>
+            </div>
+
+            <!-- How to Extend -->
+            <div id="extend" class="content-section">
+              <h3>How to extend your UK Senior or Specialist Worker visa?</h3>
+              <p>You may extend your visa if:</p>
+              
+              <ul class="requirement-list">
+                <li><i class="fas fa-check-circle"></i> You remain in the same role and occupation code</li>
+                <li><i class="fas fa-check-circle"></i> You continue working for the same sponsoring employer</li>
+                <li><i class="fas fa-check-circle"></i> You have not exceeded the maximum permitted stay</li>
+              </ul>
+              
+              <div class="info-box">
+                <p>Extensions are applied for online, with fees matching those for switching visas.</p>
+              </div>
+            </div>
+
+            <!-- How We Can Help -->
+            <div id="how-we-help" class="content-section">
+              <h3>How Our Immigration Experts Can Help</h3>
+              <p>The Senior or Specialist Worker visa process involves complex requirements and strict eligibility criteria. Our experienced immigration team provides comprehensive support throughout your application journey.</p>
+              
+              <div class="highlight-box">
+                <h5><i class="fas fa-hands-helping me-2"></i>Our Services Include:</h5>
+                <ul>
+                  <li><strong>Eligibility Assessment:</strong> Comprehensive evaluation of your qualifications and employment history</li>
+                  <li><strong>Employer Guidance:</strong> Assistance with sponsor licence applications and CoS issuance</li>
+                  <li><strong>Document Preparation:</strong> Guidance on gathering and organizing required evidence</li>
+                  <li><strong>Application Management:</strong> Complete handling of your visa application from start to finish</li>
+                  <li><strong>Compliance Support:</strong> Advice on maintaining visa conditions and extending your stay</li>
+                  <li><strong>Dependant Applications:</strong> Assistance with family member visa applications</li>
+                </ul>
+              </div>
+              
+              <div class="success-box">
+                <p><strong>Why Choose Us:</strong> With years of experience in business immigration, we understand the specific requirements of the Senior or Specialist Worker route and can help ensure your application meets all Home Office criteria, increasing your chances of approval and minimizing processing delays.</p>
+              </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+              <h3 class="mb-3">Ready to Transfer to the UK as a Senior or Specialist Worker?</h3>
+              <p class="lead mb-4">Let our expert team guide you through the visa application process and help facilitate your transfer to the UK.</p>
+              <a href="../index.html#inquiry" class="btn btn-primary btn-lg">
+                <i class="fas fa-user-graduate me-2"></i>Start Your Specialist Worker Application
+              </a>
+              <p class="mt-3 text-muted">Click above to be redirected to our main inquiry form</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h5>One Solution Visa™</h5>
+          <p>Your trusted partner for all visa and immigration services. We make your travel dreams come true with professional expertise and personalized service.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/visaconnect" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="../index.html#services" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="../index.html#contact" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="../index.html#inquiry" class="text-light text-decoration-none">Inquiry</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Work Visa Services</h6>
+          <ul class="list-unstyled">
+            <li><a href="specialist.html" class="text-light text-decoration-none fw-bold">Senior/Specialist Worker Visa</a></li>
+            <li><a href="skilledworker.html" class="text-light text-decoration-none">UK Skilled Worker Visa</a></li>
+            <li><a href="temporary.html" class="text-light text-decoration-none">Temporary Worker Visa</a></li>
+            <li><a href="immigration.html" class="text-light text-decoration-none">Work Visa Services</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Contact Info</h6>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt me-2"></i>A. Gabuya Street, Cogon Pardo, Cebu City, Philippines</li>
+            <li><i class="fas fa-phone me-2"></i>+63 968 707 5241</li>
+            <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
+            <li><i class="fas fa-clock me-2"></i>Mon-Fri: 8AM-6PM</li>
+            <li><i class="fas fa-building me-2"></i>Sat: 9AM-3PM (Business Hours)</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0">&copy; 2025 One Solution Visa. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0">
+            <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+            <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Navigation Scripts
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const isClickInside = navbarToggler.contains(event.target) || 
+                              navbarCollapse.contains(event.target);
+        
+        if (!isClickInside && navbarCollapse.classList.contains('show')) {
+          navbarToggler.click();
+        }
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      
+      // Add loading animation on page load
+      window.addEventListener('load', () => {
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease-in-out';
+        setTimeout(() => {
+          document.body.style.opacity = '1';
+        }, 100);
+      });
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Highlight active nav link
+      const sections = document.querySelectorAll('.content-section');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      function setActiveNavLink() {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (window.scrollY >= sectionTop - 150) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', setActiveNavLink);
+      setActiveNavLink();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>UK Self-Sponsorship Skilled Worker Visa | One Solution Visa</title>
+  <link rel="icon" type="image/png" href="../images/logo.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+   :root {
+  --primary-color: #ffffff;
+  --secondary-color: #2c3e50;
+  --accent-color: #3498db;
+  --light-bg: #f4f6fa;
+}
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 0.75rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      padding: 0.5rem 0;
+      background: var(--secondary-color) !important;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .navbar-logo {
+      height: 40px;
+      width: 40px;
+      margin-right: 8px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    /* Back button styling */
+    .back-btn {
+      color: white !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateX(-3px);
+    }
+
+    .back-btn i {
+      margin-right: 5px;
+    }
+
+    .section-padding {
+      padding: 60px 0;
+      scroll-margin-top: 80px;
+    }
+
+    /* Service Hero Section with Background Image */
+    .service-hero {
+      background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), 
+                  url('../images/business.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 120px 0 80px;
+      margin-bottom: 40px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .service-hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .service-hero .lead {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .skilled-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+    
+    .content-nav {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /* Custom scrollbar for content-nav */
+    .content-nav::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .content-nav::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb {
+      background: var(--accent-color);
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
+    }
+    
+    .content-nav h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .nav-links a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      display: block;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+    
+    .nav-links a:hover {
+      background: var(--light-bg);
+      border-left: 3px solid var(--accent-color);
+      transform: translateX(5px);
+    }
+    
+    .content-section {
+      background: white;
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .content-section h2 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .content-section h3 {
+      color: var(--secondary-color);
+      margin: 2rem 0 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .content-section h4 {
+      color: var(--secondary-color);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .content-section p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    
+    .content-section ul, .content-section ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    .content-section li {
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-left: 4px solid var(--accent-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .info-box {
+      background: linear-gradient(135deg, #e8f4fc 0%, #d4eaf7 100%);
+      border-left: 4px solid var(--secondary-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .warning-box {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      border-left: 4px solid #ffc107;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .requirement-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .requirement-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .requirement-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .requirement-list i {
+      color: var(--accent-color);
+      margin-right: 10px;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    
+    .process-step {
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 2.5rem;
+    }
+    
+    .process-step .step-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, var(--light-bg) 0%, #e8f4fc 100%);
+      border-radius: 15px;
+      padding: 3rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--secondary-color);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-light:hover {
+      background: var(--light-bg);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+    }
+
+    .footer {
+      background: var(--secondary-color);
+      color: #fff;
+      padding: 40px 0 20px 0;
+      position: relative;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    /* Mobile Navigation Improvements */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: rgba(44, 62, 80, 0.98);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0.4rem 0.6rem;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
+      }
+
+      .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin: 0.25rem 0;
+      }
+
+      .nav-link:hover, .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      
+      .content-nav {
+        position: static;
+        margin-bottom: 2rem;
+      }
+    }
+
+    /* iPhone 15 and Small Devices */
+    @media (max-width: 430px) {
+      .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .navbar {
+        padding: 0.5rem 0;
+      }
+
+      .navbar-brand {
+        font-size: 1.1rem;
+      }
+
+      .navbar-logo {
+        height: 35px;
+        width: 35px;
+        margin-right: 6px;
+      }
+      
+      .service-hero {
+        padding: 100px 0 60px;
+        background-attachment: scroll;
+      }
+      
+      .service-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .service-hero .lead {
+        font-size: 1.1rem;
+      }
+      
+      .skilled-icon {
+        font-size: 2.5rem;
+      }
+      
+      .content-section, .content-nav {
+        padding: 1.5rem;
+      }
+      
+      .cta-section {
+        padding: 2rem 1.5rem;
+      }
+
+      .footer {
+        padding: 30px 0 15px 0;
+      }
+
+      .footer h5, .footer h6 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .footer p, .footer li {
+        font-size: 0.9rem;
+      }
+
+      .footer .col-lg-4, 
+      .footer .col-lg-2, 
+      .footer .col-lg-3,
+      .footer .col-md-6 {
+        margin-bottom: 1.5rem;
+      }
+
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Very Small Devices */
+    @media (max-width: 375px) {
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .navbar-brand {
+        font-size: 1rem;
+      }
+      
+      .service-hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Prevent horizontal scroll */
+    .row {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
+    .row > * {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/logo.png" alt="One Solution Visa Logo" class="navbar-logo">
+        OneSolutionVisa
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link back-btn" href="business.html">
+              <i class="fas fa-arrow-left me-1"></i>Back to Business Visa
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Self-Sponsorship Visa Content -->
+  <main style="margin-top: 80px; min-height: calc(100vh - 300px);">
+    <!-- Hero Section -->
+    <section class="service-hero">
+      <div class="container">
+        <div class="skilled-icon">
+          <i class="fas fa-user-tie"></i>
+        </div>
+        <h1>UK Self-Sponsorship Skilled Worker Visa</h1>
+        <p class="lead">If you are seeking to establish a new business in the UK, or you already own a UK-registered company, you may be eligible to apply for a UK Skilled Worker visa through self-sponsorship.</p>
+        <a href="../index.html#inquiry" class="btn btn-light btn-lg mt-3">
+          <i class="fas fa-briefcase me-2"></i>Start Self-Sponsorship Application
+        </a>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row">
+          <!-- Navigation Sidebar -->
+          <div class="col-lg-4 mb-4">
+            <div class="content-nav">
+              <h3><i class="fas fa-list-alt me-2"></i>Contents</h3>
+              <ul class="nav-links">
+                <li><a href="#overview">UK Self-Sponsorship Overview</a></li>
+                <li><a href="#requirements">Requirements for Self-Sponsorship</a></li>
+                <li><a href="#application-stages">How to Apply: 4 Key Stages</a></li>
+                <li><a href="#stage1">Stage 1: Establishing a UK Company</a></li>
+                <li><a href="#stage2">Stage 2: Skilled Worker Sponsor Licence</a></li>
+                <li><a href="#stage3">Stage 3: Certificate of Sponsorship</a></li>
+                <li><a href="#stage4">Stage 4: Skilled Worker Visa Application</a></li>
+                <li><a href="#benefits">Benefits of Self-Sponsorship</a></li>
+                <li><a href="#challenges">Potential Challenges</a></li>
+                <li><a href="#how-we-help">How We Can Help</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="col-lg-8">
+            <!-- Overview Section -->
+            <div id="overview" class="content-section">
+              <h2>UK Self-Sponsorship Skilled Worker Visa Overview</h2>
+              <p>If you are seeking to establish a new business in the UK, or you already own a UK-registered company, you may be eligible to apply for a UK Skilled Worker visa through <strong>self-sponsorship</strong>. This route allows you to be sponsored by your own UK company, provided that the business has obtained a valid Skilled Worker sponsor licence.</p>
+              
+              <div class="info-box">
+                <p><strong>Pathway to Settlement:</strong> The self-sponsored Skilled Worker route can lead to <strong>settlement in the UK</strong>, and successful applicants may be joined by dependent partners and children.</p>
+              </div>
+            </div>
+
+            <!-- Requirements Section -->
+            <div id="requirements" class="content-section">
+              <h3>Requirements for a UK Skilled Worker Visa via Self-Sponsorship</h3>
+              <p>To sponsor yourself under the Skilled Worker route, you must satisfy UK Visas and Immigration that:</p>
+              <ul class="requirement-list">
+                <li><i class="fas fa-check-circle"></i> You are aged 18 or over;</li>
+                <li><i class="fas fa-check-circle"></i> There is a genuine and active UK company operating lawfully;</li>
+                <li><i class="fas fa-check-circle"></i> Your UK company holds a valid Skilled Worker sponsor licence;</li>
+                <li><i class="fas fa-check-circle"></i> Your company has assigned you a valid Certificate of Sponsorship (CoS);</li>
+                <li><i class="fas fa-check-circle"></i> The role offered is a genuine vacancy;</li>
+                <li><i class="fas fa-check-circle"></i> The role meets the required skill level;</li>
+                <li><i class="fas fa-check-circle"></i> You will be paid a salary that meets or exceeds both the general salary threshold and the applicable SOC 2020 "going rate";</li>
+                <li><i class="fas fa-check-circle"></i> Any required Immigration Skills Charge has been paid;</li>
+                <li><i class="fas fa-check-circle"></i> You meet the English language requirement at CEFR Level B1 or above;</li>
+                <li><i class="fas fa-check-circle"></i> You have sufficient funds to support yourself without recourse to public funds;</li>
+                <li><i class="fas fa-check-circle"></i> You have provided a criminal record certificate, where required; and</li>
+                <li><i class="fas fa-check-circle"></i> You have provided a valid TB certificate, where required.</li>
+              </ul>
+              
+              <div class="highlight-box">
+                <p><strong>Important:</strong> The precise requirements will vary depending on your individual circumstances. Specialist legal advice is strongly recommended.</p>
+              </div>
+            </div>
+
+            <!-- Application Stages -->
+            <div id="application-stages" class="content-section">
+              <h3>How to Apply for a Self-Sponsorship UK Skilled Worker Visa</h3>
+              <p>The self-sponsorship process involves four key stages:</p>
+              
+              <div class="process-step">
+                <div class="step-number">1</div>
+                <h4>Establishing a UK company</h4>
+                <p>Register or own a UK-registered business entity.</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">2</div>
+                <h4>Applying for a Skilled Worker sponsor licence</h4>
+                <p>Obtain sponsorship licence for your UK company.</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">3</div>
+                <h4>Assigning a Certificate of Sponsorship</h4>
+                <p>Your company issues you a valid CoS.</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">4</div>
+                <h4>Applying for the Skilled Worker visa</h4>
+                <p>Submit your visa application with supporting documents.</p>
+              </div>
+            </div>
+
+            <!-- Stage 1 -->
+            <div id="stage1" class="content-section">
+              <h3>Stage 1: Establishing a UK Company</h3>
+              <p>You must either register a new company in the UK or already own an existing UK-registered business.</p>
+              
+              <h4>Registering a UK Company From Overseas</h4>
+              <p>It is possible to register a UK company from outside the UK. Directors are not required to be UK residents or British citizens. However, all directors must meet statutory obligations, and non-resident directors may need to appoint a UK-based representative if they cannot fulfil duties in person.</p>
+              
+              <div class="info-box">
+                <p><strong>Professional Assistance:</strong> Applicants unfamiliar with UK corporate law may wish to instruct a professional company formation agent. Compliance with overseas legal obligations should also be considered.</p>
+              </div>
+            </div>
+
+            <!-- Stage 2 -->
+            <div id="stage2" class="content-section">
+              <h3>Stage 2: Applying for a Skilled Worker Sponsor Licence</h3>
+              <p>Once the UK company is established, it must apply for a Skilled Worker sponsor licence. The Home Office must be satisfied that:</p>
+              <ul class="requirement-list">
+                <li><i class="fas fa-building"></i> The business is genuine and operating lawfully in the UK;</li>
+                <li><i class="fas fa-tasks"></i> The business is capable of fulfilling sponsor duties; and</li>
+                <li><i class="fas fa-briefcase"></i> The role offered meets the Skilled Worker skill and salary requirements.</li>
+              </ul>
+              
+              <h4>Evidence of a Genuine UK Business</h4>
+              <p>The Home Office requires at least four documents listed in Appendix A of the sponsor guidance. For start-up businesses trading for less than 18 months, this typically includes:</p>
+              
+              <div class="highlight-box">
+                <h5><i class="fas fa-star text-warning me-2"></i>Mandatory:</h5>
+                <ul>
+                  <li>Evidence of a UK corporate bank account</li>
+                </ul>
+                
+                <h5 class="mt-3"><i class="fas fa-plus-circle text-success me-2"></i>Plus three of the following:</h5>
+                <ul>
+                  <li>PAYE and National Insurance registration</li>
+                  <li>VAT registration</li>
+                  <li>Employer's liability insurance (minimum £5 million)</li>
+                  <li>Lease or ownership of business premises</li>
+                  <li>Latest annual accounts</li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <p><strong>Note:</strong> A UK business does not need to be actively trading at the time of application, but evidence such as a business plan, investment funds, or early-stage commercial activity can significantly strengthen an application.</p>
+              </div>
+              
+              <h4>Sponsor Duties and HR Systems</h4>
+              <p>Licensed sponsors must comply with strict record-keeping, reporting, and compliance obligations. The Home Office will assess whether the business has appropriate HR systems in place and may conduct compliance visits.</p>
+              
+              <h4>Genuine Employment, Skill Level, and Salary Requirements</h4>
+              <p>The Home Office will assess whether:</p>
+              <ul>
+                <li>The role meets the Skilled Worker skill threshold (normally RQF Level 3 or above);</li>
+                <li>The salary meets or exceeds the general threshold and the SOC 2020 going rate;</li>
+                <li>The role is genuine and not created solely for immigration purposes;</li>
+                <li>There is a genuine employer-employee relationship; and</li>
+                <li>The worker will not be supplied to a third party for routine work.</li>
+              </ul>
+              
+              <h4>Appointing Key Personnel</h4>
+              <p>Before submitting a sponsor licence application, the business must appoint:</p>
+              <ul>
+                <li>An <strong>Authorising Officer</strong></li>
+                <li>A <strong>Key Contact</strong></li>
+                <li>At least one <strong>Level 1 User</strong></li>
+              </ul>
+              
+              <div class="warning-box">
+                <p><strong>Important:</strong> For self-sponsorship cases, key personnel must be UK-based, and the Level 1 User must be British or settled. In practice, this requires a trusted UK-based individual with sufficient oversight of the business.</p>
+              </div>
+            </div>
+
+            <!-- Stage 3 -->
+            <div id="stage3" class="content-section">
+              <h3>Stage 3: Assigning a Certificate of Sponsorship</h3>
+              <p>Once licensed, the company must assign a <strong>Defined Certificate of Sponsorship</strong>. The CoS must:</p>
+              <ul class="requirement-list">
+                <li><i class="fas fa-calendar-check"></i> Be issued no more than three months before the visa application;</li>
+                <li><i class="fas fa-file-invoice"></i> Include accurate job, salary, and start-date details; and</li>
+                <li><i class="fas fa-ban"></i> Confirm that it has not been previously used or withdrawn.</li>
+              </ul>
+            </div>
+
+            <!-- Stage 4 -->
+            <div id="stage4" class="content-section">
+              <h3>Stage 4: Applying for the Skilled Worker Visa</h3>
+              <p>Following assignment of the CoS, the visa application must confirm compliance with all Skilled Worker requirements, including skill level, salary, English language ability, maintenance funds, and any criminal record or TB certification.</p>
+              
+              <div class="info-box">
+                <p><strong>Timing:</strong> Applications may be submitted up to three months before the intended start date. Processing times are typically three weeks overseas and eight weeks for in-country applications, subject to priority services.</p>
+              </div>
+            </div>
+
+            <!-- Benefits -->
+            <div id="benefits" class="content-section">
+              <h3>Benefits of Self-Sponsorship</h3>
+              <ul class="requirement-list">
+                <li><i class="fas fa-chart-line"></i> <strong>Control over your employment:</strong> You have full control over your role, salary, and career progression</li>
+                <li><i class="fas fa-home"></i> <strong>Pathway to settlement:</strong> Leads to Indefinite Leave to Remain after 5 years</li>
+                <li><i class="fas fa-users"></i> <strong>Bring dependants:</strong> Your partner and children under 18 can join you</li>
+                <li><i class="fas fa-briefcase"></i> <strong>Business ownership:</strong> You can grow your own UK business while securing your immigration status</li>
+                <li><i class="fas fa-pound-sign"></i> <strong>Investment in your own venture:</strong> Funds invested go into your own business rather than paying fees to an external sponsor</li>
+              </ul>
+            </div>
+
+            <!-- Challenges -->
+            <div id="challenges" class="content-section">
+              <h3>Potential Challenges and Considerations</h3>
+              
+              <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle me-2"></i>Important Considerations:</h4>
+                <ul>
+                  <li>The business must be genuine, active, and operating lawfully in the UK</li>
+                  <li>Substantial documentation and evidence required at each stage</li>
+                  <li>Need for a UK-based Level 1 User (British or settled person)</li>
+                  <li>Ongoing sponsor compliance duties after licence is granted</li>
+                  <li>Regular Home Office compliance visits may occur</li>
+                  <li>The role must be genuine and not created solely for immigration purposes</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- How We Help -->
+            <div id="how-we-help" class="content-section">
+              <h3>How Our Immigration Experts Can Help</h3>
+              <p>Our business immigration experts regularly advise entrepreneurs and company owners on securing sponsor licences and successfully sponsoring themselves under the Skilled Worker route.</p>
+              
+              <div class="highlight-box">
+                <h4>Our Services Include:</h4>
+                <ul>
+                  <li><strong>Eligibility assessment:</strong> Comprehensive evaluation of your suitability for self-sponsorship</li>
+                  <li><strong>Business setup guidance:</strong> Assistance with UK company registration and structuring</li>
+                  <li><strong>Sponsor licence application:</strong> Complete preparation and submission of sponsor licence application</li>
+                  <li><strong>Compliance framework:</strong> Development of HR systems and compliance policies</li>
+                  <li><strong>Visa application management:</strong> End-to-end handling of your Skilled Worker visa application</li>
+                  <li><strong>Post-licence support:</strong> Ongoing compliance advice and support</li>
+                </ul>
+              </div>
+              
+              <p>We provide end-to-end support, including eligibility assessments, sponsor licence preparation, compliance advice, and visa application management. Our approach is proactive, commercially aware, and tailored to the specific needs of business clients.</p>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+              <h3 class="mb-3">Ready to Start Your UK Self-Sponsorship Journey?</h3>
+              <p class="lead mb-4">Let our expert team guide you through the self-sponsorship process and help you establish your business in the UK.</p>
+              <a href="../index.html#inquiry" class="btn btn-primary btn-lg">
+                <i class="fas fa-user-tie me-2"></i>Start Your Self-Sponsorship Application
+              </a>
+              <p class="mt-3 text-muted">Click above to be redirected to our main inquiry form</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h5>One Solution Visa™</h5>
+          <p>Your trusted partner for all visa and immigration services. We make your travel dreams come true with professional expertise and personalized service.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/visaconnect" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="../index.html#services" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="../index.html#contact" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="../index.html#inquiry" class="text-light text-decoration-none">Inquiry</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Business Services</h6>
+          <ul class="list-unstyled">
+            <li><a href="selfsponsorship.html" class="text-light text-decoration-none fw-bold">UK Self-Sponsorship Skilled Worker Visa</a></li>
+            <li><a href="innovator.html" class="text-light text-decoration-none">UK Innovator Founder Visa</a></li>
+            <li><a href="business.html" class="text-light text-decoration-none">Business Visa Services</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Contact Info</h6>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt me-2"></i>A. Gabuya Street, Cogon Pardo, Cebu City, Philippines</li>
+            <li><i class="fas fa-phone me-2"></i>+63 968 707 5241</li>
+            <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
+            <li><i class="fas fa-clock me-2"></i>Mon-Fri: 8AM-6PM</li>
+            <li><i class="fas fa-building me-2"></i>Sat: 9AM-3PM (Business Hours)</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0">&copy; 2025 One Solution Visa. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0">
+            <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+            <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Navigation Scripts
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const isClickInside = navbarToggler.contains(event.target) || 
+                              navbarCollapse.contains(event.target);
+        
+        if (!isClickInside && navbarCollapse.classList.contains('show')) {
+          navbarToggler.click();
+        }
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      
+      // Add loading animation on page load
+      window.addEventListener('load', () => {
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease-in-out';
+        setTimeout(() => {
+          document.body.style.opacity = '1';
+        }, 100);
+      });
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Highlight active nav link
+      const sections = document.querySelectorAll('.content-section');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      function setActiveNavLink() {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (window.scrollY >= sectionTop - 150) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', setActiveNavLink);
+      setActiveNavLink();
+    });
+  </script>
+</body>
+</html>

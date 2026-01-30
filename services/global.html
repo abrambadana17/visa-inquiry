@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>Global Talent Visa UK | One Solution Visa</title>
+  <link rel="icon" type="image/png" href="../images/logo.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+   :root {
+  --primary-color: #ffffff;
+  --secondary-color: #2c3e50;
+  --accent-color: #3498db;
+  --light-bg: #f4f6fa;
+}
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 0.75rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      padding: 0.5rem 0;
+      background: var(--secondary-color) !important;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .navbar-logo {
+      height: 40px;
+      width: 40px;
+      margin-right: 8px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    /* Back button styling */
+    .back-btn {
+      color: white !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateX(-3px);
+    }
+
+    .back-btn i {
+      margin-right: 5px;
+    }
+
+    .section-padding {
+      padding: 60px 0;
+      scroll-margin-top: 80px;
+    }
+
+    /* Service Hero Section with Background Image */
+    .service-hero {
+      background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), 
+                  url('../images/business.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 120px 0 80px;
+      margin-bottom: 40px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .service-hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .service-hero .lead {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .global-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+    
+    .content-nav {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /* Custom scrollbar for content-nav */
+    .content-nav::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .content-nav::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb {
+      background: var(--accent-color);
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
+    }
+    
+    .content-nav h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .nav-links a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      display: block;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+    
+    .nav-links a:hover {
+      background: var(--light-bg);
+      border-left: 3px solid var(--accent-color);
+      transform: translateX(5px);
+    }
+    
+    .content-section {
+      background: white;
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .content-section h2 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .content-section h3 {
+      color: var(--secondary-color);
+      margin: 2rem 0 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .content-section h4 {
+      color: var(--secondary-color);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .content-section p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    
+    .content-section ul, .content-section ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    .content-section li {
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-left: 4px solid var(--accent-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .info-box {
+      background: linear-gradient(135deg, #e8f4fc 0%, #d4eaf7 100%);
+      border-left: 4px solid var(--secondary-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .warning-box {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      border-left: 4px solid #ffc107;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .success-box {
+      background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+      border-left: 4px solid #28a745;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .requirement-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .requirement-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .requirement-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .requirement-list i {
+      color: var(--accent-color);
+      margin-right: 10px;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    
+    .endorsement-bodies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .endorsement-body {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      border-top: 3px solid var(--accent-color);
+      transition: transform 0.3s ease;
+    }
+    
+    .endorsement-body:hover {
+      transform: translateY(-5px);
+    }
+    
+    .endorsement-body h5 {
+      color: var(--secondary-color);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    
+    .process-step {
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 2.5rem;
+    }
+    
+    .process-step .step-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    
+    .benefit-icon {
+      background: var(--light-bg);
+      color: var(--accent-color);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      flex-shrink: 0;
+      font-size: 1.5rem;
+    }
+    
+    .benefit-content {
+      flex: 1;
+    }
+    
+    .benefit-content h5 {
+      color: var(--secondary-color);
+      margin-bottom: 0.5rem;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, var(--light-bg) 0%, #e8f4fc 100%);
+      border-radius: 15px;
+      padding: 3rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--secondary-color);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-light:hover {
+      background: var(--light-bg);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+    }
+
+    .footer {
+      background: var(--secondary-color);
+      color: #fff;
+      padding: 40px 0 20px 0;
+      position: relative;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    /* Mobile Navigation Improvements */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: rgba(44, 62, 80, 0.98);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0.4rem 0.6rem;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
+      }
+
+      .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin: 0.25rem 0;
+      }
+
+      .nav-link:hover, .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      
+      .content-nav {
+        position: static;
+        margin-bottom: 2rem;
+      }
+      
+      .endorsement-bodies {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* iPhone 15 and Small Devices */
+    @media (max-width: 430px) {
+      .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .navbar {
+        padding: 0.5rem 0;
+      }
+
+      .navbar-brand {
+        font-size: 1.1rem;
+      }
+
+      .navbar-logo {
+        height: 35px;
+        width: 35px;
+        margin-right: 6px;
+      }
+      
+      .service-hero {
+        padding: 100px 0 60px;
+        background-attachment: scroll;
+      }
+      
+      .service-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .service-hero .lead {
+        font-size: 1.1rem;
+      }
+      
+      .global-icon {
+        font-size: 2.5rem;
+      }
+      
+      .content-section, .content-nav {
+        padding: 1.5rem;
+      }
+      
+      .cta-section {
+        padding: 2rem 1.5rem;
+      }
+      
+      .benefit-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .benefit-icon {
+        margin-bottom: 1rem;
+      }
+
+      .footer {
+        padding: 30px 0 15px 0;
+      }
+
+      .footer h5, .footer h6 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .footer p, .footer li {
+        font-size: 0.9rem;
+      }
+
+      .footer .col-lg-4, 
+      .footer .col-lg-2, 
+      .footer .col-lg-3,
+      .footer .col-md-6 {
+        margin-bottom: 1.5rem;
+      }
+
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Very Small Devices */
+    @media (max-width: 375px) {
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .navbar-brand {
+        font-size: 1rem;
+      }
+      
+      .service-hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Prevent horizontal scroll */
+    .row {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
+    .row > * {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/logo.png" alt="One Solution Visa Logo" class="navbar-logo">
+        OneSolutionVisa
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link back-btn" href="business.html">
+              <i class="fas fa-arrow-left me-1"></i>Back to Business Visa
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Global Talent Visa Content -->
+  <main style="margin-top: 80px; min-height: calc(100vh - 300px);">
+    <!-- Hero Section -->
+    <section class="service-hero">
+      <div class="container">
+        <div class="global-icon">
+          <i class="fas fa-globe"></i>
+        </div>
+        <h1>Global Talent Visa UK</h1>
+        <p class="lead">The UK Global Talent Visa is an immigration pathway created for highly skilled individuals in fields such as science, research, technology, engineering, and the arts and humanities who wish to live and work in the UK.</p>
+        <a href="../index.html#inquiry" class="btn btn-light btn-lg mt-3">
+          <i class="fas fa-star me-2"></i>Start Global Talent Application
+        </a>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row">
+          <!-- Navigation Sidebar -->
+          <div class="col-lg-4 mb-4">
+            <div class="content-nav">
+              <h3><i class="fas fa-list-alt me-2"></i>Contents</h3>
+              <ul class="nav-links">
+                <li><a href="#overview">Global Talent Visa Overview</a></li>
+                <li><a href="#what-is">What is the UK Global Talent Visa?</a></li>
+                <li><a href="#eligibility">Who is Eligible?</a></li>
+                <li><a href="#endorsement">Endorsement for Global Talent Visa</a></li>
+                <li><a href="#requirements">Eligibility Requirements Per Field</a></li>
+                <li><a href="#apply-endorsement">Applying for an Endorsement</a></li>
+                <li><a href="#apply-visa">How to Apply for the Visa</a></li>
+                <li><a href="#benefits">Benefits of Global Talent Visa</a></li>
+                <li><a href="#documents">Required Documents</a></li>
+                <li><a href="#processing">Waiting Time & Fees</a></li>
+                <li><a href="#dependants">Dependants & Extensions</a></li>
+                <li><a href="#settlement">Settlement in the UK</a></li>
+                <li><a href="#how-we-help">How We Can Help</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="col-lg-8">
+            <!-- Overview Section -->
+            <div id="overview" class="content-section">
+              <h2>Global Talent Visa UK</h2>
+              <p>The UK Global Talent Visa is an immigration pathway created for highly skilled individuals in fields such as science, research, technology, engineering, and the arts and humanities who wish to live and work in the UK.</p>
+              
+              <div class="info-box">
+                <p><strong>Important:</strong> This visa is designed for established leaders (Exceptional Talent) and emerging future leaders (Exceptional Promise) who can contribute significantly to their field in the UK.</p>
+              </div>
+            </div>
+
+            <!-- What is the UK Global Talent Visa -->
+            <div id="what-is" class="content-section">
+              <h3>What is the UK Global Talent Visa?</h3>
+              <p>The Global Talent Visa is a popular immigration route for non-British nationals seeking to work in the UK within specific specialist sectors.</p>
+              
+              <div class="highlight-box">
+                <h4>Endorsement Bodies:</h4>
+                <p>In most situations, applicants must first obtain an official endorsement from one of six approved endorsing organisations.</p>
+                
+                <p>Endorsements for eligible candidates working in science, engineering, medicine, social sciences, humanities, and academic research are issued by the following bodies:</p>
+                <ul>
+                  <li>The British Academy</li>
+                  <li>The Royal Academy of Engineering</li>
+                  <li>The Royal Society</li>
+                  <li>UK Research and Innovation (UKRI)</li>
+                </ul>
+              </div>
+              
+              <p>When applying for endorsement, academics and researchers may qualify under four routes: academic or research appointments, individual fellowships, endorsed funders, and peer review.</p>
+              
+              <p>For applicants in non-academic arts, culture, and digital technology, endorsements are managed by Arts Council England.</p>
+              
+              <div class="warning-box">
+                <p><strong>Two-Stage Process:</strong> Securing an endorsement from an approved body is the initial stage of the process. Once obtained, the applicant must submit both the endorsement and visa application to the Home Office for approval.</p>
+              </div>
+            </div>
+
+            <!-- Who is Eligible -->
+            <div id="eligibility" class="content-section">
+              <h3>Who is Eligible for Global Talent Visa in UK?</h3>
+              <p>This visa is available to applicants aged 18 or over who demonstrate either exceptional talent (established leaders) or exceptional promise (emerging future leaders) in the following areas:</p>
+              
+              <div class="endorsement-bodies">
+                <div class="endorsement-body">
+                  <h5><i class="fas fa-graduation-cap me-2"></i>Academia or Research</h5>
+                  <p>Science, engineering, humanities, social sciences, medicine</p>
+                </div>
+                <div class="endorsement-body">
+                  <h5><i class="fas fa-paint-brush me-2"></i>Arts and Culture</h5>
+                  <p>Architecture, fashion, film, television, performing arts</p>
+                </div>
+                <div class="endorsement-body">
+                  <h5><i class="fas fa-laptop-code me-2"></i>Digital Technology</h5>
+                  <p>Tech leadership, product development, digital innovation</p>
+                </div>
+              </div>
+              
+              <div class="info-box">
+                <p><strong>Eligibility Criteria:</strong> Eligibility is based on endorsement or receipt of a qualifying award rather than a points-based system, through one of the following routes:</p>
+                <ul>
+                  <li>Holding a prize listed under the Prestigious Prizes category in the immigration rules (for example, a Nobel Prize or Golden Global Award)</li>
+                  <li>Submitting an initial application with a valid endorsement issued by an approved body within the previous three months, provided the endorsement has not been withdrawn</li>
+                  <li>Applying for an extension and demonstrating compliance with the earnings requirement, with confirmation that any previously issued endorsement remains valid</li>
+                </ul>
+              </div>
+              
+              <div class="warning-box">
+                <p><strong>Application Process:</strong> The application process can be demanding, as both the endorsement and visa stages involve strict assessment criteria. While the Global Talent immigration rules provide detailed eligibility guidance, applicants are encouraged to seek advice from an immigration solicitor if there is any uncertainty about their circumstances.</p>
+              </div>
+              
+              <p>Applications can be made from outside the UK or by switching from certain eligible UK visas, such as the Skilled Worker or Innovator visa.</p>
+            </div>
+
+            <!-- Endorsement for the Global Talent Visa -->
+            <div id="endorsement" class="content-section">
+              <h3>Endorsement for the Global Talent Visa</h3>
+              <p>Applicants who believe they are eligible should carefully review the requirements of each endorsing body and clearly demonstrate how they meet the criteria.</p>
+              
+              <h4>Endorsing Bodies and Their Specializations:</h4>
+              
+              <div class="endorsement-bodies">
+                <div class="endorsement-body">
+                  <h5><i class="fas fa-theater-masks me-2"></i>Arts Council England</h5>
+                  <p>Arts, culture, film, music, dance, fashion, architecture</p>
+                </div>
+                <div class="endorsement-body">
+                  <h5><i class="fas fa-atom me-2"></i>The Royal Society</h5>
+                  <p>Natural sciences, mathematics, engineering, medical research</p>
+                </div>
+                <div class="endorsement-body">
+                  <h5><i class="fas fa-cogs me-2"></i>Royal Academy of Engineering</h5>
+                  <p>Engineering, technology, innovation</p>
+                </div>
+                <div class="endorsement-body">
+                  <h5><i class="fas fa-book me-2"></i>British Academy</h5>
+                  <p>Humanities, social sciences</p>
+                </div>
+                <div class="endorsement-body">
+                  <h5><i class="fas fa-flask me-2"></i>UK Research and Innovation</h5>
+                  <p>Research across all disciplines</p>
+                </div>
+                <div class="endorsement-body">
+                  <h5><i class="fas fa-microchip me-2"></i>Tech Nation</h5>
+                  <p>Digital technology sector</p>
+                </div>
+              </div>
+              
+              <div class="info-box">
+                <p><strong>Process:</strong> After submitting an endorsement application and paying the relevant fee, applicants will receive a decision. If successful, they may then proceed with their visa application to the Home Office.</p>
+              </div>
+            </div>
+
+            <!-- Eligibility Requirements Per Field -->
+            <div id="requirements" class="content-section">
+              <h3>Eligibility Requirements Per Endorsement or Field</h3>
+              <p>All applicants must be at least 18 years old and meet the criteria specific to their chosen field. Below are examples of field-based requirements by endorsing body.</p>
+              
+              <h4>Royal Society, British Academy, and UK Research and Innovation (UKRI)</h4>
+              <p>Applicants in natural and medical sciences—such as biology, chemistry, engineering, mathematics, and physics—typically apply through one of the following organisations:</p>
+              <ul>
+                <li>The Royal Society of England</li>
+                <li>UK Research and Innovation (UKRI)</li>
+                <li>The British Academy</li>
+              </ul>
+              
+              <h5>Academic or Research Appointment</h5>
+              <p>Applicants holding a research role with an eligible UK organisation must:</p>
+              <ul class="requirement-list">
+                <li><i class="fas fa-check-circle"></i> Be responsible for academic, research, or innovation leadership</li>
+                <li><i class="fas fa-check-circle"></i> Lead or direct an individual or group research or innovation project</li>
+              </ul>
+              
+              <h5>Individual Fellowships</h5>
+              <p>Applicants must have been awarded an approved individual fellowship by the British Academy, Royal Academy of Engineering, or Royal Society.</p>
+              
+              <h5>Endorsed Funders</h5>
+              <p>Applicants funded by an approved organisation must:</p>
+              <ul class="requirement-list">
+                <li><i class="fas fa-check-circle"></i> Hold a successful grant worth at least £30,000 from a UKRI-approved funder, covering a minimum of two years</li>
+                <li><i class="fas fa-check-circle"></i> Spend at least 50% of their time fulfilling the grant conditions</li>
+              </ul>
+              
+              <h5>Peer Review Applicants</h5>
+              <p>Applicants must:</p>
+              <ul class="requirement-list">
+                <li><i class="fas fa-check-circle"></i> Be actively engaged in research at a recognised institution or within industry</li>
+                <li><i class="fas fa-check-circle"></i> Hold a PhD or equivalent research experience, including clinical or industrial research</li>
+                <li><i class="fas fa-check-circle"></i> Be at an early career stage if applying under Exceptional Promise</li>
+              </ul>
+              
+              <h4>Arts Council England</h4>
+              <p>Arts Council England assesses applications from professional artists and practitioners, including those working in film, music, dance, fashion, architecture, and related fields.</p>
+              
+              <p>To qualify, applicants must:</p>
+              <ul class="requirement-list">
+                <li><i class="fas fa-check-circle"></i> Have produced high-quality, professionally published work within the past five years</li>
+                <li><i class="fas fa-check-circle"></i> Show consistent and recent professional activity during this period</li>
+                <li><i class="fas fa-check-circle"></i> Demonstrate international recognition and demand in more than one country for Exceptional Talent applications</li>
+                <li><i class="fas fa-check-circle"></i> Show a developing track record and international demand in at least one country for Exceptional Promise applications</li>
+              </ul>
+              
+              <h4>Tech Nation</h4>
+              <p>Tech Nation oversees endorsements for applicants in the digital technology sector. Applicants must demonstrate:</p>
+              <ul class="requirement-list">
+                <li><i class="fas fa-check-circle"></i> Recognition as a leader or emerging leader in digital technology within the past five years</li>
+                <li><i class="fas fa-check-circle"></i> Evidence of founding or holding a senior role in a product-led digital business, or contributing to a new digital concept</li>
+                <li><i class="fas fa-check-circle"></i> Work that advances the digital technology field</li>
+                <li><i class="fas fa-check-circle"></i> Academic contributions through published, peer-endorsed research</li>
+              </ul>
+            </div>
+
+            <!-- Applying for an Endorsement -->
+            <div id="apply-endorsement" class="content-section">
+              <h3>Applying for an Endorsement</h3>
+              <p>Below is a general overview of the endorsement process.</p>
+              
+              <div class="process-step">
+                <div class="step-number">1</div>
+                <h4>Eligibility Assessment</h4>
+                <p>Applicants must confirm that they meet the Global Talent criteria and are recognised as leaders or emerging leaders in their field.</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">2</div>
+                <h4>Choose the Right Endorsement Route</h4>
+                <p>Selecting the correct category is critical. Exceptional Talent is for established professionals with proven achievements and global recognition, while Exceptional Promise is for early-career professionals with strong potential and international impact.</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">3</div>
+                <h4>Gather Required Evidence</h4>
+                <p>Applicants must submit clear and legible supporting documents in PDF or image format. These may include:</p>
+                <ul>
+                  <li>A full job description</li>
+                  <li>A CV</li>
+                  <li>Grant award letters</li>
+                  <li>HR confirmation letters</li>
+                  <li>Letters of recommendation</li>
+                  <li>Evidence demonstrating exceptional talent or promise</li>
+                </ul>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">4</div>
+                <h4>Submit Endorsement Application</h4>
+                <p>The endorsement application (Stage 1) is submitted online via the Home Office website. This includes personal details, qualifications, fellowships, publications, awards, and patents.</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">5</div>
+                <h4>Attend an Endorsement Review</h4>
+                <p>The endorsing body will assess the application and either approve it or provide feedback.</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">6</div>
+                <h4>Await Decision and Next Steps</h4>
+                <p>Decisions are usually made within 2–8 weeks. Successful applicants receive an endorsement letter valid for three months, during which they must apply for the visa or submit both applications simultaneously.</p>
+              </div>
+              
+              <div class="success-box">
+                <h5><i class="fas fa-trophy me-2"></i>Fast-Track Application for Prestigious Award</h5>
+                <p>Applicants holding an eligible prestigious award may bypass the endorsement stage and apply directly for the Global Talent Visa.</p>
+              </div>
+            </div>
+
+            <!-- How to Apply for the Visa -->
+            <div id="apply-visa" class="content-section">
+              <h3>How to Apply for the UK Global Talent Visa?</h3>
+              <p>After receiving endorsement, or at the same time, applicants can proceed with the visa application.</p>
+              
+              <div class="process-step">
+                <div class="step-number">1</div>
+                <h4>Complete the Online Application</h4>
+                <p>Applicants must complete the online form via the UK government website and pay the required fee.</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">2</div>
+                <h4>Attend your Biometric Appointment</h4>
+                <p>Some applicants will need to attend a visa application centre to provide fingerprints and a photograph.</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">3</div>
+                <h4>Submit Supporting Documents</h4>
+                <p>Applicants must submit their endorsement letter and supporting documents to UK Visas and Immigration. Professional legal advice is strongly recommended to ensure the application is accurate and complete.</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">4</div>
+                <h4>Pay the Immigration Health Surcharge</h4>
+                <p>Applicants must pay the Immigration Health Surcharge to access NHS services.</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">5</div>
+                <h4>Attend an Interview (if required)</h4>
+                <p>An interview may be requested in some cases.</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">6</div>
+                <h4>Wait for a Decision</h4>
+                <p>Processing times vary, and average timelines can be checked on the UK government website.</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">7</div>
+                <h4>Receive your visa</h4>
+                <p>Successful applicants will receive their immigration status in digital form.</p>
+              </div>
+            </div>
+
+            <!-- Benefits of Global Talent Visa -->
+            <div id="benefits" class="content-section">
+              <h3>Benefits of the Global Talent Visa UK</h3>
+              <p>The Global Talent Visa offers significant advantages over other UK work visas.</p>
+              
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="benefit-content">
+                  <h5>Work Flexibility</h5>
+                  <p>Visa holders may work for multiple employers or operate their own business within their area of expertise. Job changes do not need to be reported, and no sponsorship is required. The only restriction is employment as a professional sportsperson or coach.</p>
+                </div>
+              </div>
+              
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-file-contract"></i>
+                </div>
+                <div class="benefit-content">
+                  <h5>No Sponsorship Required</h5>
+                  <p>Employers do not need a sponsor licence, and applicants do not require a certificate of sponsorship.</p>
+                </div>
+              </div>
+              
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-home"></i>
+                </div>
+                <div class="benefit-content">
+                  <h5>Fast-Track Path to Settlement</h5>
+                  <p>Exceptional Talent holders can apply for settlement after three years, while Exceptional Promise holders may apply after five years.</p>
+                </div>
+              </div>
+              
+              <div class="benefit-item">
+                <div class="benefit-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="benefit-content">
+                  <h5>Bring Dependants</h5>
+                  <p>Visa holders may bring their partner and children under 18, who can live, work, and study in the UK.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Required Documents -->
+            <div id="documents" class="content-section">
+              <h3>What documents do you need to apply for the Global Talent Visa?</h3>
+              <p>Document requirements depend on the applicant's field and endorsing body, but may include:</p>
+              
+              <div class="highlight-box">
+                <h5><i class="fas fa-file-alt me-2"></i>Essential Documents:</h5>
+                <ul>
+                  <li>CVs and recommendation letters</li>
+                  <li>Evidence of professional achievements</li>
+                  <li>Business or research documentation</li>
+                  <li>Grant confirmations</li>
+                  <li>Passports and TB test results (if applicable)</li>
+                  <li>Certified translations of non-English documents</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Waiting Time & Fees -->
+            <div id="processing" class="content-section">
+              <h3>Waiting Time and Global Talent Visa Fees</h3>
+              
+              <h4>Waiting Time for Global Talent Visa Application</h4>
+              <p>Most applications are decided within three weeks outside the UK and eight weeks within the UK. Additional information requests may extend processing times. Applications can be submitted up to three months before the intended travel date, with priority services available for an additional fee.</p>
+              
+              <h4>Global Talent Visa Fees</h4>
+              <div class="info-box">
+                <ul>
+                  <li><strong>Endorsement-based applications:</strong> £561 for endorsement + £766 for visa = £1,327 total</li>
+                  <li><strong>Prestigious award applications:</strong> £205 total (no endorsement required)</li>
+                  <li><strong>Visa fee only:</strong> £205</li>
+                  <li><strong>Dependants:</strong> £766 each + Immigration Health Surcharge</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Dependants & Extensions -->
+            <div id="dependants" class="content-section">
+              <h3>Dependants on UK Global Talent Visa</h3>
+              <p>Eligible dependants include spouses, partners, and children. Dependants can work, study, and apply for settlement when eligible.</p>
+              
+              <h4>Extend the Global Talent Visa in UK</h4>
+              <p>Visas can be extended for up to five years if endorsement or award status remains valid and earnings in the expert field can be demonstrated. Applications must be made before the current visa expires and cost £205.</p>
+              
+              <h4>Switch to the Global Talent Visa</h4>
+              <p>Applicants already in the UK may be able to switch, provided they meet eligibility requirements. Switching is not permitted from certain visa categories, including visit visas and short-term student visas. Switching costs £205.</p>
+            </div>
+
+            <!-- Settlement in the UK -->
+            <div id="settlement" class="content-section">
+              <h3>Settle in the UK with Global Talent Visa</h3>
+              <p>Applicants may qualify for indefinite leave to remain after three or five years, depending on endorsement type:</p>
+              
+              <div class="info-box">
+                <h5><i class="fas fa-star me-2"></i>Settlement Timelines:</h5>
+                <ul>
+                  <li><strong>Exceptional Talent:</strong> Eligible for ILR after 3 years</li>
+                  <li><strong>Exceptional Promise:</strong> Eligible for ILR after 5 years</li>
+                </ul>
+                <p>Time spent on other eligible visas may be combined. Applicants must meet residence, English language, and Life in the UK test requirements. The ILR application fee is £3,029.</p>
+              </div>
+            </div>
+
+            <!-- How We Can Help -->
+            <div id="how-we-help" class="content-section">
+              <h3>How One Solution Visa Can Help With The Global Talent Visa</h3>
+              <p>The Global Talent Visa process can be complex due to strict endorsement and documentation requirements. We offer expert legal support to guide applicants through each stage, from eligibility assessment to successful approval.</p>
+              
+              <div class="success-box">
+                <h5><i class="fas fa-medal me-2"></i>Our Expertise:</h5>
+                <p>With extensive experience and a strong record of successful applications, we provide tailored advice, comprehensive support, and end-to-end assistance to ensure a smooth application process.</p>
+              </div>
+              
+              <h4>Services We Provide</h4>
+              <p>We offer support including:</p>
+              
+              <div class="endorsement-bodies">
+                <div class="endorsement-body">
+                  <h5><i class="fas fa-clipboard-check me-2"></i>Eligibility Assessment</h5>
+                  <p>Comprehensive evaluation of your qualifications and experience</p>
+                </div>
+                <div class="endorsement-body">
+                  <h5><i class="fas fa-file-signature me-2"></i>Endorsement Guidance</h5>
+                  <p>Strategic advice on choosing the right endorsing body and route</p>
+                </div>
+                <div class="endorsement-body">
+                  <h5><i class="fas fa-folder-open me-2"></i>Document Preparation</h5>
+                  <p>Assistance with gathering and organizing required evidence</p>
+                </div>
+                <div class="endorsement-body">
+                  <h5><i class="fas fa-gavel me-2"></i>Appeal Support</h5>
+                  <p>Help with refusals, reapplications, and appeals if needed</p>
+                </div>
+              </div>
+              
+              <div class="highlight-box">
+                <p><strong>Why Choose Us:</strong> Our team specializes in Global Talent Visa applications and understands the specific requirements of each endorsing body. We work closely with clients to build strong cases that demonstrate exceptional talent or promise in their respective fields.</p>
+              </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+              <h3 class="mb-3">Ready to Showcase Your Exceptional Talent in the UK?</h3>
+              <p class="lead mb-4">Let our expert team guide you through the Global Talent Visa process and help you achieve your UK immigration goals.</p>
+              <a href="../index.html#inquiry" class="btn btn-primary btn-lg">
+                <i class="fas fa-globe me-2"></i>Start Your Global Talent Application
+              </a>
+              <p class="mt-3 text-muted">Click above to be redirected to our main inquiry form</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h5>One Solution Visa™</h5>
+          <p>Your trusted partner for all visa and immigration services. We make your travel dreams come true with professional expertise and personalized service.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/visaconnect" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="../index.html#services" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="../index.html#contact" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="../index.html#inquiry" class="text-light text-decoration-none">Inquiry</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Global Talent Services</h6>
+          <ul class="list-unstyled">
+            <li><a href="global.html" class="text-light text-decoration-none fw-bold">UK Global Talent Visa</a></li>
+            <li><a href="selfsponsorship.html" class="text-light text-decoration-none">Self-Sponsorship Visa</a></li>
+            <li><a href="innovator.html" class="text-light text-decoration-none">Innovator Founder Visa</a></li>
+            <li><a href="business.html" class="text-light text-decoration-none">Business Visa Services</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Contact Info</h6>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt me-2"></i>A. Gabuya Street, Cogon Pardo, Cebu City, Philippines</li>
+            <li><i class="fas fa-phone me-2"></i>+63 968 707 5241</li>
+            <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
+            <li><i class="fas fa-clock me-2"></i>Mon-Fri: 8AM-6PM</li>
+            <li><i class="fas fa-building me-2"></i>Sat: 9AM-3PM (Business Hours)</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0">&copy; 2025 One Solution Visa. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0">
+            <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+            <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Navigation Scripts
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const isClickInside = navbarToggler.contains(event.target) || 
+                              navbarCollapse.contains(event.target);
+        
+        if (!isClickInside && navbarCollapse.classList.contains('show')) {
+          navbarToggler.click();
+        }
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      
+      // Add loading animation on page load
+      window.addEventListener('load', () => {
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease-in-out';
+        setTimeout(() => {
+          document.body.style.opacity = '1';
+        }, 100);
+      });
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Highlight active nav link
+      const sections = document.querySelectorAll('.content-section');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      function setActiveNavLink() {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (window.scrollY >= sectionTop - 150) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', setActiveNavLink);
+      setActiveNavLink();
+    });
+  </script>
+</body>
+</html>

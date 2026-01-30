@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>Temporary Worker Visa | One Solution Visa</title>
+  <link rel="icon" type="image/png" href="../images/logo.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+   :root {
+  --primary-color: #ffffff;
+  --secondary-color: #2c3e50;
+  --accent-color: #3498db;
+  --light-bg: #f4f6fa;
+}
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 0.75rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      padding: 0.5rem 0;
+      background: var(--secondary-color) !important;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .navbar-logo {
+      height: 40px;
+      width: 40px;
+      margin-right: 8px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    /* Back button styling */
+    .back-btn {
+      color: white !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateX(-3px);
+    }
+
+    .back-btn i {
+      margin-right: 5px;
+    }
+
+    .section-padding {
+      padding: 60px 0;
+      scroll-margin-top: 80px;
+    }
+
+    /* Service Hero Section with Background Image */
+    .service-hero {
+      background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), 
+                  url('../images/work.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 120px 0 80px;
+      margin-bottom: 40px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .service-hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .service-hero .lead {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .temporary-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+    
+    .content-nav {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /* Custom scrollbar for content-nav */
+    .content-nav::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .content-nav::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb {
+      background: var(--accent-color);
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
+    }
+    
+    .content-nav h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .nav-links a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      display: block;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+    
+    .nav-links a:hover {
+      background: var(--light-bg);
+      border-left: 3px solid var(--accent-color);
+      transform: translateX(5px);
+    }
+    
+    .content-section {
+      background: white;
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .content-section h2 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .content-section h3 {
+      color: var(--secondary-color);
+      margin: 2rem 0 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .content-section h4 {
+      color: var(--secondary-color);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .content-section p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    
+    .content-section ul, .content-section ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    .content-section li {
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-left: 4px solid var(--accent-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .info-box {
+      background: linear-gradient(135deg, #e8f4fc 0%, #d4eaf7 100%);
+      border-left: 4px solid var(--secondary-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .warning-box {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      border-left: 4px solid #ffc107;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .success-box {
+      background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+      border-left: 4px solid #28a745;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .requirement-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .requirement-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .requirement-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .requirement-list i {
+      color: var(--accent-color);
+      margin-right: 10px;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+    
+    .process-step {
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 2.5rem;
+    }
+    
+    .process-step .step-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    .visa-types-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .visa-type-card {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      border-top: 3px solid var(--accent-color);
+      transition: transform 0.3s ease;
+      height: 100%;
+    }
+    
+    .visa-type-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+    
+    .visa-type-card h5 {
+      color: var(--secondary-color);
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+    }
+    
+    .visa-type-card h5 i {
+      margin-right: 10px;
+      color: var(--accent-color);
+      font-size: 1.3rem;
+    }
+    
+    .visa-duration {
+      background: var(--light-bg);
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      color: var(--secondary-color);
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+    
+    .permitted-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    
+    .permitted-item {
+      background: white;
+      border-radius: 8px;
+      padding: 1rem;
+      border-left: 4px solid #28a745;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    
+    .not-permitted-item {
+      background: white;
+      border-radius: 8px;
+      padding: 1rem;
+      border-left: 4px solid #dc3545;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    
+    .permitted-item i {
+      color: #28a745;
+      margin-right: 8px;
+    }
+    
+    .not-permitted-item i {
+      color: #dc3545;
+      margin-right: 8px;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, var(--light-bg) 0%, #e8f4fc 100%);
+      border-radius: 15px;
+      padding: 3rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--secondary-color);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-light:hover {
+      background: var(--light-bg);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+    }
+
+    .footer {
+      background: var(--secondary-color);
+      color: #fff;
+      padding: 40px 0 20px 0;
+      position: relative;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    /* Mobile Navigation Improvements */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: rgba(44, 62, 80, 0.98);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0.4rem 0.6rem;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
+      }
+
+      .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin: 0.25rem 0;
+      }
+
+      .nav-link:hover, .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      
+      .content-nav {
+        position: static;
+        margin-bottom: 2rem;
+      }
+      
+      .visa-types-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .permitted-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* iPhone 15 and Small Devices */
+    @media (max-width: 430px) {
+      .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .navbar {
+        padding: 0.5rem 0;
+      }
+
+      .navbar-brand {
+        font-size: 1.1rem;
+      }
+
+      .navbar-logo {
+        height: 35px;
+        width: 35px;
+        margin-right: 6px;
+      }
+      
+      .service-hero {
+        padding: 100px 0 60px;
+        background-attachment: scroll;
+      }
+      
+      .service-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .service-hero .lead {
+        font-size: 1.1rem;
+      }
+      
+      .temporary-icon {
+        font-size: 2.5rem;
+      }
+      
+      .content-section, .content-nav {
+        padding: 1.5rem;
+      }
+      
+      .cta-section {
+        padding: 2rem 1.5rem;
+      }
+
+      .footer {
+        padding: 30px 0 15px 0;
+      }
+
+      .footer h5, .footer h6 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .footer p, .footer li {
+        font-size: 0.9rem;
+      }
+
+      .footer .col-lg-4, 
+      .footer .col-lg-2, 
+      .footer .col-lg-3,
+      .footer .col-md-6 {
+        margin-bottom: 1.5rem;
+      }
+
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Very Small Devices */
+    @media (max-width: 375px) {
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .navbar-brand {
+        font-size: 1rem;
+      }
+      
+      .service-hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Prevent horizontal scroll */
+    .row {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
+    .row > * {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/logo.png" alt="One Solution Visa Logo" class="navbar-logo">
+        OneSolutionVisa
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link back-btn" href="immigration.html">
+              <i class="fas fa-arrow-left me-1"></i>Back to Work Visas
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Temporary Worker Visa Content -->
+  <main style="margin-top: 80px; min-height: calc(100vh - 300px);">
+    <!-- Hero Section -->
+    <section class="service-hero">
+      <div class="container">
+        <div class="temporary-icon">
+          <i class="fas fa-clock"></i>
+        </div>
+        <h1>Temporary Worker Visa</h1>
+        <p class="lead">If you plan to work in the UK for a short period, our immigration lawyers can assist you throughout the Temporary Worker Visa application process.</p>
+        <a href="../index.html#inquiry" class="btn btn-light btn-lg mt-3">
+          <i class="fas fa-calendar-alt me-2"></i>Start Temporary Visa Application
+        </a>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row">
+          <!-- Navigation Sidebar -->
+          <div class="col-lg-4 mb-4">
+            <div class="content-nav">
+              <h3><i class="fas fa-list-alt me-2"></i>Contents</h3>
+              <ul class="nav-links">
+                <li><a href="#overview">Temporary Worker Visa Overview</a></li>
+                <li><a href="#what-is">What is the Temporary Worker Visa?</a></li>
+                <li><a href="#permitted">What is Permitted on This Visa?</a></li>
+                <li><a href="#not-permitted">What is Not Permitted?</a></li>
+                <li><a href="#types">Types of Temporary Worker Visas</a></li>
+                <li><a href="#creative">Creative Worker Visa</a></li>
+                <li><a href="#government">Government Authorised Exchange Visa</a></li>
+                <li><a href="#international">International Agreement Worker Visa</a></li>
+                <li><a href="#charity">Charity Worker Visa</a></li>
+                <li><a href="#religious">Religious Worker Visa</a></li>
+                <li><a href="#seasonal">Seasonal Worker Visa</a></li>
+                <li><a href="#youth">Youth Mobility Scheme</a></li>
+                <li><a href="#eligibility">Eligibility Requirements</a></li>
+                <li><a href="#how-to-apply">How to Apply</a></li>
+                <li><a href="#how-we-help">How We Can Help</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="col-lg-8">
+            <!-- Overview Section -->
+            <div id="overview" class="content-section">
+              <h2>Temporary Worker Visa</h2>
+              <p>If you plan to work in the UK for a short period, our immigration lawyers can assist you throughout the Temporary Worker Visa application process.</p>
+              
+              <div class="info-box">
+                <p><strong>Important:</strong> The UK Temporary Worker Visa allows individuals to work in the UK for a limited time. The length of stay depends on the specific visa type and generally ranges from 6 months to 2 years.</p>
+              </div>
+            </div>
+
+            <!-- What is the Temporary Worker Visa -->
+            <div id="what-is" class="content-section">
+              <h3>What is the Temporary Worker Visa?</h3>
+              <p>The UK Temporary Worker Visa allows individuals to work in the UK for a limited time. The length of stay depends on the specific visa type and generally ranges from 6 months to 2 years.</p>
+              
+              <div class="highlight-box">
+                <h4><i class="fas fa-info-circle me-2"></i>Suitable For:</h4>
+                <p>This visa is suitable for people coming to the UK for short-term work such as:</p>
+                <ul>
+                  <li>Seasonal employment</li>
+                  <li>Sports, religious or charity work</li>
+                  <li>Work experience, training, research, fellowships</li>
+                  <li>Overseas Government Language Programmes</li>
+                  <li>Roles under approved government exchange schemes</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- What is Permitted -->
+            <div id="permitted" class="content-section">
+              <h3>What is permitted on a UK Temporary Worker Visa?</h3>
+              
+              <div class="permitted-grid">
+                <div class="permitted-item">
+                  <i class="fas fa-check-circle"></i> Work in the UK for a licensed sponsor
+                </div>
+                <div class="permitted-item">
+                  <i class="fas fa-check-circle"></i> Take part in an approved exchange programme
+                </div>
+                <div class="permitted-item">
+                  <i class="fas fa-check-circle"></i> Carry out voluntary work with a recognised international organisation
+                </div>
+                <div class="permitted-item">
+                  <i class="fas fa-check-circle"></i> Attend meetings, conferences, seminars, interviews, and training
+                </div>
+                <div class="permitted-item">
+                  <i class="fas fa-check-circle"></i> Study
+                </div>
+                <div class="permitted-item">
+                  <i class="fas fa-check-circle"></i> Take a second job for up to 20 hours per week
+                </div>
+                <div class="permitted-item">
+                  <i class="fas fa-check-circle"></i> Bring eligible family members as dependants
+                </div>
+              </div>
+            </div>
+
+            <!-- What is Not Permitted -->
+            <div id="not-permitted" class="content-section">
+              <h3>What is not permitted?</h3>
+              
+              <div class="permitted-grid">
+                <div class="not-permitted-item">
+                  <i class="fas fa-times-circle"></i> Access public funds
+                </div>
+                <div class="not-permitted-item">
+                  <i class="fas fa-times-circle"></i> Work in roles outside the eligible occupation list for your visa type
+                </div>
+                <div class="not-permitted-item">
+                  <i class="fas fa-times-circle"></i> Be self-employed or start a business
+                </div>
+                <div class="not-permitted-item">
+                  <i class="fas fa-times-circle"></i> Take permanent employment or use this visa to settle in the UK
+                </div>
+                <div class="not-permitted-item">
+                  <i class="fas fa-times-circle"></i> Work as a doctor or dentist in training (unless part of an approved foundation programme)
+                </div>
+              </div>
+            </div>
+
+            <!-- Types of Temporary Worker Visas -->
+            <div id="types" class="content-section">
+              <h3>Types of Temporary Worker Visas</h3>
+              <p>The Temporary Worker route includes several visa categories, and the correct one depends on the type of work you intend to do in the UK.</p>
+              
+              <div class="info-box">
+                <h5><i class="fas fa-passport me-2"></i>The Seven Temporary Worker Visa Types:</h5>
+                <ul>
+                  <li>Creative Worker Visa</li>
+                  <li>Government Authorised Exchange Visa</li>
+                  <li>International Agreement Worker Visa</li>
+                  <li>Religious Worker Visa</li>
+                  <li>Charity Worker Visa</li>
+                  <li>Seasonal Worker Visa</li>
+                  <li>Youth Mobility Visa</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Creative Worker Visa -->
+            <div id="creative" class="content-section">
+              <h3>Creative Worker Visa</h3>
+              
+              <div class="visa-types-grid">
+                <div class="visa-type-card">
+                  <h5><i class="fas fa-paint-brush"></i>Creative Worker Visa</h5>
+                  <p>This visa is for individuals offered work in the UK's creative industries by a licensed sponsor. Applicants must make a unique contribution to the sector and meet the minimum pay requirements set by bodies such as Equity, PACT, or BECTU.</p>
+                  <div class="visa-duration">
+                    <i class="fas fa-calendar me-1"></i> Up to 12 months
+                  </div>
+                </div>
+              </div>
+              
+              <div class="info-box">
+                <p><strong>Duration:</strong> Creative Workers can stay in the UK for up to 12 months or for the duration stated on their Certificate of Sponsorship plus up to 28 days, whichever is shorter.</p>
+              </div>
+            </div>
+
+            <!-- Government Authorised Exchange Visa -->
+            <div id="government" class="content-section">
+              <h3>Government Authorised Exchange Visa</h3>
+              
+              <div class="visa-types-grid">
+                <div class="visa-type-card">
+                  <h5><i class="fas fa-handshake"></i>Government Authorised Exchange Visa</h5>
+                  <p>This route is for individuals coming to the UK under approved exchange schemes to share skills, knowledge, and best practices while experiencing UK culture and society.</p>
+                  <div class="visa-duration">
+                    <i class="fas fa-calendar me-1"></i> 12 or 24 months
+                  </div>
+                </div>
+              </div>
+              
+              <div class="highlight-box">
+                <h5><i class="fas fa-check-circle me-2"></i>You may qualify if you are coming to the UK for:</h5>
+                <ul>
+                  <li>Work experience or training</li>
+                  <li>An Overseas Government Language Programme</li>
+                  <li>Research or a fellowship under an approved exchange scheme</li>
+                </ul>
+              </div>
+              
+              <p>You must be sponsored by a licensed UK organisation, and your work or research must align with your sponsor's activities. Depending on the scheme, this visa allows a stay of 12 or 24 months.</p>
+            </div>
+
+            <!-- International Agreement Worker Visa -->
+            <div id="international" class="content-section">
+              <h3>International Agreement Worker Visa</h3>
+              
+              <div class="visa-types-grid">
+                <div class="visa-type-card">
+                  <h5><i class="fas fa-globe"></i>International Agreement Worker Visa</h5>
+                  <p>This visa applies to individuals whose work in the UK is governed by international law. This includes working for foreign governments, international organisations, or providing services under specific international agreements.</p>
+                  <div class="visa-duration">
+                    <i class="fas fa-calendar me-1"></i> 6-24 months
+                  </div>
+                </div>
+              </div>
+              
+              <div class="info-box">
+                <h5><i class="fas fa-balance-scale me-2"></i>You may be eligible if:</h5>
+                <ul>
+                  <li>Your role is covered by GATS or similar trade agreements</li>
+                  <li>You are working for an overseas government or international organisation</li>
+                  <li>You are employed as a private servant in a diplomatic or international household</li>
+                </ul>
+              </div>
+              
+              <p>Length of stay varies by role. Those working for a foreign government or in a diplomatic household may stay up to 2 years. Contractual service suppliers may stay for 6 months in any 12-month period, or longer if covered by specific UK-EU or UK-Switzerland agreements.</p>
+            </div>
+
+            <!-- Charity Worker Visa -->
+            <div id="charity" class="content-section">
+              <h3>Charity Worker Visa</h3>
+              
+              <div class="visa-types-grid">
+                <div class="visa-type-card">
+                  <h5><i class="fas fa-hands-helping"></i>Charity Worker Visa</h5>
+                  <p>This visa is for overseas nationals undertaking unpaid, temporary voluntary work for a registered UK charity.</p>
+                  <div class="visa-duration">
+                    <i class="fas fa-calendar me-1"></i> Up to 12 months
+                  </div>
+                </div>
+              </div>
+              
+              <p>The maximum stay permitted is 12 months. This visa is specifically for unpaid voluntary work with registered charities.</p>
+            </div>
+
+            <!-- Religious Worker Visa -->
+            <div id="religious" class="content-section">
+              <h3>Religious Worker Visa</h3>
+              
+              <div class="visa-types-grid">
+                <div class="visa-type-card">
+                  <h5><i class="fas fa-pray"></i>Religious Worker Visa</h5>
+                  <p>This route is for individuals coming to the UK to carry out religious duties such as preaching, pastoral work, or work within a religious order.</p>
+                  <div class="visa-duration">
+                    <i class="fas fa-calendar me-1"></i> Up to 24 months
+                  </div>
+                </div>
+              </div>
+              
+              <div class="info-box">
+                <p><strong>Important:</strong> Unlike the Charity Worker Visa, holders of this visa may be paid. The visa is valid for up to 24 months.</p>
+              </div>
+            </div>
+
+            <!-- Seasonal Worker Visa -->
+            <div id="seasonal" class="content-section">
+              <h3>Seasonal Worker Visa</h3>
+              
+              <div class="visa-types-grid">
+                <div class="visa-type-card">
+                  <h5><i class="fas fa-tractor"></i>Seasonal Worker Visa</h5>
+                  <p>The Seasonal Worker Visa allows foreign nationals to work in UK agriculture for up to 6 months. This includes farm work such as harvesting or packaging produce.</p>
+                  <div class="visa-duration">
+                    <i class="fas fa-calendar me-1"></i> Up to 6 months
+                  </div>
+                </div>
+              </div>
+              
+              <div class="warning-box">
+                <h5><i class="fas fa-exclamation-triangle me-2"></i>Restrictions:</h5>
+                <ul>
+                  <li>Seasonal Workers may only work in the role stated on their Certificate of Sponsorship</li>
+                  <li>Cannot take a second job or permanent employment</li>
+                  <li>Applicants under this route are exempt from paying the immigration health surcharge</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Youth Mobility Scheme -->
+            <div id="youth" class="content-section">
+              <h3>Youth Mobility Scheme</h3>
+              
+              <div class="visa-types-grid">
+                <div class="visa-type-card">
+                  <h5><i class="fas fa-user-friends"></i>Youth Mobility Visa</h5>
+                  <p>The Youth Mobility Visa is available to young people from specific countries and territories, including Australia, Canada, Japan, New Zealand, Hong Kong, South Korea, Taiwan, and others.</p>
+                  <div class="visa-duration">
+                    <i class="fas fa-calendar me-1"></i> Up to 2 years
+                  </div>
+                </div>
+              </div>
+              
+              <div class="highlight-box">
+                <h5><i class="fas fa-star me-2"></i>Key Features:</h5>
+                <ul>
+                  <li>Allows a stay of up to 2 years and cannot be extended</li>
+                  <li>Applicants do not need a job offer</li>
+                  <li>Home country acts as the sponsor</li>
+                  <li>Dependants are not permitted under this route</li>
+                  <li>Successful applicants receive a reduced immigration health surcharge</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Eligibility Requirements -->
+            <div id="eligibility" class="content-section">
+              <h3>Eligibility requirements for UK Temporary Worker Visas</h3>
+              <p>Eligibility depends on the specific Temporary Worker category. In most cases, you must have a licensed UK sponsor who issues a Certificate of Sponsorship.</p>
+              
+              <div class="info-box">
+                <h5><i class="fas fa-pound-sign me-2"></i>Financial Requirement:</h5>
+                <p>You must also show you can support yourself financially, usually by holding at least <strong>£1,270</strong> in your bank account for 28 consecutive days within 31 days of applying.</p>
+              </div>
+              
+              <div class="warning-box">
+                <p><strong>Note:</strong> While most routes require a job offer and sponsorship, applicants under the Youth Mobility Scheme from eligible countries can apply without one.</p>
+              </div>
+            </div>
+
+            <!-- How to Apply -->
+            <div id="how-to-apply" class="content-section">
+              <h3>How to apply for a Temporary Worker Visa</h3>
+              <p>Applications must be made online via the relevant Temporary Worker Visa form on the gov.uk website.</p>
+              
+              <div class="process-step">
+                <div class="step-number">1</div>
+                <h4>Gather Required Documents</h4>
+                <p>You will typically need:</p>
+                <ul class="requirement-list">
+                  <li><i class="fas fa-file-alt"></i> Your Certificate of Sponsorship reference number</li>
+                  <li><i class="fas fa-passport"></i> A valid passport or acceptable ID</li>
+                  <li><i class="fas fa-coins"></i> Proof you meet the financial requirement, such as bank statements</li>
+                  <li><i class="fas fa-stethoscope"></i> Tuberculosis test results, if required</li>
+                  <li><i class="fas fa-credit-card"></i> Payment of the visa fee and immigration health surcharge (if applicable)</li>
+                </ul>
+                <p>Additional documents may be required depending on the visa category. If bringing dependants, you must provide proof of your relationship.</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">2</div>
+                <h4>Submit Online Application</h4>
+                <p>Complete the online application form on the UK government website with all required information.</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">3</div>
+                <h4>Attend Biometric Appointment</h4>
+                <p>You will also need to attend a visa application centre to submit your biometric information, including fingerprints and a photograph.</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">4</div>
+                <h4>Await Decision</h4>
+                <p>Processing times vary by visa type and application location. Most decisions are made within 3-8 weeks.</p>
+              </div>
+              
+              <div class="process-step">
+                <div class="step-number">5</div>
+                <h4>Travel to the UK</h4>
+                <p>Once approved, you can travel to the UK within the validity period stated on your visa.</p>
+              </div>
+            </div>
+
+            <!-- How We Can Help -->
+            <div id="how-we-help" class="content-section">
+              <h3>How Our Immigration Experts Can Help</h3>
+              <p>The Temporary Worker Visa process involves multiple categories with different requirements. Our experienced immigration team provides comprehensive support throughout your application journey.</p>
+              
+              <div class="visa-types-grid">
+                <div class="visa-type-card">
+                  <h5><i class="fas fa-clipboard-check"></i>Visa Type Assessment</h5>
+                  <p>Help you determine which Temporary Worker Visa category best suits your situation and qualifications</p>
+                </div>
+                
+                <div class="visa-type-card">
+                  <h5><i class="fas fa-file-contract"></i>Sponsor Guidance</h5>
+                  <p>Assistance with finding licensed sponsors and obtaining Certificates of Sponsorship</p>
+                </div>
+                
+                <div class="visa-type-card">
+                  <h5><i class="fas fa-folder-open"></i>Document Preparation</h5>
+                  <p>Guidance on gathering and organizing all required evidence for your specific visa type</p>
+                </div>
+                
+                <div class="visa-type-card">
+                  <h5><i class="fas fa-desktop"></i>Application Management</h5>
+                  <p>Complete handling of your online application and biometric appointment scheduling</p>
+                </div>
+              </div>
+              
+              <div class="success-box">
+                <h5><i class="fas fa-medal me-2"></i>Why Choose Us:</h5>
+                <p>With extensive experience in all Temporary Worker Visa categories, we understand the specific requirements of each route and can help ensure your application meets all Home Office criteria. We provide personalized guidance to match your qualifications with the most suitable visa option.</p>
+              </div>
+              
+              <div class="highlight-box">
+                <h5><i class="fas fa-hands-helping me-2"></i>Specialized Support For:</h5>
+                <ul>
+                  <li><strong>Creative Professionals:</strong> Assistance with creative industry requirements and sponsorship</li>
+                  <li><strong>Exchange Participants:</strong> Guidance on government-approved exchange programs</li>
+                  <li><strong>Seasonal Workers:</strong> Support with agricultural sponsorship and seasonal work requirements</li>
+                  <li><strong>Youth Mobility Applicants:</strong> Help with eligibility assessment and application process</li>
+                  <li><strong>Charity & Religious Workers:</strong> Assistance with charity and religious organization sponsorship</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+              <h3 class="mb-3">Ready to Start Your Temporary Work in the UK?</h3>
+              <p class="lead mb-4">Let our expert team guide you through the Temporary Worker Visa process and help you choose the right category for your short-term work plans in the UK.</p>
+              <a href="../index.html#inquiry" class="btn btn-primary btn-lg">
+                <i class="fas fa-clock me-2"></i>Start Your Temporary Worker Application
+              </a>
+              <p class="mt-3 text-muted">Click above to be redirected to our main inquiry form</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h5>One Solution Visa™</h5>
+          <p>Your trusted partner for all visa and immigration services. We make your travel dreams come true with professional expertise and personalized service.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/visaconnect" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="../index.html#services" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="../index.html#contact" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="../index.html#inquiry" class="text-light text-decoration-none">Inquiry</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Temporary Work Visas</h6>
+          <ul class="list-unstyled">
+            <li><a href="temporary.html" class="text-light text-decoration-none fw-bold">Temporary Worker Visa</a></li>
+            <li><a href="specialist.html" class="text-light text-decoration-none">Senior/Specialist Worker Visa</a></li>
+            <li><a href="skilledworker.html" class="text-light text-decoration-none">UK Skilled Worker Visa</a></li>
+            <li><a href="immigration.html" class="text-light text-decoration-none">Work Visa Services</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Contact Info</h6>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt me-2"></i>A. Gabuya Street, Cogon Pardo, Cebu City, Philippines</li>
+            <li><i class="fas fa-phone me-2"></i>+63 968 707 5241</li>
+            <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
+            <li><i class="fas fa-clock me-2"></i>Mon-Fri: 8AM-6PM</li>
+            <li><i class="fas fa-building me-2"></i>Sat: 9AM-3PM (Business Hours)</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0">&copy; 2025 One Solution Visa. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0">
+            <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+            <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Navigation Scripts
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const isClickInside = navbarToggler.contains(event.target) || 
+                              navbarCollapse.contains(event.target);
+        
+        if (!isClickInside && navbarCollapse.classList.contains('show')) {
+          navbarToggler.click();
+        }
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      
+      // Add loading animation on page load
+      window.addEventListener('load', () => {
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease-in-out';
+        setTimeout(() => {
+          document.body.style.opacity = '1';
+        }, 100);
+      });
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Highlight active nav link
+      const sections = document.querySelectorAll('.content-section');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      function setActiveNavLink() {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (window.scrollY >= sectionTop - 150) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', setActiveNavLink);
+      setActiveNavLink();
+    });
+  </script>
+</body>
+</html>

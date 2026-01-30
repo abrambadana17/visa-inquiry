@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-  <title>Business Visa & Immigration Services - One Solution Visa</title>
+  <title>Business Visa Services | One Solution Visa</title>
   <link rel="icon" type="image/png" href="../images/logo.png">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -81,28 +81,31 @@
       scroll-margin-top: 80px;
     }
 
-    /* Business specific styles */
-    .business-hero {
-  background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), 
-              url('../images/business.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  color: white;
-  padding: 120px 0 80px;
-  margin-bottom: 40px;
-  text-align: center;
-  position: relative;
-}
+    /* Hero section with background image */
+    .service-hero {
+      background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.75)), 
+                  url('../images/business.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 120px 0 80px;
+      margin-top: 56px;
+      text-align: center;
+      position: relative;
+      min-height: calc(100vh - 56px);
+      display: flex;
+      align-items: center;
+    }
     
-    .business-hero h1 {
+    .service-hero h1 {
       font-size: 2.8rem;
       font-weight: bold;
       margin-bottom: 1rem;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     }
     
-    .business-hero .lead {
+    .service-hero .lead {
       font-size: 1.3rem;
       opacity: 0.95;
       max-width: 800px;
@@ -110,215 +113,79 @@
       text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
     
-    .service-badge {
-      display: inline-block;
-      background: var(--accent-color);
-      color: white;
-      padding: 8px 20px;
-      border-radius: 30px;
-      font-weight: 600;
-      margin-bottom: 20px;
-      font-size: 0.9rem;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    }
-    
-    .content-section {
-      background: white;
-      border-radius: 12px;
-      padding: 2.5rem;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
-      border-top: 4px solid var(--accent-color);
-    }
-    
-    .content-section h2 {
-      color: var(--secondary-color);
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 2px solid var(--accent-color);
-    }
-    
-    .content-section h3 {
-      color: var(--secondary-color);
-      margin: 2rem 0 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid #eee;
-    }
-    
-    .content-section h4 {
-      color: var(--secondary-color);
-      margin: 1.5rem 0 1rem;
-    }
-    
-    .content-section p {
-      margin-bottom: 1rem;
-      color: #444;
-      line-height: 1.7;
-    }
-    
-    .content-section ul, .content-section ol {
-      margin-bottom: 1.5rem;
-      padding-left: 1.5rem;
-    }
-    
-    .content-section li {
-      margin-bottom: 0.8rem;
-      color: #444;
-      line-height: 1.6;
-    }
-    
-    .highlight-box {
-      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-      border-left: 4px solid var(--accent-color);
-      padding: 1.5rem;
-      margin: 2rem 0;
-      border-radius: 0 8px 8px 0;
-    }
-    
-    .visa-type-card {
-      background: white;
-      border-radius: 10px;
-      padding: 2rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      height: 100%;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border-top: 3px solid var(--accent-color);
-    }
-    
-    .visa-type-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-    
-    .visa-icon {
-      font-size: 2.5rem;
-      color: var(--accent-color);
-      margin-bottom: 1rem;
-      background: var(--light-bg);
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
+    /* Business-specific styles - Matching student.html sizing */
+    .business-options {
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       justify-content: center;
-      margin: 0 auto 1.5rem;
-    }
-    
-    .process-step {
-      position: relative;
-      padding-left: 40px;
-      margin-bottom: 2.5rem;
-    }
-    
-    .process-step .step-number {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 30px;
-      height: 30px;
-      background: var(--accent-color);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    }
-    
-    .requirement-list li {
-      padding: 10px 0;
-      border-bottom: 1px solid #eee;
-      display: flex;
-      align-items: flex-start;
-    }
-    
-    .requirement-list li:last-child {
-      border-bottom: none;
-    }
-    
-    .requirement-list i {
-      color: var(--accent-color);
-      margin-right: 10px;
-      font-size: 1.2rem;
-      flex-shrink: 0;
-      margin-top: 3px;
-    }
-    
-    .cta-business {
-      background: linear-gradient(135deg, var(--accent-color) 0%, #2980b9 100%);
-      color: white;
-      border-radius: 15px;
-      padding: 3rem;
+      gap: 1.5rem;
       margin-top: 3rem;
-      text-align: center;
     }
-
-    .content-nav {
-  background: white;
-  border-radius: 10px;
-  padding: 2rem;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  margin-bottom: 2rem;
-  position: sticky;
-  top: 100px;
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-/* Custom scrollbar for content-nav */
-.content-nav::-webkit-scrollbar {
-  width: 8px;
-}
-
-.content-nav::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-.content-nav::-webkit-scrollbar-thumb {
-  background: var(--accent-color);
-  border-radius: 10px;
-}
-
-.content-nav::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary-color);
-}
     
-    .content-nav h3 {
+    .business-option-btn {
+      background: rgba(255, 255, 255, 0.9);
       color: var(--secondary-color);
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 2px solid var(--accent-color);
-    }
-    
-    .nav-links {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    .nav-links li {
-      margin-bottom: 0.75rem;
-    }
-    
-    .nav-links a {
-      color: var(--secondary-color);
-      text-decoration: none;
-      padding: 8px 15px;
-      border-radius: 5px;
-      display: block;
+      border: 2px solid transparent;
+      padding: 1.2rem 2rem;
+      border-radius: 12px;
+      font-weight: 600;
       transition: all 0.3s ease;
-      border-left: 3px solid transparent;
-      font-size: 0.95rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 220px;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      background: linear-gradient(135deg, #4A90E2 0%, #2c3e50 100%);
+      color: white;
+      /* Match student.html sizing */
+      min-height: 180px;
     }
     
-    .nav-links a:hover {
-      background: var(--light-bg);
-      border-left: 3px solid var(--accent-color);
-      transform: translateX(5px);
+    .business-option-btn:hover {
+      background: white;
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+      border-color: white;
+      color: var(--secondary-color);
     }
-
+    
+    .business-option-btn i {
+      margin-bottom: 15px;
+      font-size: 2.5rem;
+      display: block;
+    }
+    
+    .business-option-btn .btn-text {
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-align: center;
+      line-height: 1.3;
+    }
+    
+    .business-option-btn .btn-subtext {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      margin-top: 5px;
+      font-weight: 400;
+      text-align: center;
+      line-height: 1.2;
+    }
+    
+    /* Option-specific colors */
+    .business-option-btn.self-sponsorship:hover {
+      border-color: #3498db;
+    }
+    
+    .business-option-btn.innovator:hover {
+      border-color: #2c3e50;
+    }
+    
+    .business-option-btn.global-talent:hover {
+      border-color: #9b59b6;
+    }
+   
     .footer {
       background: var(--secondary-color);
       color: #fff;
@@ -394,13 +261,14 @@
         background-color: rgba(255, 255, 255, 0.1);
       }
       
-      .content-nav {
-        position: static;
-        margin-bottom: 2rem;
+      .business-options {
+        flex-direction: column;
+        align-items: center;
       }
       
-      .content-section {
-        padding: 2rem;
+      .business-option-btn {
+        width: 100%;
+        max-width: 300px;
       }
     }
 
@@ -425,36 +293,37 @@
         margin-right: 6px;
       }
       
-      .business-hero {
+      .service-hero {
         padding: 100px 0 60px;
         background-attachment: scroll;
+        min-height: calc(100vh - 56px);
       }
       
-      .business-hero h1 {
+      .service-hero h1 {
         font-size: 2rem;
       }
       
-      .business-hero .lead {
+      .service-hero .lead {
         font-size: 1.1rem;
       }
       
-      .service-badge {
-        font-size: 0.8rem;
-        padding: 6px 15px;
+      .business-option-btn {
+        padding: 1rem 1.5rem;
+        min-width: 180px;
+        min-height: 160px;
       }
       
-      .visa-icon {
-        width: 60px;
-        height: 60px;
+      .business-option-btn i {
         font-size: 2rem;
+        margin-bottom: 10px;
       }
       
-      .cta-business {
-        padding: 2rem 1.5rem;
+      .business-option-btn .btn-text {
+        font-size: 1.1rem;
       }
       
-      .content-section, .content-nav {
-        padding: 1.5rem;
+      .business-option-btn .btn-subtext {
+        font-size: 0.85rem;
       }
 
       .footer {
@@ -495,12 +364,14 @@
         font-size: 1rem;
       }
       
-      .business-hero h1 {
+      .service-hero h1 {
         font-size: 1.8rem;
       }
       
-      .content-section {
-        padding: 1.25rem;
+      .business-option-btn {
+        min-width: 160px;
+        padding: 0.9rem 1.2rem;
+        min-height: 150px;
       }
     }
 
@@ -539,447 +410,32 @@
     </div>
   </nav>
 
-  <!-- Page Content -->
-  <main style="margin-top: 80px; min-height: calc(100vh - 300px);">
+  <!-- Business Visa Content -->
+  <main>
     <!-- Hero Section -->
-    <section class="business-hero">
+    <section class="service-hero">
       <div class="container">
-        
-        <h1>Business Visa</h1>
-        <p class="lead">Expand your global footprint with our comprehensive business and work visa solutions. From UK self-sponsorship to Innovator Founder visas.</p>
-        <a href="../index.html#inquiry" class="btn btn-light btn-lg mt-3">
-          <i class="fas fa-briefcase me-2"></i>Start Business Application
-        </a>
-      </div>
-    </section>
-
-    <!-- Content Section -->
-    <section class="section-padding">
-      <div class="container">
-        <div class="row">
-          <!-- Navigation Sidebar -->
-          <div class="col-lg-4 mb-4">
-            <div class="content-nav">
-              <h3><i class="fas fa-list-alt me-2"></i>Contents</h3>
-              <ul class="nav-links">
-                <li><a href="#skilled-worker"><b>UK Self-Sponsorship Skilled Worker Visa</b></a></li>
-                <li><a href="#requirements">Requirements for Self-Sponsorship</a></li>
-                <li><a href="#application-stages">How to Apply: 4 Key Stages</a></li>
-                <li><a href="#stage1">Stage 1: Establishing a UK Company</a></li>
-                <li><a href="#stage2">Stage 2: Skilled Worker Sponsor Licence</a></li>
-                <li><a href="#stage3">Stage 3: Certificate of Sponsorship</a></li>
-                <li><a href="#stage4">Stage 4: Skilled Worker Visa Application</a></li>
-                <li><a href="#how-we-help-skilled">How We Can Help - Skilled Worker</a></li>
-                <li><a href="#innovator-founder"><b>UK Innovator Founder Visa</b></a></li>
-                <li><a href="#innovator-requirements">Innovator Founder Requirements</a></li>
-                <li><a href="#who-suitable">Who Is This Visa Suitable For?</a></li>
-                <li><a href="#investment-funds">Investment Funds Requirement</a></li>
-                <li><a href="#endorsement-criteria">Endorsement Criteria</a></li>
-                <li><a href="#endorsing-bodies">Approved Endorsing Bodies</a></li>
-                <li><a href="#english-financial">English & Financial Requirements</a></li>
-                <li><a href="#application-details">Application Details</a></li>
-                <li><a href="#ilr-innovator">ILR as Innovator Founder</a></li>
-                <li><a href="#endorsement-service">Our Endorsement Service</a></li>
-                <li><a href="#how-we-help-innovator">How We Can Help - Innovator</a></li>
-              </ul>
-            </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h1>Business Visa Services</h1>
+            <p class="lead">Expand your global footprint with our comprehensive business and work visa solutions. From UK self-sponsorship to Innovator Founder and Global Talent visas.</p>
             
-            
-          </div>
-
-          <!-- Main Content -->
-          <div class="col-lg-8">
-            <!-- Skilled Worker Visa Section -->
-            <div id="skilled-worker" class="content-section">
-              <h2>UK Self-Sponsorship Skilled Worker Visa</h2>
-              <p>If you are seeking to establish a new business in the UK, or you already own a UK-registered company, you may be eligible to apply for a UK Skilled Worker visa through <strong>self-sponsorship</strong>. This route allows you to be sponsored by your own UK company, provided that the business has obtained a valid Skilled Worker sponsor licence.</p>
-              <p>The self-sponsored Skilled Worker route can lead to <strong>settlement in the UK</strong>, and successful applicants may be joined by dependent partners and children.</p>
-            </div>
-
-            <!-- Requirements Section -->
-            <div id="requirements" class="content-section">
-              <h3>Requirements for a UK Skilled Worker Visa via Self-Sponsorship</h3>
-              <p>To sponsor yourself under the Skilled Worker route, you must satisfy UK Visas and Immigration that:</p>
-              <ul class="requirement-list">
-                <li><i class="fas fa-check-circle"></i> You are aged 18 or over;</li>
-                <li><i class="fas fa-check-circle"></i> There is a genuine and active UK company operating lawfully;</li>
-                <li><i class="fas fa-check-circle"></i> Your UK company holds a valid Skilled Worker sponsor licence;</li>
-                <li><i class="fas fa-check-circle"></i> Your company has assigned you a valid Certificate of Sponsorship (CoS);</li>
-                <li><i class="fas fa-check-circle"></i> The role offered is a genuine vacancy;</li>
-                <li><i class="fas fa-check-circle"></i> The role meets the required skill level;</li>
-                <li><i class="fas fa-check-circle"></i> You will be paid a salary that meets or exceeds both the general salary threshold and the applicable SOC 2020 "going rate";</li>
-                <li><i class="fas fa-check-circle"></i> Any required Immigration Skills Charge has been paid;</li>
-                <li><i class="fas fa-check-circle"></i> You meet the English language requirement at CEFR Level B1 or above;</li>
-                <li><i class="fas fa-check-circle"></i> You have sufficient funds to support yourself without recourse to public funds;</li>
-                <li><i class="fas fa-check-circle"></i> You have provided a criminal record certificate, where required; and</li>
-                <li><i class="fas fa-check-circle"></i> You have provided a valid TB certificate, where required.</li>
-              </ul>
-              <p>The precise requirements will vary depending on your individual circumstances. Specialist legal advice is strongly recommended.</p>
-            </div>
-
-            <!-- Application Stages -->
-            <div id="application-stages" class="content-section">
-              <h3>How to Apply for a Self-Sponsorship UK Skilled Worker Visa</h3>
-              <p>The self-sponsorship process involves four key stages:</p>
-              <div class="process-step">
-                <div class="step-number">1</div>
-                <h4>Establishing a UK company</h4>
-                <p>Register or own a UK-registered business entity.</p>
-              </div>
-              <div class="process-step">
-                <div class="step-number">2</div>
-                <h4>Applying for a Skilled Worker sponsor licence</h4>
-                <p>Obtain sponsorship licence for your UK company.</p>
-              </div>
-              <div class="process-step">
-                <div class="step-number">3</div>
-                <h4>Assigning a Certificate of Sponsorship</h4>
-                <p>Your company issues you a valid CoS.</p>
-              </div>
-              <div class="process-step">
-                <div class="step-number">4</div>
-                <h4>Applying for the Skilled Worker visa</h4>
-                <p>Submit your visa application with supporting documents.</p>
-              </div>
-            </div>
-
-            <!-- Stage 1 -->
-            <div id="stage1" class="content-section">
-              <h3>Stage 1: Establishing a UK Company</h3>
-              <p>You must either register a new company in the UK or already own an existing UK-registered business.</p>
-              
-              <h4>Registering a UK Company From Overseas</h4>
-              <p>It is possible to register a UK company from outside the UK. Directors are not required to be UK residents or British citizens. However, all directors must meet statutory obligations, and non-resident directors may need to appoint a UK-based representative if they cannot fulfil duties in person.</p>
-              <p>Applicants unfamiliar with UK corporate law may wish to instruct a professional company formation agent. Compliance with overseas legal obligations should also be considered.</p>
-            </div>
-
-            <!-- Stage 2 -->
-            <div id="stage2" class="content-section">
-              <h3>Stage 2: Applying for a Skilled Worker Sponsor Licence</h3>
-              <p>Once the UK company is established, it must apply for a Skilled Worker sponsor licence. The Home Office must be satisfied that:</p>
-              <ul class="requirement-list">
-                <li><i class="fas fa-building"></i> The business is genuine and operating lawfully in the UK;</li>
-                <li><i class="fas fa-tasks"></i> The business is capable of fulfilling sponsor duties; and</li>
-                <li><i class="fas fa-briefcase"></i> The role offered meets the Skilled Worker skill and salary requirements.</li>
-              </ul>
-              
-              <h4>Evidence of a Genuine UK Business</h4>
-              <p>The Home Office requires at least four documents listed in Appendix A of the sponsor guidance. For start-up businesses trading for less than 18 months, this typically includes:</p>
-              
-              <div class="highlight-box">
-                <h5><i class="fas fa-star text-warning me-2"></i>Mandatory:</h5>
-                <ul>
-                  <li>Evidence of a UK corporate bank account</li>
-                </ul>
+            <div class="business-options">
+              <a href="selfsponsorship.html" class="business-option-btn self-sponsorship">
+                <i class="fas fa-user-tie"></i>
+                <span class="btn-text">UK Self-Sponsorship<br>Skilled Worker Visa</span>
                 
-                <h5 class="mt-3"><i class="fas fa-plus-circle text-success me-2"></i>Plus three of the following:</h5>
-                <ul>
-                  <li>PAYE and National Insurance registration</li>
-                  <li>VAT registration</li>
-                  <li>Employer's liability insurance (minimum £5 million)</li>
-                  <li>Lease or ownership of business premises</li>
-                  <li>Latest annual accounts</li>
-                </ul>
-              </div>
-              
-              <p>A UK business does not need to be actively trading at the time of application, but evidence such as a business plan, investment funds, or early-stage commercial activity can significantly strengthen an application.</p>
-              
-              <h4>Sponsor Duties and HR Systems</h4>
-              <p>Licensed sponsors must comply with strict record-keeping, reporting, and compliance obligations. The Home Office will assess whether the business has appropriate HR systems in place and may conduct compliance visits.</p>
-              <p>As part of sponsor licence support, professional HR policies and compliance frameworks are strongly advised.</p>
-              
-              <h4>Genuine Employment, Skill Level, and Salary Requirements</h4>
-              <p>The Home Office will assess whether:</p>
-              <ul>
-                <li>The role meets the Skilled Worker skill threshold (normally RQF Level 3 or above);</li>
-                <li>The salary meets or exceeds the general threshold and the SOC 2020 going rate;</li>
-                <li>The role is genuine and not created solely for immigration purposes;</li>
-                <li>There is a genuine employer-employee relationship; and</li>
-                <li>The worker will not be supplied to a third party for routine work.</li>
-              </ul>
-              <p>Supporting information must include organisational charts, job descriptions, salary details, and recruitment justification where applicable.</p>
-              
-              <h4>Appointing Key Personnel</h4>
-              <p>Before submitting a sponsor licence application, the business must appoint:</p>
-              <ul>
-                <li>An <strong>Authorising Officer</strong></li>
-                <li>A <strong>Key Contact</strong></li>
-                <li>At least one <strong>Level 1 User</strong></li>
-              </ul>
-              <p>For self-sponsorship cases, key personnel must be UK-based, and the Level 1 User must be British or settled. In practice, this requires a trusted UK-based individual with sufficient oversight of the business.</p>
-            </div>
-
-            <!-- Stage 3 -->
-            <div id="stage3" class="content-section">
-              <h3>Stage 3: Assigning a Certificate of Sponsorship</h3>
-              <p>Once licensed, the company must assign a <strong>Defined Certificate of Sponsorship</strong>. The CoS must:</p>
-              <ul class="requirement-list">
-                <li><i class="fas fa-calendar-check"></i> Be issued no more than three months before the visa application;</li>
-                <li><i class="fas fa-file-invoice"></i> Include accurate job, salary, and start-date details; and</li>
-                <li><i class="fas fa-ban"></i> Confirm that it has not been previously used or withdrawn.</li>
-              </ul>
-            </div>
-
-            <!-- Stage 4 -->
-            <div id="stage4" class="content-section">
-              <h3>Stage 4: Applying for the Skilled Worker Visa</h3>
-              <p>Following assignment of the CoS, the visa application must confirm compliance with all Skilled Worker requirements, including skill level, salary, English language ability, maintenance funds, and any criminal record or TB certification.</p>
-              <p>Applications may be submitted up to three months before the intended start date. Processing times are typically three weeks overseas and eight weeks for in-country applications, subject to priority services.</p>
-            </div>
-
-           
-
-            <!-- How We Help - Skilled Worker -->
-            <div id="how-we-help-skilled" class="content-section">
-              <h3>How Our Immigration Experts Can Help</h3>
-              <p>Our business immigration experts regularly advise entrepreneurs and company owners on securing sponsor licences and successfully sponsoring themselves under the Skilled Worker route.</p>
-              <p>We provide end-to-end support, including eligibility assessments, sponsor licence preparation, compliance advice, and visa application management. Our approach is proactive, commercially aware, and tailored to the specific needs of business clients.</p>
-            </div>
-
-            <!-- Innovator Founder Visa -->
-            <div id="innovator-founder" class="content-section">
-              <h2>UK Innovator Founder Visa</h2>
-              <p>The <strong>UK Innovator Founder Visa</strong> is intended for start-up entrepreneurs and experienced businesspersons who wish to establish a business in the United Kingdom. Applicants are not required to demonstrate a specific level of investment funds; however, they must present a business concept that is <strong>innovative, viable, and scalable</strong>, supported by a comprehensive business plan, and endorsed by an approved endorsing body.</p>
-              <p>Applicants must demonstrate that they have either generated the business idea themselves or made a significant contribution to it. Innovator Founder applicants must also intend to play a central role in the day-to-day management and development of the business.</p>
-              <p>The Innovator Founder Visa is valid for <strong>three years</strong> and can lead directly to <strong>indefinite leave to remain</strong> (settlement) in the United Kingdom at the end of the three-year period. Applicants may bring their partner and any children under the age of 18 to the UK.</p>
-              <p>If you are interested in establishing a new business in the UK, or you already own a UK business, you may also be eligible for a <strong>Skilled Worker visa through self-sponsorship</strong>, meaning you may be sponsored by your own UK company.</p>
-            </div>
-
-            <!-- Innovator Requirements -->
-            <div id="innovator-requirements" class="content-section">
-              <h3>Requirements for the UK Innovator Founder Visa</h3>
-              <p>To qualify for a UK Innovator Founder Visa, you must satisfy UK Visas and Immigration that:</p>
-              <ul class="requirement-list">
-                <li><i class="fas fa-user"></i> You are at least 18 years old;</li>
-                <li><i class="fas fa-file-contract"></i> You have obtained an endorsement letter from an approved UK endorsing body confirming that:
-                  <ul style="padding-left: 20px; margin-top: 10px;">
-                    <li>you are a fit and proper person to receive endorsement under the Innovator Founder route;</li>
-                    <li>the endorsing body has no concerns regarding the source of any funds invested into your business;</li>
-                    <li>the endorsing body has no reason to believe that you or your business may be the beneficiary of illicit or unexplained wealth;</li>
-                    <li>you possess a business plan and have either generated or significantly contributed to the ideas in that business plan;</li>
-                    <li>you will have a day-to-day role in executing the business plan;</li>
-                    <li>you will have at least two contact point meetings with the endorsing body at regular intervals;</li>
-                    <li>you are either the sole founder or an instrumental member of the founding team;</li>
-                    <li>your business is innovative, viable, and scalable;</li>
-                  </ul>
-                </li>
-                <li><i class="fas fa-calendar-alt"></i> Your endorsement letter was issued no more than three months before the date of your Innovator visa application;</li>
-                <li><i class="fas fa-language"></i> You are competent in the English language to at least CEFR Level B2, equivalent to IELTS 5.5 in reading, writing, listening, and speaking;</li>
-                <li><i class="fas fa-money-bill-wave"></i> If you are outside the UK or have been in the UK for less than 12 months, you have at least £1,270 to support yourself, plus:
-                  <ul style="padding-left: 20px; margin-top: 10px;">
-                    <li>£285 for a dependent partner</li>
-                    <li>£315 for the first child</li>
-                    <li>£200 for each additional child</li>
-                  </ul>
-                </li>
-                <li><i class="fas fa-ban"></i> Your application does not fall for refusal under the general grounds for refusal;</li>
-                <li><i class="fas fa-file-medical"></i> You have provided a TB test certificate, if required.</li>
-              </ul>
-              <p>The specific requirements you must satisfy may vary depending on the circumstances of your case. It is advisable to consult an immigration lawyer for expert advice.</p>
-            </div>
-
-            <!-- Who Suitable -->
-            <div id="who-suitable" class="content-section">
-              <h3>Who Is the UK Innovator Founder Visa Suitable For?</h3>
-              <p>The UK Innovator Founder Visa is suitable for both start-up entrepreneurs and experienced businesspersons seeking to establish a business in the UK that is innovative, viable, and scalable. In general, applicants will have a new business idea, and the business will not yet be trading. However, it is permissible for an individual to join a business after it has been registered with Companies House, provided that the business has not commenced trading.</p>
-              <p>In such cases, the Home Office will require assurance that the applicant made a significant contribution to the business plan and was not added primarily for the purpose of facilitating investment.</p>
-              <p>Innovator Founders may operate as sole founders or as part of a founding team, provided that they are instrumental members of the team. The business idea may relate to any sector, provided it is sufficiently innovative, viable, and scalable and supported by a robust business plan.</p>
-              <p>If you intend to join a business that is already trading, the <strong>Skilled Worker visa</strong> may be more appropriate. Similarly, if you are a senior manager or specialist employee of an overseas business seeking to establish a commercial presence in the UK, you may wish to consider the <strong>UK Expansion Worker visa</strong>.</p>
-            </div>
-
-            <!-- Investment Funds -->
-            <div id="investment-funds" class="content-section">
-              <h3>Investment Funds Requirement</h3>
-              <p>Innovator Founder Visa applicants are not required to show a specific investment amount. However, because the business must be <strong>viable</strong> and <strong>scalable</strong>, applicants must demonstrate access to sufficient funds to establish and grow the business.</p>
-              <p>Therefore, the investment funds requirement is flexible and can be satisfied by applicants who present a genuine innovative business proposal and evidence of adequate funding relative to the financial needs of their business.</p>
-            </div>
-
-            <!-- Endorsement Criteria -->
-            <div id="endorsement-criteria" class="content-section">
-              <h3>Endorsement Criteria</h3>
-              
-              <h4>New Business Endorsement Criteria</h4>
-              <p>To obtain endorsement from a Home Office-approved endorsing body, the following criteria must be satisfied:</p>
-              
-              <h5>General Requirements</h5>
-              <p>The endorsing body must confirm that:</p>
-              <ul>
-                <li>You are a fit and proper person to receive endorsement under the Innovator Founder route;</li>
-                <li>The endorsing body has no concerns regarding the source of any funds invested into your business;</li>
-                <li>The endorsing body has no reason to believe that you or your business may be the beneficiary of illicit or unexplained wealth.</li>
-              </ul>
-              
-              <h5>Business Plan Requirement</h5>
-              <p>To satisfy the business plan requirement, you must:</p>
-              <ul>
-                <li>Have a business plan and have either generated or significantly contributed to the ideas in that business plan;</li>
-                <li>Demonstrate that you will have a day-to-day role in executing the business plan;</li>
-                <li>Confirm that you will have at least two contact point meetings with the endorsing body at regular intervals;</li>
-                <li>Be either the sole founder or an instrumental member of the founding team.</li>
-              </ul>
-              
-              <h5>Innovation, Viability, and Scalability Requirement</h5>
-              <p>To satisfy this requirement, your business must demonstrate:</p>
-              <ul>
-                <li><strong>Innovation:</strong> A genuine, original business plan that meets new or existing market needs or creates a competitive advantage;</li>
-                <li><strong>Viability:</strong> A realistic and achievable business plan based on available resources, including the necessary skills, knowledge, experience, and market awareness to run the business successfully;</li>
-                <li><strong>Scalability:</strong> Evidence of structured planning and potential for job creation and growth into national and international markets.</li>
-              </ul>
-              
-              <h4>Same Business Endorsement Criteria</h4>
-              <p>If you are pursuing a business that was previously assessed by a Home Office-approved endorsing body under the Innovator, Innovator Founder, Start-up, or Tier 1 (Graduate Entrepreneur) routes, you may apply for further endorsement as an Innovator Founder. This may be appropriate if you are switching into the Innovator Founder route or applying for an extension.</p>
-              <p>To qualify, you must demonstrate that:</p>
-              <ul>
-                <li>Your business is registered with Companies House and you are listed as a director or member;</li>
-                <li>Your business is active, trading, and sustainable;</li>
-                <li>You have made significant progress against your business plan;</li>
-                <li>You are active in the day-to-day management and development of the business;</li>
-                <li>You have attended at least two contact point meetings with your endorsing body during your previous period of permission (or similar checkpoints with a legacy endorsing body);</li>
-                <li>You will continue to attend at least two contact point meetings during your period of permission.</li>
-              </ul>
-            </div>
-
-            <!-- Endorsing Bodies -->
-            <div id="endorsing-bodies" class="content-section">
-              <h3>List of Approved UK Innovator Founder Visa Endorsing Bodies</h3>
-              <p>The following bodies are approved by the Home Office to issue endorsement letters under the Innovator Founder route:</p>
-              <ul class="requirement-list">
-                <li><i class="fas fa-building"></i> <strong>Envestors Limited</strong></li>
-                <li><i class="fas fa-certificate"></i> <strong>UK Endorsement Services</strong></li>
-                <li><i class="fas fa-globe"></i> <strong>Innovator International</strong></li>
-                <li><i class="fas fa-users"></i> <strong>The Global Entrepreneurs Programme (GEP)</strong> (GEP can only endorse applicants who have already been invited to participate in their programme)</li>
-              </ul>
-              <p>Legacy endorsing bodies may continue to support applicants endorsed under the former Innovator Rules until they reach indefinite leave to remain. If you were endorsed before <strong>13 April 2023</strong> by a legacy endorsing body, you may rely on your existing endorsement, provided the endorsement letter is dated before that date.</p>
-            </div>
-
-            <!-- English & Financial -->
-            <div id="english-financial" class="content-section">
-              <h3>English Language and Financial Requirements</h3>
-              
-              <h4>English Language Requirement</h4>
-              <p>Unless an exemption applies, Innovator Founder applicants must demonstrate English language proficiency at <strong>CEFR Level B2</strong> across all four components (reading, writing, speaking, and listening).</p>
-              
-              <h4>Financial Requirement</h4>
-              <p>Applicants applying for entry clearance as an Innovator Founder must show that they have at least <strong>£1,270</strong> in personal funds held for a 28-day period prior to the application date.</p>
-              
-              <h4>Applying as Part of a Team</h4>
-              <p>Applicants may apply as part of a founding team; however, each member must receive individual endorsement from an approved endorsing body and be an instrumental member of the team.</p>
-              
-              <h4>Switching Into the Innovator Founder Category</h4>
-              <p>Applications may be made from outside the UK or by switching within the UK, provided the applicant is not applying from a visa category such as Visitor, Short-term Student, Parent of a Child Student, Seasonal Worker, Domestic Worker in a Private Household, or outside the Immigration Rules.</p>
-            </div>
-
-            <!-- Application Details -->
-            <div id="application-details" class="content-section">
-              <h3>Application Details</h3>
-              
-              <h4>Application Fee</h4>
-              <p>The current Home Office application fee is:</p>
-              <ul>
-                <li><strong>£1,191</strong> if applying from outside the UK</li>
-                <li><strong>£1,486</strong> if switching into the category within the UK</li>
-              </ul>
-              <p>Applicants must also pay an endorsement fee of <strong>£1,000 (excluding VAT)</strong> to the relevant endorsing body.</p>
-              
-              <h4>Validity Period</h4>
-              <p>The initial Innovator Founder Visa is valid for <strong>three years</strong>. It may be extended in further periods of three years, subject to re-endorsement each time. There is no maximum time limit within the Innovator Founder category.</p>
-              <p>Applicants may apply for indefinite leave to remain after spending three years in the Innovator Founder category.</p>
-              
-              <h4>Conditions of Stay</h4>
-              <p>As an Innovator Founder Visa holder, you must abide by conditions of stay, including working on the business(es) you have established. You may undertake secondary employment provided it is in a skilled role (RQF Level 3 or higher).</p>
-              
-              <h4>Contact Point Meetings</h4>
-              <p>You must attend at least two contact point meetings with your endorsing body at regular intervals during your permission period. These meetings serve as checkpoints to assess progress against your business plan. The endorsing body must be satisfied that you are actively working on your business venture and demonstrating reasonable progress. Failure to attend may result in visa cancellation.</p>
-            </div>
-
-            <!-- ILR Innovator -->
-            <div id="ilr-innovator" class="content-section">
-              <h3>Indefinite Leave to Remain (ILR) as an Innovator Founder</h3>
-              <p>To qualify for ILR, you must satisfy UK Visas and Immigration that:</p>
-              <ul>
-                <li>You have been endorsed by an approved UK endorsing body, which confirms that you have demonstrated significant achievements against your business plan;</li>
-                <li>Your business is registered with Companies House and you are a director or member;</li>
-                <li>Your business is active, trading, and sustainable for at least the following 12 months;</li>
-                <li>You have played an active key role in the day-to-day management and development of the business;</li>
-                <li>You meet at least two of the following criteria:
-                  <ul>
-                    <li>At least <strong>£50,000</strong> has been invested into the business and actively spent to further its growth;</li>
-                    <li>The business has created at least <strong>5 full-time jobs</strong> for settled workers with an average salary of <strong>£25,000</strong> per year;</li>
-                    <li>The business has created at least <strong>10 full-time jobs</strong> for resident workers (with no average salary requirement);</li>
-                    <li>The number of customers has at least doubled within the most recent three years and is currently higher than the mean number of customers for comparable UK businesses;</li>
-                    <li>The business has engaged in significant research and development and has applied for intellectual property protection in the UK;</li>
-                    <li>The business has generated a minimum annual gross revenue of <strong>£1 million</strong> in the last full year;</li>
-                    <li>The business has generated a minimum annual gross revenue of <strong>£500,000</strong> in the last full year, with at least <strong>£100,000</strong> from overseas exports.</li>
-                  </ul>
-                </li>
-                <li>You have spent no more than <strong>180 days outside the UK</strong> in any rolling 12-month period during the three years prior to your application;</li>
-                <li>You satisfy the English language and Life in the UK requirements.</li>
-              </ul>
-            </div>
-
-            <!-- Endorsement Service -->
-            <div id="endorsement-service" class="content-section">
-              <h3>Innovator Founder Visa Endorsement Application Service</h3>
-              <p>Our Innovator Founder Visa endorsement application service is structured into five distinct stages:</p>
-              
-              <h4>Stage 1 – Innovator Founder Visa Enquiry Form</h4>
-              <p><strong>Free Initial Assessment</strong><br>
-              To receive a free initial assessment of your suitability for the Innovator Founder visa, you may complete our Innovator Founder Visa Enquiry Form. A barrister will review your responses, and we aim to respond within 24 hours.</p>
-              
-              <h4>Stage 2 – Initial Consultation and Strategic Planning</h4>
-              <p><strong>Personalised Case Consultation</strong><br>
-              You will receive expert guidance from a specialist immigration barrister to assess your eligibility for the Innovator Founder Visa and determine the most suitable endorsing body for your business proposal.</p>
-              <p><strong>Business Plan Suitability Assessment</strong><br>
-              Your business idea and proposed business plan will be reviewed to ensure alignment with the innovation, viability, and scalability criteria required for endorsement.</p>
-              
-              <h4>Stage 3 – Innovator Founder Endorsement Application Preparation</h4>
-              <p><strong>Regulatory and Policy Guidance</strong><br>
-              You will receive in-depth advice on the relevant Immigration Rules, Home Office policies, and applicable case law.</p>
-              <p><strong>Endorsing Body Requirements Review</strong><br>
-              Detailed insights into the specific assessment criteria and expectations of the relevant endorsing body will be provided to ensure full compliance.</p>
-              <p><strong>Supporting Document Advice and Preparation</strong><br>
-              Guidance will be provided on the content, structure, and presentation of your business plan and supporting documents, including financial information, market research, and evidence of professional background.</p>
-              <p><strong>Supporting Document Review</strong><br>
-              Each document will be thoroughly reviewed with tailored feedback to enhance the strength of your application.</p>
-              <p><strong>Application Form Completion and Barrister's Opinion</strong><br>
-              All relevant forms will be accurately completed, and a legal opinion will be prepared by a specialist immigration barrister, demonstrating how your business proposal meets the innovation, viability, and scalability criteria.</p>
-              <p><strong>Application Bundle Preparation</strong><br>
-              A complete, well-organised application bundle will be assembled to ensure clarity and professional presentation.</p>
-              <p><strong>Final Compliance Check by Second Barrister</strong><br>
-              An independent review of your completed application will be conducted by a second immigration barrister.</p>
-              
-              <h4>Stage 4 – Innovator Founder Endorsement Application Submission</h4>
-              <p><strong>Application Submission Support</strong><br>
-              Assistance will be provided to ensure the application is submitted correctly and meets all technical requirements of the endorsing body.</p>
-              <p><strong>Agent for Correspondence</strong><br>
-              We will act as your designated representative for all communications with the endorsing body, responding promptly to any queries or requests for additional information until a decision is reached.</p>
-              
-              <h4>Stage 5 – Post-Decision Support and Next Steps Guidance</h4>
-              <p><strong>Decision Analysis and Advice</strong><br>
-              Professional advice will be provided on the outcome of your endorsement application, including guidance on any further steps required.</p>
-              <p><strong>Next Steps Consultation</strong><br>
-              Strategic advice will be provided on progressing to the visa application stage following a successful endorsement, or on options for re-submission or appeal if necessary.</p>
-            </div>
-
-            <!-- How We Help - Innovator -->
-            <div id="how-we-help-innovator" class="content-section">
-              <h3>How Our Immigration Barristers Can Help</h3>
-              <p>We are recognised as one of the UK's leading immigration practices for Innovator Founders. Our work has been acknowledged through membership in the <strong>Investment Migration Council</strong> and the <strong>Department for International Trade's Investor Support Network</strong>.</p>
-              <p>Our team of immigration barristers has experience in assisting all types of innovative entrepreneurs and businesspersons. Whether you are a start-up entrepreneur or an established businessperson, our barristers are experts in the immigration options for innovators and will guide you through the complex Home Office rules and policies.</p>
-              <p>We are committed to being approachable and proactive in understanding and meeting our clients' needs, providing clear and reliable immigration advice in a professional and friendly manner.</p>
-            </div>
-
-            <!-- CTA Section -->
-            <div class="cta-business">
-              <h3 class="mb-3 text-white">Ready to Start Your UK Business Journey?</h3>
-              <p class="lead mb-4 text-white">Let our expert team guide you through the self-sponsorship or Innovator Founder visa process.</p>
-              <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
-                <a href="../index.html#inquiry" class="btn btn-light btn-lg">
-                  <i class="fas fa-calendar-alt me-2"></i>Schedule Business Consultation
-                </a>
-              
-              </div>
-              <p class="mt-3 text-white opacity-75">Priority service available for urgent business immigration needs</p>
+              </a>
+              <a href="innovator.html" class="business-option-btn innovator">
+                <i class="fas fa-lightbulb"></i>
+                <span class="btn-text">UK Innovator<br>Founder Visa</span>
+                
+              </a>
+              <a href="global.html" class="business-option-btn global-talent">
+                <i class="fas fa-globe"></i>
+                <span class="btn-text">Global<br>Talent Visa</span>
+                
+              </a>
             </div>
           </div>
         </div>
@@ -1021,10 +477,9 @@
         <div class="col-lg-3 col-md-6 mb-4">
           <h6>Business Services</h6>
           <ul class="list-unstyled">
-            <li><a href="business.html" class="text-light text-decoration-none fw-bold">UK Skilled Worker Self-Sponsorship</a></li>
-            <li><a href="business.html#innovator-founder" class="text-light text-decoration-none">Innovator Founder Visa</a></li>
-            <li><a href="work.html" class="text-light text-decoration-none">Work Visas</a></li>
-            <li><a href="tourist.html" class="text-light text-decoration-none">Tourist Visas</a></li>
+            <li><a href="selfsponsorship.html" class="text-light text-decoration-none">UK Self-Sponsorship Skilled Worker Visa</a></li>
+            <li><a href="innovator.html" class="text-light text-decoration-none">UK Innovator Founder Visa</a></li>
+            <li><a href="global.html" class="text-light text-decoration-none">Global Talent Visa</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
@@ -1034,7 +489,6 @@
             <li><i class="fas fa-phone me-2"></i>+63 968 707 5241</li>
             <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
             <li><i class="fas fa-clock me-2"></i>Mon-Fri: 8AM-6PM</li>
-            <li><i class="fas fa-building me-2"></i>Sat: 9AM-3PM (Business Hours)</li>
           </ul>
         </div>
       </div>
@@ -1090,47 +544,6 @@
           document.body.style.opacity = '1';
         }, 100);
       });
-      
-      // Smooth scroll for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            window.scrollTo({
-              top: target.offsetTop - 100,
-              behavior: 'smooth'
-            });
-          }
-        });
-      });
-      
-      // Highlight active nav link
-      const sections = document.querySelectorAll('.content-section');
-      const navLinks = document.querySelectorAll('.nav-links a');
-      
-      function setActiveNavLink() {
-        let current = '';
-        
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-          
-          if (window.scrollY >= sectionTop - 150) {
-            current = section.getAttribute('id');
-          }
-        });
-        
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === '#' + current) {
-            link.classList.add('active');
-          }
-        });
-      }
-      
-      window.addEventListener('scroll', setActiveNavLink);
-      setActiveNavLink();
     });
   </script>
 </body>
