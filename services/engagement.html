@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>Permitted Paid Engagement Visa | One Solution Visa</title>
+  <link rel="icon" type="image/png" href="../images/logo.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #ffffff;
+      --secondary-color: #2c3e50;
+      --accent-color: #3498db;
+      --light-bg: #f4f6fa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 0.75rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      padding: 0.5rem 0;
+      background: var(--secondary-color) !important;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .navbar-logo {
+      height: 40px;
+      width: 40px;
+      margin-right: 8px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    /* Back button styling */
+    .back-btn {
+      color: white !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateX(-3px);
+    }
+
+    .back-btn i {
+      margin-right: 5px;
+    }
+
+    .section-padding {
+      padding: 60px 0;
+      scroll-margin-top: 80px;
+    }
+
+    /* Service Hero Section with Background Image */
+    .service-hero {
+      background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), 
+                  url('../images/tourist.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 120px 0 80px;
+      margin-bottom: 40px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .service-hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .service-hero .lead {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    /* Button styling to match other pages */
+    .btn-primary {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--secondary-color);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-light:hover {
+      background: var(--light-bg);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+    }
+
+    .engagement-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+    
+    .content-nav {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /* Custom scrollbar for content-nav */
+    .content-nav::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .content-nav::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb {
+      background: var(--accent-color);
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
+    }
+    
+    .content-nav h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .nav-links a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      display: block;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+    
+    .nav-links a:hover {
+      background: var(--light-bg);
+      border-left: 3px solid var(--accent-color);
+      transform: translateX(5px);
+    }
+    
+    .content-section {
+      background: white;
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .content-section h2 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .content-section h3 {
+      color: var(--secondary-color);
+      margin: 2rem 0 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .content-section h4 {
+      color: var(--secondary-color);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .content-section p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    
+    .content-section ul, .content-section ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    .content-section li {
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-left: 4px solid var(--accent-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .info-box {
+      background: linear-gradient(135deg, #e8f4fc 0%, #d4eaf7 100%);
+      border-left: 4px solid var(--secondary-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .warning-box {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      border-left: 4px solid #ffc107;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, var(--light-bg) 0%, #e8f4fc 100%);
+      border-radius: 15px;
+      padding: 3rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .footer {
+      background: var(--secondary-color);
+      color: #fff;
+      padding: 40px 0 20px 0;
+      position: relative;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    /* Mobile Navigation Improvements */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: rgba(44, 62, 80, 0.98);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0.4rem 0.6rem;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
+      }
+
+      .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin: 0.25rem 0;
+      }
+
+      .nav-link:hover, .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      
+      .content-nav {
+        position: static;
+        margin-bottom: 2rem;
+      }
+    }
+
+    /* iPhone 15 and Small Devices */
+    @media (max-width: 430px) {
+      .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .navbar {
+        padding: 0.5rem 0;
+      }
+
+      .navbar-brand {
+        font-size: 1.1rem;
+      }
+
+      .navbar-logo {
+        height: 35px;
+        width: 35px;
+        margin-right: 6px;
+      }
+      
+      .service-hero {
+        padding: 100px 0 60px;
+        background-attachment: scroll;
+      }
+      
+      .service-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .service-hero .lead {
+        font-size: 1.1rem;
+      }
+      
+      .engagement-icon {
+        font-size: 2.5rem;
+      }
+      
+      .content-section, .content-nav {
+        padding: 1.5rem;
+      }
+      
+      .cta-section {
+        padding: 2rem 1.5rem;
+      }
+
+      .footer {
+        padding: 30px 0 15px 0;
+      }
+
+      .footer h5, .footer h6 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .footer p, .footer li {
+        font-size: 0.9rem;
+      }
+
+      .footer .col-lg-4, 
+      .footer .col-lg-2, 
+      .footer .col-lg-3,
+      .footer .col-md-6 {
+        margin-bottom: 1.5rem;
+      }
+
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Very Small Devices */
+    @media (max-width: 375px) {
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .navbar-brand {
+        font-size: 1rem;
+      }
+      
+      .service-hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Prevent horizontal scroll */
+    .row {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
+    .row > * {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/logo.png" alt="One Solution Visa Logo" class="navbar-logo">
+        OneSolutionVisa
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link back-btn" href="../services/tourist.html">
+              <i class="fas fa-arrow-left me-1"></i>Back to Tourist Visas
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Permitted Paid Engagement Visa Content -->
+  <main style="margin-top: 80px; min-height: calc(100vh - 300px);">
+    <!-- Hero Section -->
+    <section class="service-hero">
+      <div class="container">
+        <div class="engagement-icon">
+          <i class="fas fa-hand-holding-usd"></i>
+        </div>
+        <h1>Permitted Paid Engagement Visa: Requirements & Application</h1>
+        <p class="lead">Expert-level professionals invited to the UK for short-term paid engagements can apply for this specialized visa route designed for recognized experts in their field.</p>
+        <a href="../index.html#inquiry" class="btn btn-light btn-lg mt-3">
+          <i class="fas fa-paper-plane me-2"></i>Apply for PPE Visa
+        </a>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row">
+          <!-- Navigation Sidebar -->
+          <div class="col-lg-4 mb-4">
+            <div class="content-nav">
+              <h3><i class="fas fa-list-alt me-2"></i>Contents</h3>
+              <ul class="nav-links">
+                <li><a href="#overview">1. PPE Visa Overview</a></li>
+                <li><a href="#what-is">2. What is PPE Visa?</a></li>
+                <li><a href="#eligibility">3. Eligibility Requirements</a></li>
+                <li><a href="#activities">4. Permitted Activities</a></li>
+                <li><a href="#artist">5. Professional Artist/Entertainer</a></li>
+                <li><a href="#sportsperson">6. Professional Sportsperson</a></li>
+                <li><a href="#lawyer">7. Qualified Lawyer</a></li>
+                <li><a href="#lecturer">8. Guest Lecturer</a></li>
+                <li><a href="#speaker">9. Guest Speaker</a></li>
+                <li><a href="#examiner">10. Student Examiner</a></li>
+                <li><a href="#pilot">11. Air Pilot Examiner</a></li>
+                <li><a href="#cannot-do">12. What You Cannot Do</a></li>
+                <li><a href="#intention">13. Intention to Leave UK</a></li>
+                <li><a href="#right-to-work">14. Right to Work</a></li>
+                <li><a href="#documents">15. Required Documents</a></li>
+                <li><a href="#validity">16. Validity Period</a></li>
+                <li><a href="#apply">17. How to Apply</a></li>
+                <li><a href="#help">18. How We Can Help</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="col-lg-8">
+            <!-- Overview Section -->
+            <div id="overview" class="content-section">
+              <h2>Permitted Paid Engagement Visa</h2>
+              <p>If you are an overseas national invited to the UK to carry out paid work as a recognised expert, you may qualify for a Permitted Paid Engagement Visa.</p>
+              
+              <div class="info-box">
+                <p><strong>Important:</strong> The PPE Visa is a specific route under the UK Standard Visitor Visa designed for certain professionals who have received a formal invitation from a UK-based organisation or client to take part in a paid activity connected to their professional expertise.</p>
+              </div>
+            </div>
+
+            <!-- What is PPE Visa -->
+            <div id="what-is" class="content-section">
+              <h3>What is Permitted Paid Engagement Visa?</h3>
+              <p>The Permitted Paid Engagement (PPE) Visa is a specific route under the UK Standard Visitor Visa. It is designed for certain professionals who have received a formal invitation from a UK-based organisation or client to take part in a paid activity connected to their professional expertise.</p>
+              
+              <p>This visa enables eligible individuals to undertake short-term paid engagements in the UK without needing to apply for a points-based or long-term work visa.</p>
+              
+              <div class="highlight-box">
+                <h4>Key Features:</h4>
+                <ul>
+                  <li>Short-term visa for specific paid engagements</li>
+                  <li>Valid for up to 6 months with engagement completion within 30 days</li>
+                  <li>Requires formal invitation from UK-based organisation</li>
+                  <li>Limited to recognized experts in specific professional fields</li>
+                  <li>Cannot be extended or switched to other visa categories</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Eligibility Requirements -->
+            <div id="eligibility" class="content-section">
+              <h3>Permitted Paid Engagement Visa Eligibility Requirements</h3>
+              <p>To qualify for the Permitted Paid Engagement Visa, you must meet the following conditions:</p>
+              
+              <ul>
+                <li>Be at least 18 years old</li>
+                <li>Be a national who requires a visa to enter the UK</li>
+                <li>Demonstrate that you are a recognised expert in your field</li>
+                <li>Hold a written invitation from a UK-based organisation or client for a specific, pre-arranged paid engagement</li>
+                <li>Show that the engagement is directly related to your skills, qualifications, and main occupation in your country of residence</li>
+                <li>Intend to complete the engagement within 30 days of arriving in the UK</li>
+                <li>Avoid any activities that are not permitted under this visa</li>
+                <li>Have enough funds to support yourself during your stay and to cover your return journey</li>
+                <li>Prove that you do not intend to live in the UK through frequent visits or make it your main place of residence</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>Note:</strong> Each professional category has additional specific requirements that must be met. Failure to meet any of these criteria may result in visa refusal.</p>
+              </div>
+            </div>
+
+            <!-- Permitted Activities -->
+            <div id="activities" class="content-section">
+              <h3>Permitted Activities on the PPE Visa</h3>
+              <p>To use the PPE route, you must be invited to the UK in one of the following professional capacities:</p>
+              
+              <ul>
+                <li>Professional artist, entertainer, or musician</li>
+                <li>Professional sportsperson</li>
+                <li>Qualified lawyer acting on behalf of a client</li>
+                <li>Guest lecturer</li>
+                <li>Conference guest speaker</li>
+                <li>Academic examiner or assessor</li>
+                <li>Air pilot examiner</li>
+              </ul>
+              
+              <div class="info-box">
+                <p>Each category has specific requirements regarding the activities allowed, who can issue the invitation, and how professional expertise must be demonstrated.</p>
+              </div>
+            </div>
+
+            <!-- Professional Artist, Entertainer, or Musician -->
+            <div id="artist" class="content-section">
+              <h3>Professional Artist, Entertainer, or Musician</h3>
+              <p>Professional artists include individuals working in the performing and creative arts, such as poets, stylists, make-up artists, models, photographers, and designers. Artists, entertainers, and musicians may apply for a PPE Visa to carry out activities related to their profession, including:</p>
+              
+              <ul>
+                <li>Performing</li>
+                <li>Presenting or showcasing their work</li>
+                <li>Attending professional conferences</li>
+                <li>Participating in debates or judging panels</li>
+              </ul>
+              
+              <div class="highlight-box">
+                <h4>Requirements for Artists/Entertainers:</h4>
+                <ul>
+                  <li>Must be invited by a UK-based arts organisation, broadcaster, agent, or agency</li>
+                  <li>Must prove they are established professionals in their home country</li>
+                  <li>Evidence can include media coverage, awards, published work, or promotional materials</li>
+                  <li>Support staff must qualify independently or apply under Standard Visitor route</li>
+                </ul>
+              </div>
+              
+              <p>Support staff travelling with artists or entertainers must qualify for the PPE Visa independently. If not, they may apply under the Standard Visitor route, provided they meet the relevant requirements and are employed outside the UK.</p>
+            </div>
+
+            <!-- Professional Sportsperson -->
+            <div id="sportsperson" class="content-section">
+              <h3>Professional Sportsperson</h3>
+              <p>Professional athletes, including footballers and cyclists, may apply for a PPE Visa to:</p>
+              
+              <ul>
+                <li>Take part in sporting events</li>
+                <li>Give interviews</li>
+                <li>Discuss or sign contracts</li>
+                <li>Undertake other activities linked to their sporting career</li>
+              </ul>
+              
+              <div class="info-box">
+                <p>Applicants must be invited by a UK-based sports organisation, broadcaster, or agency and show proof that they are established in their sport through recent achievements, awards, or media recognition.</p>
+              </div>
+            </div>
+
+            <!-- Qualified Lawyer -->
+            <div id="lawyer" class="content-section">
+              <h3>Qualified Lawyer</h3>
+              <p>Qualified lawyers may enter the UK on a PPE Visa if they have been invited by a UK-based client to:</p>
+              
+              <ul>
+                <li>Take part in arbitration proceedings</li>
+                <li>Prepare for or represent a client at a court or tribunal hearing</li>
+                <li>Participate in dispute resolution processes such as mediation</li>
+              </ul>
+              
+              <div class="highlight-box">
+                <h4>Requirements for Lawyers:</h4>
+                <ul>
+                  <li>Formal invitation from UK-based client</li>
+                  <li>Evidence of temporary permission or right of audience</li>
+                  <li>Practising certificate or certificate of good standing</li>
+                  <li>Confirmation of professional status in home country</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Guest Lecturer -->
+            <div id="lecturer" class="content-section">
+              <h3>Guest Lecturer</h3>
+              <p>Guest lecturers may use the PPE route to deliver lectures in their area of expertise. To qualify, they must:</p>
+              
+              <ul>
+                <li>Be invited by a UK higher education institution, research body, or arts organisation</li>
+                <li>Provide evidence of expertise, such as employer references, publications, or records of previous lectures</li>
+                <li>Be actively earning income from lecturing</li>
+                <li>Not be retired</li>
+              </ul>
+              
+              <div class="info-box">
+                <p>If lecturing in a subject outside their current role, applicants must supply evidence of relevant past employment, publications, or qualifications. Guest lecturers are not permitted to take up teaching roles beyond the specific engagement.</p>
+              </div>
+            </div>
+
+            <!-- Guest Speaker at a Conference -->
+            <div id="speaker" class="content-section">
+              <h3>Guest Speaker at a Conference</h3>
+              <p>Professionals invited to deliver paid speeches at conferences or seminars may apply under this route. Applicants must show that:</p>
+              
+              <ul>
+                <li>The event is relevant to their profession or area of expertise in their home country</li>
+                <li>They have been formally invited by the event organiser</li>
+                <li>The speaking engagement is directly related to their professional expertise</li>
+                <li>They are established professionals in their field</li>
+              </ul>
+            </div>
+
+            <!-- Student Examiner or Assessor -->
+            <div id="examiner" class="content-section">
+              <h3>Student Examiner or Assessor</h3>
+              <p>Experienced academics and professional assessors may enter the UK on a PPE Visa to examine students, sit on selection panels, or contribute to quality assurance processes.</p>
+              
+              <div class="highlight-box">
+                <h4>Requirements:</h4>
+                <ul>
+                  <li>Invitation from a UK higher education institution or research/arts organisation</li>
+                  <li>Demonstration of expertise through employer letters, published work, or prior teaching experience</li>
+                  <li>Clear connection between expertise and examination/assessment duties</li>
+                  <li>Professional standing in academic or assessment field</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Air Pilot Examiner -->
+            <div id="pilot" class="content-section">
+              <h3>Air Pilot Examiner</h3>
+              <p>Designated pilot examiners from overseas may apply for a PPE Visa to assess UK-based pilots according to aviation standards set by their home country.</p>
+              
+              <div class="info-box">
+                <p>Applicants must be invited by a UK training organisation regulated by the Civil Aviation Authority and prove they are employed full-time by their national aviation authority.</p>
+              </div>
+            </div>
+
+            <!-- What You Cannot Do -->
+            <div id="cannot-do" class="content-section">
+              <h3>What You Cannot Do On the PPE Visa</h3>
+              <p>While holding a PPE Visa, you may carry out other activities allowed under the Standard Visitor route, but you must not:</p>
+              
+              <ul>
+                <li>Perform paid work unrelated to your professional expertise</li>
+                <li>Study</li>
+                <li>Start or run a business</li>
+                <li>Marry or enter a civil partnership</li>
+                <li>Seek private medical treatment</li>
+                <li>Claim public funds</li>
+                <li>Use the UK as a transit destination</li>
+                <li>Bring dependants or family members</li>
+                <li>Switch to another visa category</li>
+                <li>Extend your visa</li>
+              </ul>
+              
+              <div class="warning-box">
+                <p><strong>Important:</strong> Violating these conditions may result in visa cancellation, future immigration problems, or being barred from entering the UK.</p>
+              </div>
+            </div>
+
+            <!-- Intention to Leave UK -->
+            <div id="intention" class="content-section">
+              <h3>Intention to Leave the UK Requirement for a Permitted Paid Engagement Visa</h3>
+              <p>Applicants must clearly demonstrate their intention to leave the UK at the end of their visit. The Home Office will assess factors such as:</p>
+              
+              <ul>
+                <li>Immigration history</li>
+                <li>Family and social ties to home country</li>
+                <li>Financial stability and employment commitments</li>
+                <li>Property ownership or rental agreements</li>
+                <li>Previous travel patterns</li>
+                <li>Consistency of application information</li>
+              </ul>
+              
+              <div class="info-box">
+                <p>Any inconsistencies, lack of evidence, or past issues with UK immigration may negatively affect the application. Providing accurate information and strong supporting documents is essential to proving genuine intent.</p>
+              </div>
+            </div>
+
+            <!-- Right to Work -->
+            <div id="right-to-work" class="content-section">
+              <h3>Permitted Paid Engagement Visit Visas – Right to Work</h3>
+              <p>Although payment is allowed for the approved engagement, the PPE Visa does not grant general permission to work in the UK. You cannot:</p>
+              
+              <ul>
+                <li>Take additional employment beyond the approved engagement</li>
+                <li>Run a business or engage in commercial activities</li>
+                <li>Offer goods or services beyond what your visa permits</li>
+                <li>Work for multiple employers during your stay</li>
+              </ul>
+              
+              <div class="highlight-box">
+                <p>Applicants are expected to be employed in their home country and to return there after completing their engagement. If a job offer is received while in the UK, the applicant must leave and apply for the appropriate work visa from outside the UK.</p>
+              </div>
+            </div>
+
+            <!-- Required Documents -->
+            <div id="documents" class="content-section">
+              <h3>Required Documents for Paid Engagement Visa</h3>
+              <p>Applications must include the following documentation:</p>
+              
+              <ul>
+                <li>A valid passport or travel document with at least one blank page</li>
+                <li>A formal invitation letter from a UK-based organisation or client detailing the engagement</li>
+                <li>Evidence of professional expertise, skills, or qualifications (certificates, awards, publications)</li>
+                <li>A letter from your employer in your home country confirming your position and leave of absence</li>
+                <li>Travel details, including accommodation arrangements and planned activities</li>
+                <li>Bank statements showing sufficient funds for the duration of stay</li>
+                <li>Information about any previous criminal convictions</li>
+                <li>Proof of return travel arrangements</li>
+              </ul>
+              
+              <div class="warning-box">
+                <p><strong>Important:</strong> All documents must be in English or accompanied by certified translations. Incomplete documentation is a common reason for visa refusal.</p>
+              </div>
+            </div>
+
+            <!-- Validity Period -->
+            <div id="validity" class="content-section">
+              <h3>Validity Period for Paid Engagement Visa</h3>
+              <p>The PPE Visa is valid for up to six months. However, the permitted engagement must be completed within the first 30 days of arrival.</p>
+              
+              <div class="info-box">
+                <h4>Key Timeframes:</h4>
+                <ul>
+                  <li><strong>Maximum visa validity:</strong> 6 months</li>
+                  <li><strong>Engagement completion deadline:</strong> Within 30 days of arrival</li>
+                  <li><strong>Application timing:</strong> Can apply up to 3 months before travel</li>
+                  <li><strong>Processing time:</strong> Typically 3 weeks (may vary)</li>
+                </ul>
+              </div>
+              
+              <p>After completing the engagement, you may remain in the UK for the rest of the visa period for permitted visitor activities such as tourism or visiting friends.</p>
+            </div>
+
+            <!-- How to Apply -->
+            <div id="apply" class="content-section">
+              <h3>How to Apply for Permitted Paid Engagement Visa</h3>
+              <p>Each applicant must apply individually, even when travelling as part of a group. Applications can be submitted up to three months before the intended travel date.</p>
+              
+              <h4>Application Process:</h4>
+              <ol>
+                <li><strong>Prepare Documentation:</strong> Gather all required documents as listed above</li>
+                <li><strong>Complete Online Application:</strong> Fill out the UK visa application form on the official government website</li>
+                <li><strong>Pay Application Fee:</strong> Submit the required visa fee payment</li>
+                <li><strong>Biometric Appointment:</strong> Attend a visa application centre to provide fingerprints and photograph</li>
+                <li><strong>Document Submission:</strong> Submit supporting documents (either online or at the appointment)</li>
+                <li><strong>Application Processing:</strong> UK Visas and Immigration will assess the application</li>
+                <li><strong>Decision Notification:</strong> Receive notification of the decision by email</li>
+                <li><strong>Passport Return:</strong> Collect passport with visa vignette if approved</li>
+              </ol>
+              
+              <div class="info-box">
+                <p><strong>Note:</strong> Processing times may vary depending on the country of application and individual circumstances. Premium services may be available for faster processing in some locations.</p>
+              </div>
+            </div>
+
+            <!-- How We Can Help -->
+            <div id="help" class="content-section">
+              <h3>How Can One Solution Visa Help?</h3>
+              <p>The Permitted Paid Engagement Visa requires careful preparation and strong evidence of professional expertise. Our experienced team can provide comprehensive assistance throughout the application process.</p>
+              
+              <div class="highlight-box">
+                <h4>Our Services Include:</h4>
+                <ul>
+                  <li>Assessment of your eligibility for the PPE Visa route</li>
+                  <li>Guidance on required documentation specific to your professional category</li>
+                  <li>Review and preparation of invitation letters and supporting evidence</li>
+                  <li>Assistance with completing the online application form accurately</li>
+                  <li>Preparation for biometric appointments and document submission</li>
+                  <li>Advice on demonstrating intention to leave the UK</li>
+                  <li>Support with any queries or additional requests from UKVI</li>
+                  <li>Guidance on what to do after receiving your visa decision</li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <h4>Why Choose Us?</h4>
+                <p>With specialized knowledge of UK visa requirements for professionals, we understand the specific evidence needed to demonstrate expertise in various fields. We can help ensure your application presents you as a recognized expert in your profession, increasing your chances of approval.</p>
+              </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+              <h3 class="mb-3">Ready to Apply for Your PPE Visa?</h3>
+              <p class="lead mb-4">Let our expert team guide you through the PPE Visa application process to ensure your professional engagement in the UK goes smoothly.</p>
+              <a href="../index.html#inquiry" class="btn btn-primary btn-lg">
+                <i class="fas fa-paper-plane me-2"></i>Start Your PPE Visa Application
+              </a>
+              <p class="mt-3 text-muted">Click above to be redirected to our main inquiry form</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h5>One Solution Visa™</h5>
+          <p>Your trusted partner for all visa and immigration services. We make your travel dreams come true with professional expertise and personalized service.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/visaconnect" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="../index.html#services" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="../index.html#contact" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="../index.html#inquiry" class="text-light text-decoration-none">Inquiry</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Tourist Services</h6>
+          <ul class="list-unstyled">
+            <li><a href="standardvisitor.html" class="text-light text-decoration-none">UK Standard Visitor</a></li>
+            <li><a href="transit.html" class="text-light text-decoration-none">UK Transit Visa</a></li>
+            <li><a href="engagement.html" class="text-light text-decoration-none fw-bold">Permitted Paid Engagement Visa</a></li>
+            <li><a href="../index.html#services" class="text-light text-decoration-none">All Visa Services</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Contact Info</h6>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt me-2"></i>A. Gabuya Street, Cogon Pardo, Cebu City, Philippines</li>
+            <li><i class="fas fa-phone me-2"></i>+63 968 707 5241</li>
+            <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
+            <li><i class="fas fa-clock me-2"></i>Mon-Sat: 9AM-6PM</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0">&copy; 2025 One Solution Visa. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0">
+            <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+            <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Navigation Scripts
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const isClickInside = navbarToggler.contains(event.target) || 
+                              navbarCollapse.contains(event.target);
+        
+        if (!isClickInside && navbarCollapse.classList.contains('show')) {
+          navbarToggler.click();
+        }
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      
+      // Add loading animation on page load
+      window.addEventListener('load', () => {
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease-in-out';
+        setTimeout(() => {
+          document.body.style.opacity = '1';
+        }, 100);
+      });
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Highlight active nav link
+      const sections = document.querySelectorAll('.content-section');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      function setActiveNavLink() {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (window.scrollY >= sectionTop - 150) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', setActiveNavLink);
+      setActiveNavLink();
+    });
+  </script>
+</body>
+</html>

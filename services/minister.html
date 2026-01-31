@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>Minister of Religion Visa UK | One Solution Visa</title>
+  <link rel="icon" type="image/png" href="../images/logo.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #ffffff;
+      --secondary-color: #2c3e50;
+      --accent-color: #3498db;
+      --light-bg: #f4f6fa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 0.75rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      padding: 0.5rem 0;
+      background: var(--secondary-color) !important;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .navbar-logo {
+      height: 40px;
+      width: 40px;
+      margin-right: 8px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    /* Back button styling */
+    .back-btn {
+      color: white !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateX(-3px);
+    }
+
+    .back-btn i {
+      margin-right: 5px;
+    }
+
+    .section-padding {
+      padding: 60px 0;
+      scroll-margin-top: 80px;
+    }
+
+    /* Service Hero Section with Background Image */
+    .service-hero {
+      background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), 
+                  url('../images/work.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 120px 0 80px;
+      margin-bottom: 40px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .service-hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .service-hero .lead {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    /* Button styling to match other pages */
+    .btn-primary {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--secondary-color);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-light:hover {
+      background: var(--light-bg);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+    }
+
+    .minister-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+    
+    .content-nav {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /* Custom scrollbar for content-nav */
+    .content-nav::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .content-nav::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb {
+      background: var(--accent-color);
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
+    }
+    
+    .content-nav h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .nav-links a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      display: block;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+    
+    .nav-links a:hover {
+      background: var(--light-bg);
+      border-left: 3px solid var(--accent-color);
+      transform: translateX(5px);
+    }
+    
+    .content-section {
+      background: white;
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .content-section h2 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .content-section h3 {
+      color: var(--secondary-color);
+      margin: 2rem 0 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .content-section h4 {
+      color: var(--secondary-color);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .content-section p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    
+    .content-section ul, .content-section ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    .content-section li {
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-left: 4px solid var(--accent-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .info-box {
+      background: linear-gradient(135deg, #e8f4fc 0%, #d4eaf7 100%);
+      border-left: 4px solid var(--secondary-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .warning-box {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      border-left: 4px solid #ffc107;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .success-box {
+      background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+      border-left: 4px solid #28a745;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, var(--light-bg) 0%, #e8f4fc 100%);
+      border-radius: 15px;
+      padding: 3rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .footer {
+      background: var(--secondary-color);
+      color: #fff;
+      padding: 40px 0 20px 0;
+      position: relative;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    /* Mobile Navigation Improvements */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: rgba(44, 62, 80, 0.98);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0.4rem 0.6rem;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
+      }
+
+      .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin: 0.25rem 0;
+      }
+
+      .nav-link:hover, .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      
+      .content-nav {
+        position: static;
+        margin-bottom: 2rem;
+      }
+    }
+
+    /* iPhone 15 and Small Devices */
+    @media (max-width: 430px) {
+      .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .navbar {
+        padding: 0.5rem 0;
+      }
+
+      .navbar-brand {
+        font-size: 1.1rem;
+      }
+
+      .navbar-logo {
+        height: 35px;
+        width: 35px;
+        margin-right: 6px;
+      }
+      
+      .service-hero {
+        padding: 100px 0 60px;
+        background-attachment: scroll;
+      }
+      
+      .service-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .service-hero .lead {
+        font-size: 1.1rem;
+      }
+      
+      .minister-icon {
+        font-size: 2.5rem;
+      }
+      
+      .content-section, .content-nav {
+        padding: 1.5rem;
+      }
+      
+      .cta-section {
+        padding: 2rem 1.5rem;
+      }
+
+      .footer {
+        padding: 30px 0 15px 0;
+      }
+
+      .footer h5, .footer h6 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .footer p, .footer li {
+        font-size: 0.9rem;
+      }
+
+      .footer .col-lg-4, 
+      .footer .col-lg-2, 
+      .footer .col-lg-3,
+      .footer .col-md-6 {
+        margin-bottom: 1.5rem;
+      }
+
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Very Small Devices */
+    @media (max-width: 375px) {
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .navbar-brand {
+        font-size: 1rem;
+      }
+      
+      .service-hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Prevent horizontal scroll */
+    .row {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
+    .row > * {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/logo.png" alt="One Solution Visa Logo" class="navbar-logo">
+        OneSolutionVisa
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link back-btn" href="../services/immigration.html">
+              <i class="fas fa-arrow-left me-1"></i>Back to Work Visas
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Minister of Religion Visa Content -->
+  <main style="margin-top: 80px; min-height: calc(100vh - 300px);">
+    <!-- Hero Section -->
+    <section class="service-hero">
+      <div class="container">
+        <div class="minister-icon">
+          <i class="fas fa-hands-praying"></i>
+        </div>
+        <h1>Minister of Religion Visa UK</h1>
+        <p class="lead">The UK Minister of Religion Visa allows ministers and religious workers in pastoral roles to live and work in the UK for up to three years and one month, with the option to extend for a further three years. This visa can also lead to settlement and, eventually, British citizenship.</p>
+        <a href="../index.html#inquiry" class="btn btn-light btn-lg mt-3">
+          <i class="fas fa-paper-plane me-2"></i>Apply for Minister of Religion Visa
+        </a>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row">
+          <!-- Navigation Sidebar -->
+          <div class="col-lg-4 mb-4">
+            <div class="content-nav">
+              <h3><i class="fas fa-list-alt me-2"></i>Contents</h3>
+              <ul class="nav-links">
+                <li><a href="#overview">1. Minister of Religion Visa Overview</a></li>
+                <li><a href="#what-is">2. What is Minister of Religion Visa?</a></li>
+                <li><a href="#can-do">3. What You Can Do</a></li>
+                <li><a href="#cannot-do">4. What You Cannot Do</a></li>
+                <li><a href="#cost">5. Visa Cost</a></li>
+                <li><a href="#eligibility">6. Eligibility Requirements</a></li>
+                <li><a href="#documents">7. Required Documents</a></li>
+                <li><a href="#financial">8. Financial Requirements</a></li>
+                <li><a href="#application">9. Application Process</a></li>
+                <li><a href="#english">10. English Language</a></li>
+                <li><a href="#dependents">11. Dependents</a></li>
+                <li><a href="#employers">12. Employer Requirements</a></li>
+                <li><a href="#extend">13. Extending the Visa</a></li>
+                <li><a href="#indefinite">14. Indefinite Leave to Remain</a></li>
+                <li><a href="#help">15. How We Can Help</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="col-lg-8">
+            <!-- Overview Section -->
+            <div id="overview" class="content-section">
+              <h2>Minister of Religion Visa UK</h2>
+              <p>The UK Minister of Religion Visa allows ministers and religious workers in pastoral roles to live and work in the UK for up to three years and one month, with the option to extend for a further three years. This visa can also lead to settlement and, eventually, British citizenship.</p>
+              
+              <div class="info-box">
+                <p><strong>Important:</strong> This visa is designed for religious leaders and pastoral workers who have been offered a role by a UK religious organization that holds a valid sponsor licence.</p>
+              </div>
+            </div>
+
+            <!-- What is the Visa -->
+            <div id="what-is" class="content-section">
+              <h3>What is a Minister of Religion Visa in UK?</h3>
+              <p>If you have been offered a role by a religious organisation or institution in the UK, you may apply for a Minister of Religion Visa.</p>
+              
+              <p>The T2 Minister of Religion Visa enables overseas nationals to enter and reside in the UK to carry out duties such as those of a minister, missionary, or religious worker. Once approved, the visa is granted for a period of three years and one month.</p>
+              
+              <div class="highlight-box">
+                <h4>Key Responsibilities Allowed:</h4>
+                <ul>
+                  <li>Leading worship services</li>
+                  <li>Delivering sermons and religious teachings</li>
+                  <li>Officiating weddings and funerals</li>
+                  <li>Organising missionary activities</li>
+                  <li>Translating religious texts</li>
+                  <li>Coordinating volunteers and community outreach</li>
+                </ul>
+              </div>
+              
+              <p>After five years of lawful residence in the UK under this route, you may become eligible to apply for Indefinite Leave to Remain (ILR).</p>
+              
+              <div class="info-box">
+                <p><strong>Note:</strong> If your role mainly involves non-pastoral duties, such as administrative or clerical work within a faith-based organisation, the UK Religious Worker Visa may be more appropriate.</p>
+              </div>
+            </div>
+
+            <!-- What You Can Do -->
+            <div id="can-do" class="content-section">
+              <h3>What Can You Do on a UK Minister of Religion Visa?</h3>
+              <p>With a Minister of Religion Visa, you are permitted to:</p>
+              
+              <ul>
+                <li>Live in the UK for up to three years and one month</li>
+                <li>Work for your sponsor in the role specified on your Certificate of Sponsorship (CoS)</li>
+                <li>Undertake voluntary work</li>
+                <li>Take a second job in limited circumstances</li>
+                <li>Study, provided it does not interfere with your main role</li>
+                <li>Travel outside the UK and return</li>
+                <li>Bring eligible family members to live with you</li>
+              </ul>
+              
+              <div class="info-box">
+                <p>Dependants may include your partner and children under 18, as well as eligible children over 18. Each dependant must submit a separate visa application.</p>
+              </div>
+            </div>
+
+            <!-- What You Cannot Do -->
+            <div id="cannot-do" class="content-section">
+              <h3>What can't you do on a Minister of Religion Visa?</h3>
+              <p>As a Minister of Religion Visa holder, you are not allowed to:</p>
+              
+              <ul>
+                <li>Access public funds (benefits)</li>
+                <li>Own more than 10% of your sponsor's shares, unless your annual income exceeds £159,600</li>
+                <li>Work for any employer other than your sponsor (except for limited second job arrangements)</li>
+                <li>Engage in business activities unrelated to your religious role</li>
+              </ul>
+              
+              <div class="warning-box">
+                <p><strong>Important:</strong> Violating these conditions may result in visa cancellation and affect future UK immigration applications.</p>
+              </div>
+            </div>
+
+            <!-- Visa Cost -->
+            <div id="cost" class="content-section">
+              <h3>How much is the Minister of Religion Visa Cost?</h3>
+              
+              <div class="highlight-box">
+                <h4>Application Fees:</h4>
+                <ul>
+                  <li><strong>Applying from outside UK:</strong> £769</li>
+                  <li><strong>Extending or switching from within UK:</strong> £885</li>
+                  <li><strong>Dependants:</strong> Same fees apply (must apply separately)</li>
+                  <li><strong>Immigration Health Surcharge (IHS):</strong> £1,035 per year for full visa duration</li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <p>Applicants must also pay the Immigration Health Surcharge (IHS), which is £1,035 per year for the full duration of the visa. Sponsors may cover this cost, provided it is clearly stated in the sponsorship or employment agreement.</p>
+              </div>
+            </div>
+
+            <!-- Eligibility Requirements -->
+            <div id="eligibility" class="content-section">
+              <h3>Minister of Religion Visa Eligibility Requirements</h3>
+              <p>To qualify for a Minister of Religion Visa, you must:</p>
+              
+              <ul>
+                <li>Be at least 18 years old</li>
+                <li>Have a valid Certificate of Sponsorship from a licensed UK sponsor</li>
+                <li>Have a confirmed job offer as a Minister of Religion from an organisation that holds the appropriate sponsor licence</li>
+                <li>Demonstrate sufficient funds to support yourself while in the UK</li>
+                <li>Meet English language requirements (CEFR level B2)</li>
+                <li>Provide details of your travel history</li>
+                <li>Submit tuberculosis test results if required (depending on country of residence)</li>
+                <li>Have a valid passport or travel document</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>Alternative Route:</strong> Those who are not acting as religious leaders but wish to work within a religious organisation may instead consider the Religious Worker Visa.</p>
+              </div>
+            </div>
+
+            <!-- Required Documents -->
+            <div id="documents" class="content-section">
+              <h3>Documents Required for Minister of Religion Visa</h3>
+              <p>When submitting your application, you must provide:</p>
+              
+              <ul>
+                <li>Your Certificate of Sponsorship reference number</li>
+                <li>Evidence of your English language ability</li>
+                <li>Proof of sufficient funds (unless exempt)</li>
+                <li>A valid passport or identity document</li>
+                <li>Expired passports to show your travel history</li>
+                <li>Tuberculosis test results if required</li>
+                <li>Proof of relationship for any dependants</li>
+                <li>Evidence of qualifications or religious training if applicable</li>
+              </ul>
+              
+              <div class="warning-box">
+                <p><strong>Important:</strong> Any documents not in English or Welsh must be accompanied by a certified translation. Additional documents may be requested depending on your circumstances.</p>
+              </div>
+            </div>
+
+            <!-- Financial Requirements -->
+            <div id="financial" class="content-section">
+              <h3>Minister of Religion Visa Financial Requirements</h3>
+              <p>You must normally show that you have at least £1,270 in personal savings, held for a minimum of 28 consecutive days, with the final day falling within 31 days of your application date.</p>
+              
+              <div class="info-box">
+                <h4>Financial Exemptions:</h4>
+                <p>You may be exempt from this requirement if:</p>
+                <ul>
+                  <li>You have lived in the UK for at least 12 months on a valid visa</li>
+                  <li>Your sponsor agrees to cover your initial living costs, up to £1,270</li>
+                </ul>
+              </div>
+              
+              <div class="warning-box">
+                <p>Dependants must also meet separate financial requirements. Each dependant needs to show £285 for a partner, £315 for one child, or £200 for each additional child.</p>
+              </div>
+            </div>
+
+            <!-- Application Process -->
+            <div id="application" class="content-section">
+              <h3>Minister of Religion Visa Application Process</h3>
+              <p>Most applications are processed within three weeks. You may apply up to three months before your intended start date.</p>
+              
+              <h4>Application Steps:</h4>
+              <ol>
+                <li><strong>Obtain Certificate of Sponsorship:</strong> Your UK sponsor must issue you a valid CoS</li>
+                <li><strong>Prepare Documents:</strong> Gather all required supporting evidence</li>
+                <li><strong>Complete Online Application:</strong> Submit application on gov.uk website</li>
+                <li><strong>Pay Fees:</strong> Pay application fee and immigration health surcharge</li>
+                <li><strong>Biometric Appointment:</strong> Attend visa application centre for fingerprints and photo</li>
+                <li><strong>Submit Documents:</strong> Provide all required evidence</li>
+                <li><strong>Await Decision:</strong> Processing typically takes up to 3 weeks</li>
+                <li><strong>Receive Decision:</strong> Notification by email and passport return</li>
+              </ol>
+              
+              <div class="info-box">
+                <p>Priority services may be available depending on your location, allowing for faster decisions at an additional cost.</p>
+              </div>
+            </div>
+
+            <!-- English Language -->
+            <div id="english" class="content-section">
+              <h3>Criteria for English Language Proficiency for Minister of Religion Visa</h3>
+              <p>Applicants must meet the English language requirement by demonstrating proficiency at CEFR level B2 through one of the following methods:</p>
+              
+              <ul>
+                <li>Passing an approved Secure English Language Test (SELT)</li>
+                <li>Holding a degree taught in English (verified by ECCTIS)</li>
+                <li>Being a national of an exempt English-speaking country</li>
+                <li>Having previously met the requirement in a previous UK visa application</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>Accepted Tests:</strong> IELTS for UKVI, Trinity College London SELT, LanguageCert, or Pearson PTE Academic UKVI at CEFR level B2.</p>
+              </div>
+            </div>
+
+            <!-- Dependents -->
+            <div id="dependents" class="content-section">
+              <h3>Visa Eligibility for Dependents of a Minister of Religion</h3>
+              <p>You may bring your partner and dependent children to the UK. Each dependant must apply separately and pay the relevant fees.</p>
+              
+              <div class="highlight-box">
+                <h4>Eligible Dependants:</h4>
+                <ul>
+                  <li><strong>Spouse or civil partner</strong></li>
+                  <li><strong>Unmarried partner</strong> (must have lived together for at least 2 years)</li>
+                  <li><strong>Children under 18</strong></li>
+                  <li><strong>Children over 18</strong> if they are currently in the UK as your dependant</li>
+                </ul>
+              </div>
+              
+              <p>Their visas will usually expire on the same date as yours and they will have similar rights to work and study in the UK.</p>
+            </div>
+
+            <!-- Employer Requirements -->
+            <div id="employers" class="content-section">
+              <h3>Requirements for Employers to Sponsor a Minister of Religion</h3>
+              <p>UK employers must hold a valid sponsor licence and meet all sponsorship obligations, including:</p>
+              
+              <ul>
+                <li>Issuing a valid Certificate of Sponsorship</li>
+                <li>Offering fair pay and conditions that meet UK minimum wage requirements</li>
+                <li>Keeping accurate records of sponsored workers</li>
+                <li>Ensuring compliance with immigration rules</li>
+                <li>Reporting changes in circumstances to UKVI</li>
+                <li>Cooperating with UKVI compliance visits</li>
+                <li>Paying the appropriate salary as per the going rate for the role</li>
+              </ul>
+              
+              <div class="info-box">
+                <p>Employers may wish to seek professional legal advice to ensure full compliance with sponsorship duties and avoid licence revocation.</p>
+              </div>
+            </div>
+
+            <!-- Extending the Visa -->
+            <div id="extend" class="content-section">
+              <h3>Can I Extend my Minister of Religion Visa in UK?</h3>
+              <p>You may apply to extend your visa for up to a further three years, provided you:</p>
+              
+              <ul>
+                <li>Remain in a qualifying role with the same or new sponsor</li>
+                <li>Continue to meet the original eligibility requirements</li>
+                <li>Apply before your current permission expires</li>
+                <li>Have a new Certificate of Sponsorship</li>
+                <li>Meet any updated English language requirements if applicable</li>
+              </ul>
+              
+              <div class="info-box">
+                <p>Applications must be submitted before your current permission expires, and dependants must also renew their visas at the same time. The extension fee is £885 when applying from within the UK.</p>
+              </div>
+            </div>
+
+            <!-- Indefinite Leave to Remain -->
+            <div id="indefinite" class="content-section">
+              <h3>Obtaining ILR via the Minister of Religion Visa</h3>
+              <p>After completing five years of continuous residence in the UK on a qualifying visa, you may apply for Indefinite Leave to Remain. To qualify, you must:</p>
+              
+              <ul>
+                <li>Have spent no more than 180 days outside the UK in any 12-month period during the 5-year qualifying period</li>
+                <li>Pass the Life in the UK Test</li>
+                <li>Satisfy the English language criteria at B1 level or higher</li>
+                <li>Remain employed in an eligible role</li>
+                <li>Have no serious criminal convictions</li>
+                <li>Meet the financial requirements</li>
+                <li>Receive confirmation from your employer that your role will continue</li>
+              </ul>
+              
+              <div class="success-box">
+                <h4>Settlement Benefits:</h4>
+                <p>ILR provides permanent residence in the UK with no time restrictions on stay, access to public funds (subject to eligibility), and the ability to apply for British citizenship after 12 months.</p>
+              </div>
+            </div>
+
+            <!-- How We Can Help -->
+            <div id="help" class="content-section">
+              <h3>How Can One Solution Visa Help with a Minister of Religion Visa application?</h3>
+              <p>Our experienced immigration team specializes in religious worker visas and can provide comprehensive assistance throughout the application process for both applicants and sponsoring organizations.</p>
+              
+              <div class="highlight-box">
+                <h4>Our Services Include:</h4>
+                <ul>
+                  <li><strong>For Applicants:</strong>
+                    <ul>
+                      <li>Assessment of eligibility for the Minister of Religion Visa route</li>
+                      <li>Guidance on required documentation and evidence</li>
+                      <li>Assistance with English language test preparation and booking</li>
+                      <li>Complete document preparation and review</li>
+                      <li>Assistance with online application submission</li>
+                      <li>Preparation for biometric appointments</li>
+                      <li>Guidance on meeting financial requirements</li>
+                      <li>Support with dependant applications</li>
+                    </ul>
+                  </li>
+                  <li><strong>For Employers/Sponsors:</strong>
+                    <ul>
+                      <li>Assistance with sponsor licence applications</li>
+                      <li>Guidance on sponsorship duties and compliance</li>
+                      <li>Help with Certificate of Sponsorship issuance</li>
+                      <li>Preparation for UKVI compliance visits</li>
+                      <li>Training on sponsorship management system</li>
+                      <li>Advice on salary and employment requirements</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <h4>Why Choose Us?</h4>
+                <p>With specialized knowledge of UK immigration requirements for religious workers, we understand the unique aspects of Minister of Religion Visa applications. We can help ensure your application demonstrates genuine pastoral responsibilities and meets all Home Office criteria.</p>
+              </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+              <h3 class="mb-3">Ready to Begin Your Religious Ministry in the UK?</h3>
+              <p class="lead mb-4">Let our expert team guide you through the Minister of Religion Visa application process to ensure a smooth transition to your religious duties in the UK.</p>
+              <a href="../index.html#inquiry" class="btn btn-primary btn-lg">
+                <i class="fas fa-paper-plane me-2"></i>Start Your Minister of Religion Visa Application
+              </a>
+              <p class="mt-3 text-muted">Click above to be redirected to our main inquiry form</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h5>One Solution Visa™</h5>
+          <p>Your trusted partner for all visa and immigration services. We make your travel dreams come true with professional expertise and personalized service.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/visaconnect" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="../index.html#services" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="../index.html#contact" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="../index.html#inquiry" class="text-light text-decoration-none">Inquiry</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Work Visa Services</h6>
+          <ul class="list-unstyled">
+            <li><a href="immigration.html" class="text-light text-decoration-none">Work Visas</a></li>
+            <li><a href="skilledworker.html" class="text-light text-decoration-none">Skilled Worker Visa</a></li>
+            <li><a href="sportsperson.html" class="text-light text-decoration-none">Sportsperson Visa</a></li>
+            <li><a href="minister.html" class="text-light text-decoration-none fw-bold">Minister of Religion Visa</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Contact Info</h6>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt me-2"></i>A. Gabuya Street, Cogon Pardo, Cebu City, Philippines</li>
+            <li><i class="fas fa-phone me-2"></i>+63 968 707 5241</li>
+            <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
+            <li><i class="fas fa-clock me-2"></i>Mon-Sat: 9AM-6PM</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0">&copy; 2025 One Solution Visa. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0">
+            <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+            <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Navigation Scripts
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const isClickInside = navbarToggler.contains(event.target) || 
+                              navbarCollapse.contains(event.target);
+        
+        if (!isClickInside && navbarCollapse.classList.contains('show')) {
+          navbarToggler.click();
+        }
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      
+      // Add loading animation on page load
+      window.addEventListener('load', () => {
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease-in-out';
+        setTimeout(() => {
+          document.body.style.opacity = '1';
+        }, 100);
+      });
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Highlight active nav link
+      const sections = document.querySelectorAll('.content-section');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      function setActiveNavLink() {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (window.scrollY >= sectionTop - 150) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', setActiveNavLink);
+      setActiveNavLink();
+    });
+  </script>
+</body>
+</html>

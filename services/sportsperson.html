@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <title>International Sportsperson Visa UK | One Solution Visa</title>
+  <link rel="icon" type="image/png" href="../images/logo.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: #ffffff;
+      --secondary-color: #2c3e50;
+      --accent-color: #3498db;
+      --light-bg: #f4f6fa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 0.75rem 0;
+      transition: all 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      padding: 0.5rem 0;
+      background: var(--secondary-color) !important;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.3rem;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    .navbar-logo {
+      height: 40px;
+      width: 40px;
+      margin-right: 8px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    /* Back button styling */
+    .back-btn {
+      color: white !important;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateX(-3px);
+    }
+
+    .back-btn i {
+      margin-right: 5px;
+    }
+
+    .section-padding {
+      padding: 60px 0;
+      scroll-margin-top: 80px;
+    }
+
+    /* Service Hero Section with Background Image */
+    .service-hero {
+      background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), 
+                  url('../images/work.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      padding: 120px 0 80px;
+      margin-bottom: 40px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .service-hero h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .service-hero .lead {
+      font-size: 1.3rem;
+      opacity: 0.95;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    /* Button styling to match other pages */
+    .btn-primary {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--secondary-color);
+      border: none;
+      padding: 12px 28px;
+      font-weight: 600;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .btn-light:hover {
+      background: var(--light-bg);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+    }
+
+    .sportsperson-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+    
+    .content-nav {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      position: sticky;
+      top: 100px;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+
+    /* Custom scrollbar for content-nav */
+    .content-nav::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .content-nav::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb {
+      background: var(--accent-color);
+      border-radius: 10px;
+    }
+
+    .content-nav::-webkit-scrollbar-thumb:hover {
+      background: var(--secondary-color);
+    }
+    
+    .content-nav h3 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .nav-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .nav-links a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      display: block;
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+    }
+    
+    .nav-links a:hover {
+      background: var(--light-bg);
+      border-left: 3px solid var(--accent-color);
+      transform: translateX(5px);
+    }
+    
+    .content-section {
+      background: white;
+      border-radius: 10px;
+      padding: 2.5rem;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .content-section h2 {
+      color: var(--secondary-color);
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--accent-color);
+    }
+    
+    .content-section h3 {
+      color: var(--secondary-color);
+      margin: 2rem 0 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #eee;
+    }
+    
+    .content-section h4 {
+      color: var(--secondary-color);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.2rem;
+    }
+    
+    .content-section p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    
+    .content-section ul, .content-section ol {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+    
+    .content-section li {
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-left: 4px solid var(--accent-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .info-box {
+      background: linear-gradient(135deg, #e8f4fc 0%, #d4eaf7 100%);
+      border-left: 4px solid var(--secondary-color);
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .warning-box {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      border-left: 4px solid #ffc107;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .success-box {
+      background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+      border-left: 4px solid #28a745;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, var(--light-bg) 0%, #e8f4fc 100%);
+      border-radius: 15px;
+      padding: 3rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .footer {
+      background: var(--secondary-color);
+      color: #fff;
+      padding: 40px 0 20px 0;
+      position: relative;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: var(--accent-color);
+      color: white;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+    }
+
+    /* Mobile Navigation Improvements */
+    @media (max-width: 991px) {
+      .navbar-collapse {
+        background: rgba(44, 62, 80, 0.98);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+
+      .navbar-toggler {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 0.4rem 0.6rem;
+      }
+
+      .navbar-toggler:focus {
+        box-shadow: 0 0 0 0.15rem rgba(255, 255, 255, 0.25);
+      }
+
+      .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin: 0.25rem 0;
+      }
+
+      .nav-link:hover, .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      
+      .content-nav {
+        position: static;
+        margin-bottom: 2rem;
+      }
+    }
+
+    /* iPhone 15 and Small Devices */
+    @media (max-width: 430px) {
+      .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .navbar {
+        padding: 0.5rem 0;
+      }
+
+      .navbar-brand {
+        font-size: 1.1rem;
+      }
+
+      .navbar-logo {
+        height: 35px;
+        width: 35px;
+        margin-right: 6px;
+      }
+      
+      .service-hero {
+        padding: 100px 0 60px;
+        background-attachment: scroll;
+      }
+      
+      .service-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .service-hero .lead {
+        font-size: 1.1rem;
+      }
+      
+      .sportsperson-icon {
+        font-size: 2.5rem;
+      }
+      
+      .content-section, .content-nav {
+        padding: 1.5rem;
+      }
+      
+      .cta-section {
+        padding: 2rem 1.5rem;
+      }
+
+      .footer {
+        padding: 30px 0 15px 0;
+      }
+
+      .footer h5, .footer h6 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .footer p, .footer li {
+        font-size: 0.9rem;
+      }
+
+      .footer .col-lg-4, 
+      .footer .col-lg-2, 
+      .footer .col-lg-3,
+      .footer .col-md-6 {
+        margin-bottom: 1.5rem;
+      }
+
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Very Small Devices */
+    @media (max-width: 375px) {
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .navbar-brand {
+        font-size: 1rem;
+      }
+      
+      .service-hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* Prevent horizontal scroll */
+    .row {
+      margin-left: -12px;
+      margin-right: -12px;
+    }
+
+    .row > * {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">
+        <img src="../images/logo.png" alt="One Solution Visa Logo" class="navbar-logo">
+        OneSolutionVisa
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link back-btn" href="../services/immigration.html">
+              <i class="fas fa-arrow-left me-1"></i>Back to Work Visas
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- International Sportsperson Visa Content -->
+  <main style="margin-top: 80px; min-height: calc(100vh - 300px);">
+    <!-- Hero Section -->
+    <section class="service-hero">
+      <div class="container">
+        <div class="sportsperson-icon">
+          <i class="fas fa-running"></i>
+        </div>
+        <h1>International Sportsperson Visa UK</h1>
+        <p class="lead">Elite athletes and professional coaches from overseas can live and work in the UK under the International Sportsperson visa.</p>
+        <a href="../index.html#inquiry" class="btn btn-light btn-lg mt-3">
+          <i class="fas fa-paper-plane me-2"></i>Apply for Sportsperson Visa
+        </a>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row">
+          <!-- Navigation Sidebar -->
+          <div class="col-lg-4 mb-4">
+            <div class="content-nav">
+              <h3><i class="fas fa-list-alt me-2"></i>Contents</h3>
+              <ul class="nav-links">
+                <li><a href="#overview">1. Sportsperson Visa Overview</a></li>
+                <li><a href="#what-is">2. What is Sportsperson Visa?</a></li>
+                <li><a href="#can-do">3. What You Can Do</a></li>
+                <li><a href="#cannot-do">4. What You Cannot Do</a></li>
+                <li><a href="#eligibility">5. Eligibility Criteria</a></li>
+                <li><a href="#footballers">6. Emerging Footballers</a></li>
+                <li><a href="#funds">7. Financial Requirements</a></li>
+                <li><a href="#english">8. English Language Requirements</a></li>
+                <li><a href="#apply">9. How to Apply</a></li>
+                <li><a href="#documents">10. Required Documents</a></li>
+                <li><a href="#fees">11. Fees & Processing Time</a></li>
+                <li><a href="#extend">12. Extending the Visa</a></li>
+                <li><a href="#indefinite">13. Indefinite Leave to Remain</a></li>
+                <li><a href="#second-job">14. Second Jobs Requirements</a></li>
+                <li><a href="#help">15. How We Can Help</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="col-lg-8">
+            <!-- Overview Section -->
+            <div id="overview" class="content-section">
+              <h2>International Sportsperson Visa UK</h2>
+              <p>Elite athletes and professional coaches from overseas can live and work in the UK under the International Sportsperson visa.</p>
+              
+              <div class="info-box">
+                <p><strong>Important:</strong> This visa is designed for high-level international athletes and coaches who can contribute to the development of their sport at the highest level in the UK.</p>
+              </div>
+            </div>
+
+            <!-- What is the Visa -->
+            <div id="what-is" class="content-section">
+              <h3>What is the International Sportsperson Visa?</h3>
+              <p>The International Sportsperson visa is a long-term UK work visa designed for high-level international athletes and coaches. It allows them to enter the UK to perform and develop their sport at an elite level.</p>
+              
+              <p>This visa has defined eligibility conditions that applicants must meet. It can be granted for up to three years initially and may be extended. After five continuous years in the UK under this route, applicants may be eligible to apply for indefinite leave to remain.</p>
+              
+              <div class="highlight-box">
+                <h4>Key Features:</h4>
+                <ul>
+                  <li>Long-term work visa for elite athletes and coaches</li>
+                  <li>Initial validity up to 3 years</li>
+                  <li>Extendable and leads to settlement</li>
+                  <li>Requires endorsement from Sports Governing Body</li>
+                  <li>Allows family members to accompany</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- What You Can Do -->
+            <div id="can-do" class="content-section">
+              <h3>What Can I Do With the International Sportsperson Visa?</h3>
+              <p>This visa allows you to:</p>
+              
+              <ul>
+                <li>Work for your sponsoring organisation in the role stated on your Certificate of Sponsorship</li>
+                <li>Take on a second job in limited circumstances</li>
+                <li>Represent your national team while in the UK</li>
+                <li>Work as a sports broadcaster</li>
+                <li>Carry out voluntary work</li>
+                <li>Study</li>
+                <li>Bring your partner and dependent children to the UK</li>
+              </ul>
+            </div>
+
+            <!-- What You Cannot Do -->
+            <div id="cannot-do" class="content-section">
+              <h3>What You Cannot Do With the International Sportsperson Visa</h3>
+              <p>You are not permitted to:</p>
+              
+              <ul>
+                <li>Access public funds</li>
+                <li>Set up or operate a business</li>
+                <li>Start a second job before beginning your main sponsored role</li>
+              </ul>
+              
+              <div class="warning-box">
+                <p><strong>Note:</strong> Violating these conditions may result in visa cancellation and affect future immigration applications.</p>
+              </div>
+            </div>
+
+            <!-- Eligibility Criteria -->
+            <div id="eligibility" class="content-section">
+              <h3>What Are the Eligibility Criteria for International Sportsperson Visa?</h3>
+              <p>To qualify for this visa, you must:</p>
+              
+              <ul>
+                <li>Receive an endorsement from a Home Office-approved Sports Governing Body confirming that:
+                  <ul>
+                    <li>You are an elite sportsperson or a suitably qualified coach</li>
+                    <li>You are internationally recognised in your sport</li>
+                    <li>Your employment will contribute to the development of your sport in the UK at the highest level</li>
+                  </ul>
+                </li>
+                <li>Hold a valid Certificate of Sponsorship</li>
+                <li>Meet the English language requirement if staying longer than 12 months</li>
+                <li>Have sufficient funds to support yourself in the UK</li>
+                <li>Provide details of your travel history over the past five years</li>
+                <li>Submit tuberculosis test results if required</li>
+                <li>Be offered employment that meets UK minimum wage and employment law requirements</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>Important:</strong> The endorsement from a Sports Governing Body is crucial and must demonstrate your elite status and contribution to UK sport development.</p>
+              </div>
+            </div>
+
+            <!-- Emerging Footballers -->
+            <div id="footballers" class="content-section">
+              <h3>Eligibility for Emerging Professional Footballers</h3>
+              <p>Updated Home Office guidance introduced the Elite Significant Contribution (ESC) route, allowing certain young footballers who show exceptional potential to qualify even if they are not yet internationally established.</p>
+              
+              <div class="highlight-box">
+                <h4>ESC Route Quotas:</h4>
+                <ul>
+                  <li><strong>Premier League and Championship clubs:</strong> May sponsor up to 4 players per season</li>
+                  <li><strong>League One and League Two clubs:</strong> May sponsor up to 2 players per season</li>
+                </ul>
+              </div>
+              
+              <p>Eligibility is assessed based on the standard of leagues previously played in and the FIFA ranking of the country represented.</p>
+              
+              <div class="info-box">
+                <p>This special route recognizes that exceptional young talent may not yet have established international recognition but shows clear potential to contribute significantly to UK football.</p>
+              </div>
+            </div>
+
+            <!-- Financial Requirements -->
+            <div id="funds" class="content-section">
+              <h3>How Much Money Do I Need for the International Sportsperson Visa?</h3>
+              <p>Applicants must usually show at least £1,270 in personal savings, held for a minimum of 28 days within the 31 days before applying.</p>
+              
+              <div class="info-box">
+                <h4>Financial Exemptions:</h4>
+                <p>This requirement does not apply if:</p>
+                <ul>
+                  <li>You have already lived in the UK for at least 12 months</li>
+                  <li>Your sponsor agrees to cover your initial living costs, as confirmed on your Certificate of Sponsorship</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- English Language -->
+            <div id="english" class="content-section">
+              <h3>What Are the English Language Requirements?</h3>
+              <p>If you intend to stay in the UK for more than 12 months, you must demonstrate English language ability. This can be done by:</p>
+              
+              <ul>
+                <li>Passing an approved Secure English Language Test at CEFR level A1 or higher</li>
+                <li>Holding a UK academic qualification</li>
+                <li>Holding an overseas degree taught in English and confirmed as equivalent to a UK degree by ECCTIS</li>
+                <li>Being a citizen of a majority English-speaking country</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>Note:</strong> For stays of 12 months or less, the English language requirement does not apply.</p>
+              </div>
+            </div>
+
+            <!-- How to Apply -->
+            <div id="apply" class="content-section">
+              <h3>How to Apply for International Sportsperson Visa?</h3>
+              <p>Before applying, you must obtain an endorsement from your sport's governing body, followed by a Certificate of Sponsorship. You must apply within three months of receiving the certificate.</p>
+              
+              <h4>Application Process:</h4>
+              <ol>
+                <li><strong>Obtain Endorsement:</strong> Secure endorsement from the relevant Sports Governing Body</li>
+                <li><strong>Certificate of Sponsorship:</strong> Obtain valid CoS from your UK sponsor</li>
+                <li><strong>Gather Documents:</strong> Prepare all required supporting documents</li>
+                <li><strong>Complete Online Application:</strong> Submit application on gov.uk within 3 months of CoS</li>
+                <li><strong>Biometric Information:</strong> Provide fingerprints and photograph at visa application centre or via UK Immigration: ID Check app</li>
+                <li><strong>Submit Documents:</strong> Provide all required supporting evidence</li>
+                <li><strong>Pay Fees:</strong> Pay application fee and immigration health surcharge</li>
+                <li><strong>Await Decision:</strong> Wait for processing and decision notification</li>
+              </ol>
+              
+              <div class="info-box">
+                <p><strong>Timing:</strong> Apply within 3 months of receiving your Certificate of Sponsorship to ensure validity.</p>
+              </div>
+            </div>
+
+            <!-- Required Documents -->
+            <div id="documents" class="content-section">
+              <h3>What Supporting Documents Do I Need to Provide?</h3>
+              <p>You will typically need to submit:</p>
+              
+              <ul>
+                <li>Your Certificate of Sponsorship reference number</li>
+                <li>Proof of English language ability, if applicable</li>
+                <li>Evidence of sufficient funds, unless exempt</li>
+                <li>A valid passport or acceptable ID</li>
+                <li>Previous passports or travel documents</li>
+                <li>Tuberculosis test results, if required</li>
+                <li>Your endorsement letter from the sports governing body</li>
+                <li>Evidence of professional achievements and recognition</li>
+                <li>Employment contract or offer letter</li>
+              </ul>
+              
+              <div class="warning-box">
+                <p><strong>Important:</strong> Documents not in English or Welsh must be accompanied by certified translations.</p>
+              </div>
+            </div>
+
+            <!-- Fees and Processing -->
+            <div id="fees" class="content-section">
+              <h3>International Sportsperson Visa Fees and Processing Time</h3>
+              
+              <div class="highlight-box">
+                <h4>Application Fees:</h4>
+                <ul>
+                  <li><strong>Stays up to 12 months:</strong> £319</li>
+                  <li><strong>Stays longer than 12 months (outside UK):</strong> £769</li>
+                  <li><strong>Stays longer than 12 months (inside UK):</strong> £885</li>
+                  <li><strong>Immigration Health Surcharge:</strong> £1,035 per year</li>
+                </ul>
+              </div>
+              
+              <h4>Processing Times:</h4>
+              <ul>
+                <li><strong>Applications from outside UK:</strong> Usually up to 3 weeks</li>
+                <li><strong>Applications from inside UK:</strong> Usually up to 8 weeks</li>
+              </ul>
+              
+              <div class="info-box">
+                <p><strong>Note:</strong> Processing times may vary depending on individual circumstances and application volume. Priority services may be available for faster processing.</p>
+              </div>
+            </div>
+
+            <!-- Extending the Visa -->
+            <div id="extend" class="content-section">
+              <h3>Extending the International Sportsperson Visa in UK</h3>
+              <p>If your initial visa period is ending, you may apply for an extension provided you:</p>
+              
+              <ul>
+                <li>Obtain a renewed endorsement from your sport's governing body</li>
+                <li>Receive a new Certificate of Sponsorship</li>
+                <li>Continue to meet all original eligibility requirements</li>
+                <li>Apply before your current visa expires</li>
+              </ul>
+              
+              <div class="info-box">
+                <p>The extension fee is £885, and a successful application can grant up to a further three years in the UK.</p>
+              </div>
+            </div>
+
+            <!-- Indefinite Leave to Remain -->
+            <div id="indefinite" class="content-section">
+              <h3>How can I apply for indefinite leave to remain?</h3>
+              <p>After five years on the International Sportsperson visa, you may qualify for indefinite leave to remain. To be eligible, you must:</p>
+              
+              <ul>
+                <li>Have spent no more than 180 days outside the UK in any 12-month period</li>
+                <li>Receive confirmation from your employer that your role will continue</li>
+                <li>Pass the Life in the UK Test</li>
+                <li>Meet English language requirements at B1 level or higher</li>
+                <li>Have no serious criminal convictions</li>
+              </ul>
+              
+              <div class="success-box">
+                <h4>Settlement Pathway:</h4>
+                <p>The ILR application fee is £3,029. Successful applicants gain permanent residence in the UK with no time restrictions on stay.</p>
+              </div>
+            </div>
+
+            <!-- Second Jobs Requirements -->
+            <div id="second-job" class="content-section">
+              <h3>What are the requirements for second jobs?</h3>
+              <p>You may take on additional work if:</p>
+              
+              <ul>
+                <li>You work no more than 20 hours per week in the second role</li>
+                <li>The role is either in the same profession or listed on the immigration salary list</li>
+              </ul>
+              
+              <div class="warning-box">
+                <p>If these conditions are not met, you must apply for a new visa supported by a new Certificate of Sponsorship.</p>
+              </div>
+            </div>
+
+            <!-- How We Can Help -->
+            <div id="help" class="content-section">
+              <h3>How Can One Solution Visa Help?</h3>
+              <p>The International Sportsperson Visa requires careful preparation and strong evidence of elite status in your sport. Our experienced team specializes in sports immigration and can provide comprehensive assistance.</p>
+              
+              <div class="highlight-box">
+                <h4>Our Services Include:</h4>
+                <ul>
+                  <li>Assessment of eligibility for the International Sportsperson route</li>
+                  <li>Guidance on obtaining endorsement from Sports Governing Bodies</li>
+                  <li>Assistance with securing Certificate of Sponsorship from UK clubs/organizations</li>
+                  <li>Preparation of evidence demonstrating elite status and international recognition</li>
+                  <li>Complete document preparation and review</li>
+                  <li>Assistance with online application submission</li>
+                  <li>Guidance on meeting financial and English language requirements</li>
+                  <li>Support with extension applications and settlement applications</li>
+                  <li>Advice for family members applying as dependants</li>
+                </ul>
+              </div>
+              
+              <div class="info-box">
+                <h4>Why Choose Us for Sports Immigration?</h4>
+                <p>With specialized knowledge of UK sports immigration requirements, we understand the specific evidence needed to demonstrate elite status in various sports. We have successfully assisted professional athletes, coaches, and emerging talents across multiple sports disciplines.</p>
+              </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+              <h3 class="mb-3">Ready to Pursue Your Sports Career in the UK?</h3>
+              <p class="lead mb-4">Let our expert team guide you through the International Sportsperson Visa application process to launch or continue your elite sports career in the UK.</p>
+              <a href="../index.html#inquiry" class="btn btn-primary btn-lg">
+                <i class="fas fa-paper-plane me-2"></i>Start Your Sportsperson Visa Application
+              </a>
+              <p class="mt-3 text-muted">Click above to be redirected to our main inquiry form</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <h5>One Solution Visa™</h5>
+          <p>Your trusted partner for all visa and immigration services. We make your travel dreams come true with professional expertise and personalized service.</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/visaconnect" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="../index.html" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="../index.html#services" class="text-light text-decoration-none">Services</a></li>
+            <li><a href="../index.html#contact" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="../index.html#inquiry" class="text-light text-decoration-none">Inquiry</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Work Visa Services</h6>
+          <ul class="list-unstyled">
+            <li><a href="immigration.html" class="text-light text-decoration-none">Work Visas</a></li>
+            <li><a href="skilledworker.html" class="text-light text-decoration-none">Skilled Worker Visa</a></li>
+            <li><a href="sportsperson.html" class="text-light text-decoration-none fw-bold">Sportsperson Visa</a></li>
+            <li><a href="temporary.html" class="text-light text-decoration-none">Temporary Worker Visa</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h6>Contact Info</h6>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt me-2"></i>A. Gabuya Street, Cogon Pardo, Cebu City, Philippines</li>
+            <li><i class="fas fa-phone me-2"></i>+63 968 707 5241</li>
+            <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
+            <li><i class="fas fa-clock me-2"></i>Mon-Sat: 9AM-6PM</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <p class="mb-0">&copy; 2025 One Solution Visa. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0">
+            <a href="#" class="text-light text-decoration-none me-3">Privacy Policy</a>
+            <a href="#" class="text-light text-decoration-none">Terms of Service</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Navigation Scripts
+    document.addEventListener('DOMContentLoaded', function() {
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const isClickInside = navbarToggler.contains(event.target) || 
+                              navbarCollapse.contains(event.target);
+        
+        if (!isClickInside && navbarCollapse.classList.contains('show')) {
+          navbarToggler.click();
+        }
+      });
+      
+      // Navbar scroll effect
+      window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+      
+      // Add loading animation on page load
+      window.addEventListener('load', () => {
+        document.body.style.opacity = '0';
+        document.body.style.transition = 'opacity 0.5s ease-in-out';
+        setTimeout(() => {
+          document.body.style.opacity = '1';
+        }, 100);
+      });
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            window.scrollTo({
+              top: target.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Highlight active nav link
+      const sections = document.querySelectorAll('.content-section');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
+      function setActiveNavLink() {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (window.scrollY >= sectionTop - 150) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+      
+      window.addEventListener('scroll', setActiveNavLink);
+      setActiveNavLink();
+    });
+  </script>
+</body>
+</html>
