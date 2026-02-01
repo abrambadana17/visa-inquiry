@@ -93,6 +93,16 @@
       margin-left: 0.1rem;
     }
 
+    /* Fix for laptop screens - detect when submenu would go off-screen and flip it */
+    @media (min-width: 992px) and (max-width: 1400px) {
+      .dropdown-submenu:nth-child(n+3) > .dropdown-menu {
+        left: auto;
+        right: 100%;
+        margin-left: 0;
+        margin-right: 0.1rem;
+      }
+    }
+
     .dropdown-divider {
       border-color: rgba(255, 255, 255, 0.2);
       margin: 0.5rem 0;
@@ -114,7 +124,7 @@
       }
 
       .dropdown-submenu > .dropdown-toggle::after {
-        content: '\f105';
+        content: '\f107';
         font-family: 'Font Awesome 6 Free';
         font-weight: 900;
         margin-left: auto;
@@ -124,7 +134,20 @@
       }
 
       .dropdown-submenu:hover > .dropdown-toggle::after {
-        transform: rotate(90deg);
+        transform: rotate(0deg);
+      }
+      
+      /* Smart positioning for submenus to prevent overflow */
+      .dropdown-submenu > .dropdown-menu {
+        position: absolute;
+      }
+      
+      /* Check if submenu would overflow and flip direction */
+      .dropdown-submenu.submenu-flip > .dropdown-menu {
+        left: auto !important;
+        right: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0.1rem !important;
       }
     }
 
@@ -225,7 +248,7 @@
       }
 
       .dropdown-submenu > .dropdown-item::after {
-        content: '\f105';
+        content: '\f107';
         font-family: 'Font Awesome 6 Free';
         font-weight: 900;
         position: absolute;
@@ -236,7 +259,7 @@
       }
 
       .dropdown-submenu.show > .dropdown-item::after {
-        transform: translateY(-50%) rotate(90deg);
+        transform: translateY(-50%) rotate(0deg);
       }
     }
 
@@ -381,22 +404,6 @@
       box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
     }
 
-    .stats-section {
-      background: var(--light-bg);
-    }
-
-    .stat-item {
-      text-align: center;
-      padding: 1.5rem 1rem;
-    }
-
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: var(--secondary-color);
-      display: block;
-    }
-
     .feature-list li {
       padding: 10px 0;
       border-bottom: 1px solid #eee;
@@ -422,6 +429,34 @@
       top: -5px;
       left: 15px;
       opacity: 0.3;
+    }
+    
+    /* Contact info box in inquiry section */
+    .contact-info-box {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+      color: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    
+    .contact-info-box i {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    
+    .contact-info-box a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.3s ease;
+    }
+    
+    .contact-info-box a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
     }
 
     /* iPhone 15 and Small Devices */
@@ -496,18 +531,6 @@
 
       .card-body {
         padding: 1.25rem;
-      }
-
-      .stat-item {
-        padding: 1rem 0.5rem;
-      }
-
-      .stat-number {
-        font-size: 2rem;
-      }
-
-      .stat-item h5 {
-        font-size: 0.95rem;
       }
 
       .contact-form {
@@ -794,7 +817,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact Us</a>
+            <a class="nav-link" href="#reviews">Reviews</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#inquiry">Inquiry</a>
@@ -815,7 +838,7 @@
   </section>
 
   <!-- About Us Section -->
-  <section id="about" class="section-padding">
+  <section id="about" class="section-padding" style="background: #ffffff;">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 mb-4 mb-lg-0">
@@ -853,18 +876,18 @@
             <div class="col-md-6 mb-3">
               <div class="card text-center">
                 <div class="card-body">
-                  <i class="fas fa-clock service-icon"></i>
-                  <h5>Fast Processing</h5>
-                  <p>Quick turnaround times for urgent applications</p>
+                  <i class="fas fa-shield-alt service-icon"></i>
+                  <h5>Secure Process</h5>
+                  <p>Your documents and information are completely secure</p>
                 </div>
               </div>
             </div>
             <div class="col-md-6 mb-3">
               <div class="card text-center">
                 <div class="card-body">
-                  <i class="fas fa-shield-alt service-icon"></i>
-                  <h5>Secure Process</h5>
-                  <p>Safe and confidential handling of your documents</p>
+                  <i class="fas fa-clock service-icon"></i>
+                  <h5>Fast Processing</h5>
+                  <p>Quick turnaround times without compromising quality</p>
                 </div>
               </div>
             </div>
@@ -874,36 +897,12 @@
     </div>
   </section>
 
-  <!-- Stats Section -->
-  <section class="stats-section section-padding">
-    <div class="container">
-      <div class="row">
-        <div class="col-6 col-md-3 stat-item">
-          <span class="stat-number counter" data-count="5000">0</span>
-          <h5>Visas Processed</h5>
-        </div>
-        <div class="col-6 col-md-3 stat-item">
-          <span class="stat-number counter" data-count="98">0</span><span class="stat-number">%</span>
-          <h5>Success Rate</h5>
-        </div>
-        <div class="col-6 col-md-3 stat-item">
-          <span class="stat-number counter" data-count="50">0</span><span class="stat-number">+</span>
-          <h5>Countries</h5>
-        </div>
-        <div class="col-6 col-md-3 stat-item">
-          <span class="stat-number counter" data-count="10">0</span><span class="stat-number">+</span>
-          <h5>Years Experience</h5>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Services Section -->
-  <section id="services" class="section-padding">
+  <section id="services" class="section-padding" style="background: var(--light-bg);">
     <div class="container">
       <div class="text-center mb-5">
         <h2>Our Services</h2>
-        <p class="lead">Comprehensive visa and immigration services tailored to your needs</p>
+        <p class="lead">Comprehensive visa solutions tailored to your needs</p>
       </div>
       <div class="row">
         <div class="col-lg-4 col-md-6 mb-4">
@@ -911,56 +910,52 @@
             <div class="card text-center h-100 service-card">
               <div class="card-body">
                 <i class="fas fa-plane-departure service-icon"></i>
-                <h5>Visit Visas</h5>
-                <p>Planning a vacation? We'll help you get the right visit visa for your destination country with minimal hassle.</p>
+                <h5>Visit Visa</h5>
+                <p>Tourist and visit visas for leisure, family visits, and short-term stays.</p>
               </div>
             </div>
           </a>
         </div>
-        
         <div class="col-lg-4 col-md-6 mb-4">
           <a href="services/business.html" class="text-decoration-none">
             <div class="card text-center h-100 service-card">
               <div class="card-body">
                 <i class="fas fa-briefcase service-icon"></i>
-                <h5>Business Visas</h5>
-                <p>Expand your business globally with our expert assistance in obtaining business and work visas.</p>
+                <h5>Business Visa</h5>
+                <p>Business visas for entrepreneurs, investors, and professionals.</p>
               </div>
             </div>
           </a>
         </div>
-        
         <div class="col-lg-4 col-md-6 mb-4">
           <a href="services/student.html" class="text-decoration-none">
             <div class="card text-center h-100 service-card">
               <div class="card-body">
                 <i class="fas fa-graduation-cap service-icon"></i>
-                <h5>Student Visas</h5>
-                <p>Pursue your education abroad with our comprehensive student visa application services.</p>
+                <h5>Student Visa</h5>
+                <p>Student visas for academic pursuits and educational opportunities.</p>
               </div>
             </div>
           </a>
         </div>
-        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <a href="services/immigration.html" class="text-decoration-none">
+            <div class="card text-center h-100 service-card">
+              <div class="card-body">
+                <i class="fas fa-passport service-icon"></i>
+                <h5>Work Visa</h5>
+                <p>Work permits and immigration services for employment opportunities.</p>
+              </div>
+            </div>
+          </a>
+        </div>
         <div class="col-lg-4 col-md-6 mb-4">
           <a href="services/family.html" class="text-decoration-none">
             <div class="card text-center h-100 service-card">
               <div class="card-body">
                 <i class="fas fa-heart service-icon"></i>
-                <h5>Family Visas</h5>
-                <p>Reunite with your loved ones through family reunification and spouse visa services.</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        
-        <div class="col-lg-4 col-md-6 mb-4">
-          <a href="services/immigration.html" class="text-decoration-none">
-            <div class="card text-center h-100 service-card">
-              <div class="card-body">
-                <i class="fas fa-user-tie service-icon"></i>
-                <h5>Work Visa</h5>
-                <p>Secure employment opportunities abroad with expert guidance on work permits, skilled worker visas, and employer sponsorship applications.</p>
+                <h5>Family Visa</h5>
+                <p>Family reunion and spouse visas to bring your loved ones together.</p>
               </div>
             </div>
           </a>
@@ -982,7 +977,7 @@
   </section>
 
   <!-- Testimonials -->
-  <section class="section-padding" style="background: #f8f9fa;">
+  <section id="reviews" class="section-padding" style="background: #ffffff;">
     <div class="container">
       <div class="text-center mb-5">
         <h2>What Our Clients Say</h2>
@@ -1046,43 +1041,21 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section-padding">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2>Contact Us</h2>
-        <p class="lead">Get in touch with our expert team</p>
-      </div>
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <div class="row">
-            <div class="col-md-4 text-center mb-4">
-              <i class="fas fa-map-marker-alt service-icon"></i>
-              <h5>Address</h5>
-              <p>A. Gabuya Street<br>Cogon Pardo<br>Cebu City, Philippines</p>
-            </div>
-            <div class="col-md-4 text-center mb-4">
-              <i class="fas fa-phone service-icon"></i>
-              <h5>Phone</h5>
-              <p>+63 968 707 5241<br>+63 917 123 4567</p>
-            </div>
-            <div class="col-md-4 text-center mb-4">
-              <i class="fas fa-envelope service-icon"></i>
-              <h5>Email</h5>
-              <p>abrambadana17@gmail.com<br>support@visaconnect.com</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- Inquiry Form Section -->
-  <section id="inquiry" class="section-padding" style="background: #f8f9fa;">
-    <div class="container">
+  <section id="inquiry" class="section-padding" style="background: var(--light-bg);">
+        <div class="container">
       <div class="text-center mb-5">
-        <h2>Start Your Visa Inquiry</h2>
-        <p class="lead">Fill out the form below and our experts will get back to you within 24 hours</p>
+    <h2>Start Your Visa Inquiry</h2>
+    <p class="lead">Fill out the form below and our experts will get back to you within 24 hours</p>
+    <p class="text-muted">
+        Contact us for more information: 
+        <a href="https://mail.google.com/mail/?view=cm&to=onesolutionvisaltd@gmail.com" target="_blank">
+             onesolutionvisaltd@gmail.com
+        </a>
+
+          </p>
       </div>
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -1164,18 +1137,11 @@
          <h5>One Solution Visa™</h5>
           <p>Your trusted partner for all visa and immigration services. We make your travel dreams come true with professional expertise and personalized service.</p>
           <div class="social-links">
-            <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+            <a href="https://www.facebook.com/onesolutionvisaltd?rdid=d9leWS7xXISoHUCc&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1HFWPZYFbV%2F#" target="_blank" aria-label="Facebook" style="text-align: left;">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.instagram.com/visaconnect" target="_blank" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
+           
+            
           </div>
         </div>
         <div class="col-lg-2 col-md-6 mb-4">
@@ -1201,9 +1167,8 @@
         <div class="col-lg-3 col-md-6 mb-4">
           <h6>Contact Info</h6>
           <ul class="list-unstyled">
-            <li><i class="fas fa-map-marker-alt me-2"></i>Cebu City, Philippines</li>
-            <li><i class="fas fa-phone me-2"></i>+63 32 123 4567</li>
-            <li><i class="fas fa-envelope me-2"></i>abrambadana17@gmail.com</li>
+      
+            <li><i class="fas fa-envelope me-2"></i><a href="/cdn-cgi/l/email-protection#553a3b30263a3920213c3a3b233c2634392131153238343c397b363a38" class="text-light text-decoration-none"><span class="__cf_email__" data-cfemail="610e0f04120e0d1415080e0f170812000d150521060c00080d4f020e0c">[email&#160;protected]</span></a></li>
           </ul>
         </div>
       </div>
@@ -1223,7 +1188,7 @@
   </footer>
 
   <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
     // Enhanced mobile navigation
@@ -1257,76 +1222,107 @@
           e.preventDefault();
           e.stopPropagation();
           
-          // Restore original navbar content
+          // Restore main menu
           navbarNav.innerHTML = originalNavbarContent;
-          
-          // Re-initialize event listeners
-          setTimeout(() => {
-            initializeMobileNavigation();
-            initDropdownSubmenus();
-          }, 10);
+          initializeMobileNavigation();
+          initDropdownSubmenus();
         });
         
-        // Initialize dropdown submenus for the services menu
+        // Re-initialize submenu functionality
         initDropdownSubmenus();
       }
       
-      // Function to initialize mobile navigation
-      function initializeMobileNavigation() {
-        const servicesDropdown = document.querySelector('#servicesDropdown');
-        
-        if (servicesDropdown && window.innerWidth < 992) {
-          servicesDropdown.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            if (navbarCollapse.classList.contains('show')) {
-              showServicesMenu();
-            }
-          });
-        }
-      }
-      
-      // Initialize dropdown submenus for mobile
+      // Initialize dropdown submenu handlers for mobile
       function initDropdownSubmenus() {
         const dropdownSubmenus = document.querySelectorAll('.dropdown-submenu');
         
         dropdownSubmenus.forEach(submenu => {
-          const toggle = submenu.querySelector('.dropdown-toggle');
-          const submenuDropdown = submenu.querySelector('.dropdown-menu');
+          const toggle = submenu.querySelector('.dropdown-item');
           
-          toggle.addEventListener('click', function(e) {
-            if (window.innerWidth < 992) {
-              e.preventDefault();
-              e.stopPropagation();
-              
-              const isOpen = submenu.classList.contains('show');
-              
-              // Close all other submenus at the same level
-              const parentMenu = submenu.parentElement;
-              if (parentMenu) {
-                parentMenu.querySelectorAll('.dropdown-submenu').forEach(sm => {
-                  if (sm !== submenu) {
-                    sm.classList.remove('show');
+          if (toggle) {
+            // Remove any existing listeners
+            const newToggle = toggle.cloneNode(true);
+            toggle.parentNode.replaceChild(newToggle, toggle);
+            
+            newToggle.addEventListener('click', function(e) {
+              if (window.innerWidth < 992) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                // Toggle this submenu
+                submenu.classList.toggle('show');
+                
+                // Close other submenus
+                dropdownSubmenus.forEach(otherSubmenu => {
+                  if (otherSubmenu !== submenu) {
+                    otherSubmenu.classList.remove('show');
                   }
                 });
               }
-              
-              // Toggle current submenu
-              submenu.classList.toggle('show');
-            }
-          });
+            });
+          }
         });
       }
       
-      // Handle window resize
-      window.addEventListener('resize', function() {
-        if (window.innerWidth >= 992) {
-          // Restore original navbar content on desktop
-          navbarNav.innerHTML = originalNavbarContent;
-          initializeMobileNavigation();
-          initDropdownSubmenus();
+      // Initialize mobile navigation
+      function initializeMobileNavigation() {
+        if (window.innerWidth < 992) {
+          // Handle services dropdown click on mobile
+          const servicesLink = document.querySelector('#servicesDropdown');
+          if (servicesLink) {
+            servicesLink.addEventListener('click', function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+              showServicesMenu();
+            });
+          }
         }
+      }
+      
+      // Smart positioning for desktop submenus
+      function checkSubmenuPosition() {
+        if (window.innerWidth >= 992) {
+          const dropdownSubmenus = document.querySelectorAll('.dropdown-submenu');
+          
+          dropdownSubmenus.forEach(submenu => {
+            const submenuDropdown = submenu.querySelector('.dropdown-menu');
+            if (submenuDropdown) {
+              const rect = submenu.getBoundingClientRect();
+              const submenuRect = submenuDropdown.getBoundingClientRect();
+              const viewportWidth = window.innerWidth;
+              
+              // Check if submenu would overflow on the right
+              if (rect.right + submenuRect.width > viewportWidth) {
+                submenu.classList.add('submenu-flip');
+              } else {
+                submenu.classList.remove('submenu-flip');
+              }
+            }
+          });
+        }
+      }
+      
+      // Check submenu position on hover (desktop only)
+      document.querySelectorAll('.dropdown-submenu').forEach(submenu => {
+        submenu.addEventListener('mouseenter', function() {
+          if (window.innerWidth >= 992) {
+            checkSubmenuPosition();
+          }
+        });
+      });
+      
+      // Handle window resize
+      let resizeTimer;
+      window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+          if (window.innerWidth >= 992) {
+            // Restore original navbar content on desktop
+            navbarNav.innerHTML = originalNavbarContent;
+            initializeMobileNavigation();
+            initDropdownSubmenus();
+          }
+        });
       });
       
       // Initialize on page load
@@ -1389,43 +1385,7 @@
         });
       });
       
-      // Counter animation
-      function animateCounters() {
-        const counters = document.querySelectorAll('.counter');
-        const speed = 200;
-
-        counters.forEach(counter => {
-          const updateCount = () => {
-            const target = +counter.getAttribute('data-count');
-            const count = +counter.innerText;
-            const increment = target / speed;
-
-            if (count < target) {
-              counter.innerText = Math.ceil(count + increment);
-              setTimeout(updateCount, 1);
-            } else {
-              counter.innerText = target;
-            }
-          };
-          updateCount();
-        });
-      }
-
-      // Trigger counter animation when stats section is visible
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            animateCounters();
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.5 });
-
-      const statsSection = document.querySelector('.stats-section');
-      if (statsSection) {
-        observer.observe(statsSection);
-      }
-
+      
       // Active navigation highlight
       function setActiveNav() {
         const sections = document.querySelectorAll('section[id]');
@@ -1587,7 +1547,8 @@
       // Close submenus when parent dropdown closes
       document.querySelectorAll('.dropdown').forEach(dropdown => {
         dropdown.addEventListener('hidden.bs.dropdown', function() {
-          this.querySelectorAll('.dropdown-submenu').forEach(submenu => {
+          const submenus = this.querySelectorAll('.dropdown-submenu');
+          submenus.forEach(submenu => {
             submenu.classList.remove('show');
           });
         });
