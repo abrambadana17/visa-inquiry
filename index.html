@@ -413,22 +413,264 @@
       border-bottom: none;
     }
 
-    .testimonial-card {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 15px;
-      margin: 1rem 0;
+    /* Image Gallery Carousel */
+    .gallery-carousel {
       position: relative;
+      max-width: 750px;
+      margin: 0 auto;
     }
 
-    .testimonial-card::before {
-      content: '"';
-      font-size: 3rem;
-      color: var(--secondary-color);
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      background: #f8f9fa;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: auto;
+      max-height: 600px;
+      object-fit: contain;
+      background: #f8f9fa;
+      transition: transform 0.3s ease;
+    }
+
+    .carousel-slide:hover img {
+      transform: scale(1.05);
+    }
+
+    .carousel-btn {
       position: absolute;
-      top: -5px;
-      left: 15px;
-      opacity: 0.3;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: var(--secondary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    .carousel-btn:hover {
+      background: var(--secondary-color);
+      color: white;
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .carousel-btn.prev {
+      left: 20px;
+    }
+
+    .carousel-btn.next {
+      right: 20px;
+    }
+
+    .carousel-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .carousel-indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #ddd;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .carousel-indicator.active {
+      background: var(--secondary-color);
+      width: 30px;
+      border-radius: 6px;
+    }
+
+    /* Modal Styles */
+    .image-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .image-modal.active {
+      display: flex;
+    }
+
+    .modal-content-wrapper {
+      position: relative;
+      max-width: 95%;
+      max-height: 95%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: zoomIn 0.3s ease;
+    }
+
+    .modal-image {
+      max-width: 95%;
+      max-height: 95vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      background: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: var(--secondary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .modal-close:hover {
+      background: var(--secondary-color);
+      color: white;
+      transform: rotate(90deg);
+    }
+
+    .modal-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: var(--secondary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .modal-nav:hover {
+      background: var(--secondary-color);
+      color: white;
+    }
+
+    .modal-nav.prev {
+      left: -70px;
+    }
+
+    .modal-nav.next {
+      right: -70px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .carousel-container {
+        min-height: 300px;
+      }
+
+      .carousel-slide img {
+        max-height: 400px;
+      }
+
+      .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+      }
+
+      .carousel-btn.prev {
+        left: 10px;
+      }
+
+      .carousel-btn.next {
+        right: 10px;
+      }
+
+      .modal-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+      }
+
+      .modal-nav.prev {
+        left: 10px;
+      }
+
+      .modal-nav.next {
+        right: 10px;
+      }
+
+      .modal-close {
+        top: 10px;
+        right: 10px;
+      }
     }
     
     /* Contact info box in inquiry section */
@@ -550,22 +792,6 @@
 
       textarea.form-control {
         min-height: 120px;
-      }
-
-      .testimonial-card {
-        padding: 1.25rem;
-        margin: 0.75rem 0;
-      }
-
-      .testimonial-card::before {
-        font-size: 2.5rem;
-        top: -5px;
-        left: 10px;
-      }
-
-      .testimonial-card p {
-        font-size: 0.95rem;
-        margin-top: 1rem;
       }
 
       .footer {
@@ -1003,45 +1229,53 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="testimonial-card">
-            <p>"One Solution Visa made my student visa application process so smooth. Their team was professional and kept me updated throughout."</p>
-            <div class="d-flex align-items-center mt-3">
-              <div class="ms-3">
-                <h6 class="mb-0">Sarah Johnson</h6>
-                <small class="text-muted">Student, UK</small>
-              </div>
+      <!-- Image Gallery Carousel -->
+      <div class="gallery-carousel">
+        <div class="carousel-container">
+          <div class="carousel-track" id="carouselTrack">
+            <div class="carousel-slide">
+              <img src="images/1.jpg" alt="Gallery Image 1" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/2.jpg" alt="Gallery Image 2" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/3.jpg" alt="Gallery Image 3" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/4.jpg" alt="Gallery Image 4" loading="lazy">
+            </div>
+            <div class="carousel-slide">
+              <img src="images/5.jpg" alt="Gallery Image 5" loading="lazy">
             </div>
           </div>
+          <button class="carousel-btn prev" id="prevBtn" aria-label="Previous image">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-btn next" id="nextBtn" aria-label="Next image">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
-        <div class="col-lg-4">
-          <div class="testimonial-card">
-            <p>"One Solution Visa, I got my business visa approved quickly. Their expertise saved me time and stress."</p>
-            <div class="d-flex align-items-center mt-3">
-              <div class="ms-3">
-                <h6 class="mb-0">Michael Chen</h6>
-                <small class="text-muted">Business Owner, Canada</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="testimonial-card">
-            <p>"Excellent service! They helped me reunite with my family. The process was handled with care and efficiency."</p>
-            <div class="d-flex align-items-center mt-3">
-              <div class="ms-3">
-                <h6 class="mb-0">Maria Rodriguez</h6>
-                <small class="text-muted">Family Reunion, USA</small>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="carousel-indicators" id="carouselIndicators"></div>
       </div>
     </div>
   </section>
 
-  
+  <!-- Image Modal -->
+  <div class="image-modal" id="imageModal">
+    <div class="modal-content-wrapper">
+      <button class="modal-close" id="modalClose" aria-label="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <button class="modal-nav prev" id="modalPrev" aria-label="Previous image">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <img src="" alt="Full size image" class="modal-image" id="modalImage">
+      <button class="modal-nav next" id="modalNext" aria-label="Next image">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
 
   <!-- Inquiry Form Section -->
   <section id="inquiry" class="section-padding" style="background: var(--light-bg);">
@@ -1052,7 +1286,7 @@
     <p class="text-muted">
         Contact us for more information: 
         <a href="https://mail.google.com/mail/?view=cm&to=onesolutionvisaltd@gmail.com" target="_blank">
-             onesolutionvisaltd@gmail.com
+             <span class="__cf_email__" data-cfemail="6609080315090a13120f0908100f15070a120226010b070f0a4805090b">[email&#160;protected]</span>
         </a>
 
           </p>
@@ -1150,7 +1384,7 @@
             <li><a href="#home" class="text-light text-decoration-none">Visa Updates</a></li>
             <li><a href="#about" class="text-light text-decoration-none">About Us</a></li>
             <li><a href="#services" class="text-light text-decoration-none">Services</a></li>
-            <li><a href="#contact" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="#reviews" class="text-light text-decoration-none">Reviews</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-6 mb-4">
@@ -1168,7 +1402,7 @@
           <h6>Contact Info</h6>
           <ul class="list-unstyled">
       
-            <li><i class="fas fa-envelope me-2"></i>onesolutionvisaltd@gmail.com</li>
+            <li><i class="fas fa-envelope me-2"></i><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="610e0f04120e0d1415080e0f170812000d150521060c00080d4f020e0c">[email&#160;protected]</a></li>
           </ul>
         </div>
       </div>
@@ -1188,7 +1422,7 @@
   </footer>
 
   <!-- Bootstrap JS -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
     // Enhanced mobile navigation
@@ -1544,10 +1778,141 @@
         });
       }
 
+      // Image Carousel and Modal Functionality
+      const carouselTrack = document.getElementById('carouselTrack');
+      const carouselSlides = document.querySelectorAll('.carousel-slide');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const carouselIndicators = document.getElementById('carouselIndicators');
+      const imageModal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      const modalClose = document.getElementById('modalClose');
+      const modalPrev = document.getElementById('modalPrev');
+      const modalNext = document.getElementById('modalNext');
+
+      const images = [
+        'images/1.jpg',
+        'images/2.jpg',
+        'images/3.jpg',
+        'images/4.jpg',
+        'images/5.jpg'
+      ];
+
+      let currentIndex = 0;
+
+      // Create carousel indicators
+      images.forEach((_, index) => {
+        const indicator = document.createElement('button');
+        indicator.classList.add('carousel-indicator');
+        if (index === 0) indicator.classList.add('active');
+        indicator.setAttribute('aria-label', `Go to image ${index + 1}`);
+        indicator.addEventListener('click', () => goToSlide(index));
+        carouselIndicators.appendChild(indicator);
+      });
+
+      const indicators = document.querySelectorAll('.carousel-indicator');
+
+      function updateCarousel() {
+        const offset = -currentIndex * 100;
+        carouselTrack.style.transform = `translateX(${offset}%)`;
+        
+        indicators.forEach((indicator, index) => {
+          indicator.classList.toggle('active', index === currentIndex);
+        });
+      }
+
+      function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateCarousel();
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateCarousel();
+      }
+
+      // Carousel navigation
+      nextBtn.addEventListener('click', nextSlide);
+      prevBtn.addEventListener('click', prevSlide);
+
+      // Open modal when clicking on carousel image
+      carouselSlides.forEach((slide, index) => {
+        slide.addEventListener('click', () => {
+          const clickedImageSrc = slide.querySelector('img').src;
+          modalImage.src = clickedImageSrc;
+          imageModal.classList.add('active');
+          currentIndex = index;
+          document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+      });
+
+      // Modal navigation
+      function openModalImage(index) {
+        modalImage.src = images[index];
+        currentIndex = index;
+      }
+
+      modalNext.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % images.length;
+        openModalImage(currentIndex);
+      });
+
+      modalPrev.addEventListener('click', (e) => {
+        e.stopPropagation();
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        openModalImage(currentIndex);
+      });
+
+      // Close modal
+      function closeModal() {
+        imageModal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+      }
+
+      modalClose.addEventListener('click', closeModal);
+      imageModal.addEventListener('click', (e) => {
+        if (e.target === imageModal) {
+          closeModal();
+        }
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (imageModal.classList.contains('active')) {
+          if (e.key === 'Escape') {
+            closeModal();
+          } else if (e.key === 'ArrowRight') {
+            currentIndex = (currentIndex + 1) % images.length;
+            openModalImage(currentIndex);
+          } else if (e.key === 'ArrowLeft') {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            openModalImage(currentIndex);
+          }
+        }
+      });
+
+      // Auto-advance carousel (optional)
+      let autoAdvance = setInterval(nextSlide, 5000);
+
+      // Pause auto-advance on hover
+      document.querySelector('.carousel-container').addEventListener('mouseenter', () => {
+        clearInterval(autoAdvance);
+      });
+
+      document.querySelector('.carousel-container').addEventListener('mouseleave', () => {
+        autoAdvance = setInterval(nextSlide, 5000);
+      });
+
       // Close submenus when parent dropdown closes
-      document.querySelectorAll('.dropdown').forEach(dropdown => {
-        dropdown.addEventListener('hidden.bs.dropdown', function() {
-          const submenus = this.querySelectorAll('.dropdown-submenu');
+      document.querySelectorAll('.dropdown-menu').forEach(dropdown => {
+        dropdown.addEventListener('hide.bs.dropdown', function () {
+          const submenus = this.querySelectorAll('.dropdown-submenu.show');
           submenus.forEach(submenu => {
             submenu.classList.remove('show');
           });
